@@ -1,0 +1,371 @@
+
+/* main - default */
+
+body {
+
+    .main {
+        section {
+            display:inline-block;
+            width:100%;
+        }
+
+        .main-issue {
+            position:relative;
+            color:@white-base;
+            .issue-bg {
+                display:none;
+            }
+
+            fieldset {
+                display:inline-block;
+                border:6px solid @white-base;
+                font-size:0;
+                input {
+                    background:transparent;
+                    color:@white-base;
+                    border:none;
+                }
+                button {
+                    padding:0 20px;
+                }
+            }
+
+            .text {
+                strong {
+                    font-weight: @font-normal;
+                }
+                button {
+                    font-size: 0;
+
+                }
+            }
+            button {
+                font-size:0;
+                border:none;
+                background:transparent;
+                padding:0 20px;
+            }
+            i {
+                color:@white-base;
+            }
+
+            .icons {
+                display:inline-block;
+                position:absolute;
+                left:0;
+                width:100%;
+                font-size:0;
+                margin:0;
+                padding:0;
+                li {
+                    display:inline-block;
+                    a {
+                        display:inline-block;
+                        color:@white-base;
+                        width:100%;
+                        font-size: @font-size-02;
+                        background: @blue;
+
+
+                        i {
+                            font-size: @font-size-08;
+                            .opacit(0.4);
+                        }
+
+                    }
+                    &:nth-child(even){
+                        a {
+                            background:@dark-blue;
+                        }
+
+                    }
+                }
+            }
+
+            .weather {
+                position:absolute;
+                h5 {
+                    font-size:@font-size-05;
+                    font-weight:@font-normal;
+                    i {
+                         &.wi-day-sunny {
+                            color : @yellow;
+                        }
+                    }
+                }
+            }
+
+            &:before {
+                content:"";
+                display:block;
+                position:absolute;
+                z-index:0;
+                background:@gray-base;
+                left:0;
+                right:0;
+                top:0;
+                bottom:0;
+                .opacity(0.5);
+            }
+
+        }
+
+        .main-food {
+            h4 {
+                position:relative;
+                font-weight:@font-normal;
+                margin:60px 0 40px;
+                small {
+                    color:@gray-light;
+                    font-size:@font-size-04;
+                }
+            }
+
+            ul {
+                list-style:none;
+                margin:0;
+                font-size:0;
+                li {
+
+                    font-size:1rem;
+                    img {
+                        display:none;
+                    }
+                    a {
+                        display:inline-block;
+                        position:relative;
+                        width:100%;
+                        height:100%;
+                        color:@white-base;
+                        vertical-align:bottom;
+                        .gradient(@startColor: rgba(0,0,0,0), @ingColor: rgba(0,0,0,0), @endColor: rgba(0,0,0,0.9));
+                        h5 {
+                            position:absolute;
+                            bottom:10px;
+                            margin:0 0 4px;
+                            padding:0 10px;
+                            font-weight:@font-normal;
+                            font-size:@font-size-03;
+                            color:@yellow-dark;
+                            small {
+                                display:block;
+                                padding-top:4px;
+                                color:@white-base;
+                            }
+                        }
+                        .rate {
+                            position:absolute;
+                            margin:0;
+                            right:10px;
+                            bottom:10px;
+                            color:@yellow-dark;
+                            font-size:0;
+                            i {
+                                font-size:@font-size-03;
+                            } 
+                            strong {
+                                font-size:@font-size-03;
+                                padding-left:4px;
+                            } 
+                        }
+                    }
+                }
+            }
+
+            .food-link {
+                text-align:center;
+                a {
+                    display:inline-block;
+                    font-size:@font-size-03;
+                    i {
+                        font-size:@font-size-08;
+                        display:block;
+                        width:80px;
+                        height:60px;
+                        margin:30px auto 0;
+                    }
+                }
+            }
+
+        }
+
+        .main-trip {
+            h4 {
+                position:relative;
+                font-weight:@font-normal;
+                small {
+                    color:@gray-light;
+                }
+            }
+
+            ul {
+                list-style:none;
+                margin:0 0 20px;
+                font-size:0;
+                li {
+                    display:inline-block;
+                    position:relative;
+                    img {
+                        width:100%;
+                        height:auto;
+                        
+                    }
+                    a {
+                        display:inline-block;
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        width:100%;
+                        height:100%;
+
+                        h5 {
+                            position:absolute;
+                            margin:0;
+                            padding:0 10px;
+                            font-weight:@font-normal;
+                            small {
+                                display:block;
+                                padding-top:4px;
+                                color:@gray-light;
+                            }
+                        }
+                        i {
+                            display:block;
+                            position:absolute;
+                            left:10px;
+                            top:10px;
+                            color:@white-base;
+                            background:@gray-base;
+                            font-size:@font-size-02;
+                            font-style:normal;
+                            padding:6px 10px;
+                            border-radius:5px;
+                        }
+                    }
+
+                }
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .main-sns {
+            background:@gray-lighter;
+            h4 {
+                position:relative;
+                font-size:@font-size-06;
+                font-weight:@font-normal;
+                margin:40px 0 30px;
+                text-align:center;
+                small {
+                    font-size:@font-size-03;
+                    color:@gray-light;
+                    display:block;
+                }
+                a {
+                    display:none;
+                }
+            }
+
+            .grid {
+                list-style:none;
+
+                padding:0 10px;
+                margin:0 0 20px;
+                font-size:0;
+                .grid-item {
+                    position:relative;
+                    padding:10px;
+                    width: calc(~"25% - 15px");
+                    background:@white-base;
+                    margin:0 0 10px;
+                    img {
+                        width:100%;
+                        height:auto;
+                        
+                    }
+                    a {
+                        display:inline-block;
+
+                        width:100%;
+                        height:100%;
+                        vertical-align:bottom;
+                        h5 {
+                            position:relative;
+                            margin:10px 0;
+                            font-weight:@font-normal;
+                            font-size:@font-size-03;
+                            i {
+                                position:absolute;
+                                right:0;
+                                font-size:@font-size-05;
+                                color:@gray-light;
+                                &.fa-instagram {
+                                    color:#000;
+                                }
+                                &.fa-facebook {
+                                    color:#3b5998;
+                                }
+                                &.fa-twitter {
+                                    color:#1da1f2;
+                                }
+                                
+
+                            }
+                        }
+                        p {
+                            font-size:1rem;
+                        }
+                        span {
+                            display:block;
+                            font-size:@font-size-01;
+                            font-style:normal;
+                            padding:6px 0;
+                            border-radius:5px;
+                            color:@light-blue;
+
+                        }
+
+
+                    }
+
+
+
+                }
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+}
+
+

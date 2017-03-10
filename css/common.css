@@ -294,7 +294,16 @@
             display: block;
         }
     }
-    /* Layout-pc */
+    /* 
+
+
+
+
+
+
+Layout-pc 
+
+    */
     
     @media (min-width:1024px) {
         .container {

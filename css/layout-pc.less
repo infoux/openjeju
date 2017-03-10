@@ -1,0 +1,94 @@
+
+/* layout - PC */
+
+body.pc {
+    .container {
+        .container(1200px);
+        text-align:left;
+    }
+
+    #header {
+        position:fixed;
+        left:0;
+        right:0;
+        top:0;
+        z-index:999;
+        background:@white-base;
+        height: @header-height;
+        line-height: @header-height;
+        text-align:center;
+        h1 {
+            position: absolute;
+            left: 0;
+            top: 20px;
+            width: 174px;
+            height: 28px;
+        }
+        ul.util_menu {
+            position: absolute;
+            right: 0;
+            a {
+                display: block;
+                height: 100%;
+                padding: 0 14px;
+                border-left: @border-normal;
+                &.active {
+                    border-color: transparent;
+                    background: @blue;
+                    color: @white-base;
+                }
+            }
+            i {display:none;}
+        }
+        nav {
+            margin-left: 240px;
+            font-size: 0;
+            a {
+                display: block;
+                font-size: @font-size-02;
+                font-weight: @font-bold;
+                padding: 0 10px;
+                width: 100%;
+                line-height: calc(@header-height - 2px);
+                border-bottom: 2px solid transparent;
+                &:hover,
+                &.active {
+                    border-color: @blue;
+                    background: @gray-lighter;
+                }
+            }
+            .close {
+                display: none;
+            }
+        }
+        a.menuToggle {
+            display: none;
+        }
+    }
+    #footer {
+        div.footer-util {
+            padding: 60px 0;
+            h2 {
+                font-size: @font-size-08;
+                margin: 0 0 20px;
+            }
+            li {
+                &::after {
+                    top: 4px;
+                    width: 2px;
+                    height: 20px;
+                }
+            }
+            a {
+                font-size: @font-size-03;
+                padding: 0 12px;
+            }
+
+        }
+        address {
+            padding: 20px 0;
+        }
+    }
+
+
+}

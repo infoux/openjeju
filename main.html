@@ -5,29 +5,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>openjeju</title>
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/common.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <!-- javaScript  -->
     <script src="js/jquery-1.11.3.min.js"></script>
+
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/common.js"></script>
 
 </head>
 
 <body>
     <!-- S:skip_navi -->
-    <div class="skip_navi">
-        <a class="sr-only sr-only-focusable" href="#header">메뉴 바로가기</a>
-        <a class="sr-only sr-only-focusable" href="#content">본문 바로가기</a>
-        <a class="sr-only sr-only-focusable" href="#footer">푸터 바로가기</a>
-    </div>
+    <div class="skip_navi"> <a class="sr-only sr-only-focusable" href="#header">메뉴 바로가기</a> <a class="sr-only sr-only-focusable" href="#content">본문 바로가기</a>        <a class="sr-only sr-only-focusable" href="#footer">푸터 바로가기</a> </div>
     <!-- E:skip_navi -->
     <!-- S:header -->
     <header id="header">
-        <div class="container">
-            <a class="menuToggle"><i class="fa fa-bars" aria-hidden="true"></i>토글</a>
+        <div class="container"> <a class="menuToggle"><i class="fa fa-bars" aria-hidden="true"></i>토글</a>
             <h1><a href="">Logo</a></h1>
             <!-- S:main_menu -->
             <nav id="main_menu">
@@ -37,30 +32,311 @@
                     <li><a href="">여행일정</a></li>
                     <li><a href="">추천장소</a></li>
                     <li><a href="">여행톡</a></li>
-                </ul>
-                <a class="close"><i class="fa fa-times" aria-hidden="true"></i>창닫기</a>
-            </nav>
+                </ul> <a class="close"><i class="fa fa-times" aria-hidden="true"></i>창닫기</a> </nav>
             <ul class="util_menu">
                 <li class="login"><a href="">로그인</a></li>
-                <li class="plan active"><a href=""><i class="fa fa-calendar-check-o" aria-hidden="true"></i>여행일정만들기</a></li>
+                <li class="plan"><a class="active" href=""><i class="fa fa-calendar-check-o" aria-hidden="true"></i>여행일정만들기</a></li>
             </ul>
             <!-- E:main_menu -->
         </div>
     </header>
     <!-- E:header -->
     <!-- S:content -->
-    <article id="content">
-        <h3 class="sr-only">제목</h3>
-        <section class="">
+    <article id="content" class="main">
+        <h3 class="sr-only">메인컨텐츠</h3>
+        <section class="main-issue">
+            <img class="issue-bg" src="images/@tmp-issue.jpg">
+            <div class="container">
+                <div class="search">
+                    <h4>나만을 위한 <strong>제주여행</strong></h4>
+                    <fieldset>
+                        <legend class="sr-only">검색폼</legend>
+                        <input type="text">
+                        <button><i class="fa fa-search" aria-hidden="true"></i>검색</button>
+                    </fieldset>
+                    <p class="text">
+                        <button><i class="fa fa-angle-left" aria-hidden="true"></i>이전검색어</button>
+                        <strong>제주맛집</strong>
+                        <button><i class="fa fa-angle-right" aria-hidden="true"></i>다음검색어</button>
+                    </p>
+                </div>
+                <ul class="icons">
+                    <li><a href=""><i class="fa fa-map-signs" aria-hidden="true"></i>도보코스</a></li>
+                    <li><a class="active" href=""><i class="fa fa-bicycle" aria-hidden="true"></i>자전거코스</a></li>
+                    <li><a href=""><i class="fa fa-quote-right" aria-hidden="true"></i>제주문화</a></li>
+                    <li><a href=""><i class="fa fa-coffee" aria-hidden="true"></i>카페로드</a></li>
+                    <li><a href=""><i class="fa fa-cutlery" aria-hidden="true"></i>맛집</a></li>
+                    <li><a href=""><i class="fa fa-shopping-basket" aria-hidden="true"></i>쇼핑</a></li>
+                </ul>
+                <div class="weather">
+                    <h5><i class="wi wi-day-sunny" aria-hidden="true"></i> 제주시 4℃</h5>
+                    <p>아주 맑고 추워요</p>
+                </div>
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </div>
+        </section>
 
 
+        <section class="main-food">
+            <div class="container">
+                <h4>맛 in JEJU <small>제주의 맛!</small><a href="">더보기 <i class="fa fa-plus" aria-hidden="true"></i></a></h4>
+
+                <ul>
+                    <li>
+                        <a href="">
+                            <p class="info">제주에서 <span>꼭 먹어봐야 할 <strong>BEST</strong><span></p>
+                            <img src="images/@tmp-food01.jpg">
+                            <h5>근고기 <small>칠돈가</small></h5>
+                            <p class="rate"><i class="fa fa-star" aria-hidden="true"></i><strong>5</strong>점</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/@tmp-food02.jpg">
+                            <h5>몸국 <small>신설오름</small></h5>
+                            <p class="rate"><i class="fa fa-star" aria-hidden="true"></i><strong>5</strong>점</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/@tmp-food03.jpg">
+                            <h5>해물탕 <small>삼성혈해물탕</small></h5>
+                            <p class="rate"><i class="fa fa-star" aria-hidden="true"></i><strong>5</strong>점</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/@tmp-food04.jpg">
+                            <h5>자리물회 <small>어진이네횟집</small></h5>
+                            <p class="rate"><i class="fa fa-star" aria-hidden="true"></i><strong>5</strong>점</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/@tmp-food05.jpg">
+                            <h5>비빔국수 <small>자매국수</small></h5>
+                            <p class="rate"><i class="fa fa-star" aria-hidden="true"></i><strong>5</strong>점</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/@tmp-food06.jpg">
+                            <h5>한치주물럭 <small>태광식당</small></h5>
+                            <p class="rate"><i class="fa fa-star" aria-hidden="true"></i><strong>5</strong>점</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/@tmp-food07.jpg">
+                            <h5>멸치국수 <small>춘자멸치국수</small></h5>
+                            <p class="rate"><i class="fa fa-star" aria-hidden="true"></i><strong>5</strong>점</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class="food-link">
+                    <a href=""><i class="fa fa-motorcycle" aria-hidden="true"></i>배달맛집</a>
+                    <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>주변맛집</a>
+                    <a href=""><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>추천맛집</a>
+                    <a href=""><i class="fa fa-television" aria-hidden="true"></i>TV맛집</a>
+                </div>
+            </div>
         </section>
-        <section class="">
-            <h4 class="sr-only">소제목</h4> 본문내용2
+
+
+        <section class="main-tv">
+            <div class="container">
+                <h4>고팡TV <small>생생한 제주 여행 방송을 감상하세요</small><a href="">더보기 <i class="fa fa-plus" aria-hidden="true"></i></a></h4>
+
+                <ul>
+                    <li>
+                        <i class="fa fa-television" aria-hidden="true"></i>
+                        <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                        <img src="https://img.youtube.com/vi/KB2T2httprg/hqdefault.jpg" alt="채널1. 위대한 자연유산 1부 - 화산섬과 용암동굴" onerror="this.src='/jtotour/resources/images/common/noimage.png'">
+                        <h5><strong>채널1.</strong> 위대한 자연유산 1부 - 화산섬과 용암동굴 <a href="">방송 참여하기</a></h5>
+                        
+                    </li>
+                    <li>
+                        <i class="fa fa-television" aria-hidden="true"></i>
+                        <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                        <img src="https://img.youtube.com/vi/KB2T2httprg/hqdefault.jpg" alt="채널2. 애니메이션설화 1회_백록담" onerror="this.src='/jtotour/resources/images/common/noimage.png'">
+                        <h5><strong>채널2.</strong> 애니메이션설화 1회_백록담 <a href="">방송 참여하기</a></h5>
+                        
+                    </li>
+
+                </ul>
+
+            </div>
         </section>
-        <section class="">
-            <h4 class="sr-only">소제목</h4> 본문내용3
+
+
+        <section class="main-trip">
+            <div class="container">
+                <h4>추천여행일정 <small>당신에게 맞는 일정을 찾아보세요</small><a href="">더보기 <i class="fa fa-plus" aria-hidden="true"></i></a></h4>
+
+                <ul>
+                    <li>
+                        <img src="images/@tmp-food05.jpg">
+                        <a href="">
+                            <h5>2박 3일 제주풍경 만끽하기 <small>최망규</small></h5>
+                            <i>홀로</i>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="images/@tmp-food05.jpg">
+                        <a href="">
+                            <h5>2박 3일 제주풍경 만끽하기 <small>최망규</small></h5>
+                            <i>홀로</i>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="images/@tmp-food05.jpg">
+                        <a href="">
+                            
+                            <h5>2박 3일 제주풍경 만끽하기 <small>최망규</small></h5>
+                            <i>홀로</i>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="images/@tmp-food05.jpg">
+                        <a href="">
+                            
+                            <h5>2박 3일 제주풍경 만끽하기 <small>최망규</small></h5>
+                            <i>홀로</i>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="images/@tmp-food05.jpg">
+                        <a href="">
+                            <h5>2박 3일 제주풍경 만끽하기 <small>최망규</small></h5>
+                            <i>홀로</i>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="images/@tmp-food05.jpg">
+                        <a href="">
+                            <h5>2박 3일 제주풍경 만끽하기 <small>최망규</small></h5>
+                            <i>홀로</i>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="images/@tmp-food05.jpg">
+                        <a href="">
+                            
+                            <h5>2박 3일 제주풍경 만끽하기 <small>최망규</small></h5>
+                            <i>홀로</i>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="images/@tmp-food05.jpg">
+                        <a href="">
+                            
+                            <h5>2박 3일 제주풍경 만끽하기 <small>최망규</small></h5>
+                            <i>홀로</i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
         </section>
+
+
+        <section class="main-sns">
+            <div class="container">
+                <h4>#JEJU <small>실시간 SNS 소식을 모았습니다.</small><a href="">더보기 <i class="fa fa-plus" aria-hidden="true"></i></a></h4>
+
+                <div class="grid">
+
+                    <div class="grid-item insta">
+                        <a href="">
+                            <img src="images/@tmp-food05.jpg">
+                            <h5>yeowoobe <i class="fa fa-instagram" aria-hidden="true"></i></h5>
+                            <p class="text">
+                                음식이 친절하고 뷰가 예술입니다. ㅁㄴㅇㄹㅁㄴㅇㄹ ㄴㅁㅇㄹㅁㄴㅇㄹ ㅁㄴㅇㄹㅇ ㄹ ㅁㄴㅇ ㄹㅁㄴㅇㄹㅁㄴ ㅇㄹㅁㄴㅇㄹ
+                            </p>
+                            <span>#점심식사, #야옹, #길</span>
+                        </a>
+            </div>
+            <div class="grid-item insta">
+                <a href="">
+                    <img src="http://images.hkn24.com/news/photo/201103/69187_61029_354.jpg">
+                    <h5>yeowoobe <i class="fa fa-facebook" aria-hidden="true"></i></h5>
+                    <p class="text">
+                        음식이 친절하고 뷰가 예술입니다.
+                    </p>
+                    <span>#점심식사, #야옹, #길</span>
+                </a>
+            </div>
+            <div class="grid-item insta">
+                <a href="">
+                    <img src="images/@tmp-food05.jpg">
+                    <h5>yeowoobe <i class="fa fa-twitter" aria-hidden="true"></i></h5>
+                    <p class="text">
+                        음식이 친절하고 뷰가 예술입니다.
+                    </p>
+                    <span>#점심식사, #야옹, #길</span>
+                </a>
+            </div>
+            <div class="grid-item insta">
+                <a href="">
+                    <img src="images/@tmp-food05.jpg">
+                    <h5>yeowoobe <i class="fa fa-instagram" aria-hidden="true"></i></h5>
+                    <p class="text">
+                        음식이 친절하고 뷰가 예술입니다.
+                    </p>
+                    <span>#점심식사, #야옹, #길</span>
+                </a>
+            </div>
+            <div class="grid-item insta">
+                <a href="">
+                    <img src="images/@tmp-food05.jpg">
+                    <h5>yeowoobe <i class="fa fa-instagram" aria-hidden="true"></i></h5>
+                    <p class="text">
+                        음식이 친절하고 뷰가 예술입니다.
+                    </p>
+                    <span>#점심식사, #야옹, #길</span>
+                </a>
+            </div>
+            <div class="grid-item insta">
+                <a href="">
+                    <img src="images/@tmp-food05.jpg">
+                    <h5>yeowoobe <i class="fa fa-instagram" aria-hidden="true"></i></h5>
+                    <p class="text">
+                        음식이 친절하고 뷰가 예술입니다.
+                    </p>
+                    <span>#점심식사, #야옹, #길</span>
+                </a>
+            </div>
+
+            <div class="grid-item insta">
+                <a href="">
+                    <img src="images/@tmp-food05.jpg">
+                    <h5>yeowoobe <i class="fa fa-instagram" aria-hidden="true"></i></h5>
+                    <p class="text">
+                        음식이 친절하고 뷰가 예술입니다.
+                    </p>
+                    <span>#점심식사, #야옹, #길</span>
+                </a>
+            </div>
+            <div class="grid-item insta">
+                <a href="">
+                    <img src="images/@tmp-food05.jpg">
+                    <h5>yeowoobe <i class="fa fa-instagram" aria-hidden="true"></i></h5>
+                    <p class="text">
+                        음식이 친절하고 뷰가 예술입니다.
+                    </p>
+                    <span>#점심식사, #야옹, #길</span>
+                </a>
+            </div>
+
+
+
+
+
+            </div>
+            </div>
+        </section>
+
+
     </article>
     <!-- E:content -->
     <!-- S:footer -->
