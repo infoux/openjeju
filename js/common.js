@@ -24,7 +24,7 @@ $(document).ready(function () {
                 mainFood.destroySlider();
                 mainFood = null;
 
-                $('.main-food ul').attr("style") = "";
+                $('.main-food ul').attr("style", "");
                 $('.main-food li').attr("style") = "";
             }
 
