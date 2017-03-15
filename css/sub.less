@@ -1,0 +1,194 @@
+
+/* sub - default */
+.sub {
+    .sub-head {
+        position  : relative;
+        text-align: center;
+
+        h3 {
+            color      : @white-base;
+            text-align : center;
+            margin     : 0;
+            font-weight: @font-normal;
+            .text-shadow(@string:0 3px 3px rgba(0, 0, 0, 0.8));
+        }
+
+        img {
+            display: none;
+        }
+
+        nav {
+            display : inline-block;
+            position: absolute;
+            left    : 0;
+            bottom  : 0;
+            width   : 100%;
+
+            ul {
+                display   : inline-block;
+                width     : 100%;
+                list-style: none;
+                padding   : 0;
+                font-size : 0;
+
+                li {
+                    display: inline-block;
+
+                    a {
+                        display   : block;
+
+                        background: @blue;
+                        color     : @white-base;
+                    }
+
+                }
+            }
+        }
+
+        &::before {
+            content   : "";
+            position  : absolute;
+            left      : 0;
+            top       : 0;
+            display   : block;
+            width     : 100%;
+            height    : 100%;
+            background: rgba(0,0,0,0.4);
+        }
+    }
+
+    .sub-info {
+        text-align: center;
+
+        .container {
+            text-align: center;
+
+            h4 {
+                margin: 0;
+            }
+
+            p {
+                margin: 0;
+
+                &.tag {
+                    margin: 20px 0 30px;
+
+                    i {
+                        display   : inline-block;
+                        background: @gray-darker;
+                        color     : @white-base;
+                        font-style: normal;
+                        padding   : 5px 10px;
+                        .border-radius(6px);
+                    }
+                }
+
+            }
+
+            .info-text {
+                line-height  : 1.4;
+                word-break   : keep-all;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .list-type01 {
+        text-align: center;
+
+        .container {
+            #order-btn {
+                button {
+                    display   : inline-block;
+                    border    : none;
+                    background: none;
+                    font-size : 1.25rem;
+                    padding   : 0;
+                    margin    : 0 5px;
+
+                    i {
+                        margin-left: 10px;
+                    }
+
+                    &.active {
+                        color: @dark-blue;
+                    }
+                }
+            }
+
+            ul {
+                padding   : 20px 0 0;
+                list-style: none;
+                border-top: 2px solid @gray-dark;
+
+                li {
+                    position: relative;
+
+                    h5 {
+
+                        font-weight: @font-normal;
+                    }
+
+                    .tag {
+                        i {
+                            font-style: normal;
+                            background: @gray-dark;
+                            color     : @white-base;
+                            padding   : 5px 10px;
+                            .border-radius(6px);
+                        }
+                    }
+
+                    .text {
+                        line-height: 1.4;
+                        color      : @gray-light;
+                        word-break : keep-all;
+                    }
+
+                    div {
+                        p {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pagenation {
+        display   : inline-block;
+        text-align: center;
+        width     : 100%;
+        font-size : 0;
+
+        a,
+        strong {
+            display       : inline-block;
+            vertical-align: top;
+            font-size     : 1rem;
+            border        : @border-normal;
+            width         : 2rem;
+            height        : 2.25rem;
+            padding-top   : 0.625rem;
+            margin        : 0 1px;
+
+            &.jump,
+            &.move {
+                font-size : 0;
+                background: @gray-lighter;
+
+                i {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        strong {
+            background  : @blue;
+            color       : @white-base;
+            font-weight : @font-normal;
+            border-color: transparent;
+        }
+    }
+
+}
