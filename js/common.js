@@ -45,17 +45,16 @@ $(document).ready(function() {
         if (windowWidth < 1199) {
             $("body").removeClass("pc");
             $("body").addClass("mobile");
-
         } else {
-
             $("body").addClass("pc");
             $("body").removeClass("mobile");
-
-
         }
 
         $(".main-issue").css("background", "url(" + $(".main-issue .issue-bg").attr("src") + ") no-repeat center / cover");
         $(".sub-head").css("background", "url(" + $(".sub-head>img").attr("src") + ") no-repeat center / cover");
+        $(".pc .view-head").css("background", "url(" + $(".view-head img").attr("src") + ") no-repeat center / cover");
+        $(".mobile .view-head").css("background", "");
+        $(".mobile .view-head .image").css("background", "url(" + $(".view-head img").attr("src") + ") no-repeat center / cover");
         $(".main-food li").each(function() {
             $(this).css("background", "url(" + $(this).find("img").attr("src") + ") no-repeat center / cover");
         });

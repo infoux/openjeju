@@ -211,6 +211,8 @@ body.mobile {
         }
 
         .view-head {
+            margin-bottom: 30px;
+
             .container {
                 p {
                     &.image {
@@ -243,17 +245,13 @@ body.mobile {
                 }
 
                 .hit-area {
-                    a {
+                    p {
                         position: relative;
-                        vertical-align: top;
-                        margin: 20px;
-                        padding: 10px 0;
-                        width: 110px;
+                        margin: 20px 10px;
                         color: @blue;
-                        .border-radius(5px);
 
                         i {
-                            margin: 10px 5px 10px 0;
+                            margin: 10px 5px 4px 0;
                             font-size: @font-size-08;
                             display: block;
                         }
@@ -261,35 +259,18 @@ body.mobile {
                         strong {
                             margin-left: 5px;
                             position: absolute;
-                            right: 10px;
-                            top: 10px;
+                            right: 0;
+                            top: 0;
                             background: @blue;
-                            padding:0 8px;
-                            hegiht: 26px;
-                            .border-radius(13px);
-                            line-height: 26px;
+                            width: 20px;
+                            hegiht: 20px;
+                            line-height: 20px;
                             color: @white-base;
                             text-align: center;
-                        }
-
-                        &:first-of-type::after {
-                            content: "";
-                            position: absolute;
-                            display: block;
-                            right: -24px;
-                            top: 20px;
-                            width: 1px;
-                            height: 60px;
-                            background: #ccc;
                         }
                     }
                 }
             }
-        }
-
-        .view-detail {
-          text-align:left;
-          padding:0 10px;
         }
     }
 }

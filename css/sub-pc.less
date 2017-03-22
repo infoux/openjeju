@@ -1,99 +1,95 @@
-
 /* sub-pc */
 body.pc {
     .sub {
         margin-top: @header-height;
 
         .indicator {
-            text-align   : center;
+            text-align: center;
             border-bottom: @border-normal;
 
             ul {
-                display       : inline-block;
+                display: inline-block;
                 vertical-align: top;
-                margin        : 0;
-                list-style    : none;
-                padding       : 0;
-                font-size     : 0;
+                margin: 0;
+                list-style: none;
+                padding: 0;
+                font-size: 0;
 
                 li {
-                    display       : inline-block;
-                    position      : relative;
-                    height        : 50px;
-                    line-height   : 50px;
+                    display: inline-block;
+                    position: relative;
+                    height: 50px;
+                    line-height: 50px;
                     vertical-align: top;
-                    font-size     : 1rem;
+                    font-size: 1rem;
 
                     a {
-                        display     : inline-block;
-                        padding     : 0 20px;
+                        display: inline-block;
+                        padding: 0 20px;
                         border-right: @border-normal;
-                        width       : 160px;
+                        width: 160px;
 
                         i {
-                            position   : absolute;
-                            right      : 10px;
-                            top        : 0;
-                            height     : 100%;
+                            position: absolute;
+                            right: 10px;
+                            top: 0;
+                            height: 100%;
                             line-height: 50px;
-
                         }
 
                         &.home {
-                            display      : block;
-                            cursor       : pointer;
-                            padding      : 0;
-                            margin       : 0;
-                            font-size    : 0;
-                            width        : 50px;
-                            height       : 50px;
-                            text-align   : center;
-                            border       : @border-normal;
-                            border-top   : none;
+                            display: block;
+                            cursor: pointer;
+                            padding: 0;
+                            margin: 0;
+                            font-size: 0;
+                            width: 50px;
+                            height: 50px;
+                            text-align: center;
+                            border: @border-normal;
+                            border-top: none;
                             border-bottom: none;
 
                             i {
-                                position      : static;
-                                font-size     : @font-size-02;
+                                position: static;
+                                font-size: @font-size-02;
                                 vertical-align: middle;
                             }
                         }
                     }
 
                     div.sub-menu {
-                        display : none;
+                        display: none;
                         position: absolute;
-                        left    : 0;
-                        top     : 50px;
-                        width   : 100%;
+                        left: 0;
+                        top: 50px;
+                        width: 100%;
 
                         ul {
-                            display   : block;
+                            display: block;
                             background: @white-base;
-                            border    : @border-normal;
+                            border: @border-normal;
 
                             li {
-                                display    : block;
-                                height     : 38px;
+                                display: block;
+                                height: 38px;
                                 line-height: 38px;
 
                                 a {
-                                    padding       : 0 10px;
+                                    padding: 0 10px;
                                     vertical-align: top;
-                                    width         : 100%;
-                                    height        : 100%;
-                                    border-bottom : 1px solid @white-base;
-                                    overflow      : hidden;
-                                    text-overflow : ellipsis;
-                                    white-space   : nowrap;
-                                    background    : @gray-lighter;
+                                    width: 100%;
+                                    height: 100%;
+                                    border-bottom: 1px solid @white-base;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    background: @gray-lighter;
                                 }
-
                             }
                         }
                     }
                 }
-
             }
         }
 
@@ -101,7 +97,7 @@ body.pc {
             height: 200px;
 
             h3 {
-                padding  : 60px 0 0;
+                padding: 60px 0 0;
                 font-size: @font-size-08;
             }
 
@@ -123,12 +119,11 @@ body.pc {
 
                     li {
                         a {
-
-                            width      : 100%;
-                            height     : 48px;
+                            width: 100%;
+                            height: 48px;
                             line-height: 48px;
-                            text-align : center;
-                            font-size  : @font-size-02;
+                            text-align: center;
+                            font-size: @font-size-02;
 
                             &.active {
                                 background: @dark-blue;
@@ -154,203 +149,202 @@ body.pc {
                 }
 
                 #map-area {
-                    display   : inline-block;
-                    position  : relative;
-                    width     : 100%;
+                    display: inline-block;
+                    position: relative;
+                    width: 100%;
                     text-align: left;
                     background: #333;
-                    font-size : 0;
+                    font-size: 0;
 
                     img {
                         display: inline-block;
                     }
 
                     ul {
-                        font-size : 1rem;
-                        margin    : 0;
+                        font-size: 1rem;
+                        margin: 0;
                         list-style: none;
 
                         .item {
-                            display : inline-block;
+                            display: inline-block;
                             position: absolute;
-                            height  : 48px;
+                            height: 48px;
 
                             a {
-                                display    : block;
-                                position   : relative;
-                                cursor     : pointer;
-                                background : #333;
-                                height     : 27px;
+                                display: block;
+                                position: relative;
+                                cursor: pointer;
+                                background: #333;
+                                height: 27px;
                                 line-height: 27px;
-                                padding    : 0 10px;
-                                color      : #fff;
+                                padding: 0 10px;
+                                color: #fff;
                             }
 
                             span {
-                                display : block;
+                                display: block;
                                 position: absolute;
-                                width   : 17px;
-                                height  : 20px;
-
+                                width: 17px;
+                                height: 20px;
                             }
 
                             &.labelLT {
                                 a {
-                                    top        : 20px;
+                                    top: 20px;
                                     margin-left: 11px;
                                 }
 
                                 span {
-                                    left      : 0;
-                                    top       : 0;
+                                    left: 0;
+                                    top: 0;
                                     background: url('../images/labelLt.png') no-repeat right bottom;
                                 }
                             }
 
                             &.labelRT {
                                 a {
-                                    top         : 20px;
+                                    top: 20px;
                                     margin-right: 11px;
                                 }
 
                                 span {
-                                    right     : 0;
-                                    top       : 0;
+                                    right: 0;
+                                    top: 0;
                                     background: url('../images/labelRt.png') no-repeat right bottom;
                                 }
                             }
 
                             &.labelLB {
                                 a {
-                                    top        : 1px;
+                                    top: 1px;
                                     margin-left: 11px;
                                 }
 
                                 span {
-                                    left      : 0;
-                                    bottom    : 0;
+                                    left: 0;
+                                    bottom: 0;
                                     background: url('../images/labelLb.png') no-repeat right top;
                                 }
                             }
 
                             &.labelRB {
                                 a {
-                                    top         : 1px;
+                                    top: 1px;
                                     margin-right: 11px;
                                 }
 
                                 span {
-                                    right     : 0;
-                                    bottom    : 0;
+                                    right: 0;
+                                    bottom: 0;
                                     background: url('../images/labelRb.png') no-repeat right top;
                                 }
                             }
 
                             &.item01 {
-                                left       : 50%;
-                                top        : 536px;
+                                left: 50%;
+                                top: 536px;
                                 margin-left: 112px;
                             }
 
                             &.item02 {
-                                left       : 50%;
-                                top        : 587px;
+                                left: 50%;
+                                top: 587px;
                                 margin-left: 96px;
                             }
 
                             &.item03 {
-                                left       : 50%;
-                                top        : 590px;
+                                left: 50%;
+                                top: 590px;
                                 margin-left: -11px;
                             }
 
                             &.item04 {
-                                left       : 50%;
-                                top        : 579px;
+                                left: 50%;
+                                top: 579px;
                                 margin-left: -163px;
                             }
 
                             &.item05 {
-                                left       : 50%;
-                                top        : 524px;
+                                left: 50%;
+                                top: 524px;
                                 margin-left: -86px;
                             }
 
                             &.item06 {
-                                left       : 50%;
-                                top        : 549px;
+                                left: 50%;
+                                top: 549px;
                                 margin-left: -182px;
                             }
 
                             &.item07 {
-                                left       : 50%;
-                                top        : 493px;
+                                left: 50%;
+                                top: 493px;
                                 margin-left: -219px;
                             }
 
                             &.item08 {
-                                left       : 50%;
-                                top        : 455px;
+                                left: 50%;
+                                top: 455px;
                                 margin-left: -122px;
                             }
 
                             &.item09 {
-                                left       : 50%;
-                                top        : 440px;
+                                left: 50%;
+                                top: 440px;
                                 margin-left: -174px;
                             }
 
                             &.item10 {
-                                left       : 50%;
-                                top        : 421px;
+                                left: 50%;
+                                top: 421px;
                                 margin-left: -128px;
                             }
 
                             &.item11 {
-                                left       : 50%;
-                                top        : 302px;
+                                left: 50%;
+                                top: 302px;
                                 margin-left: -208px;
                             }
 
                             &.item12 {
-                                left       : 50%;
-                                top        : 249px;
+                                left: 50%;
+                                top: 249px;
                                 margin-left: -338px;
                             }
 
                             &.item13 {
-                                left       : 50%;
-                                top        : 278px;
+                                left: 50%;
+                                top: 278px;
                                 margin-left: -407px;
                             }
 
                             &.item14 {
-                                left       : 50%;
-                                top        : 209px;
+                                left: 50%;
+                                top: 209px;
                                 margin-left: -496px;
                             }
 
                             &.item15 {
-                                left       : 50%;
-                                top        : 161px;
+                                left: 50%;
+                                top: 161px;
                                 margin-left: -432px;
                             }
 
                             &.item16 {
-                                left       : 50%;
-                                top        : 112px;
+                                left: 50%;
+                                top: 112px;
                                 margin-left: -464px;
                             }
 
                             &.item17 {
-                                left       : 50%;
-                                top        : 121px;
+                                left: 50%;
+                                top: 121px;
                                 margin-left: -583px;
                             }
 
                             &.item18 {
-                                left       : 50%;
-                                top        : 75px;
+                                left: 50%;
+                                top: 75px;
                                 margin-left: -545px;
                             }
 
@@ -367,57 +361,56 @@ body.pc {
                     }
 
                     .map-pop {
-                        display    : none;
+                        display: none;
                         line-height: 1.4;
-                        color      : @white-base;
-                        position   : absolute;
-                        font-size  : 1rem;
-                        width      : 300px;
-                        background : #000;
-                        top        : 0;
-                        right      : 0;
-                        bottom     : 0;
-                        font-size  : 0;
+                        color: @white-base;
+                        position: absolute;
+                        font-size: 1rem;
+                        width: 300px;
+                        background: #000;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        font-size: 0;
 
                         img {
-                            width : 300px;
+                            width: 300px;
                             height: 198.52px;
                         }
 
                         h5 {
-                            margin     : 0;
-                            padding    : 0 20px;
-                            height     : 60px;
+                            margin: 0;
+                            padding: 0 20px;
+                            height: 60px;
                             line-height: 60px;
-                            font-size  : @font-size-03;
+                            font-size: @font-size-03;
                         }
 
                         p {
-                            height    : 330px;
+                            height: 330px;
                             overflow-y: scroll;
-                            padding   : 0 20px 20px;
-                            font-size : 1rem;
+                            padding: 0 20px 20px;
+                            font-size: 1rem;
                             word-break: keep-all;
                         }
 
                         a {
-                            display    : inline-block;
-                            position   : absolute;
-                            bottom     : 0;
-                            width      : 100%;
-                            height     : 60px;
+                            display: inline-block;
+                            position: absolute;
+                            bottom: 0;
+                            width: 100%;
+                            height: 60px;
                             line-height: 60px;
-                            background : @blue;
-                            color      : @white-base;
-                            font-size  : @font-size-02;
-                            text-align : center;
+                            background: @blue;
+                            color: @white-base;
+                            font-size: @font-size-02;
+                            text-align: center;
                         }
 
                         &.map01 {
                             display: block;
                         }
                     }
-
                 }
             }
         }
@@ -428,48 +421,44 @@ body.pc {
 
                 ul {
                     li {
-
-                        padding      : 20px 240px;
-                        min-height   : 204px;
+                        padding: 20px 240px;
+                        min-height: 204px;
                         border-bottom: 1px solid @gray-light;
 
                         img {
-                            display : block;
+                            display: block;
                             position: absolute;
-                            left    : 0;
-                            top     : 20px;
-                            width   : 220px;
-                            height  : 165px;
+                            left: 0;
+                            top: 20px;
+                            width: 220px;
+                            height: 165px;
                         }
 
                         h5 {
-                            margin   : 0 0 10px;
+                            margin: 0 0 10px;
                             font-size: @font-size-04;
-
                         }
 
                         div {
                             position: absolute;
-                            right   : 0;
-                            bottom  : 40px;
+                            right: 0;
+                            bottom: 40px;
 
                             p {
-
-                                width      : 100px;
-                                height     : 100px;
-                                background : @gray-lighter;
-                                border     : 1px solid @dark-blue;
+                                width: 100px;
+                                height: 100px;
+                                background: @gray-lighter;
+                                border: 1px solid @dark-blue;
                                 .border-radius(50%);
-                                text-align : center;
-                                margin     : 0 0 0 10px;
+                                text-align: center;
+                                margin: 0 0 0 10px;
                                 padding-top: 20px;
-                                font-size  : @font-size-02;
-                                color      : @dark-blue;
+                                font-size: @font-size-02;
+                                color: @dark-blue;
 
                                 strong {
-                                    display  : block;
+                                    display: block;
                                     font-size: @font-size-06;
-
                                 }
                             }
                         }
@@ -478,5 +467,66 @@ body.pc {
             }
         }
 
+        .view-head {
+            height: 300px;
+
+            .container {
+                position: absolute;
+                left: 50%;
+                margin-left: -600px;
+                bottom: 0;
+                height: 90px;
+                overflow: hidden;
+                color: #fff;
+
+                h3 {
+                    display: inline-block;
+                    margin: 0;
+                    font-size: @font-size-05;
+                    line-height: 90px;
+                    padding-right: 10px;
+                }
+
+                p {
+                    line-height: 90px;
+
+                    &.image {
+                        display: none;
+                    }
+                }
+
+                .hit-area {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+
+                    a {
+                        font-size: @font-size-01;
+                        margin-right: 30px;
+                        color: @white-base;
+                        line-height: 90px;
+
+                        i {
+                            margin-right: 10px;
+                            font-size: @font-size-04;
+                        }
+
+                        strong {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 90px;
+                background: rgba(0,0,0,0.4);
+            }
+        }
     }
 }
