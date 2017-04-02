@@ -122,5 +122,15 @@ $(document).ready(function() {
         }
     });
 
+    if($("body").hasClass("pc")){
+      $(".mat-list .slider").bxSlider({
+        pager:false,
+        controls:false,
+        auto:true,
+        slideMargin:10,
+        infiniteLoop:true,
+        maxSlides:5
+      });
+    }
 
 });
