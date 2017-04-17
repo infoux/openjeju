@@ -38,7 +38,18 @@ $(document).ready(function() {
         }
     });
 
-
+    function matSlider(){
+      if($("body").hasClass("pc")){
+        $(".mat-list .slider").bxSlider({
+          pager:false,
+          controls:false,
+          auto:true,
+          slideMargin:10,
+          infiniteLoop:true,
+          maxSlides:5
+        });
+      }
+    }
 
     function viewMode() {
         var windowWidth = $(window).width();
@@ -79,6 +90,7 @@ $(document).ready(function() {
 
     viewMode();
     mainHeight();
+    matSlider();
 
     $(".menuToggle").click(function() {
         $("#header nav").addClass("open");
@@ -108,6 +120,7 @@ $(document).ready(function() {
     $(window).resize(function() {
         viewMode();
         mainHeight();
+        matSlider();
 
 
     });
@@ -122,15 +135,13 @@ $(document).ready(function() {
         }
     });
 
-    if($("body").hasClass("pc")){
-      $(".mat-list .slider").bxSlider({
-        pager:false,
-        controls:false,
-        auto:true,
-        slideMargin:10,
-        infiniteLoop:true,
-        maxSlides:5
-      });
-    }
+
+    $('body.mobile .sub .plan-pop .popInner .close').click(function(){
+      $('body.mobile .sub .plan-pop').hide();
+    });
+    $('body.mobile .sub .plan-head p.mobile-mapView a').click(function(){
+      $('body.mobile .sub .plan .plan-inner .list').hide();
+      $('body.mobile .sub .plan .plan-inner .mapView').show();
+    })
 
 });

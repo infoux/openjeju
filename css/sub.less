@@ -88,6 +88,7 @@
             .info-text {
                 line-height  : 1.4;
                 word-break   : keep-all;
+                margin-top:20px;
                 margin-bottom: 30px;
             }
         }
@@ -249,6 +250,71 @@
       background:@gray-lighter;
       text-align:center;
       margin-bottom:20px;
+    }
+    .plan-head{
+      position:relative;
+      text-align:center;
+      h3{
+        color      : @gray-dark;
+        text-align : center;
+        margin     : 0;
+        font-weight: @font-normal;
+      }
+    }
+    .plan{
+      input[type='text']{
+        width:100%;
+        border:1px solid #999;
+      }
+      &.write{
+        fieldset{
+          margin:0;
+          padding:0;
+          select{
+            margin-left:0 !important;
+            border-color:#e4e4e4;
+          }
+          button{
+            background:#666 !important;
+          }
+          span{
+            strong{
+              color:@blue;
+            }
+          }
+        }
+        textarea{
+          width:100%;
+          border:none;
+          background:#e8e8e8;
+          resize:vertical;
+        }
+        .plan-btn{
+          width:100%;
+          text-align:left;
+          button{
+            background:#e8e8e8;
+            color:@gray-dark;
+            border:none;
+            text-align:center;
+            &.active{
+              background:@gray-dark;
+              color:#fff;
+            }
+          }
+        }
+        .btn-area{
+          a{
+            display:inline-block;
+            text-align:center;
+            color:#fff;
+            background:#666;
+            &:first-child{
+              background:@blue;
+            }
+          }
+        }
+      }
     }
 
 
