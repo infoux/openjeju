@@ -104,6 +104,14 @@ $(document).ready(function() {
         $(this).parent().find(".sub-menu").toggle();
     });
 
+    $("body.mobile #category li.active").click(function(){
+      $(this).parent().find('li').show();
+    });
+    $('body.mobile #category li .option').click(function(e){
+      $('body.mobile #category li').hide();
+      $("body.mobile #category li.active a").text($(e.target).text());
+    });
+
 
     $('#map-area li a').on('click', function() {
         var activeTab = $(this).parent().attr('id');

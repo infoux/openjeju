@@ -246,24 +246,62 @@ body.mobile {
                   ul{
                     position:relative;
                     display:block;
+                    height:53px;
                     padding:0;
                     border-top:none;
-                    height:53px;
-                    overflow:hidden;
+                    z-index:100;
                     li{
                       position:absolute;
                       top:0;
                       left:0;
-                      display:inline-block;
+                      display:none;
                       width:100%;
                       height:53px;
-                      line-height:53px;
-                      padding:0 10px;
-                      font-size:20px;
-                      color:@gray-dark;
-                      background:url('@{img-url}/select-bg.png') no-repeat right center #fff;
-                      border:1px solid #a9a9a9;
+                      padding:0;
                       margin:0;
+                      border:none;
+                      &.active{
+                        display:block !important;
+                        a{
+                          display:inline-block;
+                          width:100%;
+                          height:53px;
+                          line-height:53px;
+                          padding:0 10px;
+                          font-size:20px;
+                          color:@gray-dark;
+                          background:url('@{img-url}/select-bg.png') no-repeat right center #fff;
+                          border:1px solid #a9a9a9;
+                          margin:0;
+                        }
+                      }
+                      a{
+                        display:inline-block;
+                        width:100%;
+                        padding:10px 0;
+                        background:@gray-lighter;
+                        color:@gray-dark;
+                        border:1px solid @gray;
+                        border-top:none;
+                      }
+                      &:nth-child(2){
+                        top:53px;
+                      }
+                      &:nth-child(3){
+                        top:90px;
+                      }
+                      &:nth-child(4){
+                        top:128px;
+                      }
+                      &:nth-child(5){
+                        top:165px;
+                      }
+                      &:nth-child(6){
+                        top:202px;
+                      }
+                      &:nth-child(7){
+                        top:239px;
+                      }
                     }
                   }
                 }
