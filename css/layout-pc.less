@@ -17,11 +17,16 @@ body.pc {
         height     : @header-height;
         line-height: @header-height;
         text-align : center;
+        ul{
+          li{
+            padding:0 20px 0 0
+          }
+        }
 
         h1 {
             position: absolute;
             left    : 0;
-            top     : 20px;
+            top     : calc(~"50% - 14px");
             width   : 170px;
             height  : 28px;
         }
@@ -29,30 +34,46 @@ body.pc {
         ul.util_menu {
             position: absolute;
             right   : 0;
+            li{
+              padding:0;
+              a {
+                position:relative;
+                  display    : block;
+                  width:116px;
+                  height     : 100px;
+                  line-height:normal;
+                  padding    : 0 14px;
+                  border-left: @border-normal;
+                  font-size:@font-size-02;
+                  text-align:center;
+                  span{
+                    position:absolute;
+                    display:inline-block;
+                    width:116px;
+                    height:100px;
+                    top:25px;
+                    left:0;
+                  }
 
-            a {
-                display    : block;
-                width:116px;
-                height     : 100%;
-                padding    : 0 14px;
-                border-left: @border-normal;
-                font-size:@font-size-02;
+                  &.active {
+                      border-color: transparent;
+                      background  : @blue;
+                      color       : @white-base;
+                  }
+              }
 
-                &.active {
-                    border-color: transparent;
-                    background  : @blue;
-                    color       : @white-base;
-                }
-            }
-
-            i {
-                display: none;
+              i {
+                  display: none;
+              }
             }
         }
 
         nav {
-            margin-left: 240px;
+            margin-left: 300px;
             font-size  : 0;
+            height:70px;
+            vertical-align:middle;
+            margin-top:6px;
 
             a {
                 display      : block;
@@ -60,7 +81,8 @@ body.pc {
                 font-weight  : @font-bold;
                 padding      : 0 10px;
                 width        : 100%;
-                line-height  : calc(@header-height - 2px);
+                height:80px;
+                line-height  : 80px;
                 border-bottom: 2px solid transparent;
 
                 &.active,
