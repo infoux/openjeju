@@ -441,24 +441,38 @@ body.pc {
                 #category{
                   display:inline-block;
                   width:980px;
-                  a{
-                    position:relative;
-                    display:inline-block;
-                    font-size:24px;
-                    padding-right:10px;
-                    margin-right:10px;
-                    &::after{
-                      content:'';
-                      position:absolute;
-                      right:0;
-                      bottom:2px;
-                      width:1px;
-                      height:20px;
-                      background:@gray-light;
-                    }
-                    &:last-child{
-                      &::after{
-                        display:none;
+                  ul{
+                    padding:0;
+                    margin:0;
+                    border:none;
+                    li{
+                      display:inline-block;
+                      padding:0;
+                      min-height:auto;
+                      border:none;
+                      a{
+                        position:relative;
+                        display:inline-block;
+                        font-size:24px;
+                        padding-right:10px;
+                        margin-right:10px;
+                        &::after{
+                          content:'';
+                          display:inline-block;
+                          position:absolute;
+                          right:0;
+                          bottom:2px;
+                          width:1px;
+                          height:20px;
+                          background:@gray-light;
+                        }
+                      }
+                      &:last-child{
+                        a{
+                          &::after{
+                            display:none;
+                          }
+                        }
                       }
                     }
                   }
