@@ -67,6 +67,39 @@ body.pc {
               }
             }
         }
+        .gnb{
+          position:absolute;
+          top:-30px;
+          right:281px;
+          display:inline-block;
+          a{
+            font-size:@font-size;
+            color:@gray;
+            margin:0 5px;
+            &.lang{
+              i{
+                font-size:20px;
+                vertical-align: -3px;
+                margin-left:5px;
+              }
+            }
+          }
+          .lang-list{
+            display:none;
+            position:absolute;
+            top:67px;
+            right:2px;
+            z-index:100;
+            line-height:1;
+            background:#fff;
+            border:1px solid #e2e2e2;
+            a{
+              display:block;
+              color:#999;
+              padding:4px 6px;
+            }
+          }
+        }
 
         nav {
             margin-left: 300px;

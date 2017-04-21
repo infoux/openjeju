@@ -124,6 +124,10 @@ $(document).ready(function() {
         console.log(activeTab);
     });
 
+    $('#header .gnb .lang').click(function(){
+      $('#header .gnb .lang-list').toggle();
+    });
+
 
     $(window).resize(function() {
         viewMode();
