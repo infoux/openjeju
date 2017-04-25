@@ -1554,17 +1554,24 @@ body.mobile {
               li{
                 display:inline-block;
                 width:100%;
-                height:24.071rem;
                 margin-bottom:1.714rem;
                 a{
                   position:relative;
                   display:inline-block;
                   width:100%;
-                  height:24.071rem;
+                  height:auto;
                   line-height:2.857rem;
                   font-size:1.429rem;
                   color:@gray-dark;
                   text-align:center;
+                }
+                .image{
+                  position:relative;
+                  margin:0;
+                  width:100%;
+                  height:0;
+                  padding-bottom:66.67%;
+                  overflow:hidden;
                   &::before{
                     content:'';
                     display:inline-block;
@@ -1572,7 +1579,7 @@ body.mobile {
                     top:0;
                     left:0;
                     right:0;
-                    bottom:4.714rem;
+                    bottom:0;
                     background-color:rgba(0, 0, 0, 0);
                     background:-webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.9));
                     background:-moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.9));
@@ -1580,33 +1587,42 @@ body.mobile {
                     background:-o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.9));
                     z-index:100;
                   }
+                  img{
+                    position:absolute;
+                    top:0;
+                    right:0;
+                    bottom:0;
+                    left:0;
+                    width:100%;
+                    border:none;
+                    vertical-align:top;
+                  }
                 }
-                img{
-                  width:100%;
-                  height:19.357rem;
-                  border:none;
-                  vertical-align:top;
-                }
-                p{
+                .content{
                   position:absolute;
-                  bottom:4.286rem;
+                  bottom:5.714rem;
                   left:1.071rem;
                   width:calc(~"100% - 2.071rem");
                   text-align:left;
                   font-size:@font-size-02;
                   color:#fff;
+                  margin:0;
                   z-index:101;
                   button{
                     float:right;
                     border:none;
                     background:none;
-                    vertical-align: -0.286rem;
-                    i{
-                      color:#fff;
-                      font-size:2.286rem;
-                      &.fa-plus{
-                        font-size:1.5rem;
-                        vertical-align:0.143rem;
+                    margin-top:0.214rem;
+                    span{
+                      margin:0;
+                      i{
+                        color:#fff;
+                        font-size:2rem;
+                        &.fa-plus{
+                          font-size:@font-size-01;
+                          top:-0.143rem;
+                          color:#333;
+                        }
                       }
                     }
                   }

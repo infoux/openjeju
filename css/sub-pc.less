@@ -1740,13 +1740,16 @@ body.pc {
                     background:-o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.9));
                     z-index:100;
                   }
-                  img{
-                    width:100%;
-                    height:200px;
-                    border:none;
-                    vertical-align:top;
+                  .image{
+                    margin:0;
+                    img{
+                      width:100%;
+                      height:200px;
+                      border:none;
+                      vertical-align:top;
+                    }
                   }
-                  p{
+                  .content{
                     position:absolute;
                     top:130px;
                     left:15px;
@@ -1756,14 +1759,18 @@ body.pc {
                     button{
                       border:none;
                       background:none;
-                      margin-left:44px;
-                      vertical-align: -4px;
-                      i{
-                        color:#fff;
-                        font-size:32px;
-                        &.fa-plus{
-                          font-size:21px;
-                          vertical-align:2px;
+                      margin-left:61px;
+                      vertical-align: -10px;
+                      span{
+                        margin:0;
+                        i{
+                          color:#fff;
+                          font-size:28px;
+                          &.fa-plus{
+                            font-size:@font-size;
+                            color:#333;
+                            top:-2px;
+                          }
                         }
                       }
                     }
