@@ -42,18 +42,13 @@ body.pc {
                   width:116px;
                   height     : 100px;
                   line-height:normal;
-                  padding    : 0 14px;
+                  padding    : 26px 14px;
                   background:@gray-lighter;
                   border-left: @border-normal;
                   font-size:@font-size-02;
                   text-align:center;
-                  span{
-                    position:absolute;
-                    display:inline-block;
-                    width:116px;
-                    height:100px;
-                    top:25px;
-                    left:0;
+                  strong{
+                    display:block;
                   }
 
                   &.active {
@@ -104,10 +99,12 @@ body.pc {
         }
 
         nav {
+            position:absolute;
+            top:20px;
+            right:251px;
             margin-left: 300px;
             font-size  : 0;
             height:70px;
-            vertical-align:bottom;
             margin-top:6px;
 
             a {

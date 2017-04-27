@@ -51,6 +51,18 @@ $(document).ready(function() {
       }
     }
 
+    function popword(){
+      if($("body").hasClass("mobile")){
+        $('.sidebar .popword ul').bxSlider({
+          mode:"vertical",
+          pager:false,
+          controls:false,
+          auto:true,
+          infiniteLoop:true
+        });
+      }
+    }
+
     function viewMode() {
         var windowWidth = $(window).width();
         if (windowWidth < 1199) {
@@ -91,6 +103,7 @@ $(document).ready(function() {
     viewMode();
     mainHeight();
     matSlider();
+    popword();
 
     $(".menuToggle").click(function() {
         $("#header nav").addClass("open");
@@ -133,6 +146,7 @@ $(document).ready(function() {
         viewMode();
         mainHeight();
         matSlider();
+        popword();
 
 
     });
