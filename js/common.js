@@ -38,18 +38,6 @@ $(document).ready(function() {
         }
     });
 
-    function matSlider(){
-      if($("body").hasClass("pc")){
-        $(".mat-list .slider").bxSlider({
-          pager:false,
-          controls:false,
-          auto:true,
-          slideMargin:10,
-          infiniteLoop:true,
-          maxSlides:5
-        });
-      }
-    }
 
     function popword(){
       if($("body").hasClass("mobile")){
@@ -102,8 +90,8 @@ $(document).ready(function() {
 
     viewMode();
     mainHeight();
-    matSlider();
     popword();
+    matSlider();
 
     $(".menuToggle").click(function() {
         $("#header nav").addClass("open");
@@ -117,12 +105,12 @@ $(document).ready(function() {
         $(this).parent().find(".sub-menu").toggle();
     });
 
-    $("body.mobile #category li.active").click(function(){
+    $("body.mobile section.mat #category li.active").click(function(){
       $(this).parent().find('li').show();
     });
-    $('body.mobile #category li .option').click(function(e){
-      $('body.mobile #category li').hide();
-      $("body.mobile #category li.active a").text($(e.target).text());
+    $('body.mobile section.mat #category li .option').click(function(e){
+      $('body.mobile section.mat #category li').hide();
+      $("body.mobile section.mat #category li.active a").text($(e.target).text());
     });
 
 
@@ -168,6 +156,57 @@ $(document).ready(function() {
     $('body.mobile .sub .plan-head p.mobile-mapView a').click(function(){
       $('body.mobile .sub .plan .plan-inner .list').hide();
       $('body.mobile .sub .plan .plan-inner .mapView').show();
-    })
+    });
+
+    $('body.pc .sub .list-type01.gallery .container ul li a.detail').click(function(){
+      if($(this).find('i').hasClass('fa-angle-down')){
+          $(this).find('i').removeClass('fa-angle-down');
+          $(this).find('i').addClass('fa-angle-up');
+        }else{
+            $(this).find('i').removeClass('fa-angle-up');
+            $(this).find('i').addClass('fa-angle-down');
+        }
+      $(this).parent().parent().next().toggle();
+      $('body.pc .sub .list-type01.gallery .container ul li.vr').hide();
+    });
+    $('body.pc .sub .list-type01.gallery .container ul li a.vr').click(function(){
+      $(this).parent().parent().next().next().toggle();
+      $('body.pc .sub .list-type01.gallery .container ul li.detail').hide();
+    });
+
+    $('body.mobile .sub .list-type01.gallery .container ul li .img .btn-area a.vr').click(function(){
+      $(this).parent().parent().parent().next().next().toggle();
+      $('body.mobile .sub .list-type01.gallery .container ul li.detail').hide();
+    });
+    $('body.mobile .sub .list-type01.gallery .container ul li .img .btn-area a.detail').click(function(){
+      $(this).parent().parent().parent().next().toggle();
+      $('body.mobile .sub .list-type01.gallery .container ul li .text').toggle();
+      $('body.mobile .sub .list-type01.gallery .container ul li.vr').hide();
+    });
+
+    $('body.pc .sub .sub-info .container .tabs a').on('click', function () {
+        var tab = $(this).attr("data");
+        $('body.pc .sub .sub-info .container .tabs a').removeClass('active');
+        $(this).addClass('active');
+        $('body.pc .sub .sub-info .container .tab').removeClass('active');
+        $('body.pc .sub .sub-info .container .tab.' + tab).addClass('active');
+    });
 
 });
+
+/* global*/
+var $matSlider; /* memory leak 방지*/
+function matSlider(){
+    if($("body").hasClass("pc")){
+        if($matSlider) $matSlider.destroySlider();
+        $matSlider = $(".mat-list .slider").bxSlider({
+            speed:1000,
+            pager:false,
+            controls:false,
+            auto:true,
+            slideMargin:10,
+            infiniteLoop:true,
+            maxSlides:5
+        });
+    }
+}

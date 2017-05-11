@@ -216,7 +216,6 @@ body.pc {
                 }
 
                 #map-area {
-                    display: inline-block;
                     position: relative;
                     width: 100%;
                     text-align: left;
@@ -676,6 +675,45 @@ body.pc {
                       }
                     }
                 }
+                .tabs{
+                  list-style:none;
+                  margin:0 0 15px 0;
+                  padding:0;
+                  font-size:0;
+                  text-align:left;
+                  li{
+                    display:inline-block;
+                    width:120px;
+                    a{
+                      display:inline-block;
+                      width:120px;
+                      height:40px;
+                      line-height:40px;
+                      font-size:@font-size-01;
+                      color:@gray-dark;
+                      background:@gray-lighter;
+                      text-align:center;
+                      cursor:pointer;
+                      &.active{
+                        background:@dark-blue;
+                        color:#fff;
+                      }
+                    }
+                  }
+                }
+                .tab{
+                  display:none;
+                  &.active{
+                    display:block;
+                  }
+                  &.tab02{
+                    img{
+                      width:100%;
+                      height:auto;
+                      max-height:758px;
+                    }
+                  }
+                }
             }
         }
 
@@ -684,6 +722,73 @@ body.pc {
             .container{
               .hit-box{
                 bottom:30px;
+              }
+            }
+          }
+          &.gallery{
+            .container{
+              ul{
+                li{
+                  position:relative;
+                  min-height:245px;
+                  padding:20px 20px 20px 310px;
+                  .img{
+                    margin:0;
+                    padding:0;
+                    img{
+                      width:290px;
+                      height:205px;
+                    }
+                  }
+                  .text{
+                    font-size:20px;
+                    color:#333;
+                    letter-spacing:-1px;
+                  }
+                  .btn-area{
+                    margin:35px 0 0 0;
+                    .vr{
+                      display:inline-block;
+                      width:159px;
+                      height:40px;
+                      line-height:40px;
+                      font-size:20px;
+                      text-align:center;
+                      color:#fff;
+                      background:@blue;
+                    }
+                    .detail{
+                      position:absolute;
+                      right:15px;
+                      bottom:20px;
+                      font-size:20px;
+                      color:@gray-light;
+                      letter-spacing:-1px;
+                      i{
+                        font-size:@font-size-05;
+                        margin-left:5px;
+                        vertical-align:-3px;
+                      }
+                    }
+                    &.mobile{
+                      display:none;
+                    }
+                  }
+                  &.detail{
+                    display:none;
+                    padding:40px 100px 40px 30px;
+                    .text{
+                      font-size:20px;
+                      color:@gray;
+                      line-height:1.4;
+                    }
+                  }
+                  &.vr{
+                    display:none;
+                    padding:30px 0;
+                    text-align:center;
+                  }
+                }
               }
             }
           }

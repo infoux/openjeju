@@ -264,6 +264,85 @@ body.mobile {
               }
             }
           }
+          &.gallery{
+            .container{
+              padding:0 1.25rem 1.875rem;
+              ul{
+                padding:0;
+                margin:0 0 20px 0;
+                border:none;
+                border-top:1px solid #777;
+                li{
+                  position:relative;
+                  border:none;
+                  padding:1.25rem 0 0;
+                  .img{
+                    position:relative;
+                    .btn-area{
+                      position:absolute;
+                      left:0;
+                      bottom:0;
+                      width:100%;
+                      font-size:0;
+                      padding:0;
+                      margin:0;
+                      a{
+                        display:inline-block;
+                        width:calc(~"100% / 2");
+                        height:50px;
+                        line-height:50px;
+                        font-size:20px;
+                        color:#fff;
+                        background:rgba(0, 0, 0, 0.2);
+                        text-align:center;
+                        border:none;
+                      }
+                    }
+                    &::before{
+                      content:'';
+                      position:absolute;
+                      top:0;
+                      left:0;
+                      bottom:0;
+                      right:0;
+                      display:inline-block;
+                      background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+                      background: -moz-linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
+                      background: -webkit-linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+                    }
+                  }
+                  .pc{
+                    display:none;
+                  }
+                  .text{
+                    display:none;
+                    font-size:@font-size-01;
+                    color:#333;
+                    text-align:center;
+                  }
+                  &.detail{
+                    display:none;
+                    border-top:1px solid  @gray-lighter;
+                    border-bottom:1px solid @gray-lighter;
+                    .text{
+                      padding:0 1.25rem;
+                      margin-top:0;
+                      text-align:left;
+                      font-size:15px;
+                      color:@gray;
+                      line-height:1.2;
+                    }
+                  }
+                  &.vr{
+                    display:none;
+                  }
+                }
+              }
+              .pagenation{
+                margin-top:50px;
+              }
+            }
+          }
           &.mat{
             #category{
               margin-bottom:15px;
