@@ -220,7 +220,7 @@ $(document).ready(function() {
 var $matSlider; /* memory leak 방지*/
 function matSlider(){
     if($("body").hasClass("pc")){
-        if($matSlider) $matSlider.destroySlider();
+        if($matSlider.length>0) $matSlider.destroySlider();
         $matSlider = $(".mat-list .slider").bxSlider({
             speed:1000,
             pager:false,
