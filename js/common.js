@@ -199,6 +199,21 @@ $(document).ready(function() {
         $('body.pc .sub .sub-info .container .tab.' + tab).addClass('active');
     });
 
+    /* STAR_RATE*/
+    var $starRate = $('body .sub .container div.star-rate');
+    if($starRate.length > 0) $starRate.on('click', 'a', function () {
+        var starValue = $(this).attr("data");
+        $starRate.find('a').each(function () {
+            $(this).find("i").removeClass("fa-star");
+            $(this).find("i").addClass("fa-star-o");
+            if ($(this).attr("data") <= starValue) {
+                $(this).addClass("on");
+                $(this).find("i").removeClass("fa-star-o");
+                $(this).find("i").addClass("fa-star");
+            }
+        });
+    });
+
 });
 
 /* global*/
