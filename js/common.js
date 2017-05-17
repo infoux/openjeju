@@ -175,20 +175,34 @@ $(document).ready(function() {
         }
       $(this).parent().parent().next().toggle();
       $('body.pc .sub .list-type01.gallery .container ul li.vr').hide();
+      $('body.pc .sub .list-type01.gallery .container ul li.filght').hide();
     });
     $('body.pc .sub .list-type01.gallery .container ul li a.vr').click(function(){
       $(this).parent().parent().next().next().toggle();
       $('body.pc .sub .list-type01.gallery .container ul li.detail').hide();
+      $('body.pc .sub .list-type01.gallery .container ul li.filght').hide();
+    });
+    $('body.pc .sub .list-type01.gallery .container ul li a.filght').click(function(){
+      $(this).parent().parent().next().next().next().toggle();
+      $('body.pc .sub .list-type01.gallery .container ul li.detail').hide();
+      $('body.pc .sub .list-type01.gallery .container ul li.vr').hide();
     });
 
     $('body.mobile .sub .list-type01.gallery .container ul li .img .btn-area a.vr').click(function(){
       $(this).parent().parent().parent().next().next().toggle();
       $('body.mobile .sub .list-type01.gallery .container ul li.detail').hide();
+      $('body.mobile .sub .list-type01.gallery .container ul li.filght').hide();
     });
     $('body.mobile .sub .list-type01.gallery .container ul li .img .btn-area a.detail').click(function(){
       $(this).parent().parent().parent().next().toggle();
       $('body.mobile .sub .list-type01.gallery .container ul li .text').toggle();
       $('body.mobile .sub .list-type01.gallery .container ul li.vr').hide();
+      $('body.mobile .sub .list-type01.gallery .container ul li.filght').hide();
+    });
+    $('body.mobile .sub .list-type01.gallery .container ul li .img .btn-area a.filght').click(function(){
+      $(this).parent().parent().parent().next().next().next().toggle();
+      $('body.mobile .sub .list-type01.gallery .container ul li.vr').hide();
+      $('body.mobile .sub .list-type01.gallery .container ul li.detail').hide();
     });
 
     $('body.pc .sub .sub-info .container .tabs a').on('click', function () {
@@ -197,6 +211,12 @@ $(document).ready(function() {
         $(this).addClass('active');
         $('body.pc .sub .sub-info .container .tab').removeClass('active');
         $('body.pc .sub .sub-info .container .tab.' + tab).addClass('active');
+    });
+
+    $('#imgList').bxSlider({
+      auto:true,
+      infiniteLoop:true,
+      controls:false
     });
 
     /* STAR_RATE*/

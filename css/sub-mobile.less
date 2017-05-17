@@ -334,6 +334,31 @@ body.mobile {
                   &.vr{
                     display:none;
                   }
+                  &.filght{
+                    border-bottom:1px solid @gray-dark;
+                    padding-bottom:1.875rem;
+                    .bx-controls{
+                      .bx-pager{
+                        margin-top:0.625rem;
+                        text-align:center;
+                        .bx-pager-item{
+                          display:inline-block;
+                          margin:0 0.188rem;
+                          a{
+                            display:inline-block;
+                            width:0.938rem;
+                            height:0.938rem;
+                            text-indent:-9999px;
+                            background:@gray-lighter;
+                            border-radius:50%;
+                            &.active{
+                              background:@blue;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
               .pagenation{

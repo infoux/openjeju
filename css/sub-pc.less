@@ -794,6 +794,48 @@ body.pc {
                     padding:30px 0;
                     text-align:center;
                   }
+                  &.filght{
+                    position:relative;
+                    display:none;
+                    padding:40px 100px 40px 30px;
+                    i{
+
+                    }
+                    #imgList{
+                      padding:0;
+                      border:none;
+                      li{
+                        position:relative;
+                        display:inline-block;
+                        padding:0;
+                        border:none;
+                        margin:0 auto;
+                        img{
+                          position:static;
+                        }
+                      }
+                    }
+                    .bx-controls{
+                      .bx-pager{
+                        text-align:center;
+                        .bx-pager-item{
+                          display:inline-block;
+                          margin:0 3px;
+                          a{
+                            display:inline-block;
+                            width:15px;
+                            height:15px;
+                            text-indent:-9999px;
+                            background:@gray-lighter;
+                            border-radius:50%;
+                            &.active{
+                              background:@blue;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
