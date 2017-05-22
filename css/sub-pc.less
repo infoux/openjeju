@@ -2272,6 +2272,7 @@ body.pc {
                 }
               }
               dl{
+                display:none;
                 position:relative;
                 margin:0;
                 padding:10px 10px 42px 10px;
@@ -2286,6 +2287,9 @@ body.pc {
                   i{
                     font-size:@font-size-05;
                   }
+                }
+                &.active{
+                  display:block;
                 }
                 &::after{
                   content:'';
@@ -2429,6 +2433,7 @@ body.pc {
               height:650px;
               background:@gray;
               padding:20px 10px;
+              z-index: 100;
               h5{
                 margin:0;
                 font-size:20px;
