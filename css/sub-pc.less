@@ -175,15 +175,8 @@ body.pc {
                     font-size:32px;
                   }
                   i{
-                    position:absolute;
-                    top:88px;
                     font-size:40px;
-                    &.fa-quote-right{
-                      right:calc(~"50% - 176px");
-                    }
-                    &.fa-quote-left{
-                      left:calc(~"50% - 176px");
-                    }
+                    vertical-align:top;
                   }
                 }
                 fieldset {
@@ -2484,6 +2477,7 @@ body.pc {
                 border-radius:10px;
                 background:#fff;
                 padding:13px 10px 13px 95px;
+                margin-bottom:10px;
                 text-align:left;
                 &::before{
                   content:'';
@@ -2736,6 +2730,7 @@ body.pc {
               display:inline-block;
               width:906px;
               text-align:center;
+              margin-bottom:30px;
               h4{
                 font-size:24px;
                 margin:30px 0;
@@ -2744,7 +2739,7 @@ body.pc {
               }
               h5{
                 display:inline-block;
-                font-size:24px;
+                font-size:22px;
                 font-weight:@font-normal;
                 margin:0;
               }
@@ -2757,6 +2752,7 @@ body.pc {
                 cursor:pointer;
               }
               &.common{
+                margin-bottom:0;
                 ul{
                   float:left;
                   text-align:left;
@@ -2770,7 +2766,7 @@ body.pc {
                       width:100%;
                       h5{
                         width:721px;
-                        margin-bottom:20px;
+                        margin-bottom:15px;
                       }
                       img{
                         float:left;
@@ -2792,6 +2788,7 @@ body.pc {
                 }
               }
               &.mat{
+                margin-bottom:0;
                 ul{
                   text-align:left;
                   li{
@@ -2806,11 +2803,16 @@ body.pc {
                     a{
                       display:block;
                       width:100%;
-                      img{
-                        width:100%;
-                        height:auto;
-                        border:none;
-                        vertical-align:top;
+                      .img{
+                        height:147px;
+                        padding:0;
+                        margin:0;
+                        overflow:hidden;
+                        img{
+                          width:100%;
+                          height:auto;
+                          border:none;
+                        }
                       }
                       h5{
                         margin-top:20px;
@@ -2832,6 +2834,7 @@ body.pc {
                 }
               }
               &.theme{
+                margin-bottom:0;
                 ul{
                   text-align:left;
                   li{
@@ -2841,6 +2844,7 @@ body.pc {
                 }
               }
               &.festival{
+                margin-bottom:0;
                 padding:0;
                 ul{
                   text-align:left;
@@ -2928,6 +2932,66 @@ body.pc {
                         }
                       }
                     }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .login{
+          text-align:center;
+          .container{
+            h2{
+              font-size:32px;
+              color:#333;
+              margin:55px 0 30px;
+              text-align:center;
+            }
+            .text{
+              font-size:@font-size-02;
+              margin:0;
+              padding:0;
+              text-align:center;
+            }
+            ul{
+              margin:40px 0 100px;
+              padding:0;
+              list-style:none;
+              text-align:center;
+              li{
+                display:inline-block;
+                width:192px;
+                height:192px;
+                margin-right:20px;
+                text-align:center;
+                &:last-child{
+                  margin-right:0;
+                }
+                a{
+                  display:block;
+                  height:192px;
+                  border:2px solid #ccc;
+                  border-radius:50%;
+                  font-size:@font-size-02;
+                  i{
+                    display:block;
+                    font-size:60px;
+                    margin:40px 0 24px;
+                  }
+                }
+                &.facebook{
+                  i{
+                    color:#3b5a9c;
+                  }
+                }
+                &.kakao{
+                  i{
+                    color:#381e1f;
+                  }
+                }
+                &.instagram{
+                  i{
+                    color:#ef4835;
                   }
                 }
               }

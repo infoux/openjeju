@@ -36,14 +36,8 @@ body.mobile {
                   margin-bottom:0.714rem;
                 }
                 i{
-                  position:absolute;
                   font-size:@font-size-03;
-                  &.fa-quote-left{
-                    left:calc(~"50% - 6.786rem");
-                  }
-                  &.fa-quote-right{
-                    right:calc(~"50% - 6.786rem");
-                  }
+                  vertical-align:top;
                 }
               }
               fieldset {
@@ -1990,7 +1984,148 @@ body.mobile {
               }
             }
             .plan-search{
-              display:none;
+              position:fixed;
+              top:0;
+              right:0;
+              bottom:0;
+              left:0;
+              width:100%;
+              height:100%;
+              z-index:101;
+              background:rgba(255,255,255, 0.77);
+              .search-inner{
+                position:absolute;
+                top:calc(~"50% - 14.286rem");
+                left:10px;
+                display:inline-block;
+                width:calc(~"100% - 1.429rem");
+                min-height:28.571rem;
+                background:@gray;
+                padding:0.714rem;
+                z-index:102;
+                h5{
+                  margin:0;
+                  font-size:1.429rem;
+                  font-weight:@font-normal;
+                  color:#fff;
+                  text-align:left;
+                }
+                p{
+                  margin:1.071rem 0;
+                  a{
+                    display:inline-block;
+                    width:calc(~"100% / 4 - 0.313rem");
+                    height:2.571rem;
+                    line-height:2.571rem;
+                    font-size:@font-size;
+                    color:#fff;
+                    text-align:center;
+                    border-radius:0.714rem;
+                    background:@gray-dark;
+                    &.active{
+                      background:@blue;
+                    }
+                  }
+                }
+                fieldset{
+                  border:none;
+                  padding:0;
+                  margin-bottom:1.071rem;
+                  input[type='text']{
+                    width:calc(~"100% - 3.429rem");
+                    height:2.571rem;
+                    line-height:2.571rem;
+                    padding:0 0.714rem;
+                    background:#fff;
+                    font-size:@font-size-01;
+                    color:@gray-dark;
+                    &::-webkit-input-placeholder{font-size:@font-size-01;color:@gray-dark;}
+                    &:-moz-placeholder{font-size:@font-size-01;color:@gray-dark;}
+                    &::-ms-input-placeholder{font-size:@font-size-01;color:@gray-dark;}
+                  }
+                  button{
+                    width:3.429rem;
+                    height:2.571rem;
+                    font-size:0;
+                    border:none;
+                    margin-left:-0.429rem;
+                    vertical-align:top;
+                    background:@blue !important;
+                    text-align:center;
+                    i{
+                      font-size:@font-size-02;
+                      color:#fff;
+                    }
+                  }
+                }
+                .content{
+                  position:relative;
+                  display:inline-block;
+                  width:100%;
+                  height:7.714rem;
+                  border-radius:0.714rem;
+                  background:#fff;
+                  padding:0.929rem 0.714rem 0.929rem 7.143rem;
+                  text-align:left;
+                  margin-bottom:0.625rem;
+                  &::before{
+                    content:"";
+                    position:absolute;
+                    left:0.714rem;
+                    top:0.929rem;
+                    width:6.214rem;
+                    height:6.214rem;
+                    background:url('@{img-url}/@tmp-transport03.jpg') no-repeat center / cover;
+                    border-radius:0.714rem;
+                  }
+                  span{
+                    display:inline-block;
+                    font-size:1.214rem;
+                    font-weight:@font-bold;
+                    color:@gray-dark;
+                    padding-left:0.5rem;
+                    text-align:left;
+                    small{
+                      display:block;
+                      font-size:@font-size;
+                      font-weight:@font-normal;
+                      margin-top:0.429rem;
+                    }
+                  }
+                  strong{
+                    display:block;
+                    font-size:1.071rem;
+                    font-weight:@font-normal;
+                    color:@blue;
+                    margin-top:0.643rem;
+                    padding-left:0.5rem;
+                  }
+                  p{
+                    position:absolute;
+                    top:0.643rem;
+                    right:0.643rem;
+                    margin:0;
+                    i{
+                      font-size:@font-size-03;
+                      &.fa-info-circle{
+                        color:#999;
+                      }
+                    }
+                  }
+                }
+                .close{
+                  position:absolute;
+                  top:0.357rem;
+                  right:0.357rem;
+                  text-align:center;
+                  background:@gray;
+                  border:none;
+                  i{
+                    font-size:@font-size-04;
+                    color:#fff;
+                  }
+                }
+              }
             }
             .mapView{
               display:none;
@@ -2091,149 +2226,6 @@ body.mobile {
               font-weight:@font-bold;
               background:@blue;
               color:#fff;
-            }
-          }
-        }
-        .plan-pop{
-          position:fixed;
-          top:0;
-          right:0;
-          bottom:0;
-          left:0;
-          width:100%;
-          height:100%;
-          z-index:101;
-          background:rgba(255,255,255, 0.77);
-          .popInner{
-            position:absolute;
-            top:calc(~"50% - 14.286rem");
-            left:10px;
-            display:inline-block;
-            width:calc(~"100% - 1.429rem");
-            min-height:28.571rem;
-            background:@gray;
-            padding:0.714rem;
-            z-index:102;
-            h5{
-              margin:0;
-              font-size:1.429rem;
-              font-weight:@font-normal;
-              color:#fff;
-              text-align:left;
-            }
-            p{
-              margin:1.071rem 0;
-              a{
-                display:inline-block;
-                width:4.714rem;
-                height:2.571rem;
-                line-height:2.571rem;
-                font-size:@font-size;
-                color:#fff;
-                text-align:center;
-                border-radius:0.714rem;
-                background:@gray-dark;
-                &.active{
-                  background:@blue;
-                }
-              }
-            }
-            fieldset{
-              border:none;
-              padding:0;
-              margin-bottom:1.071rem;
-              input[type='text']{
-                width:calc(~"100% - 3.429rem");
-                height:2.571rem;
-                line-height:2.571rem;
-                padding:0 0.714rem;
-                background:#fff;
-                font-size:@font-size-01;
-                color:@gray-dark;
-                &::-webkit-input-placeholder{font-size:@font-size-01;color:@gray-dark;}
-                &:-moz-placeholder{font-size:@font-size-01;color:@gray-dark;}
-                &::-ms-input-placeholder{font-size:@font-size-01;color:@gray-dark;}
-              }
-              button{
-                width:3.429rem;
-                height:2.571rem;
-                font-size:0;
-                border:none;
-                margin-left:-0.429rem;
-                vertical-align: top;
-                background:@blue !important;
-                text-align:center;
-                i{
-                  font-size:@font-size-02;
-                  color:#fff;
-                }
-              }
-            }
-            .content{
-              position:relative;
-              display:inline-block;
-              width:100%;
-              height:7.714rem;
-              border-radius:0.714rem;
-              background:#fff;
-              padding:0.929rem 0.714rem 0.929rem 7.143rem;
-              text-align:left;
-              &::before{
-                content:'';
-                position:absolute;
-                left:0.714rem;
-                top:0.929rem;
-                width:6.214rem;
-                height:6.214rem;
-                background:url('@{img-url}/@tmp-transport03.jpg') no-repeat center / cover;
-                border-radius:0.714rem;
-              }
-              span{
-                display:inline-block;
-                font-size:1.214rem;
-                font-weight:@font-bold;
-                color:@gray-dark;
-                padding-left:0.5rem;
-                text-align:left;
-                small{
-                  display:block;
-                  font-size:@font-size;
-                  font-weight:@font-normal;
-                  margin-top:0.429rem;
-                }
-              }
-              strong{
-                display:block;
-                font-size:1.071rem;
-                font-weight:@font-normal;
-                color:@blue;
-                margin-top:0.643rem;
-                padding-left:0.5rem;
-              }
-              p{
-                position:absolute;
-                top:0.643rem;
-                right:0.643rem;
-                margin:0;
-                i{
-                  font-size:@font-size-03;
-                  &.fa-info-circle{
-                    color:#999;
-                  }
-                }
-              }
-            }
-            .close{
-              position:absolute;
-              top:0.357rem;
-              right:0.357rem;
-              text-align:center;
-              background:@gray;
-              border:none;
-              i{
-                font-size:@font-size-04;
-                color:#fff;
-              }
             }
           }
         }
@@ -2363,7 +2355,7 @@ body.mobile {
                 }
                 h5{
                   display:inline-block;
-                  font-size:1.643rem;
+                  font-size:1.375rem;
                   font-weight:@font-normal;
                   color:@blue;
                   margin:0;
@@ -2561,6 +2553,61 @@ body.mobile {
                 }
                 .bx-viewport{
                   margin:0 !important;
+                }
+              }
+            }
+          }
+        }
+        .login{
+          text-align:center;
+          .container{
+            h2{
+              font-size:21px;
+              margin:30px 0 25px;
+            }
+            p{
+              margin:0;
+              padding:0;
+              font-size:12px;
+              line-height:1.2;
+            }
+            ul{
+              margin:50px 0 80px;
+              padding:0;
+              list-style:none;
+              li{
+                text-align:center;
+                margin-bottom:20px;
+                &:last-child{
+                  margin-bottom:0;
+                }
+                a{
+                  display:inline-block;
+                  width:140px;
+                  height:140px;
+                  border:2px solid #ccc;
+                  border-radius:50%;
+                  font-size:14px;
+                  i{
+                    display:block;
+                    font-size:@font-size-08;
+                    margin:28px 0 12px;
+                  }
+                }
+                &.facebook{
+                  i{
+                    color:#3b5a9c;
+                  }
+                }
+                &.kakao{
+                  i{
+                    color:#381e1f;
+                  }
+                }
+                &.instagram{
+                  i{
+                    color:#ef4835;
+                  }
                 }
               }
             }
