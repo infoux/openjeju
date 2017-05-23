@@ -1834,8 +1834,8 @@ body.mobile {
                   }
                 }
               }
-              dl{
-                display:none;
+              ul{
+                display:block;
                 position:relative;
                 margin:0;
                 padding:0.714rem 0.714rem 3rem 0.714rem;
@@ -1863,23 +1863,31 @@ body.mobile {
                     color:#999;
                   }
                 }
-                dt{
+                .count{
                   float:left;
                   width:2.857rem;
                   height:2.857rem;
-                  line-height:2.857rem;
-                  background:@orange;
-                  font-size:1.214rem;
-                  text-align:center;
-                  color:#fff;
-                  border-radius:50%;
+                  h5{
+                    display:inline-block;
+                    width:2.857rem;
+                    height:2.857rem;
+                    line-height:2.857rem;
+                    background:@orange;
+                    font-size:1.214rem;
+                    text-align:center;
+                    color:#fff;
+                    border-radius:50%;
+                    margin:0;
+                  }
                 }
-                dd{
+                .detail{
                   display:inline-block;
                   margin:0 0 1.429rem 0;
                   width:calc(~"100% - 4.714rem");
                   .content{
                     position:relative;
+                    top:0;
+                    left:0;
                     display:inline-block;
                     width:100%;
                     height:7rem;
@@ -1890,11 +1898,15 @@ body.mobile {
                     &.active{
                       border-color:@orange;
                     }
-                    h5{
+                    h6{
+                      width:calc(~"100% - 2.143rem");
                       margin:0;
                       font-size:1.214rem;
                       font-weight:@font-bold;
                       color:@gray-dark;
+                      overflow:hidden;
+                      text-overflow:ellipsis;
+                      white-space:nowrap;
                       small{
                         display:block;
                         font-size:@font-size;
@@ -1922,7 +1934,7 @@ body.mobile {
                         &.fa-commenting{
                           padding-top:2.857rem;
                           color:@gray-dark;
-                          &.acitve{
+                          &.active{
                             color:@blue;
                           }
                         }
@@ -1993,6 +2005,7 @@ body.mobile {
               right:0;
               bottom:0;
               left:0;
+              display:none;
               width:100%;
               height:100%;
               z-index:101;
@@ -2062,57 +2075,69 @@ body.mobile {
                     }
                   }
                 }
-                .content{
-                  position:relative;
-                  display:inline-block;
-                  width:100%;
-                  height:7.714rem;
-                  border-radius:0.714rem;
-                  background:#fff;
-                  padding:0.929rem 0.714rem 0.929rem 7.143rem;
-                  text-align:left;
-                  margin-bottom:0.625rem;
-                  &::before{
-                    content:"";
-                    position:absolute;
-                    left:0.714rem;
-                    top:0.929rem;
-                    width:6.214rem;
-                    height:6.214rem;
-                    background:url('@{img-url}/@tmp-transport03.jpg') no-repeat center / cover;
-                    border-radius:0.714rem;
-                  }
-                  span{
+                section{
+                  max-height:21.429rem;
+                  overflow-y:scroll;
+                  .content{
+                    position:relative;
                     display:inline-block;
-                    font-size:1.214rem;
-                    font-weight:@font-bold;
-                    color:@gray-dark;
-                    padding-left:0.5rem;
+                    width:100%;
+                    height:7.714rem;
+                    border-radius:0.714rem;
+                    background:#fff;
+                    padding:0.929rem 0.714rem 0.929rem 7.143rem;
                     text-align:left;
-                    small{
-                      display:block;
-                      font-size:@font-size;
-                      font-weight:@font-normal;
-                      margin-top:0.429rem;
+                    margin-bottom:0.625rem;
+                    &::before{
+                      content:"";
+                      position:absolute;
+                      left:0.714rem;
+                      top:0.929rem;
+                      width:6.214rem;
+                      height:6.214rem;
+                      background:url('@{img-url}/@tmp-transport03.jpg') no-repeat center / cover;
+                      border-radius:0.714rem;
                     }
-                  }
-                  strong{
-                    display:block;
-                    font-size:1.071rem;
-                    font-weight:@font-normal;
-                    color:@blue;
-                    margin-top:0.643rem;
-                    padding-left:0.5rem;
-                  }
-                  p{
-                    position:absolute;
-                    top:0.643rem;
-                    right:0.643rem;
-                    margin:0;
-                    i{
-                      font-size:@font-size-03;
-                      &.fa-info-circle{
-                        color:#999;
+                    span{
+                      display:inline-block;
+                      font-size:1.214rem;
+                      font-weight:@font-bold;
+                      color:@gray-dark;
+                      padding-left:0.5rem;
+                      text-align:left;
+                      small{
+                        display:block;
+                        font-size:@font-size;
+                        font-weight:@font-normal;
+                        margin-top:0.429rem;
+                      }
+                      i{
+                        display:inline-block;
+                        max-width:calc(~"100% - 2.857rem");
+                        font-style:normal;
+                        overflow:hidden;
+                        text-overflow:ellipsis;
+                        white-space:nowrap;
+                      }
+                    }
+                    strong{
+                      display:block;
+                      font-size:1.071rem;
+                      font-weight:@font-normal;
+                      color:@blue;
+                      margin-top:0.643rem;
+                      padding-left:0.5rem;
+                    }
+                    p{
+                      position:absolute;
+                      top:0.643rem;
+                      right:0.643rem;
+                      margin:0;
+                      i{
+                        font-size:@font-size-03;
+                        &.fa-info-circle{
+                          color:#999;
+                        }
                       }
                     }
                   }

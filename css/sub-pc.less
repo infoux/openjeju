@@ -2271,8 +2271,8 @@ body.pc {
                   }
                 }
               }
-              dl{
-                display:none;
+              ul{
+                display:block;
                 position:relative;
                 margin:0;
                 padding:10px 10px 42px 10px;
@@ -2287,34 +2287,43 @@ body.pc {
                   i{
                     font-size:@font-size-05;
                   }
+                  &::after{
+                    content:'';
+                    position:absolute;
+                    top:0;
+                    left:24px;
+                    width:4px;
+                    height:100%;
+                    background:#ececec;
+                    z-index:-1;
+                  }
                 }
                 &.active{
                   display:block;
                 }
-                &::after{
-                  content:'';
-                  position:absolute;
-                  top:0;
-                  left:24px;
-                  width:4px;
-                  height:100%;
-                  background:#ececec;
-                  z-index:-1;
-                }
-                dt{
+                .count{
                   float:left;
                   width:32px;
                   height:32px;
-                  line-height:32px;
-                  background:@orange;
-                  font-size:20px;
-                  text-align:center;
-                  color:#fff;
-                  border-radius:50%;
+                  h5{
+                    display:inline-block;
+                    width:32px;
+                    height:32px;
+                    line-height:32px;
+                    background:@orange;
+                    font-size:20px;
+                    text-align:center;
+                    color:#fff;
+                    border-radius:50%;
+                    margin:0;
+                    padding:0;
+                  }
                 }
-                dd{
+                .detail{
                   display:inline-block;
                   margin:0 0 20px 0;
+                  width:270px;
+                  height:auto;
                   .content{
                     position:relative;
                     display:inline-block;
@@ -2327,11 +2336,15 @@ body.pc {
                     &.active{
                       border-color:@orange;
                     }
-                    h5{
+                    h6{
+                      max-width:220px;
                       margin:0;
                       font-size:20px;
                       font-weight:@font-bold;
                       color:@gray-dark;
+                      overflow:hidden;
+                      text-overflow:ellipsis;
+                      white-space:nowrap;
                       small{
                         display:block;
                         font-size:@font-size;
@@ -2474,57 +2487,94 @@ body.pc {
                   background:@blue !important;
                 }
               }
-              .content{
-                position:relative;
-                display:inline-block;
-                width:100%;
-                height:100px;
-                border-radius:10px;
-                background:#fff;
-                padding:13px 10px 13px 95px;
-                margin-bottom:10px;
-                text-align:left;
-                &::before{
-                  content:'';
-                  position:absolute;
-                  left:10px;
-                  top:13px;
-                  width:76px;
-                  height:76px;
-                  background:url('@{img-url}/@tmp-transport03.jpg') no-repeat center / cover;
+              section{
+                max-height:470px;
+                overflow-y:scroll;
+                scrollbar-arrow-color:@gray;
+                scrollbar-3dlight-color:@gray;
+                scrollbar-darkshadow-color:@gray;
+                scrollbar-face-color:@gray;
+                scrollbar-hightlight-color:@gray;
+                scrollbar-shadow-color:@gray;
+                scrollbar-track-color:@gray;
+                &::-webkit-scrollbar {
+                  width: 1em;
+                }
+                &::-webkit-scrollbar-track {
+                  visibility:hidden;
+                }
+                &::-webkit-scrollbar-thumb {
+                  visibility:hidden;
+                }
+                &::-ms-scrollbar {
+                  width: 1em;
+                }
+                &::-ms-scrollbar-track {
+                  visibility:hidden;
+                }
+                &::-ms-scrollbar-thumb {
+                  visibility:hidden;
+                }
+                .content{
+                  position:relative;
+                  display:inline-block;
+                  width:100%;
+                  height:100px;
                   border-radius:10px;
-                }
-                span{
-                  display:inline-block;
-                  font-size:20px;
-                  font-weight:@font-bold;
-                  color:@gray-dark;
-                  padding-left:7px;
+                  background:#fff;
+                  padding:13px 10px 13px 95px;
+                  margin-bottom:10px;
                   text-align:left;
-                  small{
-                    display:block;
-                    font-size:14px;
-                    font-weight:@font-normal;
-                    margin-top:6px;
+                  &::before{
+                    content:'';
+                    position:absolute;
+                    left:10px;
+                    top:13px;
+                    width:76px;
+                    height:76px;
+                    background:url('@{img-url}/@tmp-transport03.jpg') no-repeat center / cover;
+                    border-radius:10px;
                   }
-                }
-                strong{
-                  display:inline-block;
-                  font-size:@font-size-01;
-                  font-weight:@font-normal;
-                  color:@blue;
-                  margin-top:15px;
-                  padding-left:7px;
-                }
-                p{
-                  position:absolute;
-                  top:11px;
-                  right:11px;
-                  margin:0;
-                  i{
-                    font-size:@font-size-04;
-                    &.fa-info-circle{
-                      color:#999;
+                  span{
+                    display:inline-block;
+                    font-size:20px;
+                    font-weight:@font-bold;
+                    color:@gray-dark;
+                    padding-left:7px;
+                    text-align:left;
+                    small{
+                      display:block;
+                      font-size:14px;
+                      font-weight:@font-normal;
+                      margin-top:6px;
+                    }
+                    i{
+                      display:inline-block;
+                      max-width:150px;
+                      font-style:normal;
+                      overflow:hidden;
+                      text-overflow:ellipsis;
+                      white-space:nowrap;
+                    }
+                  }
+                  strong{
+                    display:inline-block;
+                    font-size:@font-size-01;
+                    font-weight:@font-normal;
+                    color:@blue;
+                    margin-top:15px;
+                    padding-left:7px;
+                  }
+                  p{
+                    position:absolute;
+                    top:11px;
+                    right:11px;
+                    margin:0;
+                    i{
+                      font-size:@font-size-04;
+                      &.fa-info-circle{
+                        color:#999;
+                      }
                     }
                   }
                 }
