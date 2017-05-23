@@ -2198,6 +2198,17 @@ body.pc {
               &::-webkit-input-placeholder{font-size:@font-size-02;color:@gray-dark;}
               &:-moz-placeholder{font-size:@font-size-02;color:@gray-dark;}
               &::-ms-input-placeholder{font-size:@font-size-02;color:@gray-dark;}
+              &.date{
+                width:350px;
+                height:42px;
+                line-height:42px;
+                text-indent:10px;
+                color:@gray-dark;
+                font-size:@font-size-01;
+                &::-webkit-input-placeholder{font-size:@font-size-01;color:@gray-dark;}
+                &:-moz-placeholder{font-size:@font-size-01;color:@gray-dark;}
+                &::-ms-input-placeholder{font-size:@font-size-01;color:@gray-dark;}
+              }
             }
             textarea{
               min-height:130px;
@@ -2301,11 +2312,13 @@ body.pc {
                 &.active{
                   display:block;
                 }
-                .count{
-                  float:left;
-                  width:32px;
-                  height:32px;
+                .detail{
+                  display:inline-block;
+                  margin:0 0 20px 0;
+                  width:100%;
+                  height:auto;
                   h5{
+                    float:left;
                     display:inline-block;
                     width:32px;
                     height:32px;
@@ -2318,12 +2331,6 @@ body.pc {
                     margin:0;
                     padding:0;
                   }
-                }
-                .detail{
-                  display:inline-block;
-                  margin:0 0 20px 0;
-                  width:270px;
-                  height:auto;
                   .content{
                     position:relative;
                     display:inline-block;
@@ -2406,6 +2413,7 @@ body.pc {
                     width:270px;
                     height:54px;
                     margin-top:5px;
+                    margin-left:38px;
                     textarea{
                       display:inline-block;
                       width:100%;
@@ -2447,6 +2455,9 @@ body.pc {
               background:@gray;
               padding:20px 10px;
               z-index: 100;
+              img{
+                display:none;
+              }
               h5{
                 margin:0;
                 font-size:20px;

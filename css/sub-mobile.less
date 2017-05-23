@@ -1863,11 +1863,12 @@ body.mobile {
                     color:#999;
                   }
                 }
-                .count{
-                  float:left;
-                  width:2.857rem;
-                  height:2.857rem;
+                .detail{
+                  display:inline-block;
+                  margin:0 0 1.429rem 0;
+                  width:100%;
                   h5{
+                    float:left;
                     display:inline-block;
                     width:2.857rem;
                     height:2.857rem;
@@ -1879,17 +1880,12 @@ body.mobile {
                     border-radius:50%;
                     margin:0;
                   }
-                }
-                .detail{
-                  display:inline-block;
-                  margin:0 0 1.429rem 0;
-                  width:calc(~"100% - 4.714rem");
                   .content{
                     position:relative;
                     top:0;
                     left:0;
                     display:inline-block;
-                    width:100%;
+                    width:calc(~"100% - 4.714rem");
                     height:7rem;
                     border:1px solid #ccc;
                     border-radius:0.357rem;
@@ -1899,7 +1895,7 @@ body.mobile {
                       border-color:@orange;
                     }
                     h6{
-                      width:calc(~"100% - 2.143rem");
+                      width:calc(~"100% - 1.786rem");
                       margin:0;
                       font-size:1.214rem;
                       font-weight:@font-bold;
@@ -1971,9 +1967,10 @@ body.mobile {
                   }
                   .comment{
                     position:relative;
-                    width:100%;
+                    width:calc(~"100% - 4.714rem");
                     height:3.857rem;
                     margin-top:0.357rem;
+                    margin-left:3.786rem;
                     textarea{
                       display:inline-block;
                       width:100%;
