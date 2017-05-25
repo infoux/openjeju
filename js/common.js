@@ -39,17 +39,7 @@ $(document).ready(function() {
     });
 
 
-    function popword(){
-      if($("body").hasClass("mobile")){
-        $('.sidebar .popword ul').bxSlider({
-          mode:"vertical",
-          pager:false,
-          controls:false,
-          auto:true,
-          infiniteLoop:true
-        });
-      }
-    }
+
 
     function viewMode() {
         var windowWidth = $(window).width();
@@ -145,8 +135,7 @@ $(document).ready(function() {
         matSlider();
         weatherSlider();
         popword();
-        popWordSlider()
-
+        popWordSlider();
     });
 /*
     $(window).load(function() {
@@ -295,4 +284,20 @@ function popWordSlider(){
           $popWordSlider.stopAuto();
           return false;
         });
+}
+
+var $popword0;
+function popword(){
+  try{
+    $popword0.destorySlider();
+  }catch(e1){}
+  if($("body").hasClass("mobile")){
+    $popword0 = $('.sidebar .popword ul').bxSlider({
+      mode:"vertical",
+      pager:false,
+      controls:false,
+      auto:true,
+      infiniteLoop:true
+    });
+  }
 }
