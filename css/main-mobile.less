@@ -318,4 +318,117 @@ body.mobile {
             }
         }
     }
+
+    .rank{
+      background:@gray-lighter;
+      text-align:center;
+      padding-bottom:20px;
+      .container{
+        font-size:0;
+        h4{
+          font-size:35px;
+          margin:40px 0 30px;
+          padding:0;
+        }
+        fieldset{
+          border:none;
+          margin-bottom:1.071rem;
+          select{
+            width:7.429rem;
+            height:2.571rem;
+            line-height:2.571rem;
+            padding:0 0.714rem;
+            color:@gray-dark;
+            appearance:none;
+            -moz-appearance:none;
+            -ms-appearance:none;
+            -webkit-appearance:none;
+            background:url('@{img-url}/select-bg.png') no-repeat right center;
+            font-size:@font-size;
+            margin-left:-1px;
+            border:1px solid #a9a9a9;
+            &.year{
+              width:10.143rem;
+            }
+            &::-ms-expand{
+              display:none;
+            }
+          }
+          button{
+            width:3.429rem;
+            height:2.571rem;
+            text-align:center;
+            font-size:0;
+            color:#fff;
+            background:@blue;
+            border:none;
+            vertical-align:top;
+            i{
+              font-size:@font-size-02;
+            }
+          }
+        }
+        .rank-pop{
+          display:inline-block;
+          width:calc(100% / 2);
+          padding:1.786rem 0.357rem 1.071rem;
+          border:1px solid #ccc;
+          margin-left:-1px;
+          margin-top:-1px;
+          background:#fff;
+          h5{
+            position:relative;
+            font-size:1.643rem;
+            color:@gray-dark;
+            margin:0;
+            padding:0;
+            &::after{
+              content:'';
+              position:absolute;
+              left:50%;
+              bottom:-0.929rem;
+              width:4.571rem;
+              height:2px;
+              margin-left:-2.286rem;
+              background:#ccc;
+            }
+          }
+          ul{
+            margin:2.143rem 0 0 0;
+            padding:0;
+            list-style:none;
+            li{
+              position:relative;
+              display:block;
+              width:100%;
+              color:@gray-dark;
+              text-align:left;
+              margin-bottom:0.714rem;
+              letter-spacing:-1px;
+              font-size:@font-size;
+              &:last-child{
+                margin-bottom:0;
+              }
+              .num{
+                display:inline-block;
+                width:1.071rem;
+                height:1.071rem;
+                font-size:0.786rem;
+                text-align:center;
+                color:@gray-dark;
+                background:@gray-lighter;
+                border:1px solid #ccc;
+              }
+              .count{
+                position:absolute;
+                top:0;
+                right:0;
+                font-size:@font-size;
+                color:@blue;
+              }
+            }
+          }
+        }
+      }
+    }
 }

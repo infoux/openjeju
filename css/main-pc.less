@@ -11,6 +11,18 @@ body.pc {
         }
 
         .main-issue {
+          video{
+            width:100%;
+            position:absolute;
+            top:50%;
+            left:0;
+            height:auto;
+            -ms-transform:translateY(-50%);
+            -moz-transform:translateY(-50%);
+            -webkit-transform:translateY(-50%);
+            transform:translateY(-50%);
+            background:#ccc;
+          }
             .container {
                 text-align: center;
 
@@ -35,7 +47,7 @@ body.pc {
                         font-size: @font-size-06;
                         padding  : 10px 20px;
                         min-width: 440px;
-                    }
+                    }``
                 }
 
                 .text {
@@ -107,26 +119,37 @@ body.pc {
                 }
 
                 .weather {
-
+                    width:220px;
                     top         : 50px;
-                    padding-left: 70px;
                     text-align  : left;
 
                     h5 {
                         margin: 0;
+                        p {
+                            font-size:@font-size;
+                            margin: 6px 0 0;
+                        }
 
                         i {
                             position    : absolute;
                             left        : 0;
                             top         : 0;
                             margin-right: 10px;
-                            font-size   : 54px;
+                            font-size   : 48px;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;
 
                         }
                     }
-
-                    p {
-                        margin: 6px 0 0;
+                    ul{
+                      list-style:none;
+                      margin:0;
+                      padding:0;
+                      li{
+                        padding-left:70px;
+                        height:60px;
+                      }
                     }
                 }
             }
@@ -376,6 +399,119 @@ body.pc {
 
         }
 
+    }
+    .rank{
+      background:@gray-lighter;
+      text-align:center;
+      .container{
+        margin-bottom:30px;
+        text-align:center;
+        h4{
+          font-size:35px;
+          color:@gray-dark;
+          margin:40px 0 30px;
+        }
+        fieldset{
+          border:none;
+          text-align:right;
+          margin-bottom:20px;
+          select{
+            display:inline-block;
+            width:168px;
+            height:42px;
+            text-indent:10px;
+            font-size:@font-size-01;
+            color:@gray-dark;
+            appearance:none;
+            -moz-appearance:none;
+            -ms-appearance:none;
+            -webkit-appearance:none;
+            background:url('@{img-url}/select-bg.png') no-repeat right center;
+            margin-left:-6px;
+            border:1px solid #a9a9a9;
+            &::-ms-expand{
+              display:none;
+            }
+          }
+          button{
+            width:68px;
+            height:42px;
+            font-size:0;
+            background:@blue;
+            color:#fff;
+            border:none;
+            margin-left:-6px;
+            vertical-align:top;
+            i{
+              font-size:@font-size-03;
+            }
+          }
+        }
+        .rank-pop{
+          display:inline-block;
+          width:calc(~"100% / 4 - 10px");
+          height:566px;
+          border:1px solid #ccc;
+          padding:30px 20px;
+          text-align:center;
+          margin-right:5px;
+          background:#fff;
+          h5{
+            position:relative;
+            margin:0;
+            padding:0 0 60px 0;
+            font-size:28px;
+            color:@gray-dark;
+            &::after{
+              content:'';
+              position:absolute;
+              bottom:30px;
+              left:50%;
+              width:54px;
+              height:3px;
+              background:#ccc;
+              margin-left:-27px;
+            }
+          }
+          ul{
+            margin:0;
+            padding:0;
+            list-style:none;
+            li{
+              position:relative;
+              display:block;
+              width:100%;
+              font-size:20px;
+              color:@gray-dark;
+              text-align:left;
+              margin-bottom:17px;
+              &:last-child{
+                margin-bottom:0;
+              }
+              .num{
+                display:inline-block;
+                width:24px;
+                height:24px;
+                line-height:24px;
+                font-size:@font-size-01;
+                font-weight:@font-bold;
+                color:@gray-dark;
+                background:@gray-lighter;
+                border:1px solid #ccc;
+                margin-right:10px;
+                text-align:center;
+              }
+              .count{
+                position:absolute;
+                top:0;
+                right:0;
+                font-size:@font-size-02;
+                color:@blue;
+              }
+            }
+          }
+        }
+      }
     }
 
 }
