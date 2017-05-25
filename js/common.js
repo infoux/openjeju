@@ -264,9 +264,9 @@ function weatherSlider(){
         $weatherSlider = $(".main-issue .weather ul").bxSlider({
             mode:'fade',
             speed:1000,
-            pager:true,
+            pager:false,
             controls:false,
-            auto:false,
+            auto:true,
             infiniteLoop:true,
             slideMargin:15
         });

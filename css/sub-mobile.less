@@ -2409,6 +2409,11 @@ body.mobile {
                           position:absolute;
                           float:left;
                           margin-bottom:0.714rem;
+                          display:inline-block;
+                          width:115px;
+                          overflow:hidden;
+                          text-overflow:ellipsis;
+                          white-space:nowrap;
                         }
                         img{
                           float:left;
@@ -2455,9 +2460,25 @@ body.mobile {
                       a{
                         display:block;
                         width:100%;
-                        img{
-                          width:100%;
-                          height:auto;
+                        .img{
+                          position:relative;
+                          display:inline-block;
+                          margin:0;
+                          padding:0;
+                          width:12.929rem;
+                          height:8.786rem;
+                          overflow:hidden;
+                          img{
+                            position:absolute;
+                            top:50%;
+                            min-height:100%;
+                            display:block;
+                            left:50%;
+                            -webkit-transform: translate(-50%, -50%);
+                            transform:translate(-50%,-50%);
+                            min-width:100%;
+                            border:none;
+                          }
                         }
                         h5{
                           margin-top:0.571rem;
