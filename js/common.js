@@ -229,75 +229,135 @@ $(document).ready(function() {
 });
 
 /* global*/
-var $matSlider; /* memory leak 방지*/
-function matSlider(){
-    if($("body").hasClass("pc")){
-      try{ $matSlider.destroySlider();
-      }catch(e1){}
-        $matSlider = $(".mat-list .slider").bxSlider({
-            speed:1000,
-            pager:false,
-            controls:false,
-            auto:true,
-            slideMargin:10,
-            infiniteLoop:true,
-            maxSlides:5
+var $matSlider = {
+    state: 'destroy',
+    slider: undefined
+};
+/* memory leak 방지*/
+function matSlider() {
+    if ($("body").hasClass("pc")) {
+        var $el = $(".mat-list .slider");
+        try {
+            $matSlider.slider.destroySlider();
+            $matSlider.state = 'destroy';
+            $el.removeAttr('style');
+            $.each($el.find('li'), function (e1, e2) {
+                $(e2).removeAttr('style')
+            });
+        } catch (e1) {
+
+        }
+
+        if ($matSlider.state === 'destroy') {
+            $matSlider.state = 'build';
+            $matSlider.slider = $el.bxSlider({
+                speed: 1000,
+                pager: false,
+                controls: false,
+                auto: true,
+                slideMargin: 10,
+                infiniteLoop: true,
+                maxSlides: 5
+            });
+        }
+    }
+}
+
+var $weatherSlider = {
+    state: 'destroy',
+    slider: undefined
+};
+/* memory leak 방지*/
+function weatherSlider() {
+    var $el = $(".main-issue .weather ul");
+    try {
+        $weatherSlider.slider.destroySlider();
+        $weatherSlider.state = 'destroy';
+
+    } catch (e1) {
+
+    }
+
+    if ($weatherSlider.state === "destroy") {
+        $weatherSlider.state = 'build';
+        $weatherSlider.slider = $el.bxSlider({
+            mode: 'fade',
+            speed: 1000,
+            pager: false,
+            controls: false,
+            auto: true,
+            infiniteLoop: true,
+            slideMargin: 15
         });
     }
 }
 
-var $weatherSlider; /* memory leak 방지*/
-function weatherSlider(){
-      try{ $weatherSlider.destroySlider();
-      }catch(e1){}
-        $weatherSlider = $(".main-issue .weather ul").bxSlider({
-            mode:'fade',
-            speed:1000,
-            pager:false,
-            controls:false,
-            auto:true,
-            infiniteLoop:true,
-            slideMargin:15
+var $popWordSlider = {
+    state: 'destroy',
+    slider: undefined
+};
+/* memory leak 방지*/
+function popWordSlider() {
+    var $el = $(".main-issue .search .text ul");
+    try {
+        $popWordSlider.slider.destroySlider();
+        $popWordSlider.state = 'destroy';
+        $el.removeAttr('style');
+        $.each($el.find('li'), function (e1, e2) {
+            $(e2).removeAttr('style')
         });
+    } catch (e1) {
+
+    }
+
+    if ($popWordSlider.state === 'destroy') {
+        $popWordSlider.state = 'build';
+        $popWordSlider.slider = $el.bxSlider({
+            mode: 'vertical',
+            speed: 1000,
+            pager: false,
+            controls: false,
+            auto: true,
+            infiniteLoop: true,
+            maxSlides: 1
+        });
+        $('.main-issue .text .prev').click(function () {
+            $popWordSlider.goToPrevSlide();
+            $popWordSlider.stopAuto();
+            return false;
+        });
+        $('.main-issue .text .next').click(function () {
+            $popWordSlider.goToNextSlide();
+            $popWordSlider.stopAuto();
+            return false;
+        });
+    }
 }
 
-var $weatherSlider; /* memory leak 방지*/
-function popWordSlider(){
-      try{ $popWordSlider.destroySlider();
-      }catch(e1){}
-        $popWordSlider = $(".main-issue .search .text ul").bxSlider({
-            mode:'vertical',
-            speed:1000,
-            pager:false,
-            controls:false,
-            auto:true,
-            infiniteLoop:true,
-            maxSlides:1
-        });
-        $('.main-issue .text .prev').click(function(){
-          $popWordSlider.goToPrevSlide();
-          $popWordSlider.stopAuto();
-          return false;
-        });
-        $('.main-issue .text .next').click(function(){
-          $popWordSlider.goToNextSlide();
-          $popWordSlider.stopAuto();
-          return false;
-        });
-}
+var $searchPopword = {
+    state: 'destroy',
+    slider: undefined
+};
 
-var $popword0;
-function popword(){
-  try{
-    $popword0.destorySlider();
-  }catch(e1){}
-  if($("body").hasClass("mobile")){
-    $popword0 = $('.sidebar .popword ul').bxSlider({
-      mode:"vertical",
-      pager:false,
-      controls:false,
-      auto:true,
-      infiniteLoop:true
-    });
-  }
+function popword() {
+    var $el = $('.sidebar .popword ul');
+    try {
+        $searchPopword.slider.destroySlider();
+        $el.removeAttr('style');
+        $.each($el.find('li'), function (e1, e2) {
+            $(e2).removeAttr('style')
+        });
+        $searchPopword.state = 'destroy';
+    } catch (e1) {
+    }
+    if ($("body").hasClass("mobile") && $searchPopword.state === 'destroy') {
+        $searchPopword.state = 'build';
+        $searchPopword.slider = $('.sidebar .popword ul').bxSlider({
+            mode: "vertical",
+            pager: false,
+            controls: false,
+            auto: true,
+            infiniteLoop: true
+        });
+    }
 }
