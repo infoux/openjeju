@@ -48,9 +48,23 @@ body.mobile {
                 }
 
                 .text {
-                    strong {
-                        font-size: @font-size-04;
-                        padding  : 0 1.25rem;
+                  margin:1rem 0;
+                  div{
+                    display:inline-block;
+                  }
+                    ul{
+                      margin:0;
+                      padding:0;
+                      list-style:none;
+                      display:inline-block;
+                      li{
+                        display:block;
+                        width:auto !important;
+                        strong {
+                            font-size: @font-size-04;
+                            padding  : 0 1.25rem;
+                        }
+                      }
                     }
 
                     button {
@@ -427,6 +441,9 @@ body.mobile {
               margin-bottom:0.714rem;
               letter-spacing:-1px;
               font-size:@font-size;
+              overflow:hidden;
+              text-overflow:ellipsis;
+              white-space:nowrap;
               &:last-child{
                 margin-bottom:0;
               }

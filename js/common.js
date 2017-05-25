@@ -93,6 +93,7 @@ $(document).ready(function() {
     popword();
     matSlider();
     weatherSlider();
+    popWordSlider()
 
     $(".menuToggle").click(function() {
         $("#header nav").addClass("open");
@@ -144,7 +145,7 @@ $(document).ready(function() {
         matSlider();
         weatherSlider();
         popword();
-
+        popWordSlider()
 
     });
 /*
@@ -258,7 +259,6 @@ function matSlider(){
 
 var $weatherSlider; /* memory leak 방지*/
 function weatherSlider(){
-    if($("body").hasClass("pc")){
       try{ $weatherSlider.destroySlider();
       }catch(e1){}
         $weatherSlider = $(".main-issue .weather ul").bxSlider({
@@ -270,5 +270,29 @@ function weatherSlider(){
             infiniteLoop:true,
             slideMargin:15
         });
-    }
+}
+
+var $weatherSlider; /* memory leak 방지*/
+function popWordSlider(){
+      try{ $popWordSlider.destroySlider();
+      }catch(e1){}
+        $popWordSlider = $(".main-issue .search .text ul").bxSlider({
+            mode:'vertical',
+            speed:1000,
+            pager:false,
+            controls:false,
+            auto:true,
+            infiniteLoop:true,
+            maxSlides:1
+        });
+        $('.main-issue .text .prev').click(function(){
+          $popWordSlider.goToPrevSlide();
+          $popWordSlider.stopAuto();
+          return false;
+        });
+        $('.main-issue .text .next').click(function(){
+          $popWordSlider.goToNextSlide();
+          $popWordSlider.stopAuto();
+          return false;
+        });
 }

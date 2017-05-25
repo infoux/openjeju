@@ -51,9 +51,23 @@ body.pc {
                 }
 
                 .text {
-                    strong {
-                        font-size: @font-size-06;
-                        padding  : 0 20px;
+                  margin:14px 0;
+                  div{
+                    display:inline-block;
+                  }
+                    ul{
+                      margin:0;
+                      padding:0;
+                      list-style:none;
+                      display:inline-block;
+                      li{
+                        display:block;
+                        width:auto !important;
+                        strong {
+                            font-size: @font-size-06;
+                            padding  : 0 20px;
+                        }
+                      }
                     }
 
                     button {
@@ -491,6 +505,10 @@ body.pc {
               color:@gray-dark;
               text-align:left;
               margin-bottom:17px;
+              max-width:248px;
+              overflow:hidden;
+              text-overflow:ellipsis;
+              white-space:nowrap;
               &:last-child{
                 margin-bottom:0;
               }
