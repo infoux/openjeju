@@ -11,17 +11,31 @@ body.pc {
         }
 
         .main-issue {
-          video{
-            width:100%;
-            position:absolute;
-            top:50%;
-            left:0;
-            height:auto;
-            -ms-transform:translateY(-50%);
-            -moz-transform:translateY(-50%);
-            -webkit-transform:translateY(-50%);
-            transform:translateY(-50%);
-            background:#ccc;
+          .video{
+            &::after{
+              content:'';
+              display:block;
+              position:absolute;
+              top:0;
+              left:0;
+              right:0;
+              bottom:0;
+              background:url('@{img-url}/scanline.png');
+            }
+            video{
+              position:absolute;
+              top:50%;
+              left:50%;
+              min-width:100%;
+              min-height:100%;
+              width:auto;
+              height:auto;
+              -ms-transform:translateX(-50%) translateY(-50%);
+              -moz-transform:translateX(-50%) translateY(-50%);
+              -webkit-transform:translateX(-50%) translateY(-50%);
+              transform:translateX(-50%) translateY(-50%);
+              background:#ccc;
+            }
           }
             .container {
                 text-align: center;
@@ -52,6 +66,7 @@ body.pc {
 
                 .text {
                   margin:14px 0;
+                  overflow:hidden;
                   div{
                     display:inline-block;
                   }
@@ -136,6 +151,7 @@ body.pc {
                     width:290px;
                     top         : 50px;
                     text-align  : left;
+                    overflow:hidden;
 
                     h5 {
                         margin: 0;

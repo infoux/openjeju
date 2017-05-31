@@ -5,18 +5,32 @@ body.mobile {
     .main {
         .main-issue {
             height: 36.25rem;
-            video{
+            .video{
               display:none;
-              width:100%;
-              position:absolute;
-              top:50%;
-              left:0;
-              height:auto;
-              -ms-transform:translateY(-50%);
-              -moz-transform:translateY(-50%);
-              -webkit-transform:translateY(-50%);
-              transform:translateY(-50%);
-              background:#ccc;
+              &::after{
+                content:'';
+                display:block;
+                position:absolute;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                background:url('@{img-url}/scanline.png');
+              }
+              video{
+                position:absolute;
+                top:50%;
+                left:50%;
+                min-width:100%;
+                min-height:100%;
+                width:auto;
+                height:auto;
+                -ms-transform:translateX(-50%) translateY(-65%);
+                -moz-transform:translateX(-50%) translateY(-65%);
+                -webkit-transform:translateX(-50%) translateY(-65%);
+                transform:translateX(-50%) translateY(-65%);
+                background:#ccc;
+              }
             }
 
             .container {
@@ -49,6 +63,7 @@ body.mobile {
 
                 .text {
                   margin:1rem 0;
+                  overflow:hidden;
                   div{
                     display:inline-block;
                   }
@@ -84,6 +99,9 @@ body.mobile {
                         a {
                             height     : 100%;
                             line-height: 3.125rem;
+                            overflow:hidden;
+                            text-overflow:ellipsis;
+                            white-space:nowrap;
 
                             i {
                                 display: block;
@@ -106,6 +124,7 @@ body.mobile {
                     top       : 0;
                     width     : 100%;
                     text-align: center;
+                    overflow:hidden;
 
                     ul{
                       list-style:none;
