@@ -791,9 +791,6 @@ body.pc {
                     position:relative;
                     display:none;
                     padding:40px 30px 40px 30px;
-                    i{
-
-                    }
                     #imgList{
                       padding:0;
                       border:none;
@@ -810,6 +807,7 @@ body.pc {
                         }
                       }
                     }
+                    /*
                     .bx-controls{
                       .bx-pager{
                         text-align:center;
@@ -829,7 +827,7 @@ body.pc {
                           }
                         }
                       }
-                    }
+                    } */
                   }
                 }
               }
@@ -870,6 +868,27 @@ body.pc {
                         a{
                           &::after{
                             display:none;
+                          }
+                        }
+                      }
+                      &.filght{
+                        position:relative;
+                        display:none;
+                        padding:40px 30px;
+                        background:@gray-lighter;
+                        #imgList{
+                          padding:0;
+                          border:none;
+                          li{
+                            position:relative;
+                            display:inline-block;
+                            padding:0;
+                            border:none;
+                            margin:0 auto;
+                            img{
+                              width:220px;
+                              height:165px;
+                            }
                           }
                         }
                       }
@@ -983,9 +1002,6 @@ body.pc {
                             margin-right:10px;
                           }
                           .detail{
-                            position:absolute;
-                            right:15px;
-                            bottom:20px;
                             font-size:20px;
                             color:@gray-light;
                             background:none;
