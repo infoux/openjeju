@@ -157,7 +157,7 @@ $(document).ready(function() {
       $('body.mobile .sub .plan .plan-inner .mapView').show();
     });
 
-    $('body.pc .sub .list-type01.gallery .container ul li a.detail').click(function(){
+    $('body.pc .sub .list-type01 .container ul li a.detail').click(function(){
       if($(this).find('i').hasClass('fa-angle-down')){
           $(this).find('i').removeClass('fa-angle-down');
           $(this).find('i').addClass('fa-angle-up');
@@ -197,12 +197,12 @@ $(document).ready(function() {
       $('body.mobile .sub .list-type01.gallery .container ul li.detail').hide();
     });
 
-    $('body.pc .sub .sub-info .container .tabs a').on('click', function () {
+    $('body .sub .sub-info .container .tabs a').on('click', function () {
         var tab = $(this).attr("data");
-        $('body.pc .sub .sub-info .container .tabs a').removeClass('active');
+        $('body .sub .sub-info .container .tabs a').removeClass('active');
         $(this).addClass('active');
-        $('body.pc .sub .sub-info .container .tab').removeClass('active');
-        $('body.pc .sub .sub-info .container .tab.' + tab).addClass('active');
+        $('body .sub .sub-info .container .tab').removeClass('active');
+        $('body .sub .sub-info .container .tab.' + tab).addClass('active');
     });
 
     $('#imgList').bxSlider({

@@ -220,6 +220,44 @@ body.mobile {
                     }
                 }
             }
+            .tabs{
+              list-style:none;
+              margin:0 0 1.071rem 0;
+              padding:0;
+              font-size:0;
+              text-align:left;
+              li{
+                display:inline-block;
+                width:calc(~"100% / 2");
+                a{
+                  display:inline-block;
+                  width:100%;
+                  height:2.857rem;
+                  line-height:2.857rem;
+                  font-size:@font-size-01;
+                  color:@gray-dark;
+                  background:@gray-lighter;
+                  text-align:center;
+                  cursor:pointer;
+                  &.active{
+                    background:@dark-blue;
+                    color:#fff;
+                  }
+                }
+              }
+            }
+            .tab{
+              display:none;
+              &.active{
+                display:block;
+              }
+              &.tab02{
+                img{
+                  width:100%;
+                  height:auto;
+                }
+              }
+            }
         }
 
         .list-type01 {
