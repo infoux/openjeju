@@ -4992,11 +4992,12 @@ body.pc .sub .search-result .container div.common {
   margin-bottom: 0;
 }
 body.pc .sub .search-result .container div.common ul {
-  float: left;
+  display: inline-block;
+  width: 100%;
   text-align: left;
 }
 body.pc .sub .search-result .container div.common ul li {
-  float: left;
+  display: inline-block;
   width: 100%;
   margin: 10px 0;
 }
@@ -5069,6 +5070,9 @@ body.pc .sub .search-result .container div.mat ul li a .star-rate i.fa-star {
 }
 body.pc .sub .search-result .container div.mat ul li a .star-rate i.fa-star.active {
   color: #f68409;
+}
+body.pc .sub .search-result .container div.mat ul.nonSearch li {
+  width: 100%;
 }
 body.pc .sub .search-result .container div.theme {
   margin-bottom: 0;

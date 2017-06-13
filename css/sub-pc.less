@@ -3094,10 +3094,11 @@ body.pc {
                     &.common {
                         margin-bottom: 0;
                         ul {
-                            float: left;
+                            display:inline-block;
+                            width:100%;
                             text-align: left;
                             li {
-                                float: left;
+                                display:inline-block;
                                 width: 100%;
                                 margin: 10px 0;
                                 a {
@@ -3170,6 +3171,11 @@ body.pc {
                                         }
                                     }
                                 }
+                            }
+                            &.nonSearch {
+                              li {
+                                width:100%;
+                              }
                             }
                         }
                     }
