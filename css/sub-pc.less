@@ -917,7 +917,6 @@ body.pc {
                                 }
                                 margin:2px 0;
                                 display: block;
-                                width: 170px;
                                 height: 46px;
                                 line-height: 46px;
                                 font-size: @font-size-02;
@@ -935,9 +934,14 @@ body.pc {
                                 line-height: 40px;
                                 font-size: 20px;
                                 text-align: center;
-                                color: #fff;
-                                background: #0075bc;
-                                margin-right: 10px;
+                                color: @blue;
+                                background: #eee;
+                                padding: 0;
+                                margin-right: 6px;
+                                &::after {
+                                    padding: 0 10px;
+                                    content: ">";
+                                }
                             }
                             .detail {
                                 font-size: 20px;
