@@ -3005,6 +3005,10 @@ body.pc .sub .list-type01 .container ul li.filght #imgList li img {
   height: 165px;
   border: 3px solid #fff;
 }
+body.pc .sub .list-type01 .container ul li.detail {
+  background: #eeeeee;
+  padding: 30px;
+}
 body.pc .sub .view-head {
   height: 423px;
   overflow: hidden;
@@ -3862,6 +3866,7 @@ body.pc .sub .list-main .container ul {
   margin: 60px 0 20px;
   font-size: 0;
   padding: 0;
+  text-align: center;
 }
 body.pc .sub .list-main .container ul li {
   position: relative;
