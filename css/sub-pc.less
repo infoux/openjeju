@@ -1003,9 +1003,10 @@ body.pc {
                 left: 50%;
                 margin-left: -600px;
                 top: 50%;
-                margin-top: -97px;
-                height: 110px;
+                margin-top: -117px;
+                height: 130px;
                 overflow: hidden;
+                padding:20px 30px;
                 color: #fff;
                 background: rgba(0, 0, 0, 0.4);
                 z-index: 101;
@@ -1013,13 +1014,17 @@ body.pc {
                     display: inline-block;
                     margin: 0;
                     font-size: @font-size-09;
-                    line-height: 110px;
-                    padding-right: 10px;
-                    padding-left: 20px;
+
                 }
                 p {
-                    line-height: 110px;
                     font-size: @font-size-02;
+                    display:block;
+                    width:100%;
+                    margin-top:14px;
+                    overflow:hidden;
+                    text-overflow:ellipsis;
+                    white-space:nowrap;
+
                     &.image {
                         display: none;
                     }
@@ -1045,9 +1050,9 @@ body.pc {
             }
             .sns-list {
                 position: absolute;
-                right: 0;
+                right: 10px;
                 top: 50%;
-                margin-top: -16px;
+                margin-top: -36px;
                 a {
                     display: inline-block;
                     width: 31px;
@@ -1068,7 +1073,7 @@ body.pc {
             z-index: 100;
             margin-top: -200px;
             .container {
-                padding: 30px;
+                padding: 30px 30px 80px;
                 border:5px solid #eee;
                 border-top:none;
                 .image {
