@@ -4104,6 +4104,56 @@ body.pc .sub .transport .container ul li.bgblur::before {
   -moz-filter: blur(2px);
   -o-filter: blur(2px);
 }
+body.pc .sub .foot-navi {
+  text-align: center;
+}
+body.pc .sub .foot-navi .container {
+  padding: 50px 20px 20px;
+  text-align: center;
+}
+body.pc .sub .foot-navi .container h4 {
+  font-size: 39px;
+  margin: 0;
+  font-weight: 400;
+}
+body.pc .sub .foot-navi .container h4 small {
+  display: block;
+  font-size: 21px;
+  padding-top: 20px;
+  color: #0075bc;
+}
+body.pc .sub .foot-navi .container div {
+  list-style: none;
+  margin: 40px 150px;
+  min-height: 398px;
+  padding: 20px 0 0 300px;
+  font-size: 18px;
+  background: url('/openjeju/images/navi.jpg') no-repeat left top;
+  text-align: left;
+}
+body.pc .sub .foot-navi .container div p {
+  color: #777777;
+}
+body.pc .sub .foot-navi .container div p::before {
+  content: "-";
+  padding-right: 10px;
+}
+body.pc .sub .foot-navi .container div h5 {
+  margin: 40px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid #eeeeee;
+  font-size: 25px;
+  color: #0075bc;
+}
+body.pc .sub .foot-navi .container div .google {
+  display: inline-block;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  background: url('/openjeju/images/google.svg') no-repeat center / 80%;
+  width: 160px;
+  height: 42px;
+  font-size: 0;
+}
 body.pc .sub .plan {
   text-align: center;
 }
@@ -7035,6 +7085,58 @@ body.mobile .sub .list-main .container ul li.bgblur::before {
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
   -o-filter: blur(2px);
+}
+body.mobile .sub .foot-navi {
+  text-align: center;
+}
+body.mobile .sub .foot-navi .container {
+  padding: 2.5rem 0.625rem ;
+}
+body.mobile .sub .foot-navi .container h4 {
+  font-size: 1.786rem;
+  margin: 0;
+  font-weight: 400;
+  word-break: keep-all;
+}
+body.mobile .sub .foot-navi .container h4 small {
+  display: block;
+  font-size: 1.25rem;
+  padding-top: 1.25rem;
+  color: #0075bc;
+}
+body.mobile .sub .foot-navi .container div {
+  list-style: none;
+  margin: 2.25rem 0;
+  padding: 17.25rem 1.25rem 1.25rem;
+  background: url('/openjeju/images/navi.jpg') no-repeat center top / 10.15rem auto;
+  text-align: left;
+}
+body.mobile .sub .foot-navi .container div p {
+  color: #777777;
+  position: relative;
+  padding-left: 0.825rem;
+}
+body.mobile .sub .foot-navi .container div p::before {
+  content: "-";
+  display: block;
+  position: absolute;
+  left: 0;
+}
+body.mobile .sub .foot-navi .container div h5 {
+  margin: 40px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid #eeeeee;
+  font-size: 25px;
+  color: #0075bc;
+}
+body.mobile .sub .foot-navi .container div .google {
+  display: inline-block;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  background: url('/openjeju/images/google.svg') no-repeat center / 80%;
+  width: 160px;
+  height: 42px;
+  font-size: 0;
 }
 body.mobile .sub .plan {
   text-align: center;

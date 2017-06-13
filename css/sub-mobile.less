@@ -1765,6 +1765,73 @@ body.mobile {
           }
         }
 
+
+
+                .foot-navi {
+                  text-align:center;
+                  .container{
+                    padding:2.5rem 0.625rem ;
+
+                    h4 {
+                      font-size:1.786rem;
+                            margin: 0;
+                            font-weight:@font-normal;
+                            word-break:keep-all;
+
+                            small {
+                              display:block;
+                              font-size:1.25rem;
+                              padding-top:1.25rem;
+                              color:@blue;
+                            }
+                        }
+
+                        div {
+                            list-style: none;
+                            margin: 2.25rem 0;
+                            padding: 17.25rem 1.25rem 1.25rem;
+                            background:url('@{img-url}/navi.jpg') no-repeat center top / 10.15rem auto;
+
+                            text-align:left;
+                            p{
+                                color:@gray-light;
+                                position:relative;
+                                padding-left:0.825rem;
+                                &::before {
+                                content:"-";
+                                display:block;
+                                position:absolute;
+                                left:0;
+                              }
+                            }
+
+                            h5 {
+                              margin:40px 0 0;
+                              padding-top:20px;
+                              border-top:1px solid @gray-lighter;
+                              font-size:@font-size-04;
+                              color:@blue;
+                            }
+
+                            .google {
+                              display:inline-block;
+                              border:1px solid @gray-lighter;
+                              border-radius:10px;
+                              background:url('@{img-url}/google.svg') no-repeat center / 80%;
+                              width:160px;
+                              height:42px;
+                              font-size:0;
+                            }
+
+                        }
+
+
+                    }
+
+
+                }
+
+
         .plan{
           text-align:center;
           padding:1.429rem 0.857rem;
