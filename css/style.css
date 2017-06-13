@@ -4,6 +4,14 @@
 /* function */
 @light-blue : @blue +#111;
 /* mixin */
+@keyframes fade {
+  from {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
 /* header */
 * {
   -webkit-box-sizing: border-box;
@@ -3801,6 +3809,102 @@ body.pc .sub .event .container ul li a span {
 body.pc .sub .event .container ul li a span.type01 {
   color: #0075bc;
 }
+body.pc .sub .list-main {
+  text-align: center;
+}
+body.pc .sub .list-main .container {
+  padding: 50px 20px 20px;
+  text-align: center;
+}
+body.pc .sub .list-main .container h2 {
+  font-size: 39px;
+  color: #333333;
+  margin: 30px 0;
+  text-align: center;
+}
+body.pc .sub .list-main .container .info-text {
+  line-height: 1.4;
+  word-break: keep-all;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+body.pc .sub .list-main .container .info-text p {
+  margin: 0;
+}
+body.pc .sub .list-main .container ul {
+  list-style: none;
+  margin: 60px 0 20px;
+  font-size: 0;
+  padding: 0;
+}
+body.pc .sub .list-main .container ul li {
+  position: relative;
+  display: inline-block;
+  width: calc((100% - 30px) / 4);
+  height: 204px;
+  margin: 0 10px 10px 0;
+  z-index: 100;
+}
+body.pc .sub .list-main .container ul li img {
+  width: 100%;
+  height: 100%;
+}
+body.pc .sub .list-main .container ul li a {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding-top: 60px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+body.pc .sub .list-main .container ul li a h3 {
+  font-size: 18px;
+}
+body.pc .sub .list-main .container ul li a p {
+  display: none;
+}
+body.pc .sub .list-main .container ul li a:hover {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+body.pc .sub .list-main .container ul li a:hover h3 {
+  display: inline-block;
+  font-size: 22px;
+  margin: 0 0 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #fff;
+}
+body.pc .sub .list-main .container ul li a:hover p {
+  margin: 0;
+  font-size: 1rem;
+  display: block;
+}
+body.pc .sub .list-main .container ul li a i {
+  display: block;
+  font-size: 55px;
+  padding-top: 60px;
+}
+body.pc .sub .list-main .container ul li:nth-child(4n+4) {
+  margin-right: 0;
+}
+body.pc .sub .list-main .container ul li.bgblur::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  z-index: -1;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+}
 body.pc .sub .festival {
   padding: 60px 0;
   text-align: center;
@@ -3868,8 +3972,9 @@ body.pc .sub .festival .container dl dd {
   width: 1050px;
   border: 1px solid #ccc;
   margin: 0 0 10px 15px;
-  padding-left: 255px;
+  padding-left: 260px;
   vertical-align: top;
+  overflow: hidden;
 }
 body.pc .sub .festival .container dl dd.nonSearch {
   line-height: 120px;
@@ -3884,7 +3989,7 @@ body.pc .sub .festival .container dl dd img {
 }
 body.pc .sub .festival .container dl dd h4 {
   display: inline-block;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: normal;
   color: #333333;
   margin: 20px 0 0 0;
@@ -3898,7 +4003,7 @@ body.pc .sub .festival .container dl dd p {
 }
 body.pc .sub .festival .container dl dd i {
   display: block;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 20px;
   font-style: normal;
 }
@@ -3986,93 +4091,6 @@ body.pc .sub .transport .container ul li:nth-child(4) {
   margin-right: 0;
 }
 body.pc .sub .transport .container ul li.bgblur::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: inherit;
-  z-index: -1;
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
-  -moz-filter: blur(2px);
-  -o-filter: blur(2px);
-}
-body.pc .sub .list-main {
-  text-align: center;
-}
-body.pc .sub .list-main .container {
-  padding: 50px 20px 20px;
-  text-align: center;
-}
-body.pc .sub .list-main .container h4 {
-  font-size: 39px;
-  margin: 0;
-}
-body.pc .sub .list-main .container .info-text {
-  line-height: 1.4;
-  word-break: keep-all;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-body.pc .sub .list-main .container .info-text p {
-  margin: 0;
-}
-body.pc .sub .list-main .container ul {
-  list-style: none;
-  margin: 60px 0;
-  padding: 0;
-}
-body.pc .sub .list-main .container ul li {
-  position: relative;
-  display: inline-block;
-  width: calc(100% / 4 - 15px);
-  height: 204px;
-  margin-right: 15px;
-  z-index: 100;
-}
-body.pc .sub .list-main .container ul li img {
-  width: 100%;
-  height: 100%;
-}
-body.pc .sub .list-main .container ul li a {
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  line-height: 100px;
-  font-size: 24px;
-  font-weight: 600;
-  color: #fff;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0);
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-}
-body.pc .sub .list-main .container ul li a i {
-  display: block;
-  font-size: 55px;
-  padding-top: 60px;
-}
-body.pc .sub .list-main .container ul li:nth-child(1) {
-  background: url('/openjeju/images/@tmp-transport0101.jpg') no-repeat center / cover;
-}
-body.pc .sub .list-main .container ul li:nth-child(2) {
-  background: url('/openjeju/images/@tmp-transport0102.jpg') no-repeat center / cover;
-}
-body.pc .sub .list-main .container ul li:nth-child(3) {
-  background: url('/openjeju/images/@tmp-transport0103.jpg') no-repeat center / cover;
-}
-body.pc .sub .list-main .container ul li:nth-child(4) {
-  background: url('/openjeju/images/@tmp-transport0104.jpg') no-repeat center / cover;
-  margin-right: 0;
-}
-body.pc .sub .list-main .container ul li.bgblur::before {
   content: '';
   position: absolute;
   top: 0;
@@ -6923,6 +6941,88 @@ body.mobile .sub .transport .container ul li a i {
   padding-top: 1.929rem;
 }
 body.mobile .sub .transport .container ul li.bgblur::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  z-index: -1;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+}
+body.mobile .sub .list-main {
+  text-align: center;
+}
+body.mobile .sub .list-main .container {
+  padding: 2.5rem 0.625rem ;
+}
+body.mobile .sub .list-main .container h2 {
+  font-size: 1.786rem;
+  margin: 0;
+}
+body.mobile .sub .list-main .container .info-text {
+  line-height: 1.4;
+  word-break: keep-all;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+body.mobile .sub .list-main .container .info-text p {
+  margin: 0;
+}
+body.mobile .sub .list-main .container ul {
+  list-style: none;
+  margin: 0 ;
+  padding: 0;
+}
+body.mobile .sub .list-main .container ul li {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 12.25rem;
+  margin-bottom: 1rem;
+  z-index: 100;
+  overflow: hidden;
+}
+body.mobile .sub .list-main .container ul li img {
+  width: 100%;
+  height: auto;
+}
+body.mobile .sub .list-main .container ul li a {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding-top: 3.25rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+body.mobile .sub .list-main .container ul li a h3 {
+  display: inline-block;
+  font-size: 1.25rem;
+  margin: 0 0 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #fff;
+}
+body.mobile .sub .list-main .container ul li a p {
+  margin: 0;
+  display: block;
+}
+body.mobile .sub .list-main .container ul li a i {
+  display: block;
+  font-size: 55px;
+  padding-top: 60px;
+}
+body.mobile .sub .list-main .container ul li:nth-child(4) {
+  margin-right: 0;
+}
+body.mobile .sub .list-main .container ul li.bgblur::before {
   content: '';
   position: absolute;
   top: 0;
