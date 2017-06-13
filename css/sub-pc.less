@@ -672,6 +672,40 @@ body.pc {
                     }
                 }
             }
+
+            &.map {
+              .container {
+                .select {
+                  padding:0 0 20px;
+                  font-size:@font-size-03;
+
+                  input {
+                    display:none;
+                  }
+                  label {
+                    padding:10px;
+                    border:1px solid @blue;
+                    border-radius:10px;
+                    color:@blue;
+                  }
+                  input:checked + label {
+                    background:@blue;
+                    color:@white-base;
+                  }
+                  button {
+                    padding:12px;
+                    border:1px solid @gray-darker;
+                    border-radius:10px;
+                    background:@gray-darker;
+                    color:@white-base;
+                  }
+
+                }
+
+              }
+
+
+            }
         }
         .list-type01 {
             &.local {
@@ -983,7 +1017,7 @@ body.pc {
         }
         .view-head {
             height: 423px;
-            z-index: -1;
+            overflow:hidden;
             &::before {
                 content: '';
                 position: absolute;
@@ -992,7 +1026,6 @@ body.pc {
                 right: 0;
                 bottom: 0;
                 background: inherit;
-                z-index: -1;
                 filter: blur(8px);
                 -webkit-filter: blur(8px);
                 -moz-filter: blur(8px);

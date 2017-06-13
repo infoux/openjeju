@@ -2696,6 +2696,30 @@ body.pc .sub .sub-info .container .tab.tab02 img {
   height: auto;
   max-height: 758px;
 }
+body.pc .sub .sub-info.map .container .select {
+  padding: 0 0 20px;
+  font-size: 21px;
+}
+body.pc .sub .sub-info.map .container .select input {
+  display: none;
+}
+body.pc .sub .sub-info.map .container .select label {
+  padding: 10px;
+  border: 1px solid #0075bc;
+  border-radius: 10px;
+  color: #0075bc;
+}
+body.pc .sub .sub-info.map .container .select input:checked + label {
+  background: #0075bc;
+  color: #fff;
+}
+body.pc .sub .sub-info.map .container .select button {
+  padding: 12px;
+  border: 1px solid #222222;
+  border-radius: 10px;
+  background: #222222;
+  color: #fff;
+}
 body.pc .sub .list-type01.local .container .hit-box {
   bottom: 30px;
 }
@@ -2983,7 +3007,7 @@ body.pc .sub .list-type01 .container ul li.filght #imgList li img {
 }
 body.pc .sub .view-head {
   height: 423px;
-  z-index: -1;
+  overflow: hidden;
 }
 body.pc .sub .view-head::before {
   content: '';
@@ -2993,7 +3017,6 @@ body.pc .sub .view-head::before {
   right: 0;
   bottom: 0;
   background: inherit;
-  z-index: -1;
   filter: blur(8px);
   -webkit-filter: blur(8px);
   -moz-filter: blur(8px);
@@ -5670,6 +5693,36 @@ body.mobile .sub .sub-info .tab.active {
 body.mobile .sub .sub-info .tab.tab02 img {
   width: 100%;
   height: auto;
+}
+body.mobile .sub .sub-info.map .container .info-text {
+  text-align: center;
+}
+body.mobile .sub .sub-info.map .container .select {
+  padding: 0 0 1.25rem;
+}
+body.mobile .sub .sub-info.map .container .select input {
+  display: none;
+}
+body.mobile .sub .sub-info.map .container .select label {
+  display: inline-block;
+  padding: 0.625rem 0.313rem;
+  border: 1px solid #0075bc;
+  border-radius: 0.625rem;
+  color: #0075bc;
+}
+body.mobile .sub .sub-info.map .container .select input:checked + label {
+  background: #0075bc;
+  color: #fff;
+}
+body.mobile .sub .sub-info.map .container .select button {
+  display: inline-block;
+  width: 100%;
+  margin-top: 0.625rem;
+  padding: 0.75rem;
+  border: 1px solid #222222;
+  border-radius: 0.625rem;
+  background: #222222;
+  color: #fff;
 }
 body.mobile .sub .list-type01.local .container {
   padding-top: 0;
