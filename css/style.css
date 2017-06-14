@@ -6046,25 +6046,28 @@ body.mobile .sub .list-type01 .container ul .btn-area a {
   padding: 0.714rem;
 }
 body.mobile .sub .view-head .container p.image {
-  position: relative;
-  height: 11.25rem;
-}
-body.mobile .sub .view-head .container p.image::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 3px;
-  right: 0;
-  bottom: 10px;
-  background: inherit;
-  z-index: 99;
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-  -moz-filter: blur(8px);
-  -o-filter: blur(8px);
-}
-body.mobile .sub .view-head .container p.image img {
   display: none;
+  /*position:relative;
+                        height: 11.25rem;
+                        &::before{
+                          content:'';
+                          position:absolute;
+                          left:0;
+                          top:3px;
+                          right:0;
+                          bottom:10px;
+                          background:inherit;
+                          z-index:99;
+                          filter:blur(8px);
+                          -webkit-filter:blur(8px);
+                          -moz-filter:blur(8px);
+                          -o-filter:blur(8px);
+                        }
+
+                        img {
+                            display: none;
+                        }
+                        */
 }
 body.mobile .sub .view-head .container p.text {
   width: 100%;
