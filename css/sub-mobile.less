@@ -1713,6 +1713,43 @@ body.mobile {
                 }
               }
             }
+
+            table {
+              width:100%;
+              border-spacing:0px;
+              caption {
+                display:none;
+              }
+              th,
+              td {
+                border:1px solid @gray-lighter;
+                border-right-width:0;
+                padding:1rem 0.2rem;
+                word-break:keep-all;
+                letter-spacing:-1px;
+
+                &:last-child {
+                  border-right-width:1px;
+                }
+              }
+              th {
+                background:#f4f4f4;
+              }
+              td {
+                border-top-width:0;
+
+                .homepage {
+                  font-size:0;
+                  &::before {
+                    content:"홈페이지";
+                    font-size:1rem;
+                    color:@blue;
+                  }
+                }
+              }
+
+            }
+
           }
         }
 

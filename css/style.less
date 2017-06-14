@@ -12,3 +12,96 @@
 @import "sub.less";
 @import "sub-pc.less";
 @import "sub-mobile.less";
+
+
+.sub-detail {
+  text-align:center;
+  border-top: 1px solid @gray;
+  background:@gray-lighter;
+  padding:20px 0;
+  p {
+    margin:0;
+    button {
+      display:inline-block;
+      padding:10px;
+      border:none;
+      color:@white-base;
+      background:@blue;
+      border-radius:10px;
+      cursor:pointer;
+    }
+    span {
+      display:inline-block;
+      padding:10px;
+      color:@white-base;
+      background:@gray;
+      border-radius:10px;
+    }
+  }
+}
+
+
+/* 문화컨텐츠 */
+
+.culture {
+  &.view {
+    text-align:center;
+    .container {
+      text-align:left;
+      padding:0 1.25rem;
+      word-break:keep-all;
+      h2 {
+        font-size:2rem;
+        margin:2.5rem 0;
+
+      }
+      img {
+        max-width:100%;
+      }
+      .btn-area {
+        margin:20px 0;
+        text-align:right;
+        a {
+          display:inline-block;
+          padding:10px;
+          color:@white-base;
+          background:@gray-darker;
+          border-radius:10px;
+        }
+      }
+
+
+      /*각 페이지별 태그 들어갑니다.*/
+
+
+
+
+
+
+
+
+
+
+
+    }
+  }
+  &.write {
+    textarea {
+      background:@white-base !important;
+      border-bottom:none !important;
+
+      &:focus {
+        outline: none;
+      }
+
+
+    }
+    .uploaded {
+      background:@gray-lighter;
+      padding:20px;
+      img {
+        max-width:100%;
+      }
+    }
+  }
+}

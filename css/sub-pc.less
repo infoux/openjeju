@@ -2209,6 +2209,31 @@ body.pc {
                         }
                     }
                 }
+
+                table {
+                  width:100%;
+                  border-spacing:0px;
+                  caption {
+                    display:none;
+                  }
+                  th,
+                  td {
+                    border:1px solid @gray-lighter;
+                    border-right-width:0;
+                    padding:14px 0;
+
+                    &:last-child {
+                      border-right-width:1px;
+                    }
+                  }
+                  th {
+                    background:#f4f4f4;
+                  }
+                  td {
+                    border-top-width:0;
+                  }
+
+                }
             }
         }
 
