@@ -826,6 +826,7 @@ body.pc .main .main-issue .container fieldset input {
   font-size: 35px;
   padding: 10px 20px;
   min-width: 440px;
+  outline: none;
 }
 body.pc .main .main-issue .container .text {
   margin: 14px 0;
