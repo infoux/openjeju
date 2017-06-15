@@ -100,16 +100,17 @@ $(document).ready(function() {
     $("body.mobile section.mat #category li.active").click(function(){
       $(this).parent().find('li').show();
     });
+
     $('body.mobile section.mat #category li .option').click(function(e){
       $('body.mobile section.mat #category li').hide();
       $("body.mobile section.mat #category li.active a").text($(e.target).text());
     });
-    $("body.mobile section.search-result .search-category li.active").click(function(){
+    $("body.mobile section.search-result button.mobile-category").click(function(){
       $(this).parent().find('li').show();
     });
     $('body.mobile section.search-result .search-category li .option').click(function(e){
       $('body.mobile section.search-result .search-category li').hide();
-      $("body.mobile section.search-result .search-category li.active a").text($(e.target).text());
+      $("body.mobile section.search-result button.mobile-category").text($(e.target).text());
     });
 
 

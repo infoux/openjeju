@@ -83,7 +83,7 @@ body #header h1 a {
   margin: 0;
   width: 100%;
   height: 100%;
-  background: url("/openjeju/images/logo.svg") no-repeat center / 100% 100%;
+  background: url("../images/logo.svg") no-repeat center / 100% 100%;
 }
 body #header .util_menu {
   font-size: 0;
@@ -782,7 +782,7 @@ body.pc .main .main-issue .video::after {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('/openjeju/images/scanline.png');
+  background: url('../images/scanline.png');
 }
 body.pc .main .main-issue .video video {
   position: absolute;
@@ -1021,7 +1021,7 @@ body.pc .main .main-tv {
   margin: 0;
   width: 100%;
   height: 100%;
-  background: url('/openjeju/images/main-tv-bg.jpg') no-repeat center / 100% 100%;
+  background: url('../images/main-tv-bg.jpg') no-repeat center / 100% 100%;
 }
 body.pc .main .main-tv h4 {
   position: relative;
@@ -1161,7 +1161,7 @@ body.pc .rank .container fieldset select {
   -moz-appearance: none;
   -ms-appearance: none;
   -webkit-appearance: none;
-  background: url('/openjeju/images/select-bg.png') no-repeat right center;
+  background: url('../images/select-bg.png') no-repeat right center;
   margin-left: -6px;
   border: 1px solid #a9a9a9;
 }
@@ -1264,7 +1264,7 @@ body.mobile .main .main-issue .video::after {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('/openjeju/images/scanline.png');
+  background: url('../images/scanline.png');
 }
 body.mobile .main .main-issue .video video {
   position: absolute;
@@ -1453,7 +1453,7 @@ body.mobile .main .main-tv {
   margin: 0;
   width: 100%;
   height: 100%;
-  background: url('/openjeju/images/main-tv-bg.jpg') no-repeat center / 100% 100%;
+  background: url('../images/main-tv-bg.jpg') no-repeat center / 100% 100%;
 }
 body.mobile .main .main-tv h4 {
   position: relative;
@@ -1584,7 +1584,7 @@ body.mobile .rank .container fieldset select {
   -moz-appearance: none;
   -ms-appearance: none;
   -webkit-appearance: none;
-  background: url('/openjeju/images/select-bg.png') no-repeat right center;
+  background: url('../images/select-bg.png') no-repeat right center;
   font-size: 14px;
   margin-left: -1px;
   border: 1px solid #a9a9a9;
@@ -1680,7 +1680,7 @@ body.mobile .rank .container .rank-pop ul li .count {
   float: none !important;
   font-size: 21px;
   font-weight: 600;
-  padding: 0 0 20px 0 !important;
+  padding: 20px 0 !important;
   min-height: auto !important;
   text-align: center;
 }
@@ -2301,7 +2301,7 @@ body.pc .sub .sub-info .container #map-area ul .item.labelLT a {
 body.pc .sub .sub-info .container #map-area ul .item.labelLT span {
   left: 0;
   top: 0;
-  background: url('/openjeju/images/labelLt.png') no-repeat right bottom;
+  background: url('../images/labelLt.png') no-repeat right bottom;
 }
 body.pc .sub .sub-info .container #map-area ul .item.labelRT a {
   top: 20px;
@@ -2310,7 +2310,7 @@ body.pc .sub .sub-info .container #map-area ul .item.labelRT a {
 body.pc .sub .sub-info .container #map-area ul .item.labelRT span {
   right: 0;
   top: 0;
-  background: url('/openjeju/images/labelRt.png') no-repeat right bottom;
+  background: url('../images/labelRt.png') no-repeat right bottom;
 }
 body.pc .sub .sub-info .container #map-area ul .item.labelLB a {
   top: 1px;
@@ -2319,7 +2319,7 @@ body.pc .sub .sub-info .container #map-area ul .item.labelLB a {
 body.pc .sub .sub-info .container #map-area ul .item.labelLB span {
   left: 0;
   bottom: 0;
-  background: url('/openjeju/images/labelLb.png') no-repeat right top;
+  background: url('../images/labelLb.png') no-repeat right top;
 }
 body.pc .sub .sub-info .container #map-area ul .item.labelRB a {
   top: 1px;
@@ -2328,7 +2328,7 @@ body.pc .sub .sub-info .container #map-area ul .item.labelRB a {
 body.pc .sub .sub-info .container #map-area ul .item.labelRB span {
   right: 0;
   bottom: 0;
-  background: url('/openjeju/images/labelRb.png') no-repeat right top;
+  background: url('../images/labelRb.png') no-repeat right top;
 }
 body.pc .sub .sub-info .container #map-area ul .item.item01 {
   left: 50%;
@@ -3688,7 +3688,7 @@ body.pc .sub .rank .container fieldset select {
   -moz-appearance: none;
   -ms-appearance: none;
   -webkit-appearance: none;
-  background: url('/openjeju/images/select-bg.png') no-repeat right center;
+  background: url('../images/select-bg.png') no-repeat right center;
   margin-left: -6px;
   border: 1px solid #a9a9a9;
 }
@@ -3958,7 +3958,7 @@ body.pc .sub .festival .container fieldset select {
   -moz-appearance: none;
   -ms-appearance: none;
   -webkit-appearance: none;
-  background: url('/openjeju/images/select-bg.png') no-repeat right center;
+  background: url('../images/select-bg.png') no-repeat right center;
   margin-left: -5px;
   border: 1px solid #a9a9a9;
 }
@@ -4110,16 +4110,16 @@ body.pc .sub .transport .container ul li a i {
   padding-top: 60px;
 }
 body.pc .sub .transport .container ul li:nth-child(1) {
-  background: url('/openjeju/images/@tmp-transport0101.jpg') no-repeat center / cover;
+  background: url('../images/@tmp-transport0101.jpg') no-repeat center / cover;
 }
 body.pc .sub .transport .container ul li:nth-child(2) {
-  background: url('/openjeju/images/@tmp-transport0102.jpg') no-repeat center / cover;
+  background: url('../images/@tmp-transport0102.jpg') no-repeat center / cover;
 }
 body.pc .sub .transport .container ul li:nth-child(3) {
-  background: url('/openjeju/images/@tmp-transport0103.jpg') no-repeat center / cover;
+  background: url('../images/@tmp-transport0103.jpg') no-repeat center / cover;
 }
 body.pc .sub .transport .container ul li:nth-child(4) {
-  background: url('/openjeju/images/@tmp-transport0104.jpg') no-repeat center / cover;
+  background: url('../images/@tmp-transport0104.jpg') no-repeat center / cover;
   margin-right: 0;
 }
 body.pc .sub .transport .container ul li.bgblur::before {
@@ -4183,7 +4183,7 @@ body.pc .sub .foot-navi .container div {
   min-height: 398px;
   padding: 20px 0 0 300px;
   font-size: 18px;
-  background: url('/openjeju/images/navi.jpg') no-repeat left top;
+  background: url('../images/navi.jpg') no-repeat left top;
   text-align: left;
 }
 body.pc .sub .foot-navi .container div p {
@@ -4204,7 +4204,7 @@ body.pc .sub .foot-navi .container div .google {
   display: inline-block;
   border: 1px solid #eeeeee;
   border-radius: 10px;
-  background: url('/openjeju/images/google.svg') no-repeat center / 80%;
+  background: url('../images/google.svg') no-repeat center / 80%;
   width: 160px;
   height: 42px;
   font-size: 0;
@@ -4249,7 +4249,7 @@ body.pc .sub .plan .container fieldset select {
   -moz-appearance: none;
   -ms-appearance: none;
   -webkit-appearance: none;
-  background: url('/openjeju/images/select-bg.png') no-repeat right center;
+  background: url('../images/select-bg.png') no-repeat right center;
   margin-left: -6px;
   border: 1px solid #a9a9a9;
 }
@@ -4746,7 +4746,7 @@ body.pc .sub .plan .container .plan-inner .plan-search section .content::before 
   top: 13px;
   width: 76px;
   height: 76px;
-  background: url('/openjeju/images/@tmp-transport03.jpg') no-repeat center / cover;
+  background: url('../images/@tmp-transport03.jpg') no-repeat center / cover;
   border-radius: 10px;
 }
 body.pc .sub .plan .container .plan-inner .plan-search section .content span {
@@ -4830,7 +4830,7 @@ body.pc .sub .plan .container .plan-inner .mapView .content::before {
   top: 13px;
   width: 76px;
   height: 76px;
-  background: url('/openjeju/images/@tmp-transport03.jpg') no-repeat center / cover;
+  background: url('../images/@tmp-transport03.jpg') no-repeat center / cover;
   border-radius: 10px;
 }
 body.pc .sub .plan .container .plan-inner .mapView .content span {
@@ -4917,7 +4917,7 @@ body.pc .sub .category-search .container fieldset select {
   -moz-appearance: none;
   -ms-appearance: none;
   -webkit-appearance: none;
-  background: url('/openjeju/images/select-bg.png') no-repeat right center #fff;
+  background: url('../images/select-bg.png') no-repeat right center #fff;
   border: none;
   margin-right: 5px;
 }
@@ -5287,7 +5287,7 @@ body.pc .sub .mypage.bookmark .container fieldset select {
   -moz-appearance: none;
   -ms-appearance: none;
   -webkit-appearance: none;
-  background: url('/openjeju/images/select-bg.png') no-repeat right center;
+  background: url('../images/select-bg.png') no-repeat right center;
   margin-left: -6px;
   border: 1px solid #a9a9a9;
 }
@@ -5920,7 +5920,7 @@ body.mobile .sub .list-type01.mat #category ul li.active a {
   padding: 0 10px;
   font-size: 20px;
   color: #333333;
-  background: url('/openjeju/images/select-bg.png') no-repeat right center #fff;
+  background: url('../images/select-bg.png') no-repeat right center #fff;
   border: 1px solid #a9a9a9;
   margin: 0;
 }
@@ -6756,7 +6756,7 @@ body.mobile .sub .rank .container fieldset select {
   -moz-appearance: none;
   -ms-appearance: none;
   -webkit-appearance: none;
-  background: url('/openjeju/images/select-bg.png') no-repeat right center;
+  background: url('../images/select-bg.png') no-repeat right center;
   font-size: 14px;
   margin-left: -1px;
   border: 1px solid #a9a9a9;
@@ -6928,7 +6928,7 @@ body.mobile .sub .festival .container fieldset select {
   -moz-appearance: none;
   -ms-appearance: none;
   -webkit-appearance: none;
-  background: url('/openjeju/images/select-bg.png') no-repeat right center;
+  background: url('../images/select-bg.png') no-repeat right center;
   font-size: 14px;
   margin-left: -1px;
   border: 1px solid #a9a9a9;
@@ -7049,18 +7049,18 @@ body.mobile .sub .transport .container ul li:nth-child(even) {
   margin-right: 0;
 }
 body.mobile .sub .transport .container ul li:nth-child(1) {
-  background: url('/openjeju/images/@tmp-transport01.jpg') no-repeat center / cover;
+  background: url('../images/@tmp-transport01.jpg') no-repeat center / cover;
   margin-bottom: 0.714rem;
 }
 body.mobile .sub .transport .container ul li:nth-child(2) {
-  background: url('/openjeju/images/@tmp-transport02.jpg') no-repeat center / cover;
+  background: url('../images/@tmp-transport02.jpg') no-repeat center / cover;
   margin-bottom: 0.714rem;
 }
 body.mobile .sub .transport .container ul li:nth-child(3) {
-  background: url('/openjeju/images/@tmp-transport03.jpg') no-repeat center / cover;
+  background: url('../images/@tmp-transport03.jpg') no-repeat center / cover;
 }
 body.mobile .sub .transport .container ul li:nth-child(4) {
-  background: url('/openjeju/images/@tmp-transport04.jpg') no-repeat center / cover;
+  background: url('../images/@tmp-transport04.jpg') no-repeat center / cover;
   margin-right: 0;
 }
 body.mobile .sub .transport .container ul li a {
@@ -7234,7 +7234,7 @@ body.mobile .sub .foot-navi .container div {
   list-style: none;
   margin: 2.25rem 0;
   padding: 17.25rem 1.25rem 1.25rem;
-  background: url('/openjeju/images/navi.jpg') no-repeat center top / 10.15rem auto;
+  background: url('../images/navi.jpg') no-repeat center top / 10.15rem auto;
   text-align: left;
 }
 body.mobile .sub .foot-navi .container div p {
@@ -7259,7 +7259,7 @@ body.mobile .sub .foot-navi .container div .google {
   display: inline-block;
   border: 1px solid #eeeeee;
   border-radius: 10px;
-  background: url('/openjeju/images/google.svg') no-repeat center / 80%;
+  background: url('../images/google.svg') no-repeat center / 80%;
   width: 160px;
   height: 42px;
   font-size: 0;
@@ -7365,7 +7365,7 @@ body.mobile .sub .plan .container fieldset select {
   -moz-appearance: none;
   -ms-appearance: none;
   -webkit-appearance: none;
-  background: url('/openjeju/images/select-bg.png') no-repeat right center;
+  background: url('../images/select-bg.png') no-repeat right center;
   font-size: 14px;
   margin-left: -7px;
   border: 1px solid #a9a9a9;
@@ -7787,7 +7787,7 @@ body.mobile .sub .plan .plan-inner .plan-search .search-inner section .content::
   top: 0.929rem;
   width: 6.214rem;
   height: 6.214rem;
-  background: url('/openjeju/images/@tmp-transport03.jpg') no-repeat center / cover;
+  background: url('../images/@tmp-transport03.jpg') no-repeat center / cover;
   border-radius: 0.714rem;
 }
 body.mobile .sub .plan .plan-inner .plan-search .search-inner section .content span {
@@ -7871,7 +7871,7 @@ body.mobile .sub .plan .plan-inner .mapView .content::before {
   top: 0.929rem;
   width: 6.214rem;
   height: 6.214rem;
-  background: url('/openjeju/images/@tmp-transport03.jpg') no-repeat center / cover;
+  background: url('../images/@tmp-transport03.jpg') no-repeat center / cover;
   border-radius: 0.714rem;
 }
 body.mobile .sub .plan .plan-inner .mapView .content span {
@@ -7963,7 +7963,7 @@ body.mobile .sub .category-search .container fieldset select {
   -moz-appearance: none;
   -ms-appearance: none;
   -webkit-appearance: none;
-  background: url('/openjeju/images/select-bg.png') no-repeat right center #fff;
+  background: url('../images/select-bg.png') no-repeat right center #fff;
   border: none;
   margin-bottom: 0.714rem;
 }
@@ -7993,12 +7993,22 @@ body.mobile .sub .category-search .container fieldset button i {
   font-size: 18px;
   color: #fff;
 }
+body.mobile .sub .search-result .container .mobile-category {
+  display: inline-block;
+  width: calc(100% - 20px);
+  height: 53px;
+  line-height: 53px;
+  margin: 10px 10px 0;
+  font-size: 20px;
+  color: #333333;
+  background: url('../images/select-bg.png') no-repeat right center #fff;
+  border: 1px solid #a9a9a9;
+}
 body.mobile .sub .search-result .container .search-category {
   position: relative;
   display: block;
   width: calc(100% - 1.174rem);
-  margin-left: 0.587rem;
-  height: 53px;
+  margin: 0 10px;
   padding: 0;
   border-top: none;
   z-index: 100;
@@ -8009,52 +8019,33 @@ body.mobile .sub .search-result .container .search-category li {
   left: 0;
   display: none;
   width: 100%;
-  height: 53px;
   padding: 0;
   margin: 0;
   border: none;
 }
-body.mobile .sub .search-result .container .search-category li.active {
-  display: block !important;
-}
-body.mobile .sub .search-result .container .search-category li.active a {
-  display: inline-block;
-  width: 100%;
-  height: 53px;
-  line-height: 53px;
-  padding: 0 10px;
-  font-size: 20px;
-  color: #333333;
-  background: url('/openjeju/images/select-bg.png') no-repeat right center #fff;
-  border: 1px solid #a9a9a9;
-  margin: 0;
-}
 body.mobile .sub .search-result .container .search-category li a {
   display: inline-block;
   width: 100%;
-  padding: 10px 0;
+  padding: 14px 0;
   background: #eeeeee;
   color: #333333;
   border: 1px solid #555555;
   border-top: none;
 }
 body.mobile .sub .search-result .container .search-category li:nth-child(2) {
-  top: 53px;
+  top: 47px;
 }
 body.mobile .sub .search-result .container .search-category li:nth-child(3) {
-  top: 90px;
+  top: 94px;
 }
 body.mobile .sub .search-result .container .search-category li:nth-child(4) {
-  top: 128px;
+  top: 141px;
 }
 body.mobile .sub .search-result .container .search-category li:nth-child(5) {
-  top: 165px;
+  top: 188px;
 }
 body.mobile .sub .search-result .container .search-category li:nth-child(6) {
-  top: 202px;
-}
-body.mobile .sub .search-result .container .search-category li:nth-child(7) {
-  top: 239px;
+  top: 235px;
 }
 body.mobile .sub .search-result .container .list {
   padding: 0 0.857rem 1.429rem;
@@ -8079,11 +8070,12 @@ body.mobile .sub .search-result .container .list div button {
   margin: 1.429rem 0 0.714rem;
 }
 body.mobile .sub .search-result .container .list div.common ul {
-  float: left;
+  display: inline-block;
+  width: 100%;
   text-align: left;
 }
 body.mobile .sub .search-result .container .list div.common ul li {
-  float: left;
+  display: inline-block;
   width: 100%;
   margin: 0.714rem 0;
 }
@@ -8094,10 +8086,8 @@ body.mobile .sub .search-result .container .list div.common ul li a {
   width: 100%;
 }
 body.mobile .sub .search-result .container .list div.common ul li a h5 {
-  position: absolute;
-  float: left;
+  display: block;
   margin-bottom: 0.714rem;
-  display: inline-block;
   width: 115px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -8112,22 +8102,13 @@ body.mobile .sub .search-result .container .list div.common ul li a img {
   margin-right: 1.429rem;
 }
 body.mobile .sub .search-result .container .list div.common ul li a p {
-  position: absolute;
-  top: 2.571rem;
-  display: -webkit-inline-box;
-  -webkit-line-clamp: 2;
-  height: 2.429rem;
-  line-height: 1.143rem;
   font-size: 14px;
   color: #555555;
   margin: 0 0 0.357rem 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
 }
-body.mobile .sub .search-result .container .list div.common ul li a p.address {
-  top: 5.557rem;
+body.mobile .sub .search-result .container .list div.common ul li.no {
+  margin: 0;
+  width: 100%;
 }
 body.mobile .sub .search-result .container .list div.mat ul {
   padding: 1.429rem 0;
@@ -8135,6 +8116,7 @@ body.mobile .sub .search-result .container .list div.mat ul {
 }
 body.mobile .sub .search-result .container .list div.mat ul li {
   display: inline-block;
+  vertical-align: top;
   width: calc(100% / 2 - 0.714rem);
   text-align: center;
   margin: 0 0.929rem 2.143rem 0;
@@ -8143,7 +8125,7 @@ body.mobile .sub .search-result .container .list div.mat ul li:nth-child(even) {
   margin-right: 0;
 }
 body.mobile .sub .search-result .container .list div.mat ul li a {
-  display: block;
+  display: inline-block;
   width: 100%;
 }
 body.mobile .sub .search-result .container .list div.mat ul li a .img {
@@ -8151,19 +8133,13 @@ body.mobile .sub .search-result .container .list div.mat ul li a .img {
   display: inline-block;
   margin: 0;
   padding: 0;
-  width: 12.929rem;
-  height: 8.786rem;
+  width: 100%;
+  height: auto;
   overflow: hidden;
 }
 body.mobile .sub .search-result .container .list div.mat ul li a .img img {
-  position: absolute;
-  top: 50%;
-  min-height: 100%;
-  display: block;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  min-width: 100%;
+  width: 100%;
+  height: auto;
   border: none;
 }
 body.mobile .sub .search-result .container .list div.mat ul li a h5 {
@@ -8171,6 +8147,10 @@ body.mobile .sub .search-result .container .list div.mat ul li a h5 {
 }
 body.mobile .sub .search-result .container .list div.mat ul li a .star-rate {
   display: none;
+}
+body.mobile .sub .search-result .container .list div.mat ul li.no {
+  margin: 0;
+  width: 100%;
 }
 body.mobile .sub .search-result .container .list div.theme ul {
   padding: 1.429rem 0;
@@ -8182,6 +8162,11 @@ body.mobile .sub .search-result .container .list div.theme ul li a p {
   font-size: 14px;
   color: #555555;
 }
+body.mobile .sub .search-result .container .list div.theme ul li.no {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
 body.mobile .sub .search-result .container .list div.festival ul {
   padding: 1.429rem 0;
 }
@@ -8191,6 +8176,11 @@ body.mobile .sub .search-result .container .list div.festival ul li {
 body.mobile .sub .search-result .container .list div.festival ul li a p {
   font-size: 14px;
   color: #555555;
+}
+body.mobile .sub .search-result .container .list div.festival ul li.no {
+  margin: 0;
+  width: 100%;
+  text-align: center;
 }
 body.mobile .sub .search-result .container .list div.plan ul {
   padding: 1.429rem 0;
@@ -8225,6 +8215,11 @@ body.mobile .sub .search-result .container .list div.plan ul li a h5 strong {
   font-size: 1.357rem;
   font-weight: 600;
 }
+body.mobile .sub .search-result .container .list div.plan ul li.no {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
 body.mobile .sub .search-result .container .sidebar {
   position: absolute;
   top: -2.5rem;
@@ -8247,8 +8242,12 @@ body.mobile .sub .search-result .container .sidebar .popword {
   vertical-align: bottom;
 }
 body.mobile .sub .search-result .container .sidebar .popword ul {
-  display: inline-block;
+  display: block;
+  width: 100% !important;
   border: none;
+}
+body.mobile .sub .search-result .container .sidebar .popword ul li {
+  width: 100% !important;
 }
 body.mobile .sub .search-result .container .sidebar .popword ul li a {
   display: inline-block;
@@ -8345,7 +8344,7 @@ body.mobile .sub .mypage.bookmark .container fieldset select {
   -moz-appearance: none;
   -ms-appearance: none;
   -webkit-appearance: none;
-  background: url('/openjeju/images/select-bg.png') no-repeat right center;
+  background: url('../images/select-bg.png') no-repeat right center;
   font-size: 14px;
   margin-left: -7px;
   border: 1px solid #a9a9a9;
