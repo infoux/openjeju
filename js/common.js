@@ -107,12 +107,17 @@ $(document).ready(function() {
     });
     $("body.mobile section.search-result button.mobile-category").click(function(){
       $(this).parent().find('li').show();
+    $("body.mobile section.search-result button.mobile-close").show();
     });
     $('body.mobile section.search-result .search-category li .option').click(function(e){
       $('body.mobile section.search-result .search-category li').hide();
+      $("body.mobile section.search-result button.mobile-close").hide();
       $("body.mobile section.search-result button.mobile-category").text($(e.target).text());
     });
-
+    $("body.mobile section.search-result button.mobile-close").click(function(e){
+      $('body.mobile section.search-result .search-category li').hide();
+      $("body.mobile section.search-result button.mobile-close").hide();
+    });
 
     $('#map-area li a').on('click', function() {
         var activeTab = $(this).parent().attr('id');

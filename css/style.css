@@ -4955,6 +4955,12 @@ body.pc .sub .map-area {
 body.pc .sub .search-result .container {
   padding: 0 20px;
 }
+body.pc .sub .search-result .container .mobile-category {
+  display: none;
+}
+body.pc .sub .search-result .container .mobile-close {
+  display: none;
+}
 body.pc .sub .search-result .container .search-category {
   display: inline-block;
   list-style: none;
@@ -8003,6 +8009,18 @@ body.mobile .sub .search-result .container .mobile-category {
   color: #333333;
   background: url('../images/select-bg.png') no-repeat right center #fff;
   border: 1px solid #a9a9a9;
+}
+body.mobile .sub .search-result .container .mobile-close {
+  display: none;
+  position: absolute;
+  z-index: 400;
+  right: 10px;
+  top: 10px;
+  width: 53px;
+  height: 53px;
+  background: #333333;
+  color: #fff;
+  border: none;
 }
 body.mobile .sub .search-result .container .search-category {
   position: relative;
