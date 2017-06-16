@@ -8612,16 +8612,38 @@ body.mobile .sub .mypage.review .container ul li .aside .btn-area a {
 }
 .culture.view .container {
   text-align: left;
-  padding: 0 1.25rem;
+  padding: 1.25rem;
+  font-size: 1.25rem;
   word-break: keep-all;
+  line-height: 1.6;
   /*각 페이지별 태그 들어갑니다.*/
 }
 .culture.view .container h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 2.5rem 0;
+}
+.culture.view .container strong {
+  font-size: 1.5rem;
+  color: #0075bc;
 }
 .culture.view .container img {
   max-width: 100%;
+}
+.culture.view .container img[align=left] {
+  margin: 1.25rem;
+  margin-left: 0;
+  margin-top: 0;
+  max-width: 50%;
+}
+.culture.view .container img[align=right] {
+  margin: 1.25rem;
+  margin-right: 0;
+  margin-top: 0;
+  max-width: 50%;
+}
+.culture.view .container img[align=center] {
+  margin: 1.25rem auto;
+  margin-top: 0;
 }
 .culture.view .container .btn-area {
   margin: 20px 0;
