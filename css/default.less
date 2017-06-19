@@ -31,7 +31,6 @@
 @gray-lighter: lighten(@gray-base,
 93.5%); // #eee
 @blue: #0075bc;
-@light-blue: @blue +#111;
 @dark-blue: @blue - #111;
 @green: #199d54;
 @dark-green: @green - #111;
@@ -57,7 +56,11 @@
     background-clip: padding-box;
 }
 
-.drop-shadow (@x: 0, @alpha: 0.25, @blur: 2px, @spread: 0, @y: 2px) {
+.drop-shadow (@x: 0,
+@alpha: 0.25,
+@blur: 2px,
+@spread: 0,
+@y: 2px) {
     -webkit-box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
     -moz-box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
     box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
@@ -73,7 +76,9 @@
     opacity: @opacity;
 }
 
-.gradient (@startColor: #eee, @endColor: white, @ingColor: #eee) {
+.gradient (@startColor: #eee,
+@endColor: white,
+@ingColor: #eee) {
     background-color: @startColor;
     background: -webkit-linear-gradient(top, @startColor, @ingColor, @endColor);
     background: -moz-linear-gradient(top, @startColor, @ingColor, @endColor);
@@ -81,7 +86,9 @@
     background: -o-linear-gradient(top, @startColor, @ingColor, @endColor);
 }
 
-.gradienth (@startColor: #eee, @endColor: white, @ingColor: #eee) {
+.gradienth (@startColor: #eee,
+@endColor: white,
+@ingColor: #eee) {
     background-color: @startColor;
     background: -webkit-linear-gradient(left, @startColor, @ingColor, @endColor);
     background: -moz-linear-gradient(left, @startColor, @ingColor, @endColor);
@@ -111,10 +118,16 @@
     height: 100%;
     background: @background;
 }
+
 @keyframes fade {
-    from {background:rgba(0,0,0,0.3);}
-    to {background:rgba(0,0,0,0.7);}
+    from {
+        background: rgba(0, 0, 0, 0.3);
+    }
+    to {
+        background: rgba(0, 0, 0, 0.7);
+    }
 }
+
 
 /* header */
 
