@@ -1,6 +1,7 @@
 @import "normalize.css";
 @import "font-awesome.min.css";
 @import "weather-icons.css";
+@import "custom-scrollbar.css";
 /* function */
 @light-blue : @blue +#111;
 /* mixin */
@@ -556,8 +557,8 @@ body .main .main-issue .weather h5 i.wi-snow {
 body .main .main-issue:before {
   content: "";
   display: block;
-  position: absolute;
-  z-index: 0;
+  position: fixed;
+  z-index: -1;
   background: #000;
   left: 0;
   right: 0;
@@ -773,11 +774,15 @@ body.pc .main {
 }
 body.pc .main section {
   text-align: center;
+  display: inline-block;
+  width: 100%;
+  font-size: 0;
 }
 body.pc .main .main-issue .video::after {
   content: '';
   display: block;
-  position: absolute;
+  position: fixed;
+  z-index: -1;
   top: 0;
   left: 0;
   right: 0;
@@ -785,17 +790,12 @@ body.pc .main .main-issue .video::after {
   background: url('../images/scanline.png');
 }
 body.pc .main .main-issue .video video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 200%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 110%;
   background: #ccc;
   object-fit: cover;
 }
@@ -932,6 +932,9 @@ body.pc .main .main-issue .container .weather ul {
 body.pc .main .main-issue .container .weather ul li {
   padding-left: 70px;
   height: 60px;
+}
+body.pc .main .main-food {
+  background: #fff;
 }
 body.pc .main .main-food h4 {
   font-size: 44px;
@@ -1098,6 +1101,9 @@ body.pc .main .main-tv ul li:last-child {
   position: absolute;
   right: 0;
 }
+body.pc .main .main-trip {
+  background: #fff;
+}
 body.pc .main .main-trip h4 {
   font-size: 44px;
   margin: 60px 0 40px;
@@ -1133,7 +1139,6 @@ body.pc .main .main-trip ul li:nth-child(4n) {
   margin-right: 0;
 }
 body.pc .rank {
-  background: #eeeeee;
   text-align: center;
 }
 body.pc .rank .container {
@@ -1142,7 +1147,7 @@ body.pc .rank .container {
 }
 body.pc .rank .container h4 {
   font-size: 35px;
-  color: #333333;
+  color: #fff;
   margin: 40px 0 30px;
 }
 body.pc .rank .container fieldset {
@@ -1252,6 +1257,8 @@ body.pc .rank .container .rank-pop ul li .count {
 /* main - mobile */
 body.mobile .main .main-issue {
   height: 36.25rem;
+  position: relative;
+  z-index: -1;
 }
 body.mobile .main .main-issue .video {
   display: none;
@@ -1381,6 +1388,9 @@ body.mobile .main .main-issue .container .weather ul li h5 i {
 body.mobile .main .main-issue .container .weather ul li p {
   font-size: 14px;
   margin: 0.375rem 0 0;
+}
+body.mobile .main .main-food {
+  background: #fff;
 }
 body.mobile .main .main-food h4 {
   font-size: 35px;
@@ -2452,10 +2462,12 @@ body.pc .sub .sub-info .container #map-area .map-pop h5 {
 }
 body.pc .sub .sub-info .container #map-area .map-pop p {
   height: 330px;
-  overflow-y: scroll;
   padding: 0 20px 20px;
   font-size: 1rem;
   word-break: keep-all;
+}
+body.pc .sub .sub-info .container #map-area .map-pop p .viewport {
+  height: 330px !important;
 }
 body.pc .sub .sub-info .container #map-area .map-pop a {
   display: inline-block;
@@ -8633,12 +8645,11 @@ body.mobile .sub .mypage.review .container ul li .aside .btn-area a {
   margin: 1.25rem;
   margin-left: 0;
   margin-top: 0;
-  max-width: 50%;
+  max-width: 60%;
 }
 .culture.view .container img[align=right] {
   margin: 1.25rem;
   margin-right: 0;
-  margin-top: 0;
   max-width: 50%;
 }
 .culture.view .container img[align=center] {

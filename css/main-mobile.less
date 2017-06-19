@@ -5,6 +5,8 @@ body.mobile {
     .main {
         .main-issue {
             height: 36.25rem;
+            position:relative;
+            z-index:-1;
             .video{
               display:none;
               &::after{
@@ -155,6 +157,7 @@ body.mobile {
         }
 
         .main-food {
+          background:@white-base;
             h4 {
                 font-size : @font-size-06;
                 margin    : 40px 0 30px;

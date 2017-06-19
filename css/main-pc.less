@@ -7,15 +7,20 @@ body.pc {
 
         section {
             text-align: center;
+            display:inline-block;
+            width:100%;
+            font-size:0;
 
         }
 
         .main-issue {
+
           .video{
             &::after{
               content:'';
               display:block;
-              position:absolute;
+              position:fixed;
+              z-index:-1;
               top:0;
               left:0;
               right:0;
@@ -23,17 +28,14 @@ body.pc {
               background:url('@{img-url}/scanline.png');
             }
             video{
-              position:absolute;
-              top:50%;
-              left:50%;
-              min-width:200%;
-              min-height:100%;
-              width:auto;
-              height:auto;
-              -ms-transform:translateX(-50%) translateY(-50%);
-              -moz-transform:translateX(-50%) translateY(-50%);
-              -webkit-transform:translateX(-50%) translateY(-50%);
-              transform:translateX(-50%) translateY(-50%);
+              position:fixed;
+              z-index:-1;
+              top:0;
+              left:0;
+
+              width:100%;
+              min-height:110%;
+
               background:#ccc;
               object-fit:cover;
             }
@@ -195,9 +197,12 @@ body.pc {
         }
 
         .main-food {
+          background:@white-base;
+
             h4 {
                 font-size: @font-size-08;
                 margin   : 60px 0 40px;
+
 
                 small {
                     font-size: @font-size-04;
@@ -389,6 +394,8 @@ body.pc {
         }
 
         .main-trip {
+          background:@white-base;
+
             h4 {
                 font-size: @font-size-08;
                 margin   : 60px 0 40px;
@@ -440,14 +447,13 @@ body.pc {
 
     }
     .rank{
-      background:@gray-lighter;
       text-align:center;
       .container{
         margin-bottom:30px;
         text-align:center;
         h4{
           font-size:35px;
-          color:@gray-dark;
+          color:@white-base;
           margin:40px 0 30px;
         }
         fieldset{
