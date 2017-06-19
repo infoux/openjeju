@@ -5408,20 +5408,25 @@ body.pc .sub .mypage.bookmark .container ul li a span {
 body.pc .sub .mypage.bookmark .container ul li a .content {
   position: absolute;
   bottom: 10px;
-  left: 20px;
-  width: 250px;
+  left: 0;
+  width: 100%;
   text-align: left;
   font-size: 18px;
+  padding: 0 20px;
   color: #fff;
   z-index: 101;
 }
 body.pc .sub .mypage.bookmark .container ul li a .content h5 {
   display: inline-block;
+  width: calc(100% - 50px);
   font-size: 24px;
   color: #fff;
   margin: 0;
   line-height: 1.4;
   font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 body.pc .sub .mypage.bookmark .container ul li a .content h5 small {
   display: block;
@@ -5429,13 +5434,13 @@ body.pc .sub .mypage.bookmark .container ul li a .content h5 small {
   color: #ffff00;
 }
 body.pc .sub .mypage.bookmark .container ul li a .content button {
-  float: right;
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
   border: none;
   background: none;
   width: 35px;
   height: 35px;
-  margin-top: 25px;
-  margin-right: 5px;
   border-radius: 50%;
   border: 5px solid #fff;
 }

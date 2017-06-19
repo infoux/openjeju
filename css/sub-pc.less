@@ -3467,19 +3467,24 @@ body.pc {
                                 .content {
                                     position: absolute;
                                     bottom: 10px;
-                                    left: 20px;
-                                    width: 250px;
+                                    left: 0;
+                                    width: 100%;
                                     text-align: left;
                                     font-size: @font-size-02;
+                                    padding: 0 20px;
                                     color: #fff;
                                     z-index: 101;
                                     h5 {
                                         display: inline-block;
+                                        width: calc(~"100% - 50px");
                                         font-size: 24px;
                                         color: #fff;
                                         margin: 0;
                                         line-height: 1.4;
                                         font-weight: @font-normal;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
                                         small {
                                             display: block;
                                             font-size: @font-size-01;
@@ -3487,13 +3492,13 @@ body.pc {
                                         }
                                     }
                                     button {
-                                        float: right;
+                                        position: absolute;
+                                        right: 20px;
+                                        bottom: 10px;
                                         border: none;
                                         background: none;
                                         width: 35px;
                                         height: 35px;
-                                        margin-top: 25px;
-                                        margin-right: 5px;
                                         border-radius: 50%;
                                         border: 5px solid #fff;
                                         i {
