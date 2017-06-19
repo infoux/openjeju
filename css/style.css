@@ -3884,7 +3884,7 @@ body.pc .sub .list-main .container ul {
   margin: 60px 0 20px;
   font-size: 0;
   padding: 0;
-  text-align: center;
+  text-align: left;
 }
 body.pc .sub .list-main .container ul li {
   position: relative;
@@ -5333,6 +5333,7 @@ body.pc .sub .mypage.bookmark .container ul {
   list-style: none;
   margin: 20px 0 30px;
   padding: 0;
+  text-align: left;
 }
 body.pc .sub .mypage.bookmark .container ul li {
   display: inline-block;
