@@ -3908,7 +3908,7 @@ body.pc .sub .list-main .container ul li a {
   width: 100%;
   height: 100%;
   color: #fff;
-  padding-top: 60px;
+  padding: 60px 10px 0;
   text-align: center;
   background: rgba(0, 0, 0, 0.3);
 }
@@ -3919,8 +3919,9 @@ body.pc .sub .list-main .container ul li a p {
   display: none;
 }
 body.pc .sub .list-main .container ul li a:hover {
-  animation-name: fade;
-  animation-duration: 1s;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: background-color 1s, -webkit-transform 1s;
+  transition: background-color 1s, transform 1s;
 }
 body.pc .sub .list-main .container ul li a:hover h3 {
   display: inline-block;
