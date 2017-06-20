@@ -4673,8 +4673,20 @@ body.pc .sub .plan .container .plan-inner .plan-search {
   padding: 20px 10px;
   z-index: 100;
 }
-body.pc .sub .plan .container .plan-inner .plan-search img {
-  display: none;
+body.pc .sub .plan .container .plan-inner .plan-search .image {
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  width: 76px;
+  height: 76px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+body.pc .sub .plan .container .plan-inner .plan-search .image img {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
 }
 body.pc .sub .plan .container .plan-inner .plan-search h5 {
   margin: 0;
@@ -4763,16 +4775,6 @@ body.pc .sub .plan .container .plan-inner .plan-search section .content {
   margin-bottom: 10px;
   text-align: left;
 }
-body.pc .sub .plan .container .plan-inner .plan-search section .content::before {
-  content: '';
-  position: absolute;
-  left: 10px;
-  top: 13px;
-  width: 76px;
-  height: 76px;
-  background: url('../images/@tmp-transport03.jpg') no-repeat center / cover;
-  border-radius: 10px;
-}
 body.pc .sub .plan .container .plan-inner .plan-search section .content span {
   display: inline-block;
   font-size: 20px;
@@ -4847,15 +4849,20 @@ body.pc .sub .plan .container .plan-inner .mapView .content {
   padding: 13px 10px 13px 95px;
   text-align: left;
 }
-body.pc .sub .plan .container .plan-inner .mapView .content::before {
-  content: '';
+body.pc .sub .plan .container .plan-inner .mapView .content .image {
+  display: block;
   position: absolute;
   left: 10px;
   top: 13px;
   width: 76px;
   height: 76px;
-  background: url('../images/@tmp-transport03.jpg') no-repeat center / cover;
   border-radius: 10px;
+  overflow: hidden;
+}
+body.pc .sub .plan .container .plan-inner .mapView .content .image img {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
 }
 body.pc .sub .plan .container .plan-inner .mapView .content span {
   display: inline-block;
@@ -4864,6 +4871,9 @@ body.pc .sub .plan .container .plan-inner .mapView .content span {
   color: #333333;
   padding-left: 7px;
   text-align: left;
+}
+body.pc .sub .plan .container .plan-inner .mapView .content span i {
+  font-style: normal;
 }
 body.pc .sub .plan .container .plan-inner .mapView .content span small {
   display: block;

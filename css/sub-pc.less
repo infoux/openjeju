@@ -2706,8 +2706,20 @@ body.pc {
                         background: @gray;
                         padding: 20px 10px;
                         z-index: 100;
-                        img {
-                            display: none;
+                        .image {
+                            display: block;
+                            position: absolute;
+                            left: 10px;
+                            top: 13px;
+                            width: 76px;
+                            height: 76px;
+                            border-radius: 10px;
+                            overflow: hidden;
+                            img {
+                                width: 100%;
+                                height: auto;
+                                min-height: 100%;
+                            }
                         }
                         h5 {
                             margin: 0;
@@ -2796,16 +2808,6 @@ body.pc {
                                 padding: 13px 10px 13px 95px;
                                 margin-bottom: 10px;
                                 text-align: left;
-                                &::before {
-                                    content: '';
-                                    position: absolute;
-                                    left: 10px;
-                                    top: 13px;
-                                    width: 76px;
-                                    height: 76px;
-                                    background:url('@{img-url}/@tmp-transport03.jpg') no-repeat center / cover;
-                                    border-radius: 10px;
-                                }
                                 span {
                                     display: inline-block;
                                     font-size: 20px;
@@ -2881,15 +2883,20 @@ body.pc {
                             background: #fff;
                             padding: 13px 10px 13px 95px;
                             text-align: left;
-                            &::before {
-                                content: '';
+                            .image {
+                                display: block;
                                 position: absolute;
                                 left: 10px;
                                 top: 13px;
                                 width: 76px;
                                 height: 76px;
-                                background:url('@{img-url}/@tmp-transport03.jpg') no-repeat center / cover;
                                 border-radius: 10px;
+                                overflow: hidden;
+                                img {
+                                    width: 100%;
+                                    height: auto;
+                                    min-height: 100%;
+                                }
                             }
                             span {
                                 display: inline-block;
@@ -2898,6 +2905,9 @@ body.pc {
                                 color: @gray-dark;
                                 padding-left: 7px;
                                 text-align: left;
+                                i {
+                                    font-style: normal;
+                                }
                                 small {
                                     display: block;
                                     font-size: 14px;
