@@ -2,7 +2,7 @@
 @import "normalize.css";
 @import "font-awesome.min.css";
 @import "weather-icons.css";
-@import "custom-scrollbar.css";
+@import "perfect-scrollbar.css";
 /* function */
 /* mixin */
 @keyframes fade {
@@ -2470,6 +2470,7 @@ body.pc .sub .sub-info .container #map-area .map-pop h5 {
   font-size: 21px;
 }
 body.pc .sub .sub-info .container #map-area .map-pop p {
+  position: relative;
   height: 330px;
   padding: 0 20px 20px;
   font-size: 1rem;
@@ -4471,12 +4472,11 @@ body.pc .sub .plan .container .plan-inner .list {
   display: inline-block;
   width: 354px;
   height: 650px;
-  overflow-y: scroll;
 }
 body.pc .sub .plan .container .plan-inner .list h4 {
   margin: 0;
   font-weight: 400;
-  border: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
 }
 body.pc .sub .plan .container .plan-inner .list h4 a {
   display: block;
@@ -4737,32 +4737,7 @@ body.pc .sub .plan .container .plan-inner .plan-search fieldset button {
 }
 body.pc .sub .plan .container .plan-inner .plan-search section {
   max-height: 470px;
-  overflow-y: scroll;
-  scrollbar-arrow-color: #555555;
-  scrollbar-3dlight-color: #555555;
-  scrollbar-darkshadow-color: #555555;
-  scrollbar-face-color: #555555;
-  scrollbar-hightlight-color: #555555;
-  scrollbar-shadow-color: #555555;
-  scrollbar-track-color: #555555;
-}
-body.pc .sub .plan .container .plan-inner .plan-search section::-webkit-scrollbar {
-  width: 1em;
-}
-body.pc .sub .plan .container .plan-inner .plan-search section::-webkit-scrollbar-track {
-  visibility: hidden;
-}
-body.pc .sub .plan .container .plan-inner .plan-search section::-webkit-scrollbar-thumb {
-  visibility: hidden;
-}
-body.pc .sub .plan .container .plan-inner .plan-search section::-ms-scrollbar {
-  width: 1em;
-}
-body.pc .sub .plan .container .plan-inner .plan-search section::-ms-scrollbar-track {
-  visibility: hidden;
-}
-body.pc .sub .plan .container .plan-inner .plan-search section::-ms-scrollbar-thumb {
-  visibility: hidden;
+  position: relative;
 }
 body.pc .sub .plan .container .plan-inner .plan-search section .content {
   position: relative;
@@ -7817,7 +7792,7 @@ body.mobile .sub .plan .plan-inner .plan-search .search-inner fieldset button i 
 }
 body.mobile .sub .plan .plan-inner .plan-search .search-inner section {
   max-height: 21.429rem;
-  overflow-y: scroll;
+  position: relative;
 }
 body.mobile .sub .plan .plan-inner .plan-search .search-inner section .content {
   position: relative;
@@ -7830,15 +7805,18 @@ body.mobile .sub .plan .plan-inner .plan-search .search-inner section .content {
   text-align: left;
   margin-bottom: 0.625rem;
 }
-body.mobile .sub .plan .plan-inner .plan-search .search-inner section .content::before {
-  content: "";
+body.mobile .sub .plan .plan-inner .plan-search .search-inner section .content .image {
   position: absolute;
   left: 0.714rem;
   top: 0.929rem;
   width: 6.214rem;
   height: 6.214rem;
-  background: url('../images/@tmp-transport03.jpg') no-repeat center / cover;
+  overflow: hidden;
   border-radius: 0.714rem;
+}
+body.mobile .sub .plan .plan-inner .plan-search .search-inner section .content .image img {
+  width: 100%;
+  min-height: 100%;
 }
 body.mobile .sub .plan .plan-inner .plan-search .search-inner section .content span {
   display: inline-block;
@@ -7914,15 +7892,18 @@ body.mobile .sub .plan .plan-inner .mapView .content {
   padding: 0.929rem 0.714rem 0.929rem 7.143rem;
   text-align: left;
 }
-body.mobile .sub .plan .plan-inner .mapView .content::before {
-  content: '';
+body.mobile .sub .plan .plan-inner .mapView .content .image {
   position: absolute;
   left: 0.714rem;
   top: 0.929rem;
   width: 6.214rem;
   height: 6.214rem;
-  background: url('../images/@tmp-transport03.jpg') no-repeat center / cover;
+  overflow: hidden;
   border-radius: 0.714rem;
+}
+body.mobile .sub .plan .plan-inner .mapView .content .image img {
+  width: 100%;
+  min-height: 100%;
 }
 body.mobile .sub .plan .plan-inner .mapView .content span {
   display: inline-block;
@@ -7931,6 +7912,9 @@ body.mobile .sub .plan .plan-inner .mapView .content span {
   color: #333333;
   padding-left: 0.5rem;
   text-align: left;
+}
+body.mobile .sub .plan .plan-inner .mapView .content span i {
+  font-style: normal;
 }
 body.mobile .sub .plan .plan-inner .mapView .content span small {
   display: block;

@@ -40,7 +40,6 @@ $(document).ready(function () {
 
 
 
-
     function viewMode() {
         var windowWidth = $(window).width();
         if (windowWidth < 1199) {
@@ -133,6 +132,14 @@ $(document).ready(function () {
     $('#header .gnb .lang').click(function () {
         $('#header .gnb .lang-list').toggle();
     });
+
+
+
+    $(".map-pop p").perfectScrollbar();
+    $(".plan-inner .list").perfectScrollbar();
+
+    $(".plan-search .search-inner section").perfectScrollbar();
+
 
 
     $(window).resize(function () {
@@ -341,8 +348,6 @@ function popWordSlider() {
         });
     }
 }
-
-$("body.pc .map-pop p").customScrollbar();
 
 
 var $searchPopword = {

@@ -2352,7 +2352,7 @@ body.mobile {
                         }
                         section {
                             max-height: 21.429rem;
-                            overflow-y: scroll;
+                            position: relative;
                             .content {
                                 position: relative;
                                 display: inline-block;
@@ -2363,15 +2363,18 @@ body.mobile {
                                 padding: 0.929rem 0.714rem 0.929rem 7.143rem;
                                 text-align: left;
                                 margin-bottom: 0.625rem;
-                                &::before {
-                                    content: "";
+                                .image {
                                     position: absolute;
                                     left: 0.714rem;
                                     top: 0.929rem;
                                     width: 6.214rem;
                                     height: 6.214rem;
-                                    background:url('@{img-url}/@tmp-transport03.jpg') no-repeat center / cover;
+                                    overflow: hidden;
                                     border-radius: 0.714rem;
+                                    img {
+                                        width: 100%;
+                                        min-height: 100%;
+                                    }
                                 }
                                 span {
                                     display: inline-block;
@@ -2449,15 +2452,18 @@ body.mobile {
                         background: #fff;
                         padding: 0.929rem 0.714rem 0.929rem 7.143rem;
                         text-align: left;
-                        &::before {
-                            content: '';
+                        .image {
                             position: absolute;
                             left: 0.714rem;
                             top: 0.929rem;
                             width: 6.214rem;
                             height: 6.214rem;
-                            background:url('@{img-url}/@tmp-transport03.jpg') no-repeat center / cover;
+                            overflow: hidden;
                             border-radius: 0.714rem;
+                            img {
+                                width: 100%;
+                                min-height: 100%;
+                            }
                         }
                         span {
                             display: inline-block;
@@ -2466,6 +2472,9 @@ body.mobile {
                             color: @gray-dark;
                             padding-left: 0.5rem;
                             text-align: left;
+                            i {
+                                font-style: normal;
+                            }
                             small {
                                 display: block;
                                 font-size: @font-size;

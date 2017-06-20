@@ -409,6 +409,7 @@ body.pc {
                             font-size: @font-size-03;
                         }
                         p {
+                            position: relative;
                             height: 330px;
                             padding: 0 20px 20px;
                             font-size: 1rem;
@@ -2503,11 +2504,10 @@ body.pc {
                         display: inline-block;
                         width: 354px;
                         height: 650px;
-                        overflow-y: scroll;
                         h4 {
                             margin: 0;
                             font-weight: @font-normal;
-                            border: 1px solid #e4e4e4;
+                            border-bottom: 1px solid #e4e4e4;
                             a {
                                 display: block;
                                 height: 46px;
@@ -2772,32 +2772,7 @@ body.pc {
                         }
                         section {
                             max-height: 470px;
-                            overflow-y: scroll;
-                            scrollbar-arrow-color: @gray;
-                            scrollbar-3dlight-color: @gray;
-                            scrollbar-darkshadow-color: @gray;
-                            scrollbar-face-color: @gray;
-                            scrollbar-hightlight-color: @gray;
-                            scrollbar-shadow-color: @gray;
-                            scrollbar-track-color: @gray;
-                            &::-webkit-scrollbar {
-                                width: 1em;
-                            }
-                            &::-webkit-scrollbar-track {
-                                visibility: hidden;
-                            }
-                            &::-webkit-scrollbar-thumb {
-                                visibility: hidden;
-                            }
-                            &::-ms-scrollbar {
-                                width: 1em;
-                            }
-                            &::-ms-scrollbar-track {
-                                visibility: hidden;
-                            }
-                            &::-ms-scrollbar-thumb {
-                                visibility: hidden;
-                            }
+                            position: relative;
                             .content {
                                 position: relative;
                                 display: inline-block;
