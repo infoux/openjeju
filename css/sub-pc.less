@@ -841,17 +841,17 @@ body.pc {
                                 position: relative;
                                 display: inline-block;
                                 font-size: 20px;
-                                padding-right: 10px;
-                                margin-right: 10px;
-                                &::after {
-                                    content: '';
-                                    display: inline-block;
-                                    position: absolute;
-                                    right: 0;
-                                    bottom: 0;
-                                    width: 1px;
-                                    height: 20px;
-                                    background: @gray-lighter;
+                                padding: 10px 20px;
+                                margin: 0 4px 6px 0;
+                                border:1px solid @gray;
+
+                                &.active {
+                                  color:@white-base;
+                                  font-weight:@font-bold;
+                                  border-color:transparent;
+                                  background:@blue;
+
+
                                 }
                             }
                             &:last-child {
