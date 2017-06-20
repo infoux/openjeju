@@ -2889,6 +2889,9 @@ body.pc .sub .list-type01 .container #category ul li a::after {
 body.pc .sub .list-type01 .container #category ul li:last-child a::after {
   display: none;
 }
+body.pc .sub .list-type01 .container #category ul li.nonSearch {
+  padding: 20px;
+}
 body.pc .sub .list-type01 .container #order-btn {
   display: inline-block;
 }
