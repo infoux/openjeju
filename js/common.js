@@ -329,14 +329,14 @@ function popWordSlider() {
 
 
         });
-        $('.main-issue .text .prev').click(function () {
-            $popWordSlider.goToPrevSlide();
-            $popWordSlider.stopAuto();
+        $('.main-issue .text .prevSlider').click(function () {
+            $popWordSlider.slider.goToPrevSlide();
+            $popWordSlider.slider.stopAuto();
             return false;
         });
-        $('.main-issue .text .next').click(function () {
-            $popWordSlider.goToNextSlide();
-            $popWordSlider.stopAuto();
+        $('.main-issue .text .nextSlider').click(function () {
+            $popWordSlider.slider.goToNextSlide();
+            $popWordSlider.slider.stopAuto();
             return false;
         });
     }
