@@ -86,48 +86,48 @@ body {
 
             .weather {
                 position:absolute;
+                i {
+                     &.wi-day-sunny {
+                        color : @yellow;
+                    }
+                    &.wi-day-sunny-overcast{
+                      color:@yellow;
+                    }
+                    &.wi-cloudy{
+                      color:#448aca;
+                    }
+                    &.wi-day-cloudy{
+                      color:#acacac;
+                    }
+                    &.wi-rain{
+                      color:#7accc8;
+                    }
+                    &.wi-sprinkle{
+                      color:#7accc8;
+                    }
+                    &.wi-sleet{
+                      color:#57b9e7;
+                    }
+                    &.wi-snow{
+                      color:#57b9e7;
+                    }
+                }
                 h5 {
                     font-size:@font-size-05;
                     font-weight:@font-normal;
-                    i {
-                         &.wi-day-sunny {
-                            color : @yellow;
-                        }
-                        &.wi-day-sunny-overcast{
-                          color:@yellow;
-                        }
-                        &.wi-cloudy{
-                          color:#448aca;
-                        }
-                        &.wi-day-cloudy{
-                          color:#acacac;
-                        }
-                        &.wi-rain{
-                          color:#7accc8;
-                        }
-                        &.wi-sprinkle{
-                          color:#7accc8;
-                        }
-                        &.wi-sleet{
-                          color:#57b9e7;
-                        }
-                        &.wi-snow{
-                          color:#57b9e7;
-                        }
-                    }
+
                 }
             }
 
             &:before {
                 content:"";
                 display:block;
-                position:fixed;
-                z-index:-1;
+                position:absolute;
                 background:@gray-base;
                 left:0;
                 right:0;
                 top:0;
-                bottom:0;
+                height:100%;
                 .opacity(0.5);
             }
 

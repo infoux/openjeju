@@ -50,7 +50,7 @@ $(document).ready(function () {
             $("body").removeClass("mobile");
         }
 
-        $(".mobile .main-issue").css("background", "url(" + $(".main-issue .issue-bg").attr("src") + ") no-repeat center / cover");
+        $(".main-issue").css("background", "url(" + $(".main-issue .issue-bg").attr("src") + ") no-repeat center / cover");
         $(".sub-head").css("background", "url(" + $(".sub-head>img").attr("src") + ") no-repeat center / cover");
         $(".visual-area").css("background", "url(" + $(".visual-area img").attr("src") + ") no-repeat center / cover");
         $(".pc .view-head").css("background", "url(" + $(".view-head img").attr("src") + ") no-repeat center / cover");
@@ -67,18 +67,19 @@ $(document).ready(function () {
 
     }
 
+/*
     function mainHeight() {
         $(".pc .main-issue").css("height", $(window).height() - 70);
         $(".pc .visual-area").css("height", $(window).height());
         $(".mobile .main-issue").css("height", "");
         $(".mobile .visual-area").css("height", "");
     }
-
+*/
 
 
 
     viewMode();
-    mainHeight();
+//    mainHeight();
     popword();
     matSlider();
     weatherSlider();
@@ -144,7 +145,7 @@ $(document).ready(function () {
 
     $(window).resize(function () {
         viewMode();
-        mainHeight();
+//        mainHeight();
         matSlider();
         weatherSlider();
         popword();

@@ -6,7 +6,7 @@ body.mobile {
         .main-issue {
             height: 36.25rem;
             position:relative;
-            z-index:-1;
+
             .video{
               display:none;
               &::after{
@@ -123,7 +123,7 @@ body.mobile {
 
                 .weather {
 
-                    top       : 0;
+                    top       : 2vh;
                     width     : 100%;
                     text-align: center;
                     overflow:hidden;
@@ -134,19 +134,22 @@ body.mobile {
                       padding:0;
                       li{
                         width:100% !important;
+
+                        i {
+                            display      : block;
+                            font-size    : 5.25rem;
+                            margin-bottom: 0.825rem;
+                            line-height: 6rem;
+
+                        }
                         h5 {
                           width:100%;
-                            margin: 1.875rem 0 0;
+                            margin: 1.25rem 0 0;
 
-                            i {
-                                display      : block;
-                                font-size    : 5.25rem;
-                                margin-bottom: 1.25rem;
-
-                            }
                         }
 
-                        p {
+                        small {
+                            display:block;
                             font-size:@font-size;
                             margin: 0.375rem 0 0;
                         }

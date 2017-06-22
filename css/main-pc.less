@@ -7,10 +7,15 @@ body.pc {
             text-align: center;
             display: inline-block;
             width: 100%;
+
             font-size: 0;
         }
         .main-issue {
+            height:600px;
             .video {
+              display:none;
+
+              /*
                 &::after {
                     content: '';
                     display: block;
@@ -30,15 +35,17 @@ body.pc {
                     width: 100%;
                     min-height: 110%;
                     background: #ccc;
-                    object-fit: cover;   
+                    object-fit: cover;
                 }
+
+                */
             }
             .container {
                 text-align: center;
                 h4 {
                     font-size: 54px;
                     font-weight: @font-normal;
-                    margin: 24vh 0 2vh;
+                    margin: 120px 0 20px;
                     strong {
                         color: @yellow-dark;
                         font-weight: @font-normal;
@@ -130,42 +137,42 @@ body.pc {
                     bottom: 10px;
                 }
                 .weather {
-                    width: 290px;
-                    top: 50px;
-                    text-align: left;
-                    overflow: hidden;
-                    h5 {
-                        margin: 0;
-                        width: 220px;
-                        p {
-                            font-size: @font-size;
-                            margin: 6px 0 0;
-                        }
+                  position:absolute;
+                  left:40px;
+                  top:40px;
+                  width:300px;
+                  text-align:left;
+                  .bx-viewport {
+
+
+                    ul {
+                      display:inline-block;
+                      list-style: none;
+                      margin: 0;
+                      padding: 0;
+
+                      li {
+                        height:90px !important;
+                        width:300px !important;
                         i {
-                            position: absolute;
-                            left: 0;
-                            top: 0;
-                            margin-right: 10px;
-                            font-size: 48px;
-                            display: flex;
-                            width: 70px;
-                            height: 54px;
-                            align-items: center;
-                            justify-content: center;
-                            &.wi-day-sunny-overcast,
-                            &.wi-day-cloudy {
-                                height: 70px;
-                            }
+                            display:inline-block;
+                            font-size: 72px;
+                            min-height:90px;
+                            line-height:100px;
+
+                        }
+                          h5 {
+                            display:inline-block;
+                              margin: 10px 0 0 10px;
+                              small {
+                                display:block;
+                                  font-size: @font-size;
+                                  margin: 6px 0 0;
+                              }
+
+                          }
                         }
                     }
-                    ul {
-                        list-style: none;
-                        margin: 0;
-                        padding: 0;
-                        li {
-                            padding-left: 70px;
-                            height: 60px;
-                        }
                     }
                 }
             }
@@ -378,13 +385,13 @@ body.pc {
     }
     .rank {
         text-align: center;
+        background:@gray-lighter;
         .container {
             margin-bottom: 30px;
             text-align: center;
             h4 {
                 font-size: 35px;
-                color: @white-base;
-                margin: 40px 0 30px;
+                margin: 60px 0 40px;
             }
             fieldset {
                 border: none;

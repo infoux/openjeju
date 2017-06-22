@@ -525,44 +525,43 @@ body .main .main-issue .icons li:nth-child(even) a {
 body .main .main-issue .weather {
   position: absolute;
 }
+body .main .main-issue .weather i.wi-day-sunny {
+  color: #ffff00;
+}
+body .main .main-issue .weather i.wi-day-sunny-overcast {
+  color: #ffff00;
+}
+body .main .main-issue .weather i.wi-cloudy {
+  color: #448aca;
+}
+body .main .main-issue .weather i.wi-day-cloudy {
+  color: #acacac;
+}
+body .main .main-issue .weather i.wi-rain {
+  color: #7accc8;
+}
+body .main .main-issue .weather i.wi-sprinkle {
+  color: #7accc8;
+}
+body .main .main-issue .weather i.wi-sleet {
+  color: #57b9e7;
+}
+body .main .main-issue .weather i.wi-snow {
+  color: #57b9e7;
+}
 body .main .main-issue .weather h5 {
   font-size: 30px;
   font-weight: 400;
 }
-body .main .main-issue .weather h5 i.wi-day-sunny {
-  color: #ffff00;
-}
-body .main .main-issue .weather h5 i.wi-day-sunny-overcast {
-  color: #ffff00;
-}
-body .main .main-issue .weather h5 i.wi-cloudy {
-  color: #448aca;
-}
-body .main .main-issue .weather h5 i.wi-day-cloudy {
-  color: #acacac;
-}
-body .main .main-issue .weather h5 i.wi-rain {
-  color: #7accc8;
-}
-body .main .main-issue .weather h5 i.wi-sprinkle {
-  color: #7accc8;
-}
-body .main .main-issue .weather h5 i.wi-sleet {
-  color: #57b9e7;
-}
-body .main .main-issue .weather h5 i.wi-snow {
-  color: #57b9e7;
-}
 body .main .main-issue:before {
   content: "";
   display: block;
-  position: fixed;
-  z-index: -1;
+  position: absolute;
   background: #000;
   left: 0;
   right: 0;
   top: 0;
-  bottom: 0;
+  height: 100%;
   -webkit-opacity: 0.5;
   -moz-opacity: 0.5;
   opacity: 0.5;
@@ -777,26 +776,35 @@ body.pc .main section {
   width: 100%;
   font-size: 0;
 }
-body.pc .main .main-issue .video::after {
-  content: '';
-  display: block;
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('../images/scanline.png');
+body.pc .main .main-issue {
+  height: 600px;
 }
-body.pc .main .main-issue .video video {
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 110%;
-  background: #ccc;
-  object-fit: cover;
+body.pc .main .main-issue .video {
+  display: none;
+  /*
+                &::after {
+                    content: '';
+                    display: block;
+                    position: fixed;
+                    z-index: -1;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background:url('@{img-url}/scanline.png');
+                }
+                video {
+                    position: fixed;
+                    z-index: -1;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    min-height: 110%;
+                    background: #ccc;
+                    object-fit: cover;
+                }
+
+                */
 }
 body.pc .main .main-issue .container {
   text-align: center;
@@ -804,7 +812,7 @@ body.pc .main .main-issue .container {
 body.pc .main .main-issue .container h4 {
   font-size: 54px;
   font-weight: 400;
-  margin: 24vh 0 2vh;
+  margin: 120px 0 20px;
 }
 body.pc .main .main-issue .container h4 strong {
   color: #ffcc00;
@@ -898,43 +906,36 @@ body.pc .main .main-issue .container .fa-angle-down {
   bottom: 10px;
 }
 body.pc .main .main-issue .container .weather {
-  width: 290px;
-  top: 50px;
-  text-align: left;
-  overflow: hidden;
-}
-body.pc .main .main-issue .container .weather h5 {
-  margin: 0;
-  width: 220px;
-}
-body.pc .main .main-issue .container .weather h5 p {
-  font-size: 14px;
-  margin: 6px 0 0;
-}
-body.pc .main .main-issue .container .weather h5 i {
   position: absolute;
-  left: 0;
-  top: 0;
-  margin-right: 10px;
-  font-size: 48px;
-  display: flex;
-  width: 70px;
-  height: 54px;
-  align-items: center;
-  justify-content: center;
+  left: 40px;
+  top: 40px;
+  width: 300px;
+  text-align: left;
 }
-body.pc .main .main-issue .container .weather h5 i.wi-day-sunny-overcast,
-body.pc .main .main-issue .container .weather h5 i.wi-day-cloudy {
-  height: 70px;
-}
-body.pc .main .main-issue .container .weather ul {
+body.pc .main .main-issue .container .weather .bx-viewport ul {
+  display: inline-block;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-body.pc .main .main-issue .container .weather ul li {
-  padding-left: 70px;
-  height: 60px;
+body.pc .main .main-issue .container .weather .bx-viewport ul li {
+  height: 90px !important;
+  width: 300px !important;
+}
+body.pc .main .main-issue .container .weather .bx-viewport ul li i {
+  display: inline-block;
+  font-size: 72px;
+  min-height: 90px;
+  line-height: 100px;
+}
+body.pc .main .main-issue .container .weather .bx-viewport ul li h5 {
+  display: inline-block;
+  margin: 10px 0 0 10px;
+}
+body.pc .main .main-issue .container .weather .bx-viewport ul li h5 small {
+  display: block;
+  font-size: 14px;
+  margin: 6px 0 0;
 }
 body.pc .main .main-food {
   background: #fff;
@@ -1143,6 +1144,7 @@ body.pc .main .main-trip ul li:nth-child(4n) {
 }
 body.pc .rank {
   text-align: center;
+  background: #eeeeee;
 }
 body.pc .rank .container {
   margin-bottom: 30px;
@@ -1150,8 +1152,7 @@ body.pc .rank .container {
 }
 body.pc .rank .container h4 {
   font-size: 35px;
-  color: #fff;
-  margin: 40px 0 30px;
+  margin: 60px 0 40px;
 }
 body.pc .rank .container fieldset {
   border: none;
@@ -1261,7 +1262,6 @@ body.pc .rank .container .rank-pop ul li .count {
 body.mobile .main .main-issue {
   height: 36.25rem;
   position: relative;
-  z-index: -1;
 }
 body.mobile .main .main-issue .video {
   display: none;
@@ -1366,7 +1366,7 @@ body.mobile .main .main-issue .container .fa-angle-down {
   display: none;
 }
 body.mobile .main .main-issue .container .weather {
-  top: 0;
+  top: 2vh;
   width: 100%;
   text-align: center;
   overflow: hidden;
@@ -1379,16 +1379,18 @@ body.mobile .main .main-issue .container .weather ul {
 body.mobile .main .main-issue .container .weather ul li {
   width: 100% !important;
 }
-body.mobile .main .main-issue .container .weather ul li h5 {
-  width: 100%;
-  margin: 1.875rem 0 0;
-}
-body.mobile .main .main-issue .container .weather ul li h5 i {
+body.mobile .main .main-issue .container .weather ul li i {
   display: block;
   font-size: 5.25rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.825rem;
+  line-height: 6rem;
 }
-body.mobile .main .main-issue .container .weather ul li p {
+body.mobile .main .main-issue .container .weather ul li h5 {
+  width: 100%;
+  margin: 1.25rem 0 0;
+}
+body.mobile .main .main-issue .container .weather ul li small {
+  display: block;
   font-size: 14px;
   margin: 0.375rem 0 0;
 }
@@ -2046,8 +2048,7 @@ body.mobile .rank .container .rank-pop ul li .count {
   background: #fff;
 }
 .sub .pagenation a,
-.sub .pagenation strong,
-.sub .pagenation .active {
+.sub .pagenation strong {
   display: inline-block;
   vertical-align: top;
   font-size: 1rem;
@@ -2059,22 +2060,19 @@ body.mobile .rank .container .rank-pop ul li .count {
 }
 .sub .pagenation a.jump,
 .sub .pagenation strong.jump,
-.sub .pagenation .active.jump,
 .sub .pagenation a.move,
-.sub .pagenation strong.move,
-.sub .pagenation .active.move {
+.sub .pagenation strong.move {
   font-size: 0;
   background: #eeeeee;
 }
 .sub .pagenation a.jump i,
 .sub .pagenation strong.jump i,
-.sub .pagenation .active.jump i,
 .sub .pagenation a.move i,
-.sub .pagenation strong.move i,
-.sub .pagenation .active.move i {
+.sub .pagenation strong.move i {
   font-size: 1rem;
 }
-.sub .pagenation strong {
+.sub .pagenation strong,
+.sub .pagenation .active {
   background: #0075bc;
   color: #fff;
   font-weight: 400;
@@ -3412,6 +3410,7 @@ body.pc .sub .view-review .container .btn-area a:last-child {
 }
 body.pc .sub .visual-area .container {
   text-align: center;
+  height: 900px;
 }
 body.pc .sub .visual-area .container h2 {
   position: relative;
@@ -3437,23 +3436,20 @@ body.pc .sub .visual-area .container h2 small {
   font-weight: 400;
   padding-top: 45px;
 }
+body.pc .sub .visual-area ul {
+  margin-bottom: 40px;
+}
 body.pc .sub .visual-area ul li {
   display: inline-block;
-  width: 340px;
+  width: calc(100% / 4);
   height: 220px;
   font-size: 0;
   text-align: center;
   border: 1px solid #fff;
+  border-right-color: transparent;
 }
-body.pc .sub .visual-area ul li:nth-child(2),
-body.pc .sub .visual-area ul li:nth-child(5) {
-  border-left: none;
-  border-right: none;
-}
-body.pc .sub .visual-area ul li:nth-child(1),
-body.pc .sub .visual-area ul li:nth-child(2),
-body.pc .sub .visual-area ul li:nth-child(3) {
-  border-bottom: none;
+body.pc .sub .visual-area ul li:last-child {
+  border-right-color: #fff;
 }
 body.pc .sub .visual-area ul li a {
   display: inline-block;
@@ -6527,7 +6523,6 @@ body.mobile .sub .visual-area ul li:nth-child(odd) {
 body.mobile .sub .visual-area ul li:nth-child(3),
 body.mobile .sub .visual-area ul li:nth-child(4) {
   border-top: none;
-  border-bottom: none;
 }
 body.mobile .sub .visual-area ul li a {
   display: inline-block;
@@ -8624,7 +8619,6 @@ body.mobile .sub .mypage.review .container ul li .aside .btn-area a {
   border-top: 1px solid #555555;
   background: #eeeeee;
   padding: 20px 0;
-  /* 문화컨텐츠 */
 }
 .sub-detail p {
   margin: 0;
@@ -8645,10 +8639,24 @@ body.mobile .sub .mypage.review .container ul li .aside .btn-area a {
   background: #555555;
   border-radius: 10px;
 }
-.sub-detail .culture.view {
+/* 문화컨텐츠 */
+.culture .btn-area {
+  margin: 20px 0;
+  text-align: right;
+}
+.culture .btn-area a {
+  display: inline-block;
+  height: auto !important;
+  line-height: normal !important;
+  padding: 10px;
+  color: #fff;
+  background: #222222;
+  border-radius: 10px;
+}
+.culture.view {
   text-align: center;
 }
-.sub-detail .culture.view .container {
+.culture.view .container {
   text-align: left;
   padding: 1.25rem;
   font-size: 1.25rem;
@@ -8656,54 +8664,43 @@ body.mobile .sub .mypage.review .container ul li .aside .btn-area a {
   line-height: 1.6;
   /*각 페이지별 태그 들어갑니다.*/
 }
-.sub-detail .culture.view .container h2 {
+.culture.view .container h2 {
   font-size: 2.5rem;
   margin: 2.5rem 0;
 }
-.sub-detail .culture.view .container strong {
+.culture.view .container strong {
   font-size: 1.5rem;
   color: #0075bc;
 }
-.sub-detail .culture.view .container img {
+.culture.view .container img {
   max-width: 100%;
 }
-.sub-detail .culture.view .container img[align=left] {
+.culture.view .container img[align=left] {
   margin: 1.25rem;
   margin-left: 0;
   margin-top: 0;
   max-width: 60%;
 }
-.sub-detail .culture.view .container img[align=right] {
+.culture.view .container img[align=right] {
   margin: 1.25rem;
   margin-right: 0;
   max-width: 50%;
 }
-.sub-detail .culture.view .container img[align=center] {
+.culture.view .container img[align=center] {
   margin: 1.25rem auto;
   margin-top: 0;
 }
-.sub-detail .culture.view .container .btn-area {
-  margin: 20px 0;
-  text-align: right;
-}
-.sub-detail .culture.view .container .btn-area a {
-  display: inline-block;
-  padding: 10px;
-  color: #fff;
-  background: #222222;
-  border-radius: 10px;
-}
-.sub-detail .culture.write textarea {
+.culture.write textarea {
   background: #fff !important;
   border-bottom: none !important;
 }
-.sub-detail .culture.write textarea:focus {
+.culture.write textarea:focus {
   outline: none;
 }
-.sub-detail .culture.write .uploaded {
+.culture.write .uploaded {
   background: #eeeeee;
   padding: 20px;
 }
-.sub-detail .culture.write .uploaded img {
+.culture.write .uploaded img {
   max-width: 100%;
 }

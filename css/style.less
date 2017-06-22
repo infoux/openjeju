@@ -41,8 +41,22 @@
             }
         }
     }
+  }
     /* 문화컨텐츠 */
     .culture {
+      .btn-area {
+          margin: 20px 0;
+          text-align: right;
+          a {
+              display: inline-block;
+              height:auto !important;
+              line-height:normal !important;
+              padding: 10px;
+              color: @white-base;
+              background: @gray-darker;
+              border-radius: 10px;
+          }
+      }
         &.view {
             text-align: center;
             .container {
@@ -77,17 +91,7 @@
                         margin-top: 0;
                     }
                 }
-                .btn-area {
-                    margin: 20px 0;
-                    text-align: right;
-                    a {
-                        display: inline-block;
-                        padding: 10px;
-                        color: @white-base;
-                        background: @gray-darker;
-                        border-radius: 10px;
-                    }
-                }
+
                 /*각 페이지별 태그 들어갑니다.*/
             }
         }
@@ -108,4 +112,3 @@
             }
         }
     }
-}
