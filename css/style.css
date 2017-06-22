@@ -777,7 +777,7 @@ body.pc .main section {
   font-size: 0;
 }
 body.pc .main .main-issue {
-  height: 600px;
+  height: 700px;
 }
 body.pc .main .main-issue .video {
   display: none;
@@ -812,7 +812,7 @@ body.pc .main .main-issue .container {
 body.pc .main .main-issue .container h4 {
   font-size: 54px;
   font-weight: 400;
-  margin: 120px 0 20px;
+  margin: 160px 0 20px;
 }
 body.pc .main .main-issue .container h4 strong {
   color: #ffcc00;
