@@ -9,7 +9,7 @@
       float:none !important;
 
       font-size:21px;
-      font-weight:@font-bold;
+      font-weight:bold;
       padding:20px 0 !important;
       min-height:auto !important;
       text-align:center;
@@ -26,10 +26,10 @@
         text-align: center;
 
         h3 {
-            color      : @white-base;
+            color      : @white;
             text-align : center;
             margin     : 0;
-            font-weight: @font-normal;
+            .normal;
             .text-shadow(@string:0 3px 3px rgba(0, 0, 0, 0.8));
         }
 
@@ -90,7 +90,7 @@
                         display   : block;
 
                         background: @blue;
-                        color     : @white-base;
+                        color     : @white;
                     }
 
                 }
@@ -128,7 +128,7 @@
                     i {
                         display   : inline-block;
                         background: @gray-darker;
-                        color     : @white-base;
+                        color     : @white;
                         font-style: normal;
                         padding   : 5px 10px;
                         .border-radius(6px);
@@ -179,14 +179,14 @@
 
                     h5 {
 
-                        font-weight: @font-normal;
+                        .normal;
                     }
 
                     .tag {
                         i {
                             font-style: normal;
                             background: @gray-dark;
-                            color     : @white-base;
+                            color     : @white;
                             padding   : 5px 10px;
                             .border-radius(6px);
                         }
@@ -217,7 +217,7 @@
         .container {
             h3 {
                 margin: 0;
-                font-weight: @font-normal;
+                .normal;
             }
 
             p {
@@ -260,7 +260,7 @@
     section>h4{
         position:relative;
         font-size:@font-size-07;
-        font-weight:@font-normal;
+        .normal;
         text-align:center;
         &::after{
           content:'';
@@ -310,7 +310,7 @@
         color      : @gray-dark;
         text-align : center;
         margin     : 0;
-        font-weight: @font-normal;
+        .normal;
       }
     }
     .plan{
@@ -453,8 +453,8 @@
         strong,
         .active {
             background  : @blue;
-            color       : @white-base;
-            font-weight : @font-normal;
+            color       : @white;
+            .normal;
             border-color: transparent;
         }
     }
