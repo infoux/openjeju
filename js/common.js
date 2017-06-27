@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 
 
-    var carouselWidth = 1190;
+    var carouselWidth = 1199;
     var ttCarousel;
     var ttCarousel_Config = {
         auto: true,
@@ -14,6 +14,8 @@ $(document).ready(function () {
     if ($(window).width() < carouselWidth) {
         if (ttCarousel == null)
             ttCarousel = $('.main-food .slider').bxSlider(ttCarousel_Config);
+
+            $('.main-food .bx-viewport').css("height", "auto");
     };
 
     $(window).resize(function () {
@@ -250,7 +252,7 @@ var $matSlider = {
 /* memory leak 방지*/
 function matSlider() {
     if ($("body").hasClass("pc")) {
-        var $el = $(".mat-list .slider");
+        var $el = $el = $(".mat-list .slider");
         try {
             $matSlider.slider.destroySlider();
             $matSlider.state = 'destroy';
@@ -273,6 +275,7 @@ function matSlider() {
                 infiniteLoop: true,
                 maxSlides: 5
             });
+
         }
     }
 }
