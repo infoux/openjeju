@@ -238,7 +238,7 @@ body {
   color: #222222;
 }
 header {
-  height: 380px;
+  height: 420px;
   position: relative;
   background: #fff;
 }
@@ -380,7 +380,7 @@ header .weather ul li h5 small {
   color: #000;
   border: none;
   padding: 0.90909091rem 0.90909091rem;
-  width: 20.90909091rem;
+  width: 17.27272727rem;
   font-size: 1.09090909rem;
   outline: none;
 }
@@ -392,10 +392,10 @@ header .weather ul li h5 small {
   font-size: 1.45454545rem;
 }
 .banner {
-  height: 240px;
+  height: 180px;
   background: #0075bc;
   text-align: center;
-  line-height: 240px;
+  line-height: 180px;
 }
 .banner button {
   background: transparent;
