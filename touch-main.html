@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>오픈제주</title>
+  <link href="css/touch.css" rel="stylesheet">
+  <!-- javaScript  -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/jquery.bxslider.min.js"></script>
+  <script>
+    $(document).ready(function() {
+
+
+      var $weatherSlider = {
+        state: 'destroy',
+        slider: undefined
+      };
+      /* memory leak 방지*/
+      function weatherSlider() {
+        var $el = $(".weather ul");
+        try {
+          $weatherSlider.slider.destroySlider();
+          $weatherSlider.state = 'destroy';
+
+        } catch (e1) {
+
+        }
+
+        if ($weatherSlider.state === "destroy") {
+          $weatherSlider.state = 'build';
+          $weatherSlider.slider = $el.bxSlider({
+            mode: 'fade',
+            speed: 1000,
+            pager: false,
+            controls: false,
+            auto: true,
+            infiniteLoop: true
+
+          });
+        }
+      }
+      weatherSlider();
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <!-- S:header -->
+  <header id="header">
+
+    <h1><a href="">오픈제주</a></h1>
+
+    <div class="weather">
+      <ul>
+        <li><i class="wi wi-day-sunny" aria-hidden="true"></i>
+          <h5>제주시 4℃<small>맑음</small></h5></li>
+        <li><i class="wi wi-day-sunny-overcast" aria-hidden="true"></i>
+          <h5>서귀포시 4℃<small>아주 맑고 추워요</small></h5></li>
+        <li><i class="wi wi-cloudy" aria-hidden="true"></i>
+          <h5>성산 4℃<small>아주 맑고 추워요</small></h5></li>
+        <li><i class="wi wi-day-cloudy" aria-hidden="true"></i>
+          <h5>고산 4℃<small>아주 맑고 추워요</small></h5></li>
+        <li><i class="wi wi-rain" aria-hidden="true"></i>
+          <h5>노형 4℃<small>아주 맑고 추워요</small></h5></li>
+        <li><i class="wi wi-sprinkle" aria-hidden="true"></i>
+          <h5>중문 4℃<small>아주 맑고 추워요</small></h5></li>
+        <li><i class="wi wi-sleet" aria-hidden="true"></i>
+          <h5>제주시 4℃<small>아주 맑고 추워요</small></h5></li>
+        <li><i class="wi wi-snow" aria-hidden="true"></i>
+          <h5>제주시 4℃<small>아주 맑고 추워요</small></h5></li>
+      </ul>
+    </div>
+    <nav id="main_menu">
+      <ul>
+        <li><a href=""><i class="fa fa-magic" aria-hidden="true"></i>테마여행</a></li>
+        <li><a href=""><i class="fa fa-quote-right" aria-hidden="true"></i>제주문화/체험</a></li>
+        <li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>맛 IN JEJU</a></li>
+        <li><a href=""><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>여행 Tip</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="search">
+    <fieldset>
+      <legend class="sr-only">검색폼</legend>
+      <input type="text" placeholder="제주정보검색">
+      <button><i class="fa fa-search" aria-hidden="true"></i>검색</button>
+    </fieldset>
+  </section>
+  <section class="banner">
+    <button><i class="fa fa-battery-three-quarters" aria-hidden="true"></i>전기차 충전</button>
+  </section>
+  <video autoplay="" loop="">
+            <source src="images/trip.mp4">
+        </video>
+  <!-- E:header -->
+</body>
+
+</html>

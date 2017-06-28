@@ -1,4 +1,4 @@
-// out: ./style.css, sourcemap: false, compress: false
+// out: ./touch.css, sourcemap: false, compress: false
 @import "normalize.css";
 @import "rem.less";
 /* function */
@@ -352,146 +352,229 @@ a {
 /*font*/
 html {
   min-width: @min-width;
+  font-size: 22px;
 }
 
 body {
   font-family: @myfont, sans-serif;
   color: @gray-darker;
 }
-@media (max-width:360px) {
-  html {
-    font-size: @font-size;
-  }
-}
-@media (min-width:361px) and (max-width:480px) {
-  html {
-    font-size: @font-size-01;
-  }
-}
-@media (min-width:481px) {
-  html {
-    font-size: @font-size-02;
-  }
-}
-@media (min-width:1200px) {
-  html {
-    font-size: @font-size;
-  }
-}
 @import "font-awesome.min.css";
 @import "weather-icons.css";
-@import "perfect-scrollbar.css";
-@import "layout.less";
-@import "main.less";
-@import "sub.less";
-@import "sub-pc.less";
-@import "sub-mobile.less";
+@import "perfect-scrollbar.css"; //
+//
 
-.sub-detail {
-  text-align: center;
-  border-top: 1px solid @gray;
-  background: @gray-lighter;
-  padding: 20px 0;
+header {
+  height: 380px;
+  .relative;
+  background: @white;
 
-  p {
-    margin: 0;
+  h1 {
+    .absolute;
+    right: 40px;
+    top: 40px;
+    .inline-block;
+    .zero;
+    .hidden;
+    width: 320px;
+    height: 52px;
 
-    button {
-      .inline-block;
-      padding: 10px;
-      border: none;
-      color: @white;
-      background: @blue;
-      .border-radius(10px);
-      .pointer;
+    a {
+      .block;
+      .full;
+      .full-background(@logo);
     }
+  }
 
-    span {
-      span {
+  nav {
+    .absolute;
+    .inline-block;
+    .center;
+    width: 100%;
+    left: 0;
+    bottom: 40px;
+
+    ul {
+      list-style: none;
+      .mapazero;
+
+      li {
         .inline-block;
-        padding: 10px;
-        color: @white;
-        background: @gray;
-        .border-radius(10px);
+        .center;
+        .top;
+
+        a {
+          .block;
+          width: 140px;
+          height: 120px;
+          font-size: 18px;
+          .bottom;
+          border-radius: 20px;
+          background: @gray-lighter;
+
+          i {
+            width: 100%;
+            font-size: 44px !important;
+            color: @blue;
+            margin: 20px 0 10px;
+          }
+
+          &:hover {
+            background: @blue;
+            color: @white;
+
+            i {
+              color: @white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .weather {
+    .hidden;
+    width: 300px;
+    .absolute;
+    left: 40px;
+    top: 40px;
+
+    ul {
+      list-style: none;
+      .mapazero;
+
+      li {
+        i {
+          .inline-block;
+          font-size: 48px;
+          line-height: inherit;
+
+          &.wi-day-sunny {
+            color: #f68409;
+          }
+
+          &.wi-day-sunny-overcast {
+            color: #f68409;
+          }
+
+          &.wi-cloudy {
+            color: #448aca;
+          }
+
+          &.wi-day-cloudy {
+            color: #eee;
+          }
+
+          &.wi-rain {
+            color: #7accc8;
+          }
+
+          &.wi-sprinkle {
+            color: #7accc8;
+          }
+
+          &.wi-sleet {
+            color: #57b9e7;
+          }
+
+          &.wi-snow {
+            color: #57b9e7;
+          }
+        }
+
+        h5 {
+          .normal;
+          .inline-block;
+          font-size: 24px;
+          margin: 0;
+
+          small {
+            .block;
+            font-size: 16px;
+            margin: 6px 0 0;
+          }
+        }
       }
     }
   }
 }
-/* 문화컨텐츠 */
-.culture {
-  .btn-area {
-    margin: 20px 0;
-    .right;
 
-    a {
-      .inline-block;
-      height: auto !important;
-      line-height: normal !important;
-      padding: 10px;
-      color: @white;
-      background: @gray-darker;
-      .border-radius(10px);
-    }
+.search {
+  background: @gray-lighter;
+  padding: 40px 0;
+  .center;
+
+  button {
+    font-size: 0;
+    border: none;
+    background: transparent;
+    .rem(padding, 0 20);
   }
 
-  &.view {
-    .center;
-
-    .container {
-      .left;
-      padding: 1.25rem;
-      font-size: 1.25rem;
-      word-break: keep-all;
-      line-height: 1.6;
-
-      h2 {
-        font-size: 2.5rem;
-        margin: 2.5rem 0;
-      }
-
-      strong {
-        font-size: 1.5rem;
-        color: @blue;
-      }
-
-      img {
-        max-width: 100%;
-
-        &[align=left] {
-          margin: 0 1.25rem 1.25rem 0;
-          max-width: 60%;
-        }
-
-        &[align=right] {
-          margin: 1.25rem 0 1.25rem 1.25rem;
-          max-width: 50%;
-        }
-
-        &[align=center] {
-          margin: 0 auto 1.25rem;
-        }
-      }
-      /*각 페이지별 태그 들어갑니다.*/
-    }
+  i {
+    color: @blue;
   }
 
-  &.write {
-    textarea {
-      background: @white !important;
-      border-bottom: none !important;
+  fieldset {
+    .inline-block;
+    .rem(border-width, 6);
+    border-color: @blue;
+    border-style: solid;
+    .rem(border-radius, 10);
+    .zero;
+    background: @white;
+    .hidden;
 
-      &:focus {
-        outline: none;
-      }
+    input {
+      background: transparent;
+      color: @black;
+      border: none;
+      .rem(padding, 20 20);
+      .rem(width, 460);
+      .rem(font-size, 24);
+      outline: none;
     }
 
-    .uploaded {
-      background: @gray-lighter;
-      padding: 20px;
+    button {
+      .rem(padding, 0 10);
+      outline: none;
 
-      img {
-        max-width: 100%;
+      i {
+        .rem(font-size, 32);
       }
     }
   }
+}
+
+.banner {
+  height: 240px;
+  background: @blue;
+  text-align: center;
+  line-height: 240px;
+
+  button {
+    background: transparent;
+    border: 4px solid rgba(255,255,255,0.4);
+    color: @white;
+    padding: 20px 50px;
+    width: 80%;
+    border-radius: 20px;
+    font-size: 40px;
+
+    i {
+      margin-right: 20px;
+    }
+  }
+}
+
+video {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  min-width: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+  background-attachment: fixed;
 }
