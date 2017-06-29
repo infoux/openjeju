@@ -1500,9 +1500,6 @@ body .main .rank .container .rank-pop ul li .count {
   display: none;
 }
 @media all and (min-width: 1200px) {
-  .sub {
-    margin-top: 100px;
-  }
   .sub .indicator {
     display: block;
     text-align: center;
