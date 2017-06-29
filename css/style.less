@@ -124,6 +124,11 @@
 
 #order-btn {
   .top;
+  .inline-block;
+  .right;
+  @media all and (min-width: 1200px) {
+    width: 196px;
+  }
 
   button {
     .inline-block;
@@ -148,6 +153,11 @@
 
 #category {
   .top;
+  .inline-block;
+  width: 100%;
+  @media all and (min-width: 1200px) {
+    width: calc(~"100% - 200px");
+  }
 
   ul {
     border-top: none;

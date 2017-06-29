@@ -74,6 +74,13 @@
 }
 #order-btn {
   vertical-align: top;
+  display: inline-block;
+  text-align: right;
+}
+@media all and (min-width: 1200px) {
+  #order-btn {
+    width: 196px;
+  }
 }
 #order-btn button {
   display: inline-block;
@@ -96,6 +103,13 @@
 }
 #category {
   vertical-align: top;
+  display: inline-block;
+  width: 100%;
+}
+@media all and (min-width: 1200px) {
+  #category {
+    width: calc(100% - 200px);
+  }
 }
 #category ul {
   border-top: none;
@@ -2251,17 +2265,6 @@ body .main .rank .container .rank-pop ul li .count {
   text-align: center;
   margin: 1.36363636rem 0 0;
 }
-@media all and (min-width: 1200px) {
-  .sub .list-basic .container #category {
-    display: inline-block;
-    width: calc(100% - 200px);
-  }
-  .sub .list-basic .container #order-btn {
-    display: inline-block;
-    width: 196px;
-    text-align: right;
-  }
-}
 .sub .list-basic .container .list {
   padding: 0.90909091rem 0 0;
   list-style: none;
@@ -2359,21 +2362,129 @@ body .main .rank .container .rank-pop ul li .count {
 .sub .login .container ul li.instagram i {
   color: #ef4835;
 }
+.sub .board-gallery {
+  text-align: center;
+}
+.sub .board-gallery .container fieldset {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  margin: 1.36363636rem 0 0.90909091rem;
+  border: none;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-gallery .container fieldset {
+    text-align: right;
+    padding: 10px 0;
+  }
+}
+.sub .board-gallery .container fieldset input {
+  width: calc(100% - 50px);
+  border: 1px solid #eeeeee;
+  font-size: 1rem;
+  height: 2.54545455rem;
+  padding: 0 0.714rem;
+  border-right: none;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-gallery .container fieldset input {
+    width: 262px;
+    height: 42px;
+    padding: 0 10px;
+    vertical-align: top;
+  }
+}
+.sub .board-gallery .container fieldset button {
+  border: none;
+  width: 50px;
+  height: 2.54545455rem;
+  background: #0075bc;
+  font-size: 0;
+}
+.sub .board-gallery .container fieldset button i {
+  font-size: 1.36363636rem;
+  color: #fff;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-gallery .container fieldset button {
+    width: 62px;
+    height: 42px;
+  }
+}
+.sub .board-gallery .container .list {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+  font-size: 0;
+}
+.sub .board-gallery .container .list li {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 1.36363636rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-gallery .container .list li {
+    margin: 0 5px 20px;
+    width: calc(100% / 4 - 10px);
+  }
+}
+.sub .board-gallery .container .list li a {
+  display: inline-block;
+  font-size: 18px;
+  color: #333333;
+  width: 100%;
+}
+.sub .board-gallery .container .list li a img {
+  display: none;
+}
+.sub .board-gallery .container .list li a .image {
+  width: 100%;
+  height: 180px;
+}
+.sub .board-gallery .container .list li a strong {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0 4px;
+  font-size: 1.36363636rem;
+}
+.sub .board-gallery .container .list li a p {
+  margin: 0;
+}
+.sub .board-gallery .container .btn-area {
+  width: 100%;
+  margin: 30px 0 50px;
+  text-align: center;
+}
+.sub .board-gallery .container .btn-area a {
+  display: inline-block;
+  width: 146px;
+  height: 54px;
+  line-height: 54px;
+  font-size: 21px;
+  color: #fff;
+  text-align: center;
+  margin: 0 2px;
+  background: #666;
+}
+.sub .board-gallery .container .btn-area a.write {
+  background: #0075bc;
+}
 .sub .list-type01 {
   text-align: center;
 }
-.sub .list-type01 .container ul {
+.sub .list-type01 .container .list {
   padding: 20px 0 0;
   list-style: none;
   border-top: 2px solid #333333;
 }
-.sub .list-type01 .container ul li {
+.sub .list-type01 .container .list li {
   position: relative;
 }
-.sub .list-type01 .container ul li h5 {
+.sub .list-type01 .container .list li h5 {
   font-weight: normal;
 }
-.sub .list-type01 .container ul li .tag i {
+.sub .list-type01 .container .list li .tag i {
   font-style: normal;
   background: #333333;
   color: #fff;
@@ -2385,12 +2496,12 @@ body .main .rank .container .rank-pop ul li .count {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-.sub .list-type01 .container ul li .text {
+.sub .list-type01 .container .list li .text {
   line-height: 1.4;
   color: #777777;
   word-break: keep-all;
 }
-.sub .list-type01 .container ul li div p {
+.sub .list-type01 .container .list li div p {
   display: inline-block;
 }
 .sub .view-head {
@@ -2657,12 +2768,12 @@ body.pc .sub .list-type01 .container {
 body.pc .sub .list-type01 .container #order-btn {
   display: inline-block;
 }
-body.pc .sub .list-type01 .container ul li {
+body.pc .sub .list-type01 .container .list li {
   padding: 20px 20px 20px 240px;
   min-height: 204px;
   border-bottom: 1px solid #eeeeee;
 }
-body.pc .sub .list-type01 .container ul li img {
+body.pc .sub .list-type01 .container .list li img {
   display: block;
   position: absolute;
   left: 0;
@@ -2670,23 +2781,23 @@ body.pc .sub .list-type01 .container ul li img {
   width: 220px;
   height: 165px;
 }
-body.pc .sub .list-type01 .container ul li h5 {
+body.pc .sub .list-type01 .container .list li h5 {
   margin: 0 0 10px;
   font-size: 25px;
 }
-body.pc .sub .list-type01 .container ul li h5 small i {
+body.pc .sub .list-type01 .container .list li h5 small i {
   margin-left: 10px;
   font-size: 21px;
   color: #ccc;
 }
-body.pc .sub .list-type01 .container ul li h5 small i.active {
+body.pc .sub .list-type01 .container .list li h5 small i.active {
   color: #f68409;
 }
-body.pc .sub .list-type01 .container ul li .hash-tag {
+body.pc .sub .list-type01 .container .list li .hash-tag {
   margin: 30px 0 0;
   padding: 0;
 }
-body.pc .sub .list-type01 .container ul li .hash-tag i {
+body.pc .sub .list-type01 .container .list li .hash-tag i {
   display: inline-block;
   padding: 0 10px;
   height: 30px;
@@ -2697,11 +2808,11 @@ body.pc .sub .list-type01 .container ul li .hash-tag i {
   text-align: center;
   font-style: normal;
 }
-body.pc .sub .list-type01 .container ul li .hit-box {
+body.pc .sub .list-type01 .container .list li .hit-box {
   display: inline-block;
   margin-top: 10px;
 }
-body.pc .sub .list-type01 .container ul li .hit-box p {
+body.pc .sub .list-type01 .container .list li .hit-box p {
   display: inline-block;
   width: 170px;
   height: 46px;
@@ -2713,18 +2824,18 @@ body.pc .sub .list-type01 .container ul li .hit-box p {
   border-radius: 5px;
   margin: 2px;
 }
-body.pc .sub .list-type01 .container ul li .hit-box p i {
+body.pc .sub .list-type01 .container .list li .hit-box p i {
   font-size: 25px;
   color: #333333;
   margin: 0 10px 0 20px;
 }
-body.pc .sub .list-type01 .container ul li .hit-area {
+body.pc .sub .list-type01 .container .list li .hit-area {
   position: absolute;
   right: 0;
   top: 30px;
   display: inline-block;
 }
-body.pc .sub .list-type01 .container ul li .hit-area p {
+body.pc .sub .list-type01 .container .list li .hit-area p {
   margin: 2px 0;
   display: block;
   height: 46px;
@@ -2735,15 +2846,15 @@ body.pc .sub .list-type01 .container ul li .hit-area p {
   border: 1px solid #eeeeee;
   border-radius: 5px;
 }
-body.pc .sub .list-type01 .container ul li .hit-area p a {
+body.pc .sub .list-type01 .container .list li .hit-area p a {
   color: #0075bc;
 }
-body.pc .sub .list-type01 .container ul li .hit-area p a i {
+body.pc .sub .list-type01 .container .list li .hit-area p a i {
   font-size: 25px;
   color: #333333;
   margin: 0 10px 0 20px;
 }
-body.pc .sub .list-type01 .container ul li .btn-area a {
+body.pc .sub .list-type01 .container .list li .btn-area a {
   display: inline-block;
   height: 40px;
   line-height: 40px;
@@ -2754,33 +2865,33 @@ body.pc .sub .list-type01 .container ul li .btn-area a {
   padding: 0;
   margin-right: 6px;
 }
-body.pc .sub .list-type01 .container ul li .btn-area a::after {
+body.pc .sub .list-type01 .container .list li .btn-area a::after {
   display: inline-block;
   padding: 0 10px;
   content: ">";
 }
-body.pc .sub .list-type01 .container ul li .btn-area .detail {
+body.pc .sub .list-type01 .container .list li .btn-area .detail {
   font-size: 20px;
   color: #777777;
   background: none;
   letter-spacing: -1px;
 }
-body.pc .sub .list-type01 .container ul li .btn-area .detail i {
+body.pc .sub .list-type01 .container .list li .btn-area .detail i {
   font-size: 30px;
   margin-left: 5px;
   vertical-align: -3px;
 }
-body.pc .sub .list-type01 .container ul li.filght {
+body.pc .sub .list-type01 .container .list li.filght {
   position: relative;
   display: none;
   padding: 40px 20px;
   background: #eeeeee;
 }
-body.pc .sub .list-type01 .container ul li.filght #imgList {
+body.pc .sub .list-type01 .container .list li.filght #imgList {
   padding: 0;
   border: none;
 }
-body.pc .sub .list-type01 .container ul li.filght #imgList li {
+body.pc .sub .list-type01 .container .list li.filght #imgList li {
   position: relative;
   display: inline-block;
   width: calc(100% / 5 - 5px);
@@ -2788,16 +2899,16 @@ body.pc .sub .list-type01 .container ul li.filght #imgList li {
   border: none;
   margin: 0 3px;
 }
-body.pc .sub .list-type01 .container ul li.filght #imgList li img {
+body.pc .sub .list-type01 .container .list li.filght #imgList li img {
   width: 220px;
   height: 165px;
   border: 3px solid #fff;
 }
-body.pc .sub .list-type01 .container ul li.detail {
+body.pc .sub .list-type01 .container .list li.detail {
   background: #eeeeee;
   padding: 30px;
 }
-body.pc .sub .list-type01 .container ul li.nonSearch {
+body.pc .sub .list-type01 .container .list li.nonSearch {
   padding: 20px !important;
 }
 body.pc .sub .view-head {
@@ -4977,65 +5088,65 @@ body.mobile .sub .list-type01 .container {
 body.mobile .sub .list-type01 .container #order-btn {
   text-align: center;
 }
-body.mobile .sub .list-type01 .container ul li {
+body.mobile .sub .list-type01 .container .list li {
   padding: 1.25rem;
   margin-bottom: 1.25rem;
   border: 1px solid #777777;
 }
-body.mobile .sub .list-type01 .container ul li img {
+body.mobile .sub .list-type01 .container .list li img {
   display: inline-block;
   width: 100%;
   height: auto;
 }
-body.mobile .sub .list-type01 .container ul li h5 {
+body.mobile .sub .list-type01 .container .list li h5 {
   margin: 1.25rem 0 0.625rem;
   font-size: 25px;
 }
-body.mobile .sub .list-type01 .container ul li .text {
+body.mobile .sub .list-type01 .container .list li .text {
   text-align: left;
 }
-body.mobile .sub .list-type01 .container ul li div p {
+body.mobile .sub .list-type01 .container .list li div p {
   color: #0064ab;
   padding: 0 0.286rem;
   font-size: 1.25rem;
 }
-body.mobile .sub .list-type01 .container ul li div p a {
+body.mobile .sub .list-type01 .container .list li div p a {
   color: #0064ab;
 }
-body.mobile .sub .list-type01 .container ul li div p a i {
+body.mobile .sub .list-type01 .container .list li div p a i {
   display: none;
 }
-body.mobile .sub .list-type01 .container ul li div p a strong {
+body.mobile .sub .list-type01 .container .list li div p a strong {
   padding-left: 0.625rem;
   font-weight: bold;
 }
-body.mobile .sub .list-type01 .container ul li div p a:first-of-type {
+body.mobile .sub .list-type01 .container .list li div p a:first-of-type {
   border-right: 1px solid #eee;
 }
-body.mobile .sub .list-type01 .container ul li.filght {
+body.mobile .sub .list-type01 .container .list li.filght {
   position: relative;
   display: none;
   background: #eeeeee;
 }
-body.mobile .sub .list-type01 .container ul li.filght #imgList {
+body.mobile .sub .list-type01 .container .list li.filght #imgList {
   padding: 0;
   border: none;
 }
-body.mobile .sub .list-type01 .container ul li.filght #imgList li {
+body.mobile .sub .list-type01 .container .list li.filght #imgList li {
   position: relative;
   display: inline-block;
   padding: 0;
   border: none;
   margin: 5px 0;
 }
-body.mobile .sub .list-type01 .container ul li.filght #imgList li img {
+body.mobile .sub .list-type01 .container .list li.filght #imgList li img {
   width: 80%;
   height: auto;
 }
-body.mobile .sub .list-type01 .container ul .btn-area {
+body.mobile .sub .list-type01 .container .list .btn-area {
   font-size: 0;
 }
-body.mobile .sub .list-type01 .container ul .btn-area a {
+body.mobile .sub .list-type01 .container .list .btn-area a {
   display: inline-block;
   font-size: 16px;
   background: #0075bc;

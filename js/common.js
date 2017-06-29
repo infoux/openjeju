@@ -43,8 +43,12 @@ $(document).ready(function() {
   $(".top_banner").css("background-color", $(this).find("img").attr("data"));
   $(".top_banner button").click(function() {
     $(".top_banner").css("display", "none");
-
   });
+
+  $(".board-gallery .list .image").css("background", "url(" + $(this).find("img").attr("src") + ") no-repeat center / cover");
+
+
+
 
   function viewMode() {
     var windowWidth = $(window).width();
