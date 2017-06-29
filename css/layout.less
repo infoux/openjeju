@@ -8,6 +8,29 @@ body {
     }
   }
 
+  .top_banner {
+    width: 100%;
+    .center;
+    .zero;
+    background: @gray-lighter;
+
+    img {
+      max-width: 100%;
+    }
+
+    button {
+      .absolute;
+      right: 0;
+      bottom: 10px;
+      .rem(font-size, 22);
+      color: @white;
+      background: @black;
+      border: none;
+      .rem(padding, 10);
+      .pointer;
+    }
+  }
+
   #header {
     position: relative;
     border-bottom: @border-normal;
@@ -29,10 +52,6 @@ body {
       }
     }
     @media all and (min-width: 1200px) {
-      position: fixed;
-      left: 0;
-      right: 0;
-      top: 0;
       height: @header-height;
 
       .menuToggle {

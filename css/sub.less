@@ -1,9 +1,28 @@
 /* sub - default */
 .sub {
   .container {
+    .center;
     .rem(padding, 0 20);
     @media all and (min-width: 1200px) {
       padding: 0 20px;
+    }
+
+    h4 {
+      .mapazero;
+      .rem(margin, 50 0 20);
+      .rem(font-size, 32);
+      @media all and (min-width: 1200px) {
+        font-size: 34px;
+        margin: 40px 0 20px;
+      }
+    }
+
+    .info-text {
+      line-height: 1.4;
+      word-break: keep-all;
+      margin-top: 40px;
+      margin-bottom: 30px;
+      .rem(font-size, 26);
     }
   }
 
@@ -19,86 +38,91 @@
       border-bottom: 1px solid @gray-lighter;
       background: @white;
 
-      ul {
-        .inline-block;
-        .top;
-        .mapazero;
-        .zero;
-        list-style: none;
+      .container {
+        padding: 0;
+        .left;
 
-        li {
+        ul {
           .inline-block;
-          .relative;
           .top;
-          font-size: 16px;
-          height: 50px;
-          line-height: 50px;
+          .mapazero;
+          .zero;
+          list-style: none;
 
-          a {
+          li {
             .inline-block;
-            padding: 0 20px 0 12px;
-            border-right: @border-normal;
-            width: 175px;
-            .hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            .relative;
+            .top;
+            font-size: 16px;
+            height: 50px;
+            line-height: 50px;
 
-            i {
-              .absolute;
-              right: 10px;
-              top: 0;
-              height: 100%;
-              line-height: 50px;
-            }
-
-            &.home {
-              .block;
-              .pointer;
-              .mapazero;
-              .zero;
-              width: 50px;
-              height: 50px;
-              .center;
-              border: 1px solid @gray-lighter;
-              border-top: none;
-              border-bottom: none;
+            a {
+              .inline-block;
+              padding: 0 20px 0 12px;
+              border-right: @border-normal;
+              width: 175px;
+              .hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
 
               i {
-                .static;
-                font-size: 20px;
-                .middle;
+                .absolute;
+                right: 10px;
+                top: 0;
+                height: 100%;
+                line-height: 50px;
+              }
+
+              &.home {
+                .block;
+                .pointer;
+                .mapazero;
+                .zero;
+                width: 50px;
+                height: 50px;
+                .center;
+                border: 1px solid @gray-lighter;
+                border-top: none;
+                border-bottom: none;
+
+                i {
+                  .static;
+                  font-size: 20px;
+                  .middle;
+                }
               }
             }
-          }
 
-          .sub-menu {
-            .none;
-            .absolute;
-            left: 0;
-            top: 50px;
-            width: 100%;
-            z-index: 100;
+            .sub-menu {
+              .none;
+              .absolute;
+              left: 0;
+              top: 50px;
+              width: 100%;
+              z-index: 100;
 
-            ul {
-              .block;
-              background: @white;
-              border: 1px solid @gray-lighter;
-
-              li {
+              ul {
                 .block;
-                height: 38px;
-                line-height: 38px;
+                background: @white;
+                border: 1px solid @gray-lighter;
 
-                a {
-                  padding: 0 10px;
-                  .top;
-                  width: 100%;
-                  height: 100%;
-                  border-bottom: 1px solid @white;
-                  .hidden;
-                  text-overflow: ellipsis;
-                  white-space: nowrap;
-                  background: @gray-lighter;
+                li {
+                  .block;
+                  height: 38px;
+                  line-height: 38px;
+
+                  a {
+                    padding: 0 10px;
+                    .top;
+                    width: 100%;
+                    height: 100%;
+                    border-bottom: 1px solid @white;
+                    .hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    background: @gray-lighter;
+                  }
                 }
               }
             }
@@ -414,22 +438,6 @@
       iframe {
         .rem(padding-bottom, 50);
         .rem(padding, 40 20);
-      }
-
-      h4 {
-        .mapazero;
-        .rem(font-size, 32);
-        @media all and (min-width: 1200px) {
-          font-size: 34px;
-        }
-      }
-
-      .info-text {
-        .left;
-        line-height: 1.4;
-        word-break: keep-all;
-        margin-top: 40px;
-        margin-bottom: 30px;
       }
 
       p {
@@ -860,6 +868,64 @@
                   color: @blue;
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .login {
+    text-align: center;
+
+    .container {
+      ul {
+        margin: 50px 0 80px;
+        padding: 0;
+        list-style: none;
+
+        li {
+          text-align: center;
+          margin-bottom: 20px;
+          @media all and (min-width: 1200px) {
+            .inline-block;
+            margin: 0 4px;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          a {
+            display: inline-block;
+            width: 140px;
+            height: 140px;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            font-size: 14px;
+
+            i {
+              display: block;
+              font-size: @font-size-08;
+              margin: 28px 0 12px;
+            }
+          }
+
+          &.facebook {
+            i {
+              color: #3b5a9c;
+            }
+          }
+
+          &.kakao {
+            i {
+              color: #381e1f;
+            }
+          }
+
+          &.instagram {
+            i {
+              color: #ef4835;
             }
           }
         }

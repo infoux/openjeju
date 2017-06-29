@@ -40,7 +40,11 @@ $(document).ready(function() {
     }
   });
 
+  $(".top_banner").css("background-color", $(this).find("img").attr("data"));
+  $(".top_banner button").click(function() {
+    $(".top_banner").css("display", "none");
 
+  });
 
   function viewMode() {
     var windowWidth = $(window).width();

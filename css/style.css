@@ -274,6 +274,26 @@ body .container {
     text-align: left;
   }
 }
+body .top_banner {
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+  background: #eeeeee;
+}
+body .top_banner img {
+  max-width: 100%;
+}
+body .top_banner button {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background: #000;
+  border: none;
+  padding: 0.45454545rem;
+  cursor: pointer;
+}
 body #header {
   position: relative;
   border-bottom: 1px solid #eee;
@@ -298,10 +318,6 @@ body #header .menuToggle .pointer .menuToggle {
 }
 @media all and (min-width: 1200px) {
   body #header {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
     height: 100px;
   }
   body #header .menuToggle {
@@ -636,11 +652,6 @@ body #footer address p.attention {
   }
 }
 /* main - default */
-@media all and (min-width: 1200px) {
-  body .main {
-    margin-top: 100px;
-  }
-}
 body .main section {
   display: inline-block;
   text-align: center;
@@ -1458,12 +1469,32 @@ body .main .rank .container .rank-pop ul li .count {
 }
 /* sub - default */
 .sub .container {
+  text-align: center;
   padding: 0 0.90909091rem;
 }
 @media all and (min-width: 1200px) {
   .sub .container {
     padding: 0 20px;
   }
+}
+.sub .container h4 {
+  margin: 0;
+  padding: 0;
+  margin: 2.27272727rem 0 0.90909091rem;
+  font-size: 1.45454545rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .container h4 {
+    font-size: 34px;
+    margin: 40px 0 20px;
+  }
+}
+.sub .container .info-text {
+  line-height: 1.4;
+  word-break: keep-all;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: 1.18181818rem;
 }
 .sub .indicator {
   display: none;
@@ -1478,7 +1509,11 @@ body .main .rank .container .rank-pop ul li .count {
     border-bottom: 1px solid #eeeeee;
     background: #fff;
   }
-  .sub .indicator ul {
+  .sub .indicator .container {
+    padding: 0;
+    text-align: left;
+  }
+  .sub .indicator .container ul {
     display: inline-block;
     vertical-align: top;
     margin: 0;
@@ -1486,7 +1521,7 @@ body .main .rank .container .rank-pop ul li .count {
     font-size: 0;
     list-style: none;
   }
-  .sub .indicator ul li {
+  .sub .indicator .container ul li {
     display: inline-block;
     position: relative;
     vertical-align: top;
@@ -1494,7 +1529,7 @@ body .main .rank .container .rank-pop ul li .count {
     height: 50px;
     line-height: 50px;
   }
-  .sub .indicator ul li a {
+  .sub .indicator .container ul li a {
     display: inline-block;
     padding: 0 20px 0 12px;
     border-right: 1px solid #eee;
@@ -1503,14 +1538,14 @@ body .main .rank .container .rank-pop ul li .count {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  .sub .indicator ul li a i {
+  .sub .indicator .container ul li a i {
     position: absolute;
     right: 10px;
     top: 0;
     height: 100%;
     line-height: 50px;
   }
-  .sub .indicator ul li a.home {
+  .sub .indicator .container ul li a.home {
     display: block;
     cursor: pointer;
     margin: 0;
@@ -1523,12 +1558,12 @@ body .main .rank .container .rank-pop ul li .count {
     border-top: none;
     border-bottom: none;
   }
-  .sub .indicator ul li a.home i {
+  .sub .indicator .container ul li a.home i {
     position: static;
     font-size: 20px;
     vertical-align: middle;
   }
-  .sub .indicator ul li .sub-menu {
+  .sub .indicator .container ul li .sub-menu {
     display: none;
     position: absolute;
     left: 0;
@@ -1536,17 +1571,17 @@ body .main .rank .container .rank-pop ul li .count {
     width: 100%;
     z-index: 100;
   }
-  .sub .indicator ul li .sub-menu ul {
+  .sub .indicator .container ul li .sub-menu ul {
     display: block;
     background: #fff;
     border: 1px solid #eeeeee;
   }
-  .sub .indicator ul li .sub-menu ul li {
+  .sub .indicator .container ul li .sub-menu ul li {
     display: block;
     height: 38px;
     line-height: 38px;
   }
-  .sub .indicator ul li .sub-menu ul li a {
+  .sub .indicator .container ul li .sub-menu ul li a {
     padding: 0 10px;
     vertical-align: top;
     width: 100%;
@@ -1854,23 +1889,6 @@ body .main .rank .container .rank-pop ul li .count {
 .sub .sub-info .container iframe {
   padding-bottom: 2.27272727rem;
   padding: 1.81818182rem 0.90909091rem;
-}
-.sub .sub-info .container h4 {
-  margin: 0;
-  padding: 0;
-  font-size: 1.45454545rem;
-}
-@media all and (min-width: 1200px) {
-  .sub .sub-info .container h4 {
-    font-size: 34px;
-  }
-}
-.sub .sub-info .container .info-text {
-  text-align: left;
-  line-height: 1.4;
-  word-break: keep-all;
-  margin-top: 40px;
-  margin-bottom: 30px;
 }
 .sub .sub-info .container p {
   margin: 0;
@@ -2307,6 +2325,49 @@ body .main .rank .container .rank-pop ul li .count {
 }
 .sub .list-basic .container .list li div p a i {
   color: #0075bc;
+}
+.sub .login {
+  text-align: center;
+}
+.sub .login .container ul {
+  margin: 50px 0 80px;
+  padding: 0;
+  list-style: none;
+}
+.sub .login .container ul li {
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media all and (min-width: 1200px) {
+  .sub .login .container ul li {
+    display: inline-block;
+    margin: 0 4px;
+  }
+}
+.sub .login .container ul li:last-child {
+  margin-bottom: 0;
+}
+.sub .login .container ul li a {
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  font-size: 14px;
+}
+.sub .login .container ul li a i {
+  display: block;
+  font-size: 44px;
+  margin: 28px 0 12px;
+}
+.sub .login .container ul li.facebook i {
+  color: #3b5a9c;
+}
+.sub .login .container ul li.kakao i {
+  color: #381e1f;
+}
+.sub .login .container ul li.instagram i {
+  color: #ef4835;
 }
 .sub .list-type01 {
   text-align: center;
@@ -7170,53 +7231,6 @@ body.mobile .sub .search-result .container .sidebar .popword ul li a .num {
 }
 body.mobile .sub .search-result .container .sidebar .popword .bx-viewport {
   margin: 0 !important;
-}
-body.mobile .sub .login {
-  text-align: center;
-}
-body.mobile .sub .login .container h2 {
-  font-size: 21px;
-  margin: 30px 0 25px;
-}
-body.mobile .sub .login .container p {
-  margin: 0;
-  padding: 0;
-  font-size: 12px;
-  line-height: 1.2;
-}
-body.mobile .sub .login .container ul {
-  margin: 50px 0 80px;
-  padding: 0;
-  list-style: none;
-}
-body.mobile .sub .login .container ul li {
-  text-align: center;
-  margin-bottom: 20px;
-}
-body.mobile .sub .login .container ul li:last-child {
-  margin-bottom: 0;
-}
-body.mobile .sub .login .container ul li a {
-  display: inline-block;
-  width: 140px;
-  height: 140px;
-  border: 2px solid #ccc;
-  border-radius: 50%;
-  font-size: 14px;
-}
-body.mobile .sub .login .container ul li a i {
-  display: block;
-  font-size: 44px;
-  margin: 28px 0 12px;
-}
-body.mobile .sub .login .container ul li.facebook i {
-  color: #3b5a9c;
-}
-body.mobile .sub .login .container ul li.kakao i {
-  color: #381e1f;
-}
-body.mobile .sub .login .container ul li.instagram i {
-  color: #ef4835;
 }
 body.mobile .sub .mypage {
   text-align: center;
