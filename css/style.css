@@ -1469,7 +1469,6 @@ body .main .rank .container .rank-pop ul li .count {
 }
 /* sub - default */
 .sub .container {
-  text-align: center;
   padding: 0 0.90909091rem;
 }
 @media all and (min-width: 1200px) {
@@ -1876,12 +1875,6 @@ body .main .rank .container .rank-pop ul li .count {
 }
 .sub .sub-info .container {
   text-align: center;
-  padding: 1.81818182rem 0.90909091rem;
-}
-@media all and (min-width: 1200px) {
-  .sub .sub-info .container {
-    padding: 50px 20px 0;
-  }
 }
 .sub .sub-info .container iframe {
   padding-bottom: 2.27272727rem;
@@ -2323,7 +2316,7 @@ body .main .rank .container .rank-pop ul li .count {
 .sub .list-basic .container .list li div p a i {
   color: #0075bc;
 }
-.sub .login {
+.sub .login .container {
   text-align: center;
 }
 .sub .login .container ul {
