@@ -403,7 +403,10 @@ body #header .util_menu {
     font-weight: bold;
   }
   body #header .util_menu li.login {
-    display: none;
+    position: absolute;
+    right: 2.18181818rem;
+    top: 0;
+    font-size: 0;
   }
   body #header .util_menu li.rank {
     display: none;
@@ -450,6 +453,9 @@ body #header .util_menu {
   }
   body #header .util_menu li a.plan {
     position: relative;
+  }
+  body #header .util_menu li.login {
+    display: none;
   }
   body #header .util_menu li i {
     display: none;
@@ -1509,6 +1515,27 @@ body .main .rank .container .rank-pop ul li .count {
   }
 }
 /* sub - default */
+.sub {
+  /*
+
+
+
+
+
+
+
+
+
+
+
+
+
+넘사벽
+
+
+
+*/
+}
 .sub .container {
   padding: 0 0.90909091rem;
 }
@@ -1532,7 +1559,6 @@ body .main .rank .container .rank-pop ul li .count {
 .sub .container .info-text {
   line-height: 1.4;
   word-break: keep-all;
-  margin-top: 40px;
   margin-bottom: 30px;
   font-size: 1.18181818rem;
 }
@@ -2850,6 +2876,191 @@ body .main .rank .container .rank-pop ul li .count {
 .sub .event img {
   max-width: 100%;
 }
+.sub .board {
+  text-align: center;
+}
+.sub .board .container {
+  text-align: center;
+}
+.sub .board .container fieldset {
+  border: none;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+.sub .board .container fieldset input {
+  vertical-align: top;
+  font-size: 1rem;
+  width: calc(100% - 60px);
+  border: 1px solid #eeeeee;
+  height: 2.36363636rem;
+  padding: 0 0.45454545rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .board .container fieldset input {
+    width: 280px;
+    height: 42px;
+  }
+}
+.sub .board .container fieldset button {
+  border: none;
+  width: 60px;
+  height: 2.36363636rem;
+  background: #0075bc;
+  font-size: 0;
+}
+.sub .board .container fieldset button i {
+  font-size: 18px;
+  color: #fff;
+}
+@media all and (min-width: 1200px) {
+  .sub .board .container fieldset button {
+    height: 42px;
+  }
+}
+.sub .board .container ul {
+  margin: 0.90909091rem 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+.sub .board .container ul li {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #777777;
+  padding: 0.90909091rem 0;
+  font-size: 0;
+}
+@media all and (min-width: 1200px) {
+  .sub .board .container ul li {
+    padding-left: 80px;
+  }
+}
+.sub .board .container ul li:first-child {
+  border-top: 2px solid #333333;
+}
+.sub .board .container ul li .no {
+  display: none;
+}
+@media all and (min-width: 1200px) {
+  .sub .board .container ul li .no {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0.90909091rem;
+    width: 100px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #777777;
+  }
+}
+.sub .board .container ul li a {
+  display: inline-block;
+  width: 100%;
+  font-size: 1rem;
+  color: #333333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+@media all and (min-width: 1200px) {
+  .sub .board .container ul li a {
+    font-size: 22px;
+    font-weight: normal;
+  }
+}
+.sub .board .container ul li a.file i {
+  margin-left: 0.90909091rem;
+  margin-left: 0.357rem;
+  color: #0075bc;
+}
+.sub .board .container ul li p {
+  margin: 0.27272727rem 0 0;
+  padding: 0;
+  font-size: 1rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .board .container ul li p {
+    font-size: 16px;
+    margin: 10px 0 0;
+    color: #777777;
+  }
+}
+.sub .board .container ul li p span {
+  display: inline-block;
+}
+.sub .board .container ul li p span.date {
+  position: relative;
+  margin-right: 0.714rem;
+}
+.sub .board .container ul li p span.date::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  right: -0.571rem;
+  width: 1px;
+  height: 1.071rem;
+  background: #555555;
+}
+.sub .board form input {
+  width: calc(100% - 0.143rem);
+  height: 3.786rem;
+  padding: 1.071rem;
+  border: 1px solid #999;
+  font-size: 18px;
+}
+.sub .board form textarea {
+  width: 100%;
+  min-height: 22.143rem;
+  border: 1px solid #999;
+  resize: vertical;
+  color: #555555;
+  padding: 1.429rem;
+  border: none;
+  border-bottom: 1px solid #999;
+  background: #e8e8e8;
+}
+.sub .board div.file {
+  width: 100%;
+  margin: 0.714rem 0;
+  text-align: center;
+}
+.sub .board div.file button {
+  display: inline-block;
+  width: 15.143rem;
+  height: 2.857rem;
+  background: #333333;
+  color: #fff;
+}
+.sub .board div.file button i {
+  margin-left: 0.357rem;
+}
+.sub .board div.file span {
+  position: relative;
+  display: block;
+  margin-top: 0.357rem;
+}
+.sub .board .btn-area {
+  text-align: center;
+  margin: 0.90909091rem 0 1.81818182rem;
+}
+.sub .board .btn-area a {
+  display: inline-block;
+  width: calc(100% / 5);
+  height: 2.45454545rem;
+  line-height: 2.45454545rem;
+  background: #0075bc;
+  color: #fff;
+}
+@media all and (min-width: 1200px) {
+  .sub .board .btn-area a {
+    height: 42px;
+    line-height: 42px;
+  }
+}
 .sub .board-gallery {
   text-align: center;
 }
@@ -2940,23 +3151,288 @@ body .main .rank .container .rank-pop ul li .count {
   margin: 0;
 }
 .sub .board-gallery .container .btn-area {
-  width: 100%;
-  margin: 30px 0 50px;
   text-align: center;
+  margin: 0.90909091rem 0 1.81818182rem;
 }
 .sub .board-gallery .container .btn-area a {
   display: inline-block;
-  width: 146px;
-  height: 54px;
-  line-height: 54px;
-  font-size: 21px;
-  color: #fff;
-  text-align: center;
-  margin: 0 2px;
-  background: #666;
-}
-.sub .board-gallery .container .btn-area a.write {
+  width: calc(100% / 5);
+  height: 2.45454545rem;
+  line-height: 2.45454545rem;
   background: #0075bc;
+  color: #fff;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-gallery .container .btn-area a {
+    height: 42px;
+    line-height: 42px;
+  }
+}
+.sub .board-view {
+  text-align: center;
+}
+.sub .board-view .container {
+  text-align: center;
+}
+.sub .board-view .container .board-head h5 {
+  margin: 2.27272727rem 0 0.90909091rem;
+  font-size: 1.54545455rem;
+  word-break: keep-all;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-view .container .board-head h5 {
+    font-size: 32px;
+    margin: 40px 0 10px;
+  }
+}
+.sub .board-view .container .board-head i {
+  font-style: normal;
+  color: #0075bc;
+}
+.sub .board-view .container .board-head i strong {
+  font-weight: normal;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-view .container .board-head i {
+    font-size: 16px;
+  }
+}
+.sub .board-view .container .text {
+  display: inline-block;
+  width: 100%;
+  background: #f6f6f6;
+  margin: 0.90909091rem 0;
+  padding: 1.36363636rem 0.90909091rem;
+  min-height: 13.63636364rem;
+  text-align: left;
+  line-height: 1.4;
+  border-top: 2px solid #555555;
+}
+.sub .board-view .container .text img {
+  max-width: 100%;
+  margin: 0.45454545rem 0;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-view .container .text {
+    font-size: 16px;
+    padding: 20px;
+  }
+}
+.sub .board-view .container .file {
+  list-style: none;
+  margin: 0.90909091rem 0;
+  padding: 0;
+  text-align: left;
+  border-bottom: 1px solid #555555;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-view .container .file {
+    font-size: 16px;
+  }
+}
+.sub .board-view .container .file li {
+  padding-bottom: 0.90909091rem;
+}
+.sub .board-view .container .file li a {
+  color: #0075bc;
+}
+.sub .board-view .container .btn-area {
+  text-align: center;
+  margin: 0.90909091rem 0 1.81818182rem;
+}
+.sub .board-view .container .btn-area a {
+  display: inline-block;
+  width: calc(100% / 5);
+  height: 2.45454545rem;
+  line-height: 2.45454545rem;
+  background: #777777;
+  color: #fff;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-view .container .btn-area a {
+    height: 42px;
+    line-height: 42px;
+  }
+}
+.sub .bookmark .container {
+  text-align: center;
+}
+.sub .bookmark .container fieldset {
+  border: none;
+  margin-bottom: 1.071rem;
+}
+.sub .bookmark .container fieldset select {
+  width: 35%;
+  height: 2.571rem;
+  line-height: 2.571rem;
+  padding: 0 0.714rem;
+  color: #333333;
+  appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  background: url('../images/select-bg.png') no-repeat right center;
+  font-size: 14px;
+  margin-left: -7px;
+  border: 1px solid #a9a9a9;
+}
+.sub .bookmark .container fieldset select.count {
+  width: 50%;
+}
+.sub .bookmark .container fieldset button {
+  width: 3.429rem;
+  height: 2.571rem;
+  text-align: center;
+  font-size: 0;
+  color: #fff;
+  background: #0075bc;
+  border: none;
+  vertical-align: top;
+  margin-left: -0.357rem;
+}
+.sub .bookmark .container fieldset button i {
+  font-size: 18px;
+}
+.sub .bookmark .container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sub .bookmark .container ul li {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1.714rem;
+}
+.sub .bookmark .container ul li:last-child {
+  margin-bottom: 0;
+}
+.sub .bookmark .container ul li.active a .image::before {
+  border: 5px solid #199d54;
+}
+.sub .bookmark .container ul li.active a button {
+  background: #199d54 !important;
+  border: none !important;
+}
+.sub .bookmark .container ul li.active a button i {
+  margin-left: 0 !important;
+}
+.sub .bookmark .container ul li a {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  line-height: 2.857rem;
+  font-size: 1.429rem;
+  color: #333;
+  text-align: center;
+}
+.sub .bookmark .container ul li a .image {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 0;
+  padding-bottom: 66.67%;
+  overflow: hidden;
+}
+.sub .bookmark .container ul li a .image::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+  z-index: 100;
+}
+.sub .bookmark .container ul li a .image img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  border: none;
+  vertical-align: top;
+}
+.sub .bookmark .container ul li a span {
+  position: absolute;
+  top: 0.857rem;
+  right: 0.857rem;
+  display: inline-block;
+  padding: 0 0.714rem;
+  height: 1.929rem;
+  line-height: 1.929rem;
+  background: #333333;
+  font-size: 0.857rem;
+  color: #fff;
+  border-radius: 4px;
+}
+.sub .bookmark .container ul li a .content {
+  position: absolute;
+  bottom: 1.429rem;
+  left: 1.071rem;
+  width: calc(100% - 2.071rem);
+  text-align: left;
+  font-size: 18px;
+  color: #fff;
+  margin: 0;
+  z-index: 101;
+}
+.sub .bookmark .container ul li a .content h5 {
+  font-size: 1.714rem;
+  margin: 0;
+  color: #fff;
+  font-weight: normal;
+  line-height: 1.4;
+}
+.sub .bookmark .container ul li a .content h5 small {
+  display: block;
+  font-size: 16px;
+  color: #ffff00;
+}
+.sub .bookmark .container ul li a .content button {
+  float: right;
+  border: none;
+  background: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 0.357rem solid #fff;
+  margin-top: -2.857rem;
+}
+.sub .bookmark .container ul li a .content button i {
+  color: #fff;
+}
+.sub .bookmark .container ul li a .content button i.fa-check {
+  font-size: 1.714rem;
+  margin-left: -0.357rem;
+}
+.sub .bookmark .container .btn-area {
+  display: block;
+  width: 100%;
+  margin: 1.429rem 0 2.857rem;
+}
+.sub .bookmark .container .btn-area a {
+  display: inline-block;
+  width: calc(100% / 2 - 0.714rem);
+  height: 2.929rem;
+  line-height: 2.929rem;
+  font-size: 14px;
+  text-align: center;
+  background: #eeeeee;
+  border: 1px solid #eee;
+}
+.sub .bookmark .container .btn-area a.all {
+  background: #555555;
+  color: #fff;
+  border: none;
+  margin-right: 0.714rem;
 }
 .sub .list-type01 {
   text-align: center;
@@ -3775,169 +4251,6 @@ body.pc .sub .view-review .container .btn-area a:last-child {
   background: #666;
   color: #fff;
 }
-body.pc .sub .board {
-  text-align: center;
-  background: #fff;
-  padding: 30px 0 50px;
-}
-body.pc .sub .board .container h2 {
-  font-size: 39px;
-  color: #333333;
-  margin: 30px 0 70px;
-  text-align: center;
-}
-body.pc .sub .board .container fieldset {
-  border: none;
-  text-align: right;
-  padding: 10px 0;
-}
-body.pc .sub .board .container fieldset input {
-  width: 262px;
-  height: 42px;
-  padding: 0 10px;
-  border: 1px solid #e4e4e4;
-  border-right: none;
-}
-body.pc .sub .board .container fieldset button {
-  width: 62px;
-  height: 42px;
-  background: #0075bc;
-  font-size: 0;
-  border: none;
-  text-align: center;
-  margin-left: -3px;
-}
-body.pc .sub .board .container fieldset button i {
-  font-size: 18px;
-  color: #fff;
-}
-body.pc .sub .board .container ul {
-  list-style: none;
-  margin: 0 0 10px;
-  padding: 0;
-}
-body.pc .sub .board .container ul li {
-  display: inline-block;
-  width: 100%;
-  padding: 20px 30px;
-  border-bottom: 1px solid #999;
-}
-body.pc .sub .board .container ul li:first-child {
-  border-top: 2px solid #000;
-}
-body.pc .sub .board .container ul li .no {
-  display: inline-block;
-  font-size: 20px;
-  font-weight: bold;
-  color: #999;
-}
-body.pc .sub .board .container ul li a {
-  display: inline-block;
-  font-size: 18px;
-  color: #333333;
-  margin-left: 50px;
-}
-body.pc .sub .board .container ul li a.file i {
-  font-size: 21px;
-  margin-left: 5px;
-  color: #0075bc;
-}
-body.pc .sub .board .container ul li p {
-  display: inline-block;
-  float: right;
-  padding: 3px 0 0;
-  margin: 0;
-  font-size: 14px;
-  color: #555555;
-}
-body.pc .sub .board .container ul li p .date {
-  position: relative;
-  display: inline-block;
-  margin-right: 11px;
-}
-body.pc .sub .board .container ul li p .date:after {
-  content: '';
-  position: absolute;
-  top: 1px;
-  right: -7px;
-  width: 1px;
-  height: 16px;
-  background: #555555;
-}
-body.pc .sub .board .container form .subject {
-  width: calc(100% - 2px);
-  height: 54px;
-  font-size: 18px;
-  border: 1px solid #999;
-  padding: 0 25px;
-}
-body.pc .sub .board .container form textarea {
-  width: 100%;
-  min-height: 415px;
-  padding: 20px;
-  background: #e8e8e8;
-  border: none;
-  border-bottom: 1px solid #999;
-  resize: vertical;
-}
-body.pc .sub .board .container form .file {
-  width: 100%;
-  font-size: 14px;
-  color: #333333;
-  padding: 10px 0;
-  border-bottom: 1px solid #999;
-}
-body.pc .sub .board .container form .file button {
-  width: 146px;
-  height: 42px;
-  line-height: 24px;
-  font-size: 16px;
-  color: #fff;
-  border: none;
-  background: #333333;
-}
-body.pc .sub .board .container form .file button i {
-  margin-left: 5px;
-  verticla-align: 0;
-}
-body.pc .sub .board .container form .file span {
-  margin-left: 20px;
-}
-body.pc .sub .board .container .btn-area {
-  width: 100%;
-  margin: 30px 0 50px;
-  text-align: center;
-}
-body.pc .sub .board .container .btn-area a {
-  display: inline-block;
-  width: 146px;
-  height: 54px;
-  line-height: 54px;
-  font-size: 21px;
-  color: #fff;
-  text-align: center;
-  margin: 0 2px;
-  background: #666;
-}
-body.pc .sub .board .container .btn-area a.write {
-  background: #0075bc;
-}
-body.pc .sub .board.view ul li:first-child {
-  font-size: 20px;
-}
-body.pc .sub .board.view ul li:nth-child(2) {
-  min-height: 415px;
-  background: #e8e8e8;
-}
-body.pc .sub .board.view ul li:last-child {
-  color: #0075bc;
-}
-body.pc .sub .board.view ul li:last-child i {
-  font-size: 18px;
-}
-body.pc .sub .board.view ul li:last-child span {
-  text-decoration: underline;
-}
 body.pc .sub .rank {
   padding: 60px 0;
   text-align: center;
@@ -4219,16 +4532,6 @@ body.pc .sub .list-main .container ul li.bgblur::before {
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
   -o-filter: blur(2px);
-}
-body.pc .sub .festival .container dl dd span {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 18px;
-  color: #0075bc;
-}
-body.pc .sub .festival .container dl dd span.mobile {
-  display: none;
 }
 body.pc .sub .transport {
   text-align: center;
@@ -5900,172 +6203,6 @@ body.mobile .sub .view-review .container .btn-area a:last-child {
   background: #666;
   color: #fff;
 }
-body.mobile .sub .board {
-  padding: 2.5rem 1.071rem;
-}
-body.mobile .sub .board .container h2 {
-  font-size: 1.571rem;
-  font-weight: bold;
-  color: #333333;
-  padding: 0;
-  margin: 0 0 1.786rem;
-  text-align: center;
-}
-body.mobile .sub .board .container fieldset {
-  border: none;
-  padding: 5px 0;
-}
-body.mobile .sub .board .container fieldset input {
-  width: calc(100% - 3.357rem);
-  border: 1px solid #eeeeee;
-  height: 2.857rem;
-  padding: 0 0.714rem;
-}
-body.mobile .sub .board .container fieldset button {
-  border: none;
-  width: 3.357rem;
-  height: 2.857rem;
-  background: #0075bc;
-  font-size: 0;
-  margin-left: -0.5rem;
-}
-body.mobile .sub .board .container fieldset button i {
-  font-size: 18px;
-  color: #fff;
-}
-body.mobile .sub .board .container ul {
-  margin: 1.071rem 0;
-  padding: 0;
-  list-style: none;
-}
-body.mobile .sub .board .container ul li {
-  display: inline-block;
-  width: 100%;
-  height: 5rem;
-  border-bottom: 1px solid #999;
-  padding: 1.071rem 0;
-}
-body.mobile .sub .board .container ul li:first-child {
-  border-top: 2px solid #333333;
-}
-body.mobile .sub .board .container ul li .no {
-  display: none;
-}
-body.mobile .sub .board .container ul li a {
-  display: inline-block;
-  width: 80%;
-  font-size: 16px;
-  color: #333333;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-body.mobile .sub .board .container ul li a.file i {
-  margin-left: 0.357rem;
-  color: #0075bc;
-}
-body.mobile .sub .board .container ul li p {
-  margin: 0.214rem 0 0;
-  padding: 0;
-  font-size: 14px;
-}
-body.mobile .sub .board .container ul li p span {
-  display: inline-block;
-}
-body.mobile .sub .board .container ul li p span.date {
-  position: relative;
-  margin-right: 0.714rem;
-}
-body.mobile .sub .board .container ul li p span.date::after {
-  content: '';
-  position: absolute;
-  top: 1px;
-  right: -0.571rem;
-  width: 1px;
-  height: 1.071rem;
-  background: #555555;
-}
-body.mobile .sub .board form input {
-  width: calc(100% - 0.143rem);
-  height: 3.786rem;
-  padding: 1.071rem;
-  border: 1px solid #999;
-  font-size: 18px;
-}
-body.mobile .sub .board form textarea {
-  width: 100%;
-  min-height: 22.143rem;
-  border: 1px solid #999;
-  resize: vertical;
-  color: #555555;
-  padding: 1.429rem;
-  border: none;
-  border-bottom: 1px solid #999;
-  background: #e8e8e8;
-}
-body.mobile .sub .board div.file {
-  width: 100%;
-  margin: 0.714rem 0;
-  text-align: center;
-}
-body.mobile .sub .board div.file button {
-  display: inline-block;
-  width: 15.143rem;
-  height: 2.857rem;
-  background: #333333;
-  color: #fff;
-}
-body.mobile .sub .board div.file button i {
-  margin-left: 0.357rem;
-}
-body.mobile .sub .board div.file span {
-  position: relative;
-  display: block;
-  margin-top: 0.357rem;
-}
-body.mobile .sub .board .btn-area {
-  width: 100%;
-  text-align: center;
-  margin: 2.857rem 0 2.143rem;
-}
-body.mobile .sub .board .btn-area a {
-  display: inline-block;
-  width: 10rem;
-  height: 2.857rem;
-  line-height: 2.857rem;
-  font-size: 14px;
-  color: #fff;
-  text-align: center;
-  background: #666;
-}
-body.mobile .sub .board .btn-area a.write {
-  background: #0075bc;
-}
-body.mobile .sub .board.view ul li:first-child {
-  font-size: 18px;
-  text-align: center;
-}
-body.mobile .sub .board.view ul li:nth-child(2) {
-  min-height: 22.143rem;
-  padding: 1.429rem;
-  background: #e8e8e8;
-}
-body.mobile .sub .board.view ul li:last-child {
-  height: auto;
-  color: #0075bc;
-}
-body.mobile .sub .board.view ul li:last-child span {
-  text-decoration: underline;
-}
-body.mobile .sub .board.view ul li p {
-  margin-top: 0.429rem;
-}
-body.mobile .sub .board.view ul li p .date {
-  margin-right: 0.857rem !important;
-}
-body.mobile .sub .board.view .btn-area a {
-  width: 100%;
-}
 body.mobile .sub .rank {
   text-align: center;
   padding: 1.429rem 0.857rem;
@@ -7516,197 +7653,6 @@ body.mobile .sub .search-result .container .sidebar .popword ul li a .num {
 }
 body.mobile .sub .search-result .container .sidebar .popword .bx-viewport {
   margin: 0 !important;
-}
-body.mobile .sub .mypage {
-  text-align: center;
-  padding: 1.429rem 0.857rem;
-}
-body.mobile .sub .mypage h4 {
-  font-size: 1.786rem;
-  margin: 0;
-}
-body.mobile .sub .mypage .info-text {
-  line-height: 1.4;
-  word-break: keep-all;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-body.mobile .sub .mypage.bookmark .container fieldset {
-  border: none;
-  margin-bottom: 1.071rem;
-}
-body.mobile .sub .mypage.bookmark .container fieldset select {
-  width: 35%;
-  height: 2.571rem;
-  line-height: 2.571rem;
-  padding: 0 0.714rem;
-  color: #333333;
-  appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -webkit-appearance: none;
-  background: url('../images/select-bg.png') no-repeat right center;
-  font-size: 14px;
-  margin-left: -7px;
-  border: 1px solid #a9a9a9;
-}
-body.mobile .sub .mypage.bookmark .container fieldset select.count {
-  width: 50%;
-}
-body.mobile .sub .mypage.bookmark .container fieldset button {
-  width: 3.429rem;
-  height: 2.571rem;
-  text-align: center;
-  font-size: 0;
-  color: #fff;
-  background: #0075bc;
-  border: none;
-  vertical-align: top;
-  margin-left: -0.357rem;
-}
-body.mobile .sub .mypage.bookmark .container fieldset button i {
-  font-size: 18px;
-}
-body.mobile .sub .mypage.bookmark .container ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-body.mobile .sub .mypage.bookmark .container ul li {
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 1.714rem;
-}
-body.mobile .sub .mypage.bookmark .container ul li:last-child {
-  margin-bottom: 0;
-}
-body.mobile .sub .mypage.bookmark .container ul li.active a .image::before {
-  border: 5px solid #199d54;
-}
-body.mobile .sub .mypage.bookmark .container ul li.active a button {
-  background: #199d54 !important;
-  border: none !important;
-}
-body.mobile .sub .mypage.bookmark .container ul li.active a button i {
-  margin-left: 0 !important;
-}
-body.mobile .sub .mypage.bookmark .container ul li a {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  height: auto;
-  line-height: 2.857rem;
-  font-size: 1.429rem;
-  color: #333;
-  text-align: center;
-}
-body.mobile .sub .mypage.bookmark .container ul li a .image {
-  position: relative;
-  margin: 0;
-  width: 100%;
-  height: 0;
-  padding-bottom: 66.67%;
-  overflow: hidden;
-}
-body.mobile .sub .mypage.bookmark .container ul li a .image::before {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0);
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-  z-index: 100;
-}
-body.mobile .sub .mypage.bookmark .container ul li a .image img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  min-height: 100%;
-  border: none;
-  vertical-align: top;
-}
-body.mobile .sub .mypage.bookmark .container ul li a span {
-  position: absolute;
-  top: 0.857rem;
-  right: 0.857rem;
-  display: inline-block;
-  padding: 0 0.714rem;
-  height: 1.929rem;
-  line-height: 1.929rem;
-  background: #333333;
-  font-size: 0.857rem;
-  color: #fff;
-  border-radius: 4px;
-}
-body.mobile .sub .mypage.bookmark .container ul li a .content {
-  position: absolute;
-  bottom: 1.429rem;
-  left: 1.071rem;
-  width: calc(100% - 2.071rem);
-  text-align: left;
-  font-size: 18px;
-  color: #fff;
-  margin: 0;
-  z-index: 101;
-}
-body.mobile .sub .mypage.bookmark .container ul li a .content h5 {
-  font-size: 1.714rem;
-  margin: 0;
-  color: #fff;
-  font-weight: normal;
-  line-height: 1.4;
-}
-body.mobile .sub .mypage.bookmark .container ul li a .content h5 small {
-  display: block;
-  font-size: 16px;
-  color: #ffff00;
-}
-body.mobile .sub .mypage.bookmark .container ul li a .content button {
-  float: right;
-  border: none;
-  background: none;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  border: 0.357rem solid #fff;
-  margin-top: -2.857rem;
-}
-body.mobile .sub .mypage.bookmark .container ul li a .content button i {
-  color: #fff;
-}
-body.mobile .sub .mypage.bookmark .container ul li a .content button i.fa-check {
-  font-size: 1.714rem;
-  margin-left: -0.357rem;
-}
-body.mobile .sub .mypage.bookmark .container .btn-area {
-  display: block;
-  width: 100%;
-  margin: 1.429rem 0 2.857rem;
-}
-body.mobile .sub .mypage.bookmark .container .btn-area a {
-  display: inline-block;
-  width: calc(100% / 2 - 0.714rem);
-  height: 2.929rem;
-  line-height: 2.929rem;
-  font-size: 14px;
-  text-align: center;
-  background: #eeeeee;
-  border: 1px solid #eee;
-}
-body.mobile .sub .mypage.bookmark .container .btn-area a.all {
-  background: #555555;
-  color: #fff;
-  border: none;
-  margin-right: 0.714rem;
 }
 body.mobile .sub .mypage.review .container ul {
   list-style: none;
