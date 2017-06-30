@@ -21,22 +21,30 @@ body {
     button {
       .absolute;
       right: 0;
-      bottom: 10px;
+      .rem(top, 10);
       .rem(font-size, 22);
+      .rem(width, 24);
+      .rem(height, 24);
+      padding: 0;
       color: @white;
       background: @black;
       border: none;
-      .rem(padding, 10);
       .pointer;
+      .zero;
+      .border-radius(50%);
+
+      i {
+        .rem(font-size, 20);
+      }
     }
   }
 
   #header {
-    position: relative;
+    .relative;
     border-bottom: @border-normal;
     z-index: 999;
-    .rem(height, 66);
-    .rem(line-height, 66);
+    .rem(height, 78);
+    .rem(line-height, 78);
     background: @white;
     .center;
 
@@ -45,7 +53,7 @@ body {
       .absolute;
       left: 0;
       top: 0;
-      font-size: 0;
+      .zero;
 
       .pointer .menuToggle {
         .none;
@@ -60,11 +68,12 @@ body {
     }
 
     h1 {
-      display: inline-block;
-      font-size: 0;
-      overflow: hidden;
-      .rem(width, 124);
-      .rem(height, 20);
+      .inline-block;
+      .zero;
+      .hidden;
+      .rem(width, 200);
+      .rem(height, 33);
+      .rem(margin, 22 0 0);
 
       a {
         .block;
@@ -72,7 +81,7 @@ body {
         .full-background(@logo);
       }
       @media all and (min-width: 1200px) {
-        position: absolute;
+        .absolute;
         left: 0;
         top: calc(~"50% - 14px");
         width: 170px;
@@ -93,18 +102,18 @@ body {
           }
 
           &.login {
-            display: none;
+            .none;
           }
 
           &.rank {
-            display: none;
+            .none;
           }
 
           &.plan {
-            position: absolute;
+            .absolute;
             right: 0;
             top: 0;
-            font-size: 0;
+            .zero;
           }
         }
       }
@@ -196,14 +205,16 @@ body {
     }
 
     i {
-      .rem(font-size, 24);
+      .rem(font-size, 32);
     }
 
     nav {
       @media all and (max-width: 1199px) {
         .header-default;
         .hidden;
-        .relative;
+        .absolute;
+        left: 0;
+        .rem(top, 78);
         z-index: 999;
         width: 100%;
         height: 0;

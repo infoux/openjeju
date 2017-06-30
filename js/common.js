@@ -45,7 +45,13 @@ $(document).ready(function() {
     $(".top_banner").css("display", "none");
   });
 
-  $(".board-gallery .list .image").css("background", "url(" + $(this).find("img").attr("src") + ") no-repeat center / cover");
+  $(".board-gallery .image").each(function() {
+
+    $(this).css("background", "url(" + $(this).find("img").attr("src") + ") no-repeat center / cover");
+
+
+
+  });
 
 
 
@@ -155,11 +161,10 @@ $(document).ready(function() {
 
   $(window).resize(function() {
     viewMode();
-    //        mainHeight();
-    matSlider();
     weatherSlider();
     popword();
     popWordSlider();
+    matSlider();
   });
   /*
       $(window).load(function() {
@@ -253,39 +258,40 @@ $(document).ready(function() {
 });
 
 /* global*/
+
+
 var $matSlider = {
   state: 'destroy',
   slider: undefined
 };
 /* memory leak 방지*/
 function matSlider() {
-  if ($("body").hasClass("pc")) {
-    var $el = $el = $(".mat-list .slider");
-    try {
-      $matSlider.slider.destroySlider();
-      $matSlider.state = 'destroy';
-      $el.removeAttr('style');
-      $.each($el.find('li'), function(e1, e2) {
-        $(e2).removeAttr('style')
-      });
-    } catch (e1) {
 
-    }
+  var $el = $(".mat-list .slider");
+  try {
+    $matSlider.slider.destroySlider();
+    $matSlider.state = 'destroy';
+    $el.removeAttr('style');
+    $.each($el.find('li'), function(e1, e2) {
+      $(e2).removeAttr('style')
+    });
+  } catch (e1) {
 
-    if ($matSlider.state === 'destroy') {
-      $matSlider.state = 'build';
-      $matSlider.slider = $el.bxSlider({
-        speed: 1000,
-        pager: false,
-        controls: false,
-        auto: true,
-        slideMargin: 10,
-        infiniteLoop: true,
-        maxSlides: 5
-      });
-
-    }
   }
+
+  if ($matSlider.state === 'destroy') {
+    $matSlider.state = 'build';
+    $matSlider.slider = $el.bxSlider({
+      speed: 1000,
+      pager: false,
+      controls: false,
+      auto: true,
+      slideMargin: 10,
+      infiniteLoop: true,
+
+    });
+  }
+
 }
 
 var $weatherSlider = {

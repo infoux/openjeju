@@ -117,7 +117,7 @@
 
 .headerBtn {
   .block;
-  .rem(padding, 6 10);
+  .rem(padding, 12 12);
   height: 100%;
   color: @gray;
 }
@@ -343,7 +343,6 @@
 .sr-only-focusable:active,
 .sr-only-focusable:focus {
   .static;
-  width: auto;
   height: auto;
   margin: 0;
   overflow: visible;
@@ -353,6 +352,14 @@
 input,
 select {
   .border-radius(0);
+  appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
 }
 
 a {

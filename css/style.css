@@ -68,7 +68,7 @@
 }
 .headerBtn {
   display: block;
-  padding: 0.27272727rem 0.45454545rem;
+  padding: 0.54545455rem 0.54545455rem;
   height: 100%;
   color: #555555;
 }
@@ -223,7 +223,6 @@
 .sr-only-focusable:active,
 .sr-only-focusable:focus {
   position: static;
-  width: auto;
   height: auto;
   margin: 0;
   overflow: visible;
@@ -237,6 +236,14 @@ select {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+}
+input::-ms-expand,
+select::-ms-expand {
+  display: none;
 }
 a {
   text-decoration: none;
@@ -300,26 +307,38 @@ body .top_banner img {
 body .top_banner button {
   position: absolute;
   right: 0;
-  bottom: 10px;
+  top: 0.45454545rem;
   font-size: 1rem;
+  width: 1.09090909rem;
+  height: 1.09090909rem;
+  padding: 0;
   color: #fff;
   background: #000;
   border: none;
-  padding: 0.45454545rem;
   cursor: pointer;
+  font-size: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+body .top_banner button i {
+  font-size: 0.90909091rem;
 }
 body #header {
   position: relative;
   border-bottom: 1px solid #eee;
   z-index: 999;
-  height: 3rem;
-  line-height: 3rem;
+  height: 3.54545455rem;
+  line-height: 3.54545455rem;
   background: #fff;
   text-align: center;
 }
 body #header .menuToggle {
   display: block;
-  padding: 0.27272727rem 0.45454545rem;
+  padding: 0.54545455rem 0.54545455rem;
   height: 100%;
   color: #555555;
   position: absolute;
@@ -342,8 +361,9 @@ body #header h1 {
   display: inline-block;
   font-size: 0;
   overflow: hidden;
-  width: 5.63636364rem;
-  height: 0.90909091rem;
+  width: 9.09090909rem;
+  height: 1.5rem;
+  margin: 1rem 0 0;
 }
 body #header h1 a {
   display: block;
@@ -372,7 +392,7 @@ body #header .util_menu {
   }
   body #header .util_menu li a {
     display: block;
-    padding: 0.27272727rem 0.45454545rem;
+    padding: 0.54545455rem 0.54545455rem;
     height: 100%;
     color: #555555;
     font-weight: bold;
@@ -468,7 +488,7 @@ body #header .gnb {
   }
 }
 body #header i {
-  font-size: 1.09090909rem;
+  font-size: 1.45454545rem;
 }
 @media all and (max-width: 1199px) {
   body #header nav {
@@ -477,7 +497,9 @@ body #header i {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 3.54545455rem;
     z-index: 999;
     width: 100%;
     height: 0;
@@ -1493,7 +1515,7 @@ body .main .rank .container .rank-pop ul li .count {
 .sub .container h4 {
   margin: 0;
   padding: 0;
-  margin: 2.27272727rem 0 0.90909091rem;
+  margin: 3.63636364rem 0 0.90909091rem;
   font-size: 1.45454545rem;
 }
 @media all and (min-width: 1200px) {
@@ -1514,6 +1536,8 @@ body .main .rank .container .rank-pop ul li .count {
 }
 @media all and (min-width: 1200px) {
   .sub .indicator {
+    position: relative;
+    z-index: 300;
     display: block;
     text-align: center;
     border-bottom: 1px solid #eeeeee;
@@ -1606,8 +1630,8 @@ body .main .rank .container .rank-pop ul li .count {
 .sub .sub-head {
   position: relative;
   text-align: center;
+  z-index: 200;
   height: 4.54545455rem;
-  margin-bottom: 2.27272727rem;
   /*    &.non-nav {
       .rem(height, 150);
       margin-bottom: 0;
@@ -1890,9 +1914,19 @@ body .main .rank .container .rank-pop ul li .count {
 .sub .sub-info .container {
   text-align: center;
 }
-.sub .sub-info .container iframe {
+.sub .sub-info .container .tv {
+  position: relative;
+  min-height: 36.36363636rem;
+  margin: 1.81818182rem 0;
+}
+.sub .sub-info .container .tv iframe {
   padding-bottom: 2.27272727rem;
   padding: 1.81818182rem 0.90909091rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .sub-info .container .tv {
+    min-height: 760px;
+  }
 }
 .sub .sub-info .container p {
   margin: 0;
@@ -1971,6 +2005,11 @@ body .main .rank .container .rank-pop ul li .count {
 @media all and (min-width: 1200px) {
   .sub .sub-info .container .tab {
     min-height: 700px;
+  }
+}
+@media all and (max-width: 1199px) {
+  .sub .sub-info .container .tab .map {
+    width: 100% !important;
   }
 }
 .sub .sub-info .container .tab img {
@@ -2307,17 +2346,449 @@ body .main .rank .container .rank-pop ul li .count {
   color: #777777;
   word-break: keep-all;
 }
-.sub .list-basic .container .list li div {
+.sub .list-basic .container .list li .btn-area a {
+  font-size: 1.18181818rem;
+  color: #0075bc;
+}
+.sub .list-basic .container .list li .btn-area a::after {
+  content: ">";
+  padding-left: 0.45454545rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .list-basic .container .list li .btn-area a {
+    font-size: 20px;
+  }
+}
+.sub .list-basic .container .list li .view {
+  background: #eeeeee;
+  padding: 0.90909091rem;
+  width: 100%;
+}
+.sub .list-basic .container .list li .view ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+.sub .list-basic .container .list li .view ul li {
+  position: relative;
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  height: auto;
+  min-height: 100px;
+  width: calc((100% - 30px) / 4);
+  margin-right: 10px;
+}
+.sub .list-basic .container .list li .view ul li:last-child {
+  margin-right: 0;
+}
+.sub .list-basic .container .list li .view ul li img {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.sub .list-basic .container .list li .hit-box {
   background: #eeeeee;
   padding: 0 0.90909091rem;
 }
-.sub .list-basic .container .list li div p {
+.sub .list-basic .container .list li .hit-box p {
   font-size: 1.27272727rem;
   display: inline-block;
   padding: 0 0.45454545rem;
 }
-.sub .list-basic .container .list li div p a i {
+.sub .list-basic .container .list li .hit-box p a i {
   color: #0075bc;
+}
+.sub .mat-list {
+  position: relative;
+  margin-top: 2.27272727rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .mat-list {
+    margin-top: 0;
+  }
+}
+.sub .mat-list .container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.sub .mat-list .container ul {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  list-style: none;
+}
+.sub .mat-list .container ul li {
+  width: auto !important;
+  display: inline-block;
+  padding: 1.36363636rem 0;
+  position: relative;
+}
+@media all and (min-width: 1200px) {
+  .sub .mat-list .container ul li {
+    padding: 30px 0;
+  }
+}
+.sub .mat-list .container ul li a {
+  display: inline-block;
+  text-align: center;
+}
+.sub .mat-list .container ul li a.best i {
+  position: absolute;
+  top: 0.90909091rem;
+  left: 0;
+  display: inline-block;
+  width: 2.27272727rem;
+  height: 2.27272727rem;
+  line-height: 2.27272727rem;
+  border-radius: 50%;
+  font-size: 0.63636364rem;
+  font-style: normal;
+  text-align: center;
+  color: #fff;
+  background: #f68409;
+}
+@media all and (min-width: 1200px) {
+  .sub .mat-list .container ul li a.best i {
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+.sub .mat-list .container ul li a img {
+  width: 6.36363636rem;
+  height: 6.36363636rem;
+  border-radius: 50%;
+}
+@media all and (min-width: 1200px) {
+  .sub .mat-list .container ul li a img {
+    width: 200px;
+    height: 200px;
+  }
+}
+.sub .mat-list .container ul li a span {
+  display: block;
+  color: #0075bc;
+  margin-top: 0.63636364rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .mat-list .container ul li a span {
+    font-size: 16px;
+  }
+}
+.sub .list-food {
+  text-align: center;
+  margin: 1.36363636rem 0 0;
+}
+.sub .list-food .container .list {
+  padding: 0.90909091rem 0 0;
+  list-style: none;
+  border-top: 2px solid #333333;
+}
+.sub .list-food .container .list li {
+  position: relative;
+  padding: 0 0 1.36363636rem;
+  margin: 0 0 1.36363636rem;
+  border-bottom: 1px solid #777777;
+}
+@media all and (min-width: 1200px) {
+  .sub .list-food .container .list li {
+    padding-left: 310px;
+    min-height: 225px;
+  }
+}
+.sub .list-food .container .list li img {
+  width: 100%;
+  height: auto;
+}
+@media all and (min-width: 1200px) {
+  .sub .list-food .container .list li img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 290px;
+    height: 205px;
+    display: inline-block;
+  }
+}
+.sub .list-food .container .list li h5 {
+  font-weight: normal;
+  font-size: 1.63636364rem;
+  margin: 0.90909091rem 0 0.45454545rem;
+}
+.sub .list-food .container .list li h5 small {
+  display: block;
+  margin-top: 0.45454545rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .list-food .container .list li h5 small {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+.sub .list-food .container .list li h5 small i {
+  font-size: 1.18181818rem;
+  color: #eeeeee;
+}
+@media all and (min-width: 1200px) {
+  .sub .list-food .container .list li h5 small i {
+    font-size: 20px;
+  }
+}
+.sub .list-food .container .list li h5 small i.active {
+  color: #f68409;
+}
+.sub .list-food .container .list li .text {
+  text-align: left;
+  line-height: 1.4;
+  color: #777777;
+  word-break: keep-all;
+}
+.sub .list-food .container .list li .hash-tag {
+  color: #0075bc;
+  font-size: 1rem;
+}
+.sub .list-food .container .list li .hash-tag i {
+  font-style: normal;
+}
+@media all and (min-width: 1200px) {
+  .sub .list-food .container .list li .hash-tag {
+    font-size: 20px;
+  }
+}
+.sub .list-food .container .list li div {
+  background: #eeeeee;
+  padding: 0 0.90909091rem;
+}
+.sub .list-food .container .list li div p {
+  font-size: 1.27272727rem;
+  display: inline-block;
+  padding: 0 0.45454545rem;
+}
+.sub .list-food .container .list li div p i {
+  color: #0075bc;
+}
+.sub .festival {
+  text-align: center;
+}
+.sub .festival .container {
+  font-size: 0;
+  margin-top: 1.81818182rem;
+}
+.sub .festival .container fieldset {
+  border: none;
+  text-align: left;
+  margin-bottom: 0.90909091rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .festival .container fieldset {
+    text-align: right;
+    margin: 20px 0;
+  }
+}
+.sub .festival .container fieldset select {
+  width: calc(40% - 30px);
+  height: 2.45454545rem;
+  padding: 0.18181818rem 0.45454545rem;
+  color: #333333;
+  background: url('../images/select-bg.png') no-repeat right center;
+  font-size: 1rem;
+  margin-left: -1px;
+  border: 1px solid #777777;
+}
+.sub .festival .container fieldset select.year {
+  width: calc(60% - 30px);
+  margin-left: 0;
+}
+@media all and (min-width: 1200px) {
+  .sub .festival .container fieldset select {
+    width: 160px;
+    height: 42px;
+    font-size: 16px;
+  }
+  .sub .festival .container fieldset select.year {
+    width: 160px;
+  }
+}
+.sub .festival .container fieldset button {
+  width: 60px;
+  height: 2.45454545rem;
+  text-align: center;
+  font-size: 0;
+  color: #fff;
+  background: #0075bc;
+  border: none;
+  vertical-align: top;
+  margin-left: -1px;
+}
+.sub .festival .container fieldset button i {
+  font-size: 1.45454545rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .festival .container fieldset button {
+    height: 42px;
+  }
+}
+.sub .festival .container dl {
+  margin: 0.45454545rem 0;
+  padding: 0;
+  text-align: center;
+}
+@media all and (min-width: 1200px) {
+  .sub .festival .container dl {
+    margin: 0 0 20px;
+    padding: 0;
+  }
+}
+.sub .festival .container dl dt {
+  display: inline-block;
+  width: 5.45454545rem;
+  height: 5.45454545rem;
+  line-height: 5.45454545rem;
+  font-size: 1.45454545rem;
+  color: #fff;
+  text-align: center;
+  background: #000;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  margin: 1.45454545rem 0;
+}
+.sub .festival .container dl dt.visible {
+  display: none;
+}
+@media all and (min-width: 1200px) {
+  .sub .festival .container dl dt {
+    -webkit-border-radius: 20px 0 0 20px;
+    -moz-border-radius: 20px 0 0 20px;
+    border-radius: 20px 0 0 20px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    width: 110px;
+    height: 120px;
+    line-height: 120px;
+    font-size: 28px;
+    margin: 0 0 10px;
+    vertical-align: top;
+    text-align: center;
+  }
+  .sub .festival .container dl dt.visible {
+    display: inline-block;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+  }
+}
+.sub .festival .container dl dd {
+  position: relative;
+  display: block;
+  width: 100%;
+  border: 1px solid #777777;
+  margin: 0 0 0.63636364rem;
+  text-align: left;
+  height: auto;
+}
+@media all and (min-width: 1200px) {
+  .sub .festival .container dl dd {
+    display: inline-block;
+    width: 1035px;
+    margin: 0 0 10px 15px;
+    padding-left: 290px;
+    vertical-align: top;
+    overflow: hidden;
+    -webkit-border-radius: 0 20px 20px 0;
+    -moz-border-radius: 0 20px 20px 0;
+    border-radius: 0 20px 20px 0;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    min-height: 210px;
+  }
+}
+.sub .festival .container dl dd img {
+  width: 100%;
+  height: auto;
+}
+@media all and (min-width: 1200px) {
+  .sub .festival .container dl dd img {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 245px;
+    height: 160px;
+    border: none;
+  }
+}
+.sub .festival .container dl dd h4 {
+  display: inline-block;
+  font-size: 1.45454545rem;
+  font-weight: normal;
+  color: #333333;
+  padding: 0 0.90909091rem;
+  margin: 1.36363636rem 0 0.90909091rem;
+  text-align: left;
+}
+.sub .festival .container dl dd h4 small {
+  display: block;
+  font-size: 1rem;
+  color: #555555;
+}
+@media all and (min-width: 1200px) {
+  .sub .festival .container dl dd h4 {
+    font-size: 24px;
+    margin: 20px 0 0;
+    padding: 0;
+  }
+}
+.sub .festival .container dl dd .text {
+  font-size: 1rem;
+  padding: 0 0.90909091rem 0.90909091rem;
+  margin: 0;
+}
+@media all and (min-width: 1200px) {
+  .sub .festival .container dl dd .text {
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 0 20px 20px 0;
+    line-height: 1.4;
+  }
+}
+.sub .festival .container dl dd i {
+  display: block;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1rem;
+  padding: 0 0.90909091rem 0.90909091rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .festival .container dl dd i {
+    font-size: 18px;
+    padding: 0;
+  }
+}
+.sub .festival .container dl dd span {
+  display: block;
+  font-size: 1rem;
+  color: #0075bc;
+  padding: 0 0.90909091rem 0.90909091rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .festival .container dl dd span {
+    position: absolute;
+    bottom: 0.90909091rem;
+    right: 0.90909091rem;
+  }
+}
+.sub .login {
+  text-align: center;
 }
 .sub .login .container {
   text-align: center;
@@ -2345,12 +2816,21 @@ body .main .rank .container .rank-pop ul li .count {
   width: 140px;
   height: 140px;
   border: 2px solid #ccc;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
-  font-size: 14px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+@media all and (max-width: 1199px) {
+  .sub .login .container ul li a {
+    font-size: 0.81818182rem;
+  }
 }
 .sub .login .container ul li a i {
   display: block;
-  font-size: 44px;
+  font-size: 3.27272727rem;
   margin: 28px 0 12px;
 }
 .sub .login .container ul li.facebook i {
@@ -2361,6 +2841,9 @@ body .main .rank .container .rank-pop ul li .count {
 }
 .sub .login .container ul li.instagram i {
   color: #ef4835;
+}
+.sub .event img {
+  max-width: 100%;
 }
 .sub .board-gallery {
   text-align: center;
@@ -3450,51 +3933,6 @@ body.pc .sub .board.view ul li:last-child i {
 body.pc .sub .board.view ul li:last-child span {
   text-decoration: underline;
 }
-body.pc .sub .mat-list .container ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  height: 310px;
-}
-body.pc .sub .mat-list .container ul li {
-  display: inline-block;
-  width: 230px !important;
-  height: 310px;
-}
-body.pc .sub .mat-list .container ul li a {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  height: 310px;
-  padding-top: 40px;
-  text-align: center;
-}
-body.pc .sub .mat-list .container ul li a.best i {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  border-radius: 50%;
-  font-size: 20px;
-  font-style: normal;
-  text-align: center;
-  color: #fff;
-  background: #f68409;
-}
-body.pc .sub .mat-list .container ul li a img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-}
-body.pc .sub .mat-list .container ul li a span {
-  display: block;
-  font-size: 20px;
-  color: #333333;
-  margin-top: 15px;
-}
 body.pc .sub .rank {
   padding: 60px 0;
   text-align: center;
@@ -3776,108 +4214,6 @@ body.pc .sub .list-main .container ul li.bgblur::before {
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
   -o-filter: blur(2px);
-}
-body.pc .sub .festival {
-  padding: 60px 0;
-  text-align: center;
-}
-body.pc .sub .festival .container fieldset {
-  border: none;
-  text-align: left;
-  padding: 0 10px;
-  margin-bottom: 20px;
-}
-body.pc .sub .festival .container fieldset select {
-  display: inline-block;
-  width: 168px;
-  height: 42px;
-  text-indent: 10px;
-  font-size: 16px;
-  color: #333333;
-  appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -webkit-appearance: none;
-  background: url('../images/select-bg.png') no-repeat right center;
-  margin-left: -5px;
-  border: 1px solid #a9a9a9;
-}
-body.pc .sub .festival .container fieldset select::-ms-expand {
-  display: none;
-}
-body.pc .sub .festival .container fieldset button {
-  width: 68px;
-  height: 42px;
-  font-size: 0;
-  background: #0075bc;
-  color: #fff;
-  border: none;
-  margin-left: -5px;
-  vertical-align: top;
-}
-body.pc .sub .festival .container fieldset button i {
-  font-size: 21px;
-}
-body.pc .sub .festival .container dl {
-  margin: 0 0 20px;
-  padding: 0 10px;
-}
-body.pc .sub .festival .container dl dt {
-  display: inline-block;
-  width: 110px;
-  height: 120px;
-  line-height: 120px;
-  font-size: 28px;
-  background: #000;
-  color: #fff;
-  margin: 0 0 10px;
-  padding: 0;
-  vertical-align: top;
-  text-align: center;
-}
-body.pc .sub .festival .container dl dt.visible {
-  visibility: hidden;
-}
-body.pc .sub .festival .container dl dd {
-  position: relative;
-  display: inline-block;
-  width: 1050px;
-  border: 1px solid #ccc;
-  margin: 0 0 10px 15px;
-  padding-left: 260px;
-  vertical-align: top;
-  overflow: hidden;
-}
-body.pc .sub .festival .container dl dd.nonSearch {
-  line-height: 120px;
-}
-body.pc .sub .festival .container dl dd img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 245px;
-  height: 160px;
-  border: none;
-}
-body.pc .sub .festival .container dl dd h4 {
-  display: inline-block;
-  font-size: 24px;
-  font-weight: normal;
-  color: #333333;
-  margin: 20px 0 0;
-  padding: 0;
-  min-width: 135px;
-}
-body.pc .sub .festival .container dl dd p {
-  width: 630px;
-  line-height: 1.4;
-  color: #777;
-}
-body.pc .sub .festival .container dl dd i {
-  display: block;
-  font-size: 18px;
-  margin-bottom: 20px;
-  font-style: normal;
 }
 body.pc .sub .festival .container dl dd span {
   position: absolute;
@@ -5725,55 +6061,6 @@ body.mobile .sub .board.view ul li p .date {
 body.mobile .sub .board.view .btn-area a {
   width: 100%;
 }
-body.mobile .sub .mat-list {
-  margin-bottom: 0;
-}
-body.mobile .sub .mat-list .container ul {
-  margin: 0;
-  padding: 0 1.786rem;
-  list-style: none;
-  white-space: nowrap;
-  overflow: hidden;
-  overflow-x: scroll;
-}
-body.mobile .sub .mat-list .container ul li {
-  display: inline-block;
-  width: 8.571rem;
-  height: 13.071rem;
-}
-body.mobile .sub .mat-list .container ul li a {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  height: 13.071rem;
-  padding-top: 1.429rem;
-  text-align: center;
-}
-body.mobile .sub .mat-list .container ul li a.best i {
-  position: absolute;
-  top: 0.714rem;
-  left: 0;
-  display: inline-block;
-  width: 3.071rem;
-  height: 3.071rem;
-  line-height: 3.071rem;
-  border-radius: 50%;
-  font-size: 0.786rem;
-  font-style: normal;
-  text-align: center;
-  color: #fff;
-  background: #f68409;
-}
-body.mobile .sub .mat-list .container ul li a img {
-  width: 7.929rem;
-  height: 7.929rem;
-  border-radius: 50%;
-}
-body.mobile .sub .mat-list .container ul li a span {
-  display: block;
-  color: #333333;
-  margin-top: 0.714rem;
-}
 body.mobile .sub .rank {
   text-align: center;
   padding: 1.429rem 0.857rem;
@@ -5951,114 +6238,6 @@ body.mobile .sub .event .container ul li a span {
 body.mobile .sub .event .container ul li a span.type01 {
   color: #0075bc;
   letter-spacing: 0;
-}
-body.mobile .sub .festival {
-  padding: 20px 12px;
-}
-body.mobile .sub .festival .container {
-  font-size: 0;
-}
-body.mobile .sub .festival .container fieldset {
-  border: none;
-  margin-bottom: 1.071rem;
-}
-body.mobile .sub .festival .container fieldset select {
-  width: 35%;
-  height: 2.571rem;
-  line-height: 2.571rem;
-  padding: 0 0.714rem;
-  color: #333333;
-  appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -webkit-appearance: none;
-  background: url('../images/select-bg.png') no-repeat right center;
-  font-size: 14px;
-  margin-left: -1px;
-  border: 1px solid #a9a9a9;
-}
-body.mobile .sub .festival .container fieldset select.year {
-  width: 49%;
-  margin-left: 0;
-}
-body.mobile .sub .festival .container fieldset select::-ms-expand {
-  display: none;
-}
-body.mobile .sub .festival .container fieldset button {
-  width: 3.429rem;
-  height: 2.571rem;
-  text-align: center;
-  font-size: 0;
-  color: #fff;
-  background: #0075bc;
-  border: none;
-  vertical-align: top;
-  margin-left: -1px;
-}
-body.mobile .sub .festival .container fieldset button i {
-  font-size: 18px;
-}
-body.mobile .sub .festival .container dl {
-  margin: 0.714rem 0;
-  padding: 0;
-  text-align: center;
-}
-body.mobile .sub .festival .container dl dt {
-  display: inline-block;
-  width: 5.857rem;
-  height: 5.857rem;
-  line-height: 5.857rem;
-  font-size: 1.429rem;
-  color: #fff;
-  text-align: center;
-  background: #333333;
-  border-radius: 50%;
-  margin: 1.429rem 0;
-}
-body.mobile .sub .festival .container dl dt.visible {
-  display: none;
-}
-body.mobile .sub .festival .container dl dd {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 18.286rem;
-  border: 1px solid #ccc;
-  margin: 0 0 0.714rem;
-  text-align: left;
-}
-body.mobile .sub .festival .container dl dd.nonSearch {
-  height: auto;
-}
-body.mobile .sub .festival .container dl dd img {
-  width: 100%;
-  height: 12.429rem;
-}
-body.mobile .sub .festival .container dl dd h4 {
-  display: inline-block;
-  font-size: 16px;
-  font-weight: normal;
-  color: #333333;
-  padding: 0 0.714rem;
-  text-align: left;
-}
-body.mobile .sub .festival .container dl dd h4 small {
-  display: block;
-  font-size: 0.929rem;
-  color: #555555;
-  margin-top: 0.357rem;
-  letter-spacing: -1px;
-}
-body.mobile .sub .festival .container dl dd span {
-  display: none;
-  position: absolute;
-  bottom: 1.214rem;
-  right: 0.714rem;
-  font-size: 14px;
-  color: #0075bc;
-}
-body.mobile .sub .festival .container dl dd span.mobile {
-  display: block;
 }
 body.mobile .sub .transport {
   text-align: center;
