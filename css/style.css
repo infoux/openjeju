@@ -401,6 +401,7 @@ body #header .util_menu {
     height: 100%;
     color: #555555;
     font-weight: bold;
+    color: #222222;
   }
   body #header .util_menu li.login {
     position: absolute;
@@ -475,7 +476,7 @@ body #header .gnb {
   }
   body #header .gnb a {
     display: inline-block;
-    color: #555555;
+    color: #222222;
     margin: 0 5px;
   }
   body #header .gnb a.lang i {
@@ -588,6 +589,7 @@ body #header i {
     display: block;
     font-size: 20px;
     font-weight: bold;
+    color: #222222;
     padding: 0 16px;
     width: 100%;
     height: 70px;
@@ -716,6 +718,7 @@ body .main section h4 small {
   display: block;
   color: #777777;
   font-size: 1.45454545rem;
+  margin-top: 0.90909091rem;
 }
 body .main section h4 a {
   display: none;
@@ -1893,6 +1896,9 @@ body .main .rank .container .rank-pop ul li .count {
   }
 }
 @media all and (min-width: 1200px) {
+  .sub .sub-head nav ul.num1 li {
+    width: 100%;
+  }
   .sub .sub-head nav ul.num2 li {
     width: calc(50%);
   }
@@ -3254,76 +3260,95 @@ body .main .rank .container .rank-pop ul li .count {
     line-height: 42px;
   }
 }
+.sub .bookmark {
+  text-align: center;
+}
 .sub .bookmark .container {
   text-align: center;
 }
 .sub .bookmark .container fieldset {
   border: none;
-  margin-bottom: 1.071rem;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  margin-bottom: 0.90909091rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .bookmark .container fieldset {
+    text-align: right;
+  }
 }
 .sub .bookmark .container fieldset select {
-  width: 35%;
-  height: 2.571rem;
-  line-height: 2.571rem;
-  padding: 0 0.714rem;
+  width: calc(60% - 30px);
+  height: 2.45454545rem;
+  padding: 0.18181818rem 0.45454545rem;
   color: #333333;
-  appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -webkit-appearance: none;
   background: url('../images/select-bg.png') no-repeat right center;
-  font-size: 14px;
-  margin-left: -7px;
-  border: 1px solid #a9a9a9;
+  font-size: 1rem;
+  margin-left: -1px;
+  border: 1px solid #777777;
 }
 .sub .bookmark .container fieldset select.count {
-  width: 50%;
+  width: calc(40% - 30px);
+  margin-left: 0;
+}
+@media all and (min-width: 1200px) {
+  .sub .bookmark .container fieldset select {
+    width: 160px;
+    height: 42px;
+    font-size: 16px;
+  }
+  .sub .bookmark .container fieldset select.count {
+    width: 160px;
+  }
 }
 .sub .bookmark .container fieldset button {
-  width: 3.429rem;
-  height: 2.571rem;
+  width: 60px;
+  height: 2.45454545rem;
   text-align: center;
   font-size: 0;
   color: #fff;
   background: #0075bc;
   border: none;
   vertical-align: top;
-  margin-left: -0.357rem;
+  margin-left: -1px;
 }
 .sub .bookmark .container fieldset button i {
-  font-size: 18px;
+  font-size: 1.45454545rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .bookmark .container fieldset button {
+    height: 42px;
+  }
 }
 .sub .bookmark .container ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 0;
 }
 .sub .bookmark .container ul li {
   display: inline-block;
   width: 100%;
-  margin-bottom: 1.714rem;
+  margin-bottom: 0.90909091rem;
 }
-.sub .bookmark .container ul li:last-child {
-  margin-bottom: 0;
-}
-.sub .bookmark .container ul li.active a .image::before {
-  border: 5px solid #199d54;
-}
-.sub .bookmark .container ul li.active a button {
-  background: #199d54 !important;
-  border: none !important;
-}
-.sub .bookmark .container ul li.active a button i {
-  margin-left: 0 !important;
+@media all and (min-width: 1200px) {
+  .sub .bookmark .container ul li {
+    width: calc((100% - 30px) / 4);
+    margin-right: 10px;
+  }
+  .sub .bookmark .container ul li:nth-child(4n) {
+    margin-right: 0;
+  }
 }
 .sub .bookmark .container ul li a {
   position: relative;
   display: inline-block;
   width: 100%;
   height: auto;
-  line-height: 2.857rem;
-  font-size: 1.429rem;
-  color: #333;
+  line-height: 2.09090909rem;
+  font-size: 1.09090909rem;
+  color: #555555;
   text-align: center;
 }
 .sub .bookmark .container ul li a .image {
@@ -3343,10 +3368,10 @@ body .main .rank .container .rank-pop ul li .count {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0);
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25), #000000);
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25), #000000);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25), #000000);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25), #000000);
   z-index: 100;
 }
 .sub .bookmark .container ul li a .image img {
@@ -3362,30 +3387,32 @@ body .main .rank .container .rank-pop ul li .count {
 }
 .sub .bookmark .container ul li a span {
   position: absolute;
-  top: 0.857rem;
-  right: 0.857rem;
+  top: 0.54545455rem;
+  right: 0.54545455rem;
   display: inline-block;
-  padding: 0 0.714rem;
-  height: 1.929rem;
-  line-height: 1.929rem;
+  padding: 0 0.45454545rem;
+  height: 1.36363636rem;
+  line-height: 1.36363636rem;
   background: #333333;
-  font-size: 0.857rem;
+  font-size: 0.54545455rem;
   color: #fff;
   border-radius: 4px;
 }
 .sub .bookmark .container ul li a .content {
   position: absolute;
-  bottom: 1.429rem;
-  left: 1.071rem;
-  width: calc(100% - 2.071rem);
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
   text-align: left;
-  font-size: 18px;
+  font-size: 1.45454545rem;
+  padding: 0 0.90909091rem 0.90909091rem;
   color: #fff;
   margin: 0;
   z-index: 101;
 }
 .sub .bookmark .container ul li a .content h5 {
-  font-size: 1.714rem;
+  font-size: 1.45454545rem;
   margin: 0;
   color: #fff;
   font-weight: normal;
@@ -3393,46 +3420,151 @@ body .main .rank .container .rank-pop ul li .count {
 }
 .sub .bookmark .container ul li a .content h5 small {
   display: block;
-  font-size: 16px;
+  font-size: 1rem;
   color: #ffff00;
 }
 .sub .bookmark .container ul li a .content button {
-  float: right;
+  position: absolute;
+  right: 0.90909091rem;
+  bottom: 0.90909091rem;
   border: none;
   background: none;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.81818182rem;
+  height: 1.81818182rem;
   border-radius: 50%;
-  border: 0.357rem solid #fff;
-  margin-top: -2.857rem;
+  border-width: 0.27272727rem;
+  border-style: solid;
+  border-color: #fff;
 }
 .sub .bookmark .container ul li a .content button i {
+  position: relative;
   color: #fff;
+  top: -0.45454545rem;
+  left: -0.27272727rem;
 }
 .sub .bookmark .container ul li a .content button i.fa-check {
-  font-size: 1.714rem;
-  margin-left: -0.357rem;
+  font-size: 1.18181818rem;
+}
+.sub .bookmark .container ul li:last-child {
+  margin-bottom: 0;
+}
+.sub .bookmark .container ul li.active a .image::before {
+  border: 5px solid #199d54;
+}
+.sub .bookmark .container ul li.active a button {
+  background: #199d54 !important;
+  border: none !important;
+}
+.sub .bookmark .container ul li.active a button i {
+  top: -0.18181818rem;
+  left: 0;
+  margin-left: 0 !important;
 }
 .sub .bookmark .container .btn-area {
   display: block;
   width: 100%;
-  margin: 1.429rem 0 2.857rem;
+  margin: 0.90909091rem 0 1.81818182rem;
+  font-size: 0;
 }
 .sub .bookmark .container .btn-area a {
   display: inline-block;
-  width: calc(100% / 2 - 0.714rem);
-  height: 2.929rem;
-  line-height: 2.929rem;
-  font-size: 14px;
+  width: calc(100% / 2 - 10px);
+  height: 2.36363636rem;
+  line-height: 2.36363636rem;
+  font-size: 1rem;
   text-align: center;
-  background: #eeeeee;
-  border: 1px solid #eee;
-}
-.sub .bookmark .container .btn-area a.all {
   background: #555555;
   color: #fff;
-  border: none;
-  margin-right: 0.714rem;
+}
+.sub .bookmark .container .btn-area a.all {
+  background: #777777;
+  margin: 0 5px;
+}
+@media all and (min-width: 1200px) {
+  .sub .bookmark .container .btn-area a {
+    width: calc(100% / 5);
+    height: 42px;
+    line-height: 42px;
+  }
+}
+.sub .review {
+  text-align: center;
+}
+.sub .review .container {
+  text-align: center;
+}
+.sub .review .container ul {
+  list-style: none;
+  margin: 0 0 1.81818182rem;
+  padding: 0;
+  border-top: 2px solid #333333;
+}
+.sub .review .container ul li {
+  position: relative;
+  width: 100%;
+  border-bottom: 2px solid #eeeeee;
+  padding: 1.18181818rem 0;
+  text-align: left;
+}
+.sub .review .container ul li .info {
+  width: 100%;
+}
+.sub .review .container ul li .info h5 {
+  margin: 0 0 1.18181818rem;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #0075bc;
+}
+.sub .review .container ul li .info p {
+  margin: 0;
+  line-height: 1.4;
+  font-size: 1rem;
+  color: #777777;
+}
+@media all and (min-width: 1200px) {
+  .sub .review .container ul li .info p {
+    font-size: 16px;
+  }
+}
+.sub .review .container ul li .star-rate {
+  position: absolute;
+  top: 0.90909091rem;
+  right: 0;
+}
+.sub .review .container ul li .star-rate i.fa-star {
+  color: #f68409;
+  font-size: 1.45454545rem;
+}
+.sub .review .container ul li .star-rate i.fa-star-o {
+  color: #eeeeee;
+  font-size: 1.45454545rem;
+}
+.sub .review .container ul li .aside {
+  font-size: 1rem;
+  margin-top: 0.90909091rem;
+}
+.sub .review .container ul li .aside .btn-area {
+  position: absolute;
+  right: 0;
+  bottom: 0.45454545rem;
+  display: inline-block;
+}
+.sub .review .container ul li .aside .btn-area a {
+  display: inline-block;
+  width: 2.72727273rem;
+  height: 1.36363636rem;
+  line-height: 1.36363636rem;
+  font-size: 1rem;
+  text-align: center;
+  border: 1px solid #777777;
+}
+@media all and (min-width: 1200px) {
+  .sub .review .container ul li .aside .btn-area a {
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+  }
 }
 .sub .list-type01 {
   text-align: center;
@@ -6210,11 +6342,6 @@ body.mobile .sub .rank {
 body.mobile .sub .rank .container {
   font-size: 0;
 }
-body.mobile .sub .rank .container h4 {
-  font-size: 21px;
-  margin: 0 0 1.071rem;
-  padding: 0;
-}
 body.mobile .sub .rank .container fieldset {
   border: none;
   margin-bottom: 1.071rem;
@@ -6585,7 +6712,6 @@ body.mobile .sub .foot-navi .container {
 }
 body.mobile .sub .foot-navi .container h4 {
   font-size: 1.786rem;
-  margin: 0;
   font-weight: normal;
   word-break: keep-all;
 }
@@ -7653,63 +7779,6 @@ body.mobile .sub .search-result .container .sidebar .popword ul li a .num {
 }
 body.mobile .sub .search-result .container .sidebar .popword .bx-viewport {
   margin: 0 !important;
-}
-body.mobile .sub .mypage.review .container ul {
-  list-style: none;
-  margin: 0 0 2.857rem;
-  padding: 0;
-  border-top: 4px solid #333333;
-}
-body.mobile .sub .mypage.review .container ul li {
-  position: relative;
-  width: 100%;
-  border-bottom: 2px solid #ccc;
-  padding: 1.214rem 0;
-  text-align: left;
-}
-body.mobile .sub .mypage.review .container ul li .info {
-  width: 100%;
-}
-body.mobile .sub .mypage.review .container ul li .info h5 {
-  margin: 0 0 1.143rem;
-  font-size: 16px;
-  font-weight: normal;
-}
-body.mobile .sub .mypage.review .container ul li .info p {
-  margin: 0;
-  line-height: 1.4;
-  font-size: 14px;
-}
-body.mobile .sub .mypage.review .container ul li .star-rate {
-  position: absolute;
-  top: 1.214rem;
-  right: 0;
-}
-body.mobile .sub .mypage.review .container ul li .star-rate i.fa-star {
-  color: #ffcc00;
-  font-size: 18px;
-}
-body.mobile .sub .mypage.review .container ul li .star-rate i.fa-star-o {
-  color: #ccc;
-  font-size: 18px;
-}
-body.mobile .sub .mypage.review .container ul li .aside {
-  font-size: 14px;
-  margin-top: 1.286rem;
-}
-body.mobile .sub .mypage.review .container ul li .aside .btn-area {
-  float: right;
-  display: inline-block;
-  margin: 0;
-}
-body.mobile .sub .mypage.review .container ul li .aside .btn-area a {
-  display: inline-block;
-  width: 2.571rem;
-  height: 1.571rem;
-  line-height: 1.429rem;
-  font-size: 14px;
-  text-align: center;
-  border: 1px solid #ccc;
 }
 .sub-detail {
   text-align: center;
