@@ -1,5 +1,4 @@
 /* main - default */
-
 body {
   .main {
     section {
@@ -12,14 +11,14 @@ body {
         .relative;
         .normal;
         .center;
-        .rem(font-size, 42);
-        .rem(margin, 60 0 40);
+        .rem(font-size, 24);
+        .rem(margin, 30 0);
 
         small {
           .block;
           color: @gray-light;
-          .rem(font-size, 32);
-          .rem(margin-top, 20);
+          .rem(font-size, 14);
+          .rem(margin-top, 10);
         }
 
         a {
@@ -29,10 +28,10 @@ body {
       @media all and (min-width: 1200px) {
         h4 {
           font-size: 42px;
-          margin: 60px 0 40px;
+          margin: 50px 0 30px;
 
           small {
-            font-size: 22px;
+            font-size: 20px;
           }
 
           a {
@@ -54,7 +53,7 @@ body {
     .main-issue {
       .relative;
       .hidden;
-      .rem(height, 640);
+      .rem(height, 560);
       color: @white;
 
       .issue-bg {
@@ -99,8 +98,8 @@ body {
 
         fieldset {
           .inline-block;
-          .rem(margin-top, 250);
-          .rem(border-width, 6);
+          .rem(margin-top, 220);
+          .rem(border-width, 3);
           border-color: @white;
           border-style: solid;
           .rem(border-radius, 10);
@@ -114,7 +113,7 @@ body {
             background: transparent;
             color: @white;
             border: none;
-            .rem(padding, 10 20);
+            .rem(padding, 6 12);
             .rem(width, 300);
             .rem(font-size, 24);
             outline: none;
@@ -159,7 +158,7 @@ body {
 
               strong {
                 .inline-block;
-                .rem(font-size, 32);
+                .rem(font-size, 22);
                 .rem(padding, 0 10);
                 .normal;
                 @media all and (min-width: 1200px) {
@@ -175,7 +174,7 @@ body {
             outline: none;
 
             i {
-              .rem(font-size, 32);
+              .rem(font-size, 22);
               @media all and (min-width: 1200px) {
                 font-size: 30px;
               }
@@ -210,7 +209,7 @@ body {
               width: 100%;
               height: 100%;
               .rem(line-height, 50);
-              .rem(font-size, 20);
+              .rem(font-size, 16);
               background: @blue;
               .hidden;
               text-overflow: ellipsis;
@@ -236,10 +235,6 @@ body {
             &:nth-child(even) {
               a {
                 background: @dark-blue;
-
-                &:hover {
-                  background: @gray-lighter;
-                }
               }
             }
             @media all and (min-width: 1200px) {
@@ -248,6 +243,10 @@ body {
                 line-height: 50px;
                 .relative;
                 top: 0;
+
+                &:hover {
+                  background: @gray-lighter;
+                }
 
                 i {
                   .none;
@@ -279,7 +278,7 @@ body {
 
         .weather {
           .absolute;
-          .rem(top, 20);
+          .rem(top, 40);
           width: 100%;
           .center;
           .hidden;
@@ -303,7 +302,7 @@ body {
 
               i {
                 .block;
-                .rem(font-size, 84);
+                .rem(font-size, 66);
                 .rem(margin-bottom, 12);
                 .rem(line-height, 96);
                 @media all and (min-width: 1200px) {
@@ -349,8 +348,8 @@ body {
               h5 {
                 .normal;
                 width: 100%;
-                .rem(margin, 20 0 0);
-                .rem(font-size, 40);
+                .rem(margin, 10 0 0);
+                .rem(font-size, 26);
 
                 small {
                   .block;
@@ -404,7 +403,7 @@ body {
       background: @white;
 
       .bx-viewport {
-        .rem(height, 240);
+        .rem(height, 200);
       }
 
       .bx-controls {
@@ -422,10 +421,10 @@ body {
 
         li {
           .relative;
-          .rem(font-size, 16);
+          .rem(font-size, 20);
           .rem(margin, 0 10);
-          .rem(width, 440) !important;
-          .rem(height, 320);
+          .rem(width, 360) !important;
+          .rem(height, 261);
           @media all and (min-width: 1200px) {
             .inline-block;
             width: 200px !important;
@@ -438,22 +437,22 @@ body {
             .absolute;
             left: 0;
             top: 0;
-            .rem(width, 110);
-            .rem(height, 110);
+            .rem(width, 66);
+            .rem(height, 66);
             .mapazero;
             line-height: 1.4;
             background: @orange;
             color: @white;
             text-align: center;
-            .rem(padding, 20 0 0);
-            .rem(font-size, 16);
+            .rem(padding, 10 0 0);
+            .rem(font-size, 10);
             word-break: keep-all;
 
             span {
               .block;
 
               strong {
-                .rem(font-size, 24);
+                .rem(font-size, 16);
                 .block;
               }
             }
@@ -478,7 +477,7 @@ body {
               .rem(margin, 0 0 4);
               .rem(padding, 0 10);
               .normal;
-              .rem(font-size, 24);
+              .rem(font-size, 18);
               .left;
               color: @yellow-dark;
 
@@ -501,11 +500,11 @@ body {
               .zero;
 
               i {
-                .rem(font-size, 24);
+                .rem(font-size, 18);
               }
 
               strong {
-                .rem(font-size, 24);
+                .rem(font-size, 18);
                 .rem(padding-left, 4);
               }
             }
@@ -552,13 +551,13 @@ body {
                 text-align: center;
                 padding-top: 30px;
                 word-break: keep-all;
-                font-size: @font-size-01;
+                font-size: 14px;
 
                 span {
                   display: block;
 
                   strong {
-                    font-size: @font-size-05;
+                    font-size: 32px;
                     display: block;
                   }
                 }
@@ -571,7 +570,8 @@ body {
       .food-link {
         .center;
         .mapazero;
-        @media all and (min-width: 1200px) {
+        .rem(padding, 0 20);
+        @media all and (min-width:1200px) {
           margin: 40px 0 60px;
         }
 
@@ -580,7 +580,7 @@ body {
           width: calc(~"100% / 3");
           .rem(margin, 10 0 0);
           .rem(height, 150);
-          .rem(font-size, 24);
+          .rem(font-size, 14);
 
           i {
             .rem(font-size, 44);
@@ -610,12 +610,10 @@ body {
     }
 
     .main-trip {
-      @media all and (min-width: 1200px) {
-        .full-background(url(  '@{img-url}/main-tv-bg.jpg') no-repeat center / 100% 100%);
+      .full-background(url(  '@{img-url}/main-tv-bg.jpg') no-repeat center / 100% 100%);
 
-        h4 {
-          color: @white;
-        }
+      h4 {
+        color: @white;
       }
 
       ul {
@@ -667,7 +665,7 @@ body {
               .rem(bottom, 20);
               margin: 0;
               .rem(padding, 0 20);
-              .rem(font-size, 28);
+              .rem(font-size, 22);
               .normal;
 
               small {
@@ -728,7 +726,7 @@ body {
           h5 {
             .relative;
             .center;
-            .rem(font-size, 24);
+            .rem(font-size, 18);
             color: @gray-dark;
             .mapazero;
             .rem(padding-bottom, 14);
@@ -769,7 +767,7 @@ body {
               .left;
               .rem(margin, 0 0 10);
               .rem(letter-spacing, -1);
-              .rem(font-size, 22);
+              .rem(font-size, 16);
               .hidden;
               text-overflow: ellipsis;
               white-space: nowrap;
@@ -787,7 +785,7 @@ body {
                 .rem(width, 20);
                 .rem(height, 20);
                 .rem(line-height, 20);
-                .rem(font-size, 16);
+                .rem(font-size, 14);
                 .center;
                 color: @gray-dark;
                 background: @gray-lighter;
@@ -806,7 +804,7 @@ body {
                 .absolute;
                 top: 0;
                 right: 0;
-                .rem(font-size, 20);
+                .rem(font-size, 16);
                 color: @blue;
                 @media all and (min-width: 1200px) {
                   font-size: 20px;

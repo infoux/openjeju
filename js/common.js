@@ -122,17 +122,17 @@ $(document).ready(function() {
     $("body.mobile section.mat #category li.active a").text($(e.target).text());
   });
   $("body.mobile section.search-result button.mobile-category").click(function() {
-    $(this).parent().find('li').show();
-    $("body.mobile section.search-result button.mobile-close").show();
+    $(this).parent().find('ul').css("display", "inline-block");
+    $("body.mobile section.search-result button.mobile-close").css("display", "inline-block");
   });
   $('body.mobile section.search-result .search-category li .option').click(function(e) {
-    $('body.mobile section.search-result .search-category li').hide();
-    $("body.mobile section.search-result button.mobile-close").hide();
+    $('body.mobile section.search-result .search-category').css("display", "");
+    $("body.mobile section.search-result button.mobile-close").css("display", "");
     $("body.mobile section.search-result button.mobile-category").text($(e.target).text());
   });
   $("body.mobile section.search-result button.mobile-close").click(function(e) {
-    $('body.mobile section.search-result .search-category li').hide();
-    $("body.mobile section.search-result button.mobile-close").hide();
+    $('body.mobile section.search-result .search-category').css("display", "");
+    $("body.mobile section.search-result button.mobile-close").css("display", "");
   });
 
   $('#map-area li a').on('click', function() {
@@ -153,9 +153,8 @@ $(document).ready(function() {
 
 
   $(".map-pop p").perfectScrollbar();
-  $(".plan-inner .list").perfectScrollbar();
   $(".sub-head nav ul").perfectScrollbar();
-  $(".plan-search .search-inner section").perfectScrollbar();
+
 
 
 
@@ -178,13 +177,18 @@ $(document).ready(function() {
       });
   */
 
-  $('body.mobile .sub .plan-pop .popInner .close').click(function() {
-    $('body.mobile .sub .plan-pop').hide();
+  $('body.mobile .plan-pop .close').click(function() {
+    $('body.mobile .plan-pop').hide();
   });
-  $('body.mobile .sub .plan-head p.mobile-mapView a').click(function() {
-    $('body.mobile .sub .plan .plan-inner .list').hide();
-    $('body.mobile .sub .plan .plan-inner .mapView').show();
+  $('body.mobile p.mobile-mapView a').click(function() {
+    $('body.mobile .sub .plan-view .list').hide();
+    $('body.mobile .sub .plan-view .mapView').show();
   });
+
+
+
+
+
 
   $('body.pc .sub .list-type01 .container ul li a.detail').click(function() {
     if ($(this).find('i').hasClass('fa-angle-down')) {
