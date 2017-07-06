@@ -62,9 +62,7 @@
               padding: 0 20px 0 12px;
               border-right: @border-normal;
               width: 175px;
-              .hidden;
-              text-overflow: ellipsis;
-              white-space: nowrap;
+              .ellipse;
 
               i {
                 .absolute;
@@ -118,10 +116,7 @@
                     width: 100%;
                     height: 100%;
                     border-bottom: 1px solid @white;
-                    .hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    background: @gray-lighter;
+                    .ellipse;
                   }
                 }
               }
@@ -1565,9 +1560,7 @@ board
             width: 100%;
             .rem(font-size, 22);
             color: @gray-dark;
-            .hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+            .ellipse;
             .bold;
             @media all and (min-width: 1200px) {
               font-size: 22px;
@@ -2800,10 +2793,10 @@ view page
         border: none;
         background: @gray-lighter;
         color: @gray;
-        .placeholder(20, @gray, 1.4);
+        .placeholder(20, @gray);
         @media all and (min-width: 1200px) {
           font-size: 16px;
-          .placeholder(16px, @gray, 1.4);
+          .placeholder(16px, @gray);
           width: calc(~"100% - 120px");
           height: 120px;
         }
@@ -3287,7 +3280,7 @@ plan
             overflow-y: scroll;
             width: 400px;
             height: 600px;
-            background: @white;
+            background: @gray-white;
             .top;
           }
 
@@ -3430,6 +3423,20 @@ plan
                     &.fa-commenting {
                       .rem(bottom, 10);
                       color: @blue;
+                    }
+                  }
+
+                  &.preference-area {
+                    .rem(padding, 10);
+
+                    i {
+                      .static;
+                      .rem(margin, 0 6 0 10);
+                    }
+
+                    span {
+                      .rem(font-size, 22);
+                      .bold;
                     }
                   }
                 }
@@ -3725,10 +3732,10 @@ plan
         }
 
         .mapView {
-          display: none;
+          .none;
           width: 100%;
-          min-height: 39rem;
-          background: #ccc;
+          .rem(min-height, 200);
+          background: @gray-lighter;
           @media all and (min-width: 1200px) {
             .inline-block;
             width: 756px;
@@ -3751,20 +3758,21 @@ plan
 
       a {
         .inline-block;
-        border: none;
-        .rem(padding, 0 20);
-        .rem(height, 54);
-        .rem(line-height, 54);
+        .rem(padding, 0 30);
+        .rem(height, 52);
+        .rem(line-height, 52);
+        .rem(margin, 0 2);
         background: @blue;
         color: @white;
+        .rem(font-size, 18);
+
+        &.cancle {
+          background: @gray;
+        }
         @media all and (min-width: 1200px) {
           height: 42px;
           line-height: 42px;
-          font-size: 16px;
-        }
-
-        &.cancle {
-          background: @gray-dark;
+          font-size: 20px;
         }
       }
     }

@@ -305,6 +305,11 @@
   font-weight: normal;
   border-color: transparent;
 }
+.ellipse {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 @keyframes fade {
   from {
     background: rgba(0, 0, 0, 0.3);
@@ -1203,9 +1208,9 @@ body .main .main-issue:before {
   right: 0;
   top: 0;
   height: 100%;
-  -webkit-opacity: 0.2;
-  -moz-opacity: 0.2;
-  opacity: 0.2;
+  -webkit-opacity: 0.4;
+  -moz-opacity: 0.4;
+  opacity: 0.4;
 }
 body .main .main-food {
   background: #fff;
@@ -1784,7 +1789,6 @@ culture
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    background: #eeeeee;
   }
 }
 .sub .sub-head {
@@ -3217,8 +3221,8 @@ culture
   font-size: 1rem;
   color: #333333;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  white-space: nowrap;
   font-weight: bold;
 }
 @media all and (min-width: 1200px) {
@@ -4394,17 +4398,14 @@ culture
 .sub .view-review .container textarea::-webkit-input-placeholder {
   font-size: 0.90909091rem;
   color: #555555;
-  line-height: 1.4;
 }
 .sub .view-review .container textarea:-moz-placeholder {
   font-size: 0.90909091rem;
   color: #555555;
-  line-height: 1.4;
 }
 .sub .view-review .container textarea::-ms-input-placeholder {
   font-size: 0.90909091rem;
   color: #555555;
-  line-height: 1.4;
 }
 @media all and (min-width: 1200px) {
   .sub .view-review .container textarea {
@@ -4415,17 +4416,14 @@ culture
   .sub .view-review .container textarea::-webkit-input-placeholder {
     font-size: 16px;
     color: #555555;
-    line-height: 1.4;
   }
   .sub .view-review .container textarea:-moz-placeholder {
     font-size: 16px;
     color: #555555;
-    line-height: 1.4;
   }
   .sub .view-review .container textarea::-ms-input-placeholder {
     font-size: 16px;
     color: #555555;
-    line-height: 1.4;
   }
 }
 .sub .view-review .container button {
@@ -4718,17 +4716,14 @@ culture
 .sub .plan-write .container input[type='text']::-webkit-input-placeholder {
   font-size: 16px;
   color: #333333;
-  line-height: 1.4;
 }
 .sub .plan-write .container input[type='text']:-moz-placeholder {
   font-size: 16px;
   color: #333333;
-  line-height: 1.4;
 }
 .sub .plan-write .container input[type='text']::-ms-input-placeholder {
   font-size: 16px;
   color: #333333;
-  line-height: 1.4;
 }
 .sub .plan-write .container input[type='text'].date {
   width: calc(100% - 60px);
@@ -4805,17 +4800,14 @@ culture
 .sub .plan-write .container textarea::-webkit-input-placeholder {
   font-size: 0.72727273rem;
   color: #555555;
-  line-height: 1.4;
 }
 .sub .plan-write .container textarea:-moz-placeholder {
   font-size: 0.72727273rem;
   color: #555555;
-  line-height: 1.4;
 }
 .sub .plan-write .container textarea::-ms-input-placeholder {
   font-size: 0.72727273rem;
   color: #555555;
-  line-height: 1.4;
 }
 @media all and (min-width: 1200px) {
   .sub .plan-write .container textarea {
@@ -4825,17 +4817,14 @@ culture
   .sub .plan-write .container textarea::-webkit-input-placeholder {
     font-size: 16px;
     color: #555555;
-    line-height: 1.4;
   }
   .sub .plan-write .container textarea:-moz-placeholder {
     font-size: 16px;
     color: #555555;
-    line-height: 1.4;
   }
   .sub .plan-write .container textarea::-ms-input-placeholder {
     font-size: 16px;
     color: #555555;
-    line-height: 1.4;
   }
 }
 .sub .plan-write .container .plan-btn {
@@ -4935,7 +4924,7 @@ culture
     overflow-y: scroll;
     width: 400px;
     height: 600px;
-    background: #fff;
+    background: #f6f6f6;
     vertical-align: top;
   }
 }
@@ -5074,6 +5063,17 @@ culture
 .sub .plan-view .container .plan-list .list ul .detail .content p i.fa-commenting {
   bottom: 0.45454545rem;
   color: #0075bc;
+}
+.sub .plan-view .container .plan-list .list ul .detail .content p.preference-area {
+  padding: 0.45454545rem;
+}
+.sub .plan-view .container .plan-list .list ul .detail .content p.preference-area i {
+  position: static;
+  margin: 0 0.27272727rem 0 0.45454545rem;
+}
+.sub .plan-view .container .plan-list .list ul .detail .content p.preference-area span {
+  font-size: 1rem;
+  font-weight: bold;
 }
 .sub .plan-view .container .plan-list .list ul .detail .comment {
   position: relative;
@@ -5245,17 +5245,14 @@ culture
 .sub .plan-view .container .plan-list .plan-search .search-inner fieldset input[type='text']::-webkit-input-placeholder {
   font-size: 16px;
   color: #333333;
-  line-height: 1.4;
 }
 .sub .plan-view .container .plan-list .plan-search .search-inner fieldset input[type='text']:-moz-placeholder {
   font-size: 16px;
   color: #333333;
-  line-height: 1.4;
 }
 .sub .plan-view .container .plan-list .plan-search .search-inner fieldset input[type='text']::-ms-input-placeholder {
   font-size: 16px;
   color: #333333;
-  line-height: 1.4;
 }
 @media all and (min-width: 1200px) {
   .sub .plan-view .container .plan-list .plan-search .search-inner fieldset input[type='text'] {
@@ -5384,8 +5381,8 @@ culture
 .sub .plan-view .container .plan-list .mapView {
   display: none;
   width: 100%;
-  min-height: 39rem;
-  background: #ccc;
+  min-height: 9.09090909rem;
+  background: #eeeeee;
 }
 @media all and (min-width: 1200px) {
   .sub .plan-view .container .plan-list .mapView {
@@ -5408,22 +5405,23 @@ culture
 }
 .sub .plan-view .btn-area a {
   display: inline-block;
-  border: none;
-  padding: 0 0.90909091rem;
-  height: 2.45454545rem;
-  line-height: 2.45454545rem;
+  padding: 0 1.36363636rem;
+  height: 2.36363636rem;
+  line-height: 2.36363636rem;
+  margin: 0 0.09090909rem;
   background: #0075bc;
   color: #fff;
+  font-size: 0.81818182rem;
+}
+.sub .plan-view .btn-area a.cancle {
+  background: #555555;
 }
 @media all and (min-width: 1200px) {
   .sub .plan-view .btn-area a {
     height: 42px;
     line-height: 42px;
-    font-size: 16px;
+    font-size: 20px;
   }
-}
-.sub .plan-view .btn-area a.cancle {
-  background: #333333;
 }
 .sub .rank {
   text-align: center;

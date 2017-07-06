@@ -211,9 +211,7 @@ body {
               .rem(line-height, 50);
               .rem(font-size, 16);
               background: @blue;
-              .hidden;
-              text-overflow: ellipsis;
-              white-space: nowrap;
+              .ellipse;
               @media all and (min-width: 1200px) {
                 font-size: 18px;
               }
@@ -395,7 +393,7 @@ body {
         right: 0;
         top: 0;
         height: 100%;
-        .opacity(0.2);
+        .opacity(0.4);
       }
     }
 
@@ -768,9 +766,7 @@ body {
               .rem(margin, 0 0 10);
               .rem(letter-spacing, -1);
               .rem(font-size, 16);
-              .hidden;
-              text-overflow: ellipsis;
-              white-space: nowrap;
+              .ellipse;
               @media all and (min-width: 1200px) {
                 font-size: 20px;
                 margin-bottom: 17px;
