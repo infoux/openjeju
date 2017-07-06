@@ -442,6 +442,15 @@ body .top_banner button {
 body .top_banner button i {
   font-size: 0.72727273rem;
 }
+@media all and (min-width: 1200px) {
+  body .top_banner button {
+    width: 20px;
+    height: 20px;
+  }
+  body .top_banner button i {
+    font-size: 14px;
+  }
+}
 body #header {
   position: relative;
   border-bottom: 1px solid #eee;
