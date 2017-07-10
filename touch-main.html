@@ -11,6 +11,36 @@
   <script src="js/jquery-1.11.3.min.js"></script>
   <script src="js/jquery.bxslider.min.js"></script>
   <script>
+    function printClock() {
+
+      var clock = document.getElementById("clock"); // 출력할 장소 선택
+      var currentDate = new Date(); // 현재시간
+      var calendar = currentDate.getFullYear() + "-" + (currentDate.getMonth() + 1) + "-" + currentDate.getDate() // 현재 날짜
+      var amPm = 'AM'; // 초기값 AM
+      var currentHours = addZeros(currentDate.getHours(), 2);
+      var currentMinute = addZeros(currentDate.getMinutes(), 2);
+
+      if (currentHours >= 12) { // 시간이 12보다 클 때 PM으로 세팅, 12를 빼줌
+        amPm = 'PM';
+        currentHours = addZeros(currentHours - 12, 2);
+      }
+
+      clock.innerHTML = currentHours + ":" + currentMinute + " <span>" + amPm + "</span>"; //날짜를 출력해 줌
+
+      setTimeout("printClock()", 1000); // 1초마다 printClock() 함수 호출
+    }
+
+    function addZeros(num, digit) { // 자릿수 맞춰주기
+      var zero = '';
+      num = num.toString();
+      if (num.length < digit) {
+        for (i = 0; i < digit - num.length; i++) {
+          zero += '0';
+        }
+      }
+      return zero + num;
+    }
+
     $(document).ready(function() {
 
 
@@ -43,6 +73,15 @@
         }
       }
       weatherSlider();
+      printClock();
+
+      $("#header").css("height", $("body").height() - $("video").height() + "px");
+
+
+
+
+
+
     });
   </script>
 
@@ -52,52 +91,57 @@
 
   <!-- S:header -->
   <header id="header">
+    <div class="day">
 
-    <h1><a href="">오픈제주</a></h1>
+      <h5>Sunday<small>June, 29</small></h5>
+      <i class="icon-cloud-sun"></i>
+
+    </div>
+    <div id="clock">
+
+    </div>
+    <h1><a href="">오픈제주<i class="icon-logo"></i></a></h1>
 
     <div class="weather">
       <ul>
-        <li><i class="wi wi-day-sunny" aria-hidden="true"></i>
-          <h5>제주시 4℃<small>맑음</small></h5></li>
-        <li><i class="wi wi-day-sunny-overcast" aria-hidden="true"></i>
-          <h5>서귀포시 4℃<small>아주 맑고 추워요</small></h5></li>
-        <li><i class="wi wi-cloudy" aria-hidden="true"></i>
-          <h5>성산 4℃<small>아주 맑고 추워요</small></h5></li>
-        <li><i class="wi wi-day-cloudy" aria-hidden="true"></i>
-          <h5>고산 4℃<small>아주 맑고 추워요</small></h5></li>
-        <li><i class="wi wi-rain" aria-hidden="true"></i>
-          <h5>노형 4℃<small>아주 맑고 추워요</small></h5></li>
-        <li><i class="wi wi-sprinkle" aria-hidden="true"></i>
-          <h5>중문 4℃<small>아주 맑고 추워요</small></h5></li>
-        <li><i class="wi wi-sleet" aria-hidden="true"></i>
-          <h5>제주시 4℃<small>아주 맑고 추워요</small></h5></li>
-        <li><i class="wi wi-snow" aria-hidden="true"></i>
-          <h5>제주시 4℃<small>아주 맑고 추워요</small></h5></li>
+        <li><i class="icon-sun" aria-hidden="true"></i>
+          <h5>제주시 맑음 4℃</h5></li>
+        <li><i class="icon-cloud-sun-inv" aria-hidden="true"></i>
+          <h5>서귀포시 맑음 4℃</h5></li>
+        <li><i class="icon-clouds" aria-hidden="true"></i>
+          <h5>성산 맑음 4℃</h5></li>
+        <li><i class="icon-cloud-sun" aria-hidden="true"></i>
+          <h5>고산 맑음 4℃</h5></li>
+        <li><i class="icon-rain" aria-hidden="true"></i>
+          <h5>노형 맑음 4℃</h5></li>
+        <li><i class="icon-rain-inv" aria-hidden="true"></i>
+          <h5>중문 맑음 4℃</h5></li>
+        <li><i class="icon-drizzle" aria-hidden="true"></i>
+          <h5>제주시 맑음 4℃</h5></li>
+        <li><i class="icon-snow-heavy" aria-hidden="true"></i>
+          <h5>제주시 맑음 4℃</h5></li>
       </ul>
     </div>
     <nav id="main_menu">
       <ul>
-        <li><a href=""><i class="fa fa-magic" aria-hidden="true"></i>테마여행</a></li>
-        <li><a href=""><i class="fa fa-quote-right" aria-hidden="true"></i>제주문화/체험</a></li>
-        <li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>맛 IN JEJU</a></li>
-        <li><a href=""><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>여행 Tip</a></li>
+        <li><a href=""><i class="" aria-hidden="true"></i>증강현실</a></li>
+        <li><a href=""><i class="" aria-hidden="true"></i>자전거코스</a></li>
+        <li><a href=""><i class="" aria-hidden="true"></i>도보코스</a></li>
+        <li><a href=""><i class="" aria-hidden="true"></i>카페로드</a></li>
+        <li><a href=""><i class="" aria-hidden="true"></i>제주문화/체험</a></li>
       </ul>
     </nav>
   </header>
-  <section class="search">
-    <fieldset>
-      <legend class="sr-only">검색폼</legend>
-      <input type="text" placeholder="제주정보검색">
-      <button><i class="fa fa-search" aria-hidden="true"></i>검색</button>
-    </fieldset>
-  </section>
+
   <section class="banner">
     <button><i class="fa fa-battery-three-quarters" aria-hidden="true"></i>전기차 충전</button>
   </section>
-  <video autoplay="" loop="">
+
+  <video id="mainVideo" autoplay="" loop="">
             <source src="images/trip.mp4">
         </video>
-  <!-- E:header -->
+
+
 </body>
 
 </html>

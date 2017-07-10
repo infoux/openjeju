@@ -1,5 +1,4 @@
 /* sub */
-
 .sub {
   .container {
     .rem(padding, 0 10);
@@ -1022,65 +1021,68 @@
       width: 100%;
       .mapazero;
 
-      ul {
-        .mapazero;
-        white-space: nowrap;
-        list-style: none;
+      .bx-viewport {
+        @media all and (max-width: 1199px) {
+          .rem(height, 240) !important;
+        }
+        @media all and (min-width: 1200px) {
+          height: 280px !important;
+        }
 
-        li {
-          width: auto !important;
-          .inline-block;
-          .rem(padding, 30 0);
-          .relative;
+        ul {
           @media all and (min-width: 1200px) {
-            padding: 30px 0;
+            padding: 20px;
           }
 
-          a {
-            .inline-block;
-            .center;
+          li {
+            width: auto !important;
 
-            &.best {
-              i {
-                .absolute;
-                .rem(top, 20);
-                left: 0;
-                .inline-block;
-                .rem(width, 50);
-                .rem(height, 50);
-                .rem(line-height, 50);
-                border-radius: 50%;
-                .rem(font-size, 14);
-                font-style: normal;
-                .center;
-                color: #fff;
-                background: @orange;
-                @media all and (min-width: 1200px) {
-                  font-size: 18px;
-                  width: 50px;
-                  height: 50px;
-                  line-height: 50px;
+            a {
+              .inline-block;
+              .center;
+
+              &.best {
+                i {
+                  .absolute;
+                  .rem(top, 20);
+                  left: 0;
+                  .inline-block;
+                  .rem(width, 50);
+                  .rem(height, 50);
+                  .rem(line-height, 50);
+                  border-radius: 50%;
+                  .rem(font-size, 14);
+                  font-style: normal;
+                  .center;
+                  color: #fff;
+                  background: @orange;
+                  @media all and (min-width: 1200px) {
+                    font-size: 18px;
+                    width: 50px;
+                    height: 50px;
+                    line-height: 50px;
+                  }
                 }
               }
-            }
 
-            img {
-              .rem(width, 140);
-              .rem(height, 140);
-              border-radius: 50%;
-              @media all and (min-width: 1200px) {
-                width: 200px;
-                height: 200px;
+              img {
+                .rem(width, 140);
+                .rem(height, 140);
+                border-radius: 50%;
+                @media all and (min-width: 1200px) {
+                  width: 200px;
+                  height: 200px;
+                }
               }
-            }
 
-            span {
-              display: block;
-              color: @blue;
-              .rem(margin-top, 14);
-              .rem(font-size, 16);
-              @media all and (min-width: 1200px) {
-                font-size: 16px;
+              span {
+                display: block;
+                color: @blue;
+                .rem(margin-top, 14);
+                .rem(font-size, 16);
+                @media all and (min-width: 1200px) {
+                  font-size: 16px;
+                }
               }
             }
           }
@@ -3105,7 +3107,7 @@ plan
         }
         @media all and (min-width: 1200px) {
           height: 42px;
-          font-size: 16px;
+          font-size: 1616px;
 
           &.date {
             width: 400px;
@@ -3114,7 +3116,7 @@ plan
       }
 
       select {
-        width: 100%;
+        width: 10100%;
         .rem(height, 52);
         .rem(padding, 4 10);
         color: @gray-dark;
@@ -3122,7 +3124,8 @@ plan
         .rem(font-size, 16);
         margin-left: -1px;
         border: 1px solid @gray-light;
-        @media all and (min-width: 1200px) {
+
+        ia all and (min-width:1200px) {
           margin-left: 10px;
           width: 211px;
           height: 42px;

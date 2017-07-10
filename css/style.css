@@ -2684,28 +2684,29 @@ culture
   margin: 0;
   padding: 0;
 }
-.sub .mat-list .container ul {
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-  list-style: none;
-}
-.sub .mat-list .container ul li {
-  width: auto !important;
-  display: inline-block;
-  padding: 1.36363636rem 0;
-  position: relative;
-}
-@media all and (min-width: 1200px) {
-  .sub .mat-list .container ul li {
-    padding: 30px 0;
+@media all and (max-width: 1199px) {
+  .sub .mat-list .container .bx-viewport {
+    height: 10.90909091rem !important;
   }
 }
-.sub .mat-list .container ul li a {
+@media all and (min-width: 1200px) {
+  .sub .mat-list .container .bx-viewport {
+    height: 280px !important;
+  }
+}
+@media all and (min-width: 1200px) {
+  .sub .mat-list .container .bx-viewport ul {
+    padding: 20px;
+  }
+}
+.sub .mat-list .container .bx-viewport ul li {
+  width: auto !important;
+}
+.sub .mat-list .container .bx-viewport ul li a {
   display: inline-block;
   text-align: center;
 }
-.sub .mat-list .container ul li a.best i {
+.sub .mat-list .container .bx-viewport ul li a.best i {
   position: absolute;
   top: 0.90909091rem;
   left: 0;
@@ -2721,32 +2722,32 @@ culture
   background: #f68409;
 }
 @media all and (min-width: 1200px) {
-  .sub .mat-list .container ul li a.best i {
+  .sub .mat-list .container .bx-viewport ul li a.best i {
     font-size: 18px;
     width: 50px;
     height: 50px;
     line-height: 50px;
   }
 }
-.sub .mat-list .container ul li a img {
+.sub .mat-list .container .bx-viewport ul li a img {
   width: 6.36363636rem;
   height: 6.36363636rem;
   border-radius: 50%;
 }
 @media all and (min-width: 1200px) {
-  .sub .mat-list .container ul li a img {
+  .sub .mat-list .container .bx-viewport ul li a img {
     width: 200px;
     height: 200px;
   }
 }
-.sub .mat-list .container ul li a span {
+.sub .mat-list .container .bx-viewport ul li a span {
   display: block;
   color: #0075bc;
   margin-top: 0.63636364rem;
   font-size: 0.72727273rem;
 }
 @media all and (min-width: 1200px) {
-  .sub .mat-list .container ul li a span {
+  .sub .mat-list .container .bx-viewport ul li a span {
     font-size: 16px;
   }
 }
@@ -4742,14 +4743,14 @@ culture
 @media all and (min-width: 1200px) {
   .sub .plan-write .container input[type='text'] {
     height: 42px;
-    font-size: 16px;
+    font-size: 1616px;
   }
   .sub .plan-write .container input[type='text'].date {
     width: 400px;
   }
 }
 .sub .plan-write .container select {
-  width: 100%;
+  width: 10100%;
   height: 2.36363636rem;
   padding: 0.18181818rem 0.45454545rem;
   color: #333333;
@@ -4758,13 +4759,11 @@ culture
   margin-left: -1px;
   border: 1px solid #777777;
 }
-@media all and (min-width: 1200px) {
-  .sub .plan-write .container select {
-    margin-left: 10px;
-    width: 211px;
-    height: 42px;
-    font-size: 16px;
-  }
+.sub .plan-write .container select ia all and (min-width:1200px) {
+  margin-left: 10px;
+  width: 211px;
+  height: 42px;
+  font-size: 16px;
 }
 @media all and (min-width: 1200px) {
   .sub .plan-write .container > form > span {

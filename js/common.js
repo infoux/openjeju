@@ -286,12 +286,14 @@ function matSlider() {
   if ($matSlider.state === 'destroy') {
     $matSlider.state = 'build';
     $matSlider.slider = $el.bxSlider({
+      auto: true,
       speed: 1000,
       pager: false,
       controls: false,
-      auto: true,
       slideMargin: 10,
       infiniteLoop: true,
+      minSlides: 20,
+      maxSlides: 30
 
     });
   }
