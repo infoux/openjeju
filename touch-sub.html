@@ -12,7 +12,7 @@
 <body>
 
   <!-- S:header -->
-  <header id="header">
+  <header id="header" class="sub">
     <div class="day">
 
       <h5>Sunday<small>June, 29</small></h5>
@@ -24,26 +24,7 @@
     </div>
     <h1><a href="">오픈제주<i class="icon-logo"></i></a></h1>
 
-    <div class="weather">
-      <ul>
-        <li><i class="icon-sun" aria-hidden="true"></i>
-          <h5>제주시 맑음 4℃</h5></li>
-        <li><i class="icon-cloud-sun-inv" aria-hidden="true"></i>
-          <h5>서귀포시 맑음 4℃</h5></li>
-        <li><i class="icon-clouds" aria-hidden="true"></i>
-          <h5>성산 맑음 4℃</h5></li>
-        <li><i class="icon-cloud-sun" aria-hidden="true"></i>
-          <h5>고산 맑음 4℃</h5></li>
-        <li><i class="icon-rain" aria-hidden="true"></i>
-          <h5>노형 맑음 4℃</h5></li>
-        <li><i class="icon-rain-inv" aria-hidden="true"></i>
-          <h5>중문 맑음 4℃</h5></li>
-        <li><i class="icon-drizzle" aria-hidden="true"></i>
-          <h5>제주시 맑음 4℃</h5></li>
-        <li><i class="icon-snow-heavy" aria-hidden="true"></i>
-          <h5>제주시 맑음 4℃</h5></li>
-      </ul>
-    </div>
+
     <nav id="main_menu">
       <i class="icon-logo"></i>
       <ul>
@@ -54,15 +35,13 @@
         <li><a href=""><i class="icon-mount" aria-hidden="true"></i>제주문화/체험</a></li>
       </ul>
     </nav>
-    <div class="charger">
-      <button>전기차 충전하기<i class="icon-charger" aria-hidden="true"></i></button>
-    </div>
+
   </header>
 
 
-  <video id="mainVideo" autoplay="" loop="">
-            <source src="images/trip.mp4">
-        </video>
+  <div class="sub-frame">
+    <iframe width="100%" height="100%" src="http://openjeju.net" frameborder="0" allowfullscreen=""></iframe>
+  </div>
 
   <!-- javaScript  -->
   <script src="js/jquery-1.11.3.min.js"></script>
@@ -100,40 +79,9 @@
 
     $(document).ready(function() {
 
-
-      var $weatherSlider = {
-        state: 'destroy',
-        slider: undefined
-      };
-      /* memory leak 방지*/
-      function weatherSlider() {
-        var $el = $(".weather ul");
-        try {
-          $weatherSlider.slider.destroySlider();
-          $weatherSlider.state = 'destroy';
-
-        } catch (e1) {
-
-        }
-
-        if ($weatherSlider.state === "destroy") {
-          $weatherSlider.state = 'build';
-          $weatherSlider.slider = $el.bxSlider({
-            mode: 'fade',
-            speed: 1000,
-            pager: false,
-            controls: false,
-            auto: true,
-            infiniteLoop: true
-
-          });
-        }
-      }
-      weatherSlider();
       printClock();
 
-      $("#header").css("height", $("body").height() - $("#mainVideo").height() - 70);
-
+      $(".sub-frame").css("height", $("body").height() - $("header").height());
 
 
 
