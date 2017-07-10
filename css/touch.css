@@ -232,7 +232,7 @@ header h1 {
   padding: 0;
   position: absolute;
   right: 0.63636364rem;
-  top: 0.63636364rem;
+  top: 0.81818182rem;
 }
 header h1 i {
   color: #fff;
@@ -247,9 +247,10 @@ header .day {
   display: inline-block;
   padding: 0 1.81818182rem 0 0;
   text-align: right;
+  font-size: 1rem;
 }
 header .day h5 {
-  margin: 0.45454545rem;
+  margin: 0.63636364rem;
 }
 header .day h5 small {
   display: block;
@@ -267,7 +268,7 @@ header #clock {
   text-align: center;
   position: absolute;
   left: 50%;
-  top: 0.45454545rem;
+  top: 0.63636364rem;
   margin-left: -4.54545455rem;
 }
 header .weather {
