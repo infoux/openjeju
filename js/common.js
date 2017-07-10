@@ -245,7 +245,7 @@ $(document).ready(function() {
   });
 
   /* STAR_RATE*/
-  var $starRate = $('body .sub .container div.star-rate');
+  var $starRate = $('.star-rate');
   if ($starRate.length > 0) $starRate.on('click', 'a', function() {
     var starValue = $(this).attr("data");
     $starRate.find('a').each(function() {

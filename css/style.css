@@ -3468,6 +3468,198 @@ culture
 .sub .board-view .container .file li a {
   color: #0075bc;
 }
+.sub .board-view .container .bbs-reply {
+  text-align: left;
+  padding: 0.45454545rem;
+  font-size: 0;
+}
+.sub .board-view .container .bbs-reply.plan-review {
+  margin-top: 1.81818182rem;
+}
+.sub .board-view .container .bbs-reply h5 {
+  position: relative;
+  font-size: 1.27272727rem;
+  font-weight: normal;
+  margin: 1.81818182rem 0 0.90909091rem;
+  color: #0075bc;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-view .container .bbs-reply h5 {
+    font-size: 28px;
+  }
+}
+.sub .board-view .container .bbs-reply div.star-rate {
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 1.36363636rem;
+}
+.sub .board-view .container .bbs-reply div.star-rate .no1 {
+  margin-left: 1.36363636rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-view .container .bbs-reply div.star-rate {
+    font-size: 22px;
+  }
+}
+.sub .board-view .container .bbs-reply div.star-rate .star {
+  cursor: pointer;
+}
+.sub .board-view .container .bbs-reply div.star-rate .star i {
+  vertical-align: bottom;
+  font-size: 1.45454545rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-view .container .bbs-reply div.star-rate .star i {
+    font-size: 26px;
+  }
+}
+.sub .board-view .container .bbs-reply div.star-rate .star i.fa-star {
+  color: #ffcc00;
+}
+.sub .board-view .container .bbs-reply div.star-rate .star i.fa-star-o {
+  color: #d3d3d3;
+}
+.sub .board-view .container .bbs-reply textarea {
+  width: 100%;
+  height: 6.36363636rem;
+  padding: 0.45454545rem;
+  font-size: 0.81818182rem;
+  line-height: 1.4;
+  resize: none;
+  border: none;
+  background: #eeeeee;
+  color: #555555;
+}
+.sub .board-view .container .bbs-reply textarea::-webkit-input-placeholder {
+  font-size: 0.90909091rem;
+  color: #555555;
+}
+.sub .board-view .container .bbs-reply textarea:-moz-placeholder {
+  font-size: 0.90909091rem;
+  color: #555555;
+}
+.sub .board-view .container .bbs-reply textarea::-ms-input-placeholder {
+  font-size: 0.90909091rem;
+  color: #555555;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-view .container .bbs-reply textarea {
+    font-size: 16px;
+    width: calc(100% - 120px);
+    height: 120px;
+  }
+  .sub .board-view .container .bbs-reply textarea::-webkit-input-placeholder {
+    font-size: 16px;
+    color: #555555;
+  }
+  .sub .board-view .container .bbs-reply textarea:-moz-placeholder {
+    font-size: 16px;
+    color: #555555;
+  }
+  .sub .board-view .container .bbs-reply textarea::-ms-input-placeholder {
+    font-size: 16px;
+    color: #555555;
+  }
+}
+.sub .board-view .container .bbs-reply button {
+  width: 100%;
+  height: 2.36363636rem;
+  line-height: 2.36363636rem;
+  font-size: 1rem;
+  color: #fff;
+  background: #0075bc;
+  border: none;
+  text-align: center;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-view .container .bbs-reply button {
+    width: 120px;
+    height: 120px;
+    vertical-align: top;
+  }
+}
+.sub .board-view .container .bbs-reply ul {
+  list-style: none;
+  margin: 1.81818182rem 0;
+  padding: 0;
+}
+.sub .board-view .container .bbs-reply li {
+  width: 100%;
+  padding: 0 0 0.90909091rem;
+  margin: 0 0 0.90909091rem;
+  border-bottom: 1px solid #eeeeee;
+  text-align: left;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-view .container .bbs-reply li {
+    min-height: 90px;
+  }
+}
+.sub .board-view .container .bbs-reply li div {
+  font-size: 1rem;
+  color: #333333;
+  margin: 0.90909091rem 0 0;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-view .container .bbs-reply li div {
+    font-size: 18px;
+  }
+}
+.sub .board-view .container .bbs-reply li div p.star-rate {
+  display: inline-block;
+  margin: 0 0 0 0.45454545rem;
+}
+.sub .board-view .container .bbs-reply li div p.star-rate i {
+  font-size: 1.27272727rem;
+}
+.sub .board-view .container .bbs-reply li div p.star-rate i.fa-star {
+  color: #ffcc00;
+}
+.sub .board-view .container .bbs-reply li div p.star-rate i.fa-star-o {
+  color: #d3d3d3;
+}
+.sub .board-view .container .bbs-reply .replyText {
+  padding: 0;
+  margin: 0.45454545rem 0;
+  font-size: 0.72727273rem;
+  color: #333333;
+  line-height: 1.4;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-view .container .bbs-reply .replyText {
+    font-size: 16px;
+  }
+}
+.sub .board-view .container .bbs-reply .aside {
+  margin: 0;
+  padding: 0;
+  font-size: 0.72727273rem;
+  color: #333333;
+  text-align: right;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-view .container .bbs-reply .aside {
+    font-size: 14px;
+  }
+}
+.sub .board-view .container .bbs-reply .aside span {
+  float: left;
+}
+.sub .board-view .container .bbs-reply .aside a {
+  display: inline-block;
+  width: 2.54545455rem;
+  height: 1.90909091rem;
+  line-height: 1.90909091rem;
+  font-size: 0.72727273rem;
+  color: #333333;
+  border: 1px solid #eeeeee;
+  text-align: center;
+}
+@media all and (min-width: 1200px) {
+  .sub .board-view .container .bbs-reply .aside a {
+    font-size: 16px;
+  }
+}
 .sub .board-view .container .btn-area {
   text-align: center;
   margin: 0.90909091rem 0 1.81818182rem;
@@ -4743,14 +4935,14 @@ culture
 @media all and (min-width: 1200px) {
   .sub .plan-write .container input[type='text'] {
     height: 42px;
-    font-size: 1616px;
+    font-size: 16px;
   }
   .sub .plan-write .container input[type='text'].date {
     width: 400px;
   }
 }
 .sub .plan-write .container select {
-  width: 10100%;
+  width: 100%;
   height: 2.36363636rem;
   padding: 0.18181818rem 0.45454545rem;
   color: #333333;
@@ -4759,11 +4951,13 @@ culture
   margin-left: -1px;
   border: 1px solid #777777;
 }
-.sub .plan-write .container select ia all and (min-width:1200px) {
-  margin-left: 10px;
-  width: 211px;
-  height: 42px;
-  font-size: 16px;
+@media all and (min-width: 1200px) {
+  .sub .plan-write .container select {
+    margin-left: 10px;
+    width: 211px;
+    height: 42px;
+    font-size: 16px;
+  }
 }
 @media all and (min-width: 1200px) {
   .sub .plan-write .container > form > span {

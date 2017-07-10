@@ -1811,6 +1811,185 @@ board
         }
       }
 
+
+
+        .bbs-reply {
+          .left;
+
+          .rem(padding, 10);
+
+          &.plan-review {
+            .rem(margin-top, 40);
+          }
+
+          h5 {
+            .relative;
+            .rem(font-size, 28);
+            .normal;
+            .rem(margin, 40 0 20);
+            color: @blue;
+
+            @media all and (min-width: 1200px) {
+              font-size: 28px;
+            }
+          }
+
+            .zero;
+
+            div.star-rate {
+              .rem(font-size, 22);
+              color: @gray-dark;
+              .rem(margin-bottom, 30);
+
+              .no1 {
+                .rem(margin-left, 30);
+              }
+              @media all and (min-width: 1200px) {
+                font-size: 22px;
+              }
+
+              .star {
+                .pointer;
+                i {
+                  .bottom;
+                  .rem(font-size, 32);
+                  @media all and (min-width: 1200px) {
+                    font-size: 26px;
+                  }
+
+                  &.fa-star {
+                    color: #ffcc00;
+                  }
+
+                  &.fa-star-o {
+                    color: #d3d3d3;
+                  }
+                }
+              }
+            }
+
+            textarea {
+              width: 100%;
+              .rem(height, 140);
+              .rem(padding, 10);
+              .rem(font-size, 18);
+              line-height: 1.4;
+              resize: none;
+              border: none;
+              background: @gray-lighter;
+              color: @gray;
+              .placeholder(20, @gray);
+              @media all and (min-width: 1200px) {
+                font-size: 16px;
+                .placeholder(16px, @gray);
+                width: calc(~"100% - 120px");
+                height: 120px;
+              }
+            }
+
+            button {
+              width: 100%;
+              .rem(height, 52);
+              .rem(line-height, 52);
+              .rem(font-size, 22);
+              color: @white;
+              background: @blue;
+              border: none;
+              .center;
+              @media all and (min-width: 1200px) {
+                width: 120px;
+                height: 120px;
+                .top;
+              }
+            }
+
+            ul {
+              list-style: none;
+              .rem(margin, 40 0);
+              padding: 0;
+            }
+
+            li {
+              width: 100%;
+              .rem(padding, 0 0 20);
+              .rem(margin, 0 0 20);
+              border-bottom: 1px solid @gray-lighter;
+              .left;
+              @media all and (min-width: 1200px) {
+                min-height: 90px;
+              }
+
+              div {
+                .rem(font-size, 22);
+                color: @gray-dark;
+                .rem(margin, 20 0 0);
+                @media all and (min-width:1200px) {
+                  font-size: 18px;
+                }
+
+                p {
+                  &.star-rate {
+                    .inline-block;
+                    .rem(margin, 0 0 0 10);
+
+                    i {
+                      .rem(font-size, 28);
+
+                      &.fa-star {
+                        color: #ffcc00;
+                      }
+
+                      &.fa-star-o {
+                        color: #d3d3d3;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .replyText {
+              padding: 0;
+              .rem(margin, 10 0);
+              .rem(font-size, 16);
+              color: @gray-dark;
+              line-height: 1.4;
+              @media all and (min-width: 1200px) {
+                font-size: 16px;
+              }
+            }
+
+            .aside {
+              .mapazero;
+              .rem(font-size, 16);
+              color: @gray-dark;
+              .right;
+              @media all and (min-width: 1200px) {
+                font-size: 14px;
+              }
+
+              span {
+                float: left;
+              }
+
+              a {
+                .inline-block;
+                .rem(width, 56);
+                .rem(height, 42);
+                .rem(line-height, 42);
+                .rem(font-size, 16);
+                color: @gray-dark;
+                border: 1px solid @gray-lighter;
+                .center;
+                @media all and (min-width: 1200px) {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+
+
+
       .btn-area {
         .center;
         .rem(margin, 20 0 40);
@@ -1830,6 +2009,10 @@ board
       }
     }
   }
+
+
+
+
 
   .board-write {
     .center;
@@ -3107,7 +3290,7 @@ plan
         }
         @media all and (min-width: 1200px) {
           height: 42px;
-          font-size: 1616px;
+          font-size: 16px;
 
           &.date {
             width: 400px;
@@ -3116,7 +3299,7 @@ plan
       }
 
       select {
-        width: 10100%;
+        width: 100%;
         .rem(height, 52);
         .rem(padding, 4 10);
         color: @gray-dark;
@@ -3125,7 +3308,7 @@ plan
         margin-left: -1px;
         border: 1px solid @gray-light;
 
-        ia all and (min-width:1200px) {
+        @media all and (min-width:1200px) {
           margin-left: 10px;
           width: 211px;
           height: 42px;
