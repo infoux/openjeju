@@ -15,30 +15,71 @@ body {
     .zero;
     background: @gray-lighter;
 
-    img {
-      max-width: 100%;
+    .eventBanner {
+      .inline-block;
+      img {
+        max-width: 100%;
+      }
     }
 
+    .live {
+      .inline-block;
+      .top;
+      width:100%;
+      @media all and (min-width: 1200px) {
+        width:200px;
+          .inline-block;
+          height:60px;
+          margin:10px 0;
+      }
+      .rem(font-size, 16);
+      a {
+        .block;
+        .rem(padding, 20);
+        color:@white;
+        height:100%;
+        background:rgba(0,0,0,0.4);
+          .rem(font-size, 22);
+          @media all and (min-width: 1200px) {
+            font-size: 18px;
+            line-height:1.4;
+            background:@dark-green;
+            padding:8px;
+            border-radius:12px;
+            .drop-shadow;
+          }
+        p {
+          .inline-block;
+          .mapazero;
+          color:@yellow;
+          @media all and (min-width: 1200px) {
+
+            .block;
+          }
+        }
+
+        animation: blinker 1s linear infinite;
+      }
+    }
     button {
       .absolute;
       right: 0;
-      .rem(top, 2);
-      .rem(width, 20);
-      .rem(height, 20);
+      top:0;
+      .rem(width, 30);
+      .rem(height, 30);
       padding: 0;
       color: @white;
-      background: @black;
+      background: @dark-blue;
       border: none;
       .pointer;
       .zero;
-      .border-radius(50%);
 
       i {
         .rem(font-size, 16);
       }
       @media all and (min-width: 1200px) {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
 
         i {
           font-size: 14px;

@@ -320,6 +320,11 @@
     background: rgba(0, 0, 0, 0.7);
   }
 }
+@keyframes blinker {
+  50% {
+    opacity: 0.5;
+  }
+}
 /* header */
 * {
   -webkit-box-sizing: border-box;
@@ -417,35 +422,78 @@ body .top_banner {
   font-size: 0;
   background: #eeeeee;
 }
-body .top_banner img {
+body .top_banner .eventBanner {
+  display: inline-block;
+}
+body .top_banner .eventBanner img {
   max-width: 100%;
+}
+body .top_banner .live {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  font-size: 0.72727273rem;
+}
+@media all and (min-width: 1200px) {
+  body .top_banner .live {
+    width: 200px;
+    display: inline-block;
+    height: 60px;
+    margin: 10px 0;
+  }
+}
+body .top_banner .live a {
+  display: block;
+  padding: 0.90909091rem;
+  color: #fff;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 1rem;
+  animation: blinker 1s linear infinite;
+}
+@media all and (min-width: 1200px) {
+  body .top_banner .live a {
+    font-size: 18px;
+    line-height: 1.4;
+    background: #088c43;
+    padding: 8px;
+    border-radius: 12px;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+body .top_banner .live a p {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  color: #ffff00;
+}
+@media all and (min-width: 1200px) {
+  body .top_banner .live a p {
+    display: block;
+  }
 }
 body .top_banner button {
   position: absolute;
   right: 0;
-  top: 0.09090909rem;
-  width: 0.90909091rem;
-  height: 0.90909091rem;
+  top: 0;
+  width: 1.36363636rem;
+  height: 1.36363636rem;
   padding: 0;
   color: #fff;
-  background: #000;
+  background: #0064ab;
   border: none;
   cursor: pointer;
   font-size: 0;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
 }
 body .top_banner button i {
   font-size: 0.72727273rem;
 }
 @media all and (min-width: 1200px) {
   body .top_banner button {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
   }
   body .top_banner button i {
     font-size: 14px;
