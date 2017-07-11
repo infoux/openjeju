@@ -322,7 +322,7 @@
 }
 @keyframes blinker {
   50% {
-    opacity: 0.5;
+    opacity: 0.;
   }
 }
 /* header */
@@ -330,6 +330,22 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+.loading {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.94);
+  text-align: center;
+  color: #0075bc;
+  font-size: 3.09090909rem;
+  padding-top: 40vh;
+}
+.loading i {
+  font-size: 3.09090909rem;
 }
 .sr-only {
   position: absolute;
@@ -1033,6 +1049,7 @@ body .main .main-issue .container .text ul li strong {
   font-size: 1rem;
   padding: 0 0.45454545rem;
   font-weight: normal;
+  cursor: pointer;
 }
 @media all and (min-width: 1200px) {
   body .main .main-issue .container .text ul li strong {
@@ -1043,6 +1060,7 @@ body .main .main-issue .container .text button {
   display: inline-block;
   vertical-align: top;
   outline: none;
+  cursor: pointer;
 }
 body .main .main-issue .container .text button i {
   font-size: 1rem;
@@ -2722,6 +2740,52 @@ culture
   padding-left: 0;
   text-align: center;
   font-size: 1.18181818rem;
+}
+.sub .mat-list-tv {
+  position: relative;
+  background: #f6f6f6;
+  text-align: center;
+}
+.sub .mat-list-tv .container {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.sub .mat-list-tv .container ul {
+  padding: 0 0.90909091rem;
+  list-style: none;
+}
+@media all and (min-width: 1200px) {
+  .sub .mat-list-tv .container ul {
+    padding: 20px;
+  }
+}
+.sub .mat-list-tv .container ul li {
+  display: inline-block;
+  margin: 0 0.45454545rem 0.27272727rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .mat-list-tv .container ul li {
+    margin: 0 10px 6px;
+  }
+}
+.sub .mat-list-tv .container ul li a {
+  display: inline-block;
+  text-align: center;
+}
+.sub .mat-list-tv .container ul li a span {
+  display: block;
+  color: #0064ab;
+  font-size: 0.72727273rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .mat-list-tv .container ul li a span {
+    font-size: 24px;
+  }
+}
+.sub .mat-list-tv .container ul li a span i {
+  color: #0075bc;
+  margin-right: 0.45454545rem;
 }
 .sub .mat-list {
   position: relative;

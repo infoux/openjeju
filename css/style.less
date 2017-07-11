@@ -468,11 +468,28 @@
 
 
         @keyframes blinker {
-          50% { opacity: 0.5; }
+          50% { opacity: 0.; }
         }
 /* header */
 * {
   .box-sizing;
+}
+
+.loading {
+  .fixed;
+  z-index:999;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background:rgba(255,255,255,0.94);
+  .center;
+  color:@blue;
+  .rem(font-size, 68);
+  padding-top:40vh;
+  i {
+    .rem(font-size, 68);
+  }
 }
 
 .sr-only {
