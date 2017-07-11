@@ -3490,6 +3490,9 @@ culture
   width: 100%;
   padding: 10px 0 4px;
   font-size: 1.18181818rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .sub .board-gallery .container .list li a p {
   margin: 0;
