@@ -3496,6 +3496,7 @@ culture
 }
 .sub .board-gallery .container .list li a p {
   margin: 0;
+  font-size: 1.09090909rem;
 }
 .sub .board-gallery .container .btn-area {
   text-align: center;
