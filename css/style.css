@@ -3190,7 +3190,7 @@ culture
 }
 .sub .event .container {
   text-align: center;
-  padding-top: 1.36363636rem;
+  padding: 1.81818182rem 0 1.36363636rem;
 }
 .sub .event .container img {
   max-width: 100%;
