@@ -322,7 +322,7 @@
 }
 @keyframes blinker {
   50% {
-    opacity: 0.;
+    opacity: 0.5;
   }
 }
 /* header */
@@ -452,10 +452,10 @@ body .top_banner .live {
 }
 @media all and (min-width: 1200px) {
   body .top_banner .live {
-    width: 200px;
+    width: 190px;
     display: inline-block;
     height: 60px;
-    margin: 10px 0;
+    margin: 10px 0 0 10px;
   }
 }
 body .top_banner .live a {
@@ -1002,7 +1002,7 @@ body .main .main-issue .container fieldset input {
   color: #fff;
   border: none;
   padding: 0.27272727rem 0.54545455rem;
-  width: 13.63636364rem;
+  width: 12.72727273rem;
   font-size: 1.09090909rem;
   outline: none;
 }
