@@ -256,7 +256,7 @@ body {
           height: auto;
         }
 
-        ul {
+        .menu {
           width: 100%;
           .drop-shadow;
           .mapazero;
@@ -291,6 +291,7 @@ body {
             ul {
               height: 0;
               .hidden;
+              .mapazero;
 
               li {
                 background: @dark-blue;
@@ -375,7 +376,7 @@ body {
         border-top: 1px solid @gray-lighter;
 
         .container {
-          & > ul {
+          .menu {
             .mapazero;
             .inline-block;
             width: 100%;
@@ -414,6 +415,10 @@ body {
             }
           }
 
+          .etc-menu {
+            .none;
+          }
+
           .close {
             display: none;
           }
@@ -425,12 +430,16 @@ body {
           .drop-shadow;
 
           .container {
-            & > ul {
+            .etc-menu {
+              .block;
+              border-top: 1px solid rgba(255,255,255,0.2);
+            }
+
+            .menu {
               li {
                 h2 {
                   a {
                     color: @white;
-                    .opacity(0.7);
                   }
                 }
 
@@ -447,9 +456,9 @@ body {
                       .left;
                       .block;
                       font-size: 16px;
-                      padding: 14px 10px;
+                      padding: 10px;
                       .ellipse;
-                      color: @white;
+                      color: rgba(255,255,255,0.8);
 
                       i {
                         .opacity(0.1);
@@ -475,7 +484,7 @@ body {
                 }
 
                 &.live {
-                  background: @green;
+                  background: rgba(0,0,0,0.1);
                   .absolute;
                   right: 0;
                   top: 0;
@@ -488,8 +497,7 @@ body {
                   }
 
                   i {
-                    margin-top: 10px;
-                    font-size: 80px;
+                    font-size: 60px;
                     color: rgba(255,255,255,0.4);
                   }
 
@@ -505,7 +513,7 @@ body {
                     font-size: 16px;
                     background: rgba(0,0,0,0.2);
                     color: @white;
-                    margin-top: 30px;
+                    margin-top: 20px;
                     padding: 10px 20px;
                     border-radius: 6px;
                     animation: none;
