@@ -2766,7 +2766,7 @@ culture
 }
 @media all and (min-width: 1200px) {
   .sub .mat-list-tv .container ul li {
-    margin: 0 10px 6px;
+    margin: 0 20px 6px;
   }
 }
 .sub .mat-list-tv .container ul li a {
@@ -4521,7 +4521,7 @@ culture
     min-height: 300px;
   }
 }
-.sub .view-location .container .map-area a {
+.sub .view-location .container .map-area > a {
   position: absolute;
   bottom: 0.45454545rem;
   right: 0.45454545rem;
@@ -4535,7 +4535,7 @@ culture
   color: #fff;
   text-align: center;
 }
-.sub .view-location .container .map-area a i {
+.sub .view-location .container .map-area > a i {
   display: block;
   font-size: 2rem;
   padding: 0.45454545rem 0;
