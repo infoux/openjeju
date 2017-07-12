@@ -61,10 +61,39 @@ $(document).ready(function() {
     if (windowWidth < 1199) {
       $("body").removeClass("pc");
       $("body").addClass("mobile");
+
+      $('body #main_menu h2 a').on('click', function() {
+        $("body #main_menu ul ul").removeAttr("style");
+        $(this).parent().parent().find("ul").css("height", "auto");
+      });
+
+
     } else {
       $("body").addClass("pc");
       $("body").removeClass("mobile");
+
+
+      $('body #main_menu h2 a').mouseenter(function() {
+        $('body #main_menu').addClass("active");
+
+      });
+
+
+      $('body #main_menu').mouseleave(function() {
+        $('body #main_menu').removeClass("active");
+
+      });
+
+
     }
+
+
+
+
+
+
+
+
 
     $(".main-issue").css("background", "url(" + $(".main-issue .issue-bg").attr("src") + ") no-repeat center / cover");
     $(".sub-head").css("background", "url(" + $(".sub-head>img").attr("src") + ") no-repeat center / cover");
@@ -237,6 +266,8 @@ $(document).ready(function() {
     $('body .sub .sub-info .container .tab').removeClass('active');
     $('body .sub .sub-info .container .tab.' + tab).addClass('active');
   });
+
+
 
   $('#imgList').bxSlider({
     auto: true,

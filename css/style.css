@@ -322,7 +322,13 @@
 }
 @keyframes blinker {
   50% {
-    opacity: 0.5;
+    background: rgba(0, 0, 0, 0.06);
+    color: #0075bc;
+  }
+}
+@keyframes heights {
+  100% {
+    height: auto;
   }
 }
 /* header */
@@ -685,7 +691,11 @@ body #header > .container i {
     width: 100%;
     line-height: 1.45454545rem;
   }
-  body #header nav ul li a {
+  body #header nav ul li h2 {
+    margin: 0;
+    padding: 0;
+  }
+  body #header nav ul li h2 a {
     display: block;
     width: 100%;
     height: 100%;
@@ -695,11 +705,55 @@ body #header > .container i {
     background: #0075bc;
     border-bottom: 1px solid #0064ab;
   }
-  body #header nav ul li a.active,
-  body #header nav ul li a:focus,
-  body #header nav ul li a:hover {
+  body #header nav ul li h2 a.active,
+  body #header nav ul li h2 a:focus,
+  body #header nav ul li h2 a:hover {
     background: #333333;
     border-color: #000;
+  }
+  body #header nav ul li ul {
+    height: 0;
+    overflow: hidden;
+  }
+  body #header nav ul li ul li {
+    background: #0064ab;
+  }
+  body #header nav ul li ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0.54545455rem;
+    font-size: 0.63636364rem;
+    color: #fff;
+    border-bottom: 1px solid #0064ab;
+  }
+  body #header nav ul li ul li a.active,
+  body #header nav ul li ul li a:focus,
+  body #header nav ul li ul li a:hover {
+    border-color: #000;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  body #header nav ul li ul li a i {
+    -webkit-opacity: 0.2;
+    -moz-opacity: 0.2;
+    opacity: 0.2;
+    margin-right: 0.45454545rem;
+  }
+  body #header nav ul li.live {
+    background: #199d54;
+    text-align: center;
+    color: #fff;
+  }
+  body #header nav ul li.live h2 a {
+    background: #0064ab;
+    text-align: left;
+  }
+  body #header nav ul li.live > a {
+    display: none;
+  }
+  body #header nav ul li.live span {
+    display: inline-block;
+    padding: 0.45454545rem 0;
   }
   body #header nav .close {
     margin-top: 0.45454545rem;
@@ -708,6 +762,7 @@ body #header > .container i {
     text-align: center;
   }
   body #header nav .close i {
+    font-size: 0.81818182rem;
     display: inline-block;
     width: 1.90909091rem;
     height: 1.90909091rem;
@@ -733,23 +788,24 @@ body #header > .container i {
     font-size: 0;
     border-top: 1px solid #eeeeee;
   }
-  body #header nav ul {
+  body #header nav .container > ul {
     margin: 0;
     padding: 0;
     display: inline-block;
     width: 100%;
     font-size: 0;
   }
-  body #header nav ul li {
+  body #header nav .container > ul li {
     display: inline-block;
     width: calc(14.28571429%);
     text-align: center;
+    vertical-align: top;
   }
-  body #header nav ul li h2 {
+  body #header nav .container > ul li h2 {
     margin: 0;
     padding: 0;
   }
-  body #header nav ul li h2 a {
+  body #header nav .container > ul li h2 a {
     display: block;
     font-size: 20px;
     font-weight: bold;
@@ -758,74 +814,98 @@ body #header > .container i {
     height: 55px;
     line-height: 56px;
   }
-  body #header nav ul li h2 a.active,
-  body #header nav ul li h2 a:hover {
+  body #header nav .container > ul li h2 a.active,
+  body #header nav .container > ul li h2 a:hover {
     color: #0075bc;
   }
-  body #header nav ul li.live {
-    vertical-align: top;
+  body #header nav .container > ul li.live a {
+    animation: blinker 2s linear infinite;
   }
-  body #header nav ul li.live a {
-    font-size: 0;
-  }
-  body #header nav .close {
+  body #header nav .container .close {
     display: none;
   }
-}
-body #header div.live {
-  display: inline-block;
-  vertical-align: top;
-  width: 100%;
-  font-size: 0.72727273rem;
-}
-@media all and (min-width: 1200px) {
-  body #header div.live {
-    text-align: right;
+  body #header nav.active {
+    background: #0075bc;
+    animation: heights 2s linear infinite;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
   }
-}
-body #header div.live a {
-  display: block;
-  padding: 0.90909091rem;
-  color: #fff;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  font-size: 1rem;
-  animation: blinker 1s linear infinite;
-}
-@media all and (min-width: 1200px) {
-  body #header div.live a {
+  body #header nav.active .container > ul li h2 a {
+    color: #fff;
+    -webkit-opacity: 0.7;
+    -moz-opacity: 0.7;
+    opacity: 0.7;
+  }
+  body #header nav.active .container > ul li ul {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+  }
+  body #header nav.active .container > ul li ul li {
+    display: block;
+    width: 100%;
+    padding: 0 4px;
+  }
+  body #header nav.active .container > ul li ul li a {
+    text-align: left;
+    display: block;
+    font-size: 16px;
+    padding: 14px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff;
+  }
+  body #header nav.active .container > ul li ul li a i {
+    -webkit-opacity: 0.1;
+    -moz-opacity: 0.1;
+    opacity: 0.1;
+    margin-right: 10px;
+  }
+  body #header nav.active .container > ul li ul li a:hover {
+    background: #0064ab;
+    border-radius: 12px;
+  }
+  body #header nav.active .container > ul li ul li a:hover i {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+  }
+  body #header nav.active .container > ul li ul li:last-child a {
+    margin-bottom: 30px;
+  }
+  body #header nav.active .container > ul li.live {
+    background: #199d54;
     position: absolute;
     right: 0;
     top: 0;
-    padding: 6px 0 0;
-    height: 55px;
-    width: calc(14.28571429%);
-    text-align: center;
+    bottom: 0;
+  }
+  body #header nav.active .container > ul li.live h2 a {
+    animation: none;
+  }
+  body #header nav.active .container > ul li.live i {
+    margin-top: 10px;
+    font-size: 80px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  body #header nav.active .container > ul li.live span {
+    display: block;
+    margin-top: 10px;
+    color: #fff;
     font-size: 16px;
   }
-}
-@media all and (min-width: 1200px) {
-  body #header div.live a strong {
-    font-size: 18px;
+  body #header nav.active .container > ul li.live > a {
+    display: inline-block;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    margin-top: 30px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    animation: none;
   }
-}
-body #header div.live a p {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  color: #ffff00;
-}
-@media all and (min-width: 1200px) {
-  body #header div.live a p {
-    display: block;
-    padding-top: 6px;
-  }
-}
-body #header.active {
-  height: 300px;
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
 }
 body #footer {
   display: inline-block;
