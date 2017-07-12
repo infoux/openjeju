@@ -836,10 +836,6 @@ body #header > .container i {
     -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
   }
-  body #header nav.active .container .etc-menu {
-    display: block;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-  }
   body #header nav.active .container .menu li h2 a {
     color: #fff;
   }
@@ -882,11 +878,12 @@ body #header > .container i {
     margin-bottom: 30px;
   }
   body #header nav.active .container .menu li.live {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.02);
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
   body #header nav.active .container .menu li.live h2 a {
     animation: none;
@@ -898,7 +895,7 @@ body #header > .container i {
   body #header nav.active .container .menu li.live span {
     display: block;
     margin-top: 10px;
-    color: #fff;
+    color: #ffff00;
     font-size: 16px;
   }
   body #header nav.active .container .menu li.live > a {
@@ -910,6 +907,40 @@ body #header > .container i {
     padding: 10px 20px;
     border-radius: 6px;
     animation: none;
+  }
+  body #header nav.active .container .etc-menu {
+    background: #0064ab;
+    display: block;
+    position: relative;
+    padding-top: 10px;
+    z-index: 100;
+  }
+  body #header nav.active .container .etc-menu .menu {
+    display: inline-block;
+  }
+  body #header nav.active .container .etc-menu .menu li {
+    width: auto;
+    vertical-align: top;
+  }
+  body #header nav.active .container .etc-menu .menu li h2 {
+    display: inline-block;
+    padding: 0 20px 0 40px;
+  }
+  body #header nav.active .container .etc-menu .menu li ul {
+    display: inline-block;
+    vertical-align: top;
+  }
+  body #header nav.active .container .etc-menu .menu li ul li {
+    display: inline-block;
+  }
+  body #header nav.active .container .etc-menu .menu li ul li a {
+    height: 55px;
+    line-height: 55px;
+    padding: 0 4px;
+    margin-bottom: 10px;
+  }
+  body #header nav.active .container .etc-menu .menu li ul li a i {
+    display: none;
   }
 }
 body #footer {
@@ -1901,7 +1932,7 @@ culture
     display: block;
     text-align: center;
     border-bottom: 1px solid #eeeeee;
-    background: #fff;
+    background: #f6f6f6;
   }
   .sub .indicator .container {
     padding: 0;

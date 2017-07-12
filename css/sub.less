@@ -35,7 +35,7 @@
       .block;
       .center;
       border-bottom: 1px solid @gray-lighter;
-      background: @white;
+      background: @gray-white;
 
       .container {
         padding: 0;
@@ -1013,59 +1013,51 @@
     }
   }
 
+  .mat-list-tv {
+    .relative;
+    background: @gray-white;
+    .center;
 
-    .mat-list-tv {
-      .relative;
-      background: @gray-white;
-        .center;
-      .container {
-        .mapazero;
-        .center;
+    .container {
+      .mapazero;
+      .center;
 
+      ul {
+        .rem(padding, 0 20);
+        list-style: none;
+        @media all and (min-width: 1200px) {
+          padding: 20px;
+        }
 
+        li {
+          .inline-block;
+          .rem(margin, 0 10 6);
+          @media all and (min-width: 1200px) {
+            margin: 0 20px 6px;
+          }
 
+          a {
+            .inline-block;
+            .center;
 
-          ul {
-            .rem(padding, 0 20);
-
-            list-style:none;
-            @media all and (min-width: 1200px) {
-              padding: 20px;
-            }
-
-            li {
-              .inline-block;
-              .rem(margin, 0 10 6);
+            span {
+              display: block;
+              color: @dark-blue;
+              .rem(font-size, 16);
               @media all and (min-width: 1200px) {
-                margin:0 20px 6px;
+                font-size: 24px;
               }
-              a {
-                .inline-block;
-                .center;
 
-
-
-
-                span {
-                  display: block;
-                  color: @dark-blue;
-                  .rem(font-size, 16);
-
-                  @media all and (min-width: 1200px) {
-                    font-size: 24px;
-                  }
-
-                  i {
-                    color:@blue;
-                    .rem(margin-right, 10);
-                  }
-                }
+              i {
+                color: @blue;
+                .rem(margin-right, 10);
               }
             }
           }
         }
       }
-
+    }
+  }
 
   .mat-list {
     .relative;
@@ -1141,10 +1133,10 @@
             }
           }
         }
-
+      }
     }
   }
-}
+
   .list-food {
     .center;
     .rem(margin, 30 0 0);
@@ -1575,6 +1567,7 @@ board
           }
         }
       }
+
       ul {
         .rem(margin, 20 0);
         padding: 0;
@@ -1770,7 +1763,6 @@ board
 
             p {
               margin: 0;
-
               .rem(font-size, 24);
             }
           }
@@ -1867,51 +1859,125 @@ board
         }
       }
 
+      .bbs-reply {
+        .left;
+        .rem(padding, 10);
 
+        &.plan-review {
+          .rem(margin-top, 40);
+        }
 
-        .bbs-reply {
-          .left;
+        h5 {
+          .relative;
+          .rem(font-size, 28);
+          .normal;
+          .rem(margin, 40 0 20);
+          color: @blue;
+          @media all and (min-width: 1200px) {
+            font-size: 28px;
+          }
+        }
+        .zero;
 
-          .rem(padding, 10);
+        div.star-rate {
+          .rem(font-size, 22);
+          color: @gray-dark;
+          .rem(margin-bottom, 30);
 
-          &.plan-review {
-            .rem(margin-top, 40);
+          .no1 {
+            .rem(margin-left, 30);
+          }
+          @media all and (min-width: 1200px) {
+            font-size: 22px;
           }
 
-          h5 {
-            .relative;
-            .rem(font-size, 28);
-            .normal;
-            .rem(margin, 40 0 20);
-            color: @blue;
+          .star {
+            .pointer;
 
-            @media all and (min-width: 1200px) {
-              font-size: 28px;
+            i {
+              .bottom;
+              .rem(font-size, 32);
+              @media all and (min-width: 1200px) {
+                font-size: 26px;
+              }
+
+              &.fa-star {
+                color: #ffcc00;
+              }
+
+              &.fa-star-o {
+                color: #d3d3d3;
+              }
             }
           }
+        }
 
-            .zero;
+        textarea {
+          width: 100%;
+          .rem(height, 140);
+          .rem(padding, 10);
+          .rem(font-size, 18);
+          line-height: 1.4;
+          resize: none;
+          border: none;
+          background: @gray-lighter;
+          color: @gray;
+          .placeholder(20, @gray);
+          @media all and (min-width: 1200px) {
+            font-size: 16px;
+            .placeholder(16px, @gray);
+            width: calc(~"100% - 120px");
+            height: 120px;
+          }
+        }
 
-            div.star-rate {
-              .rem(font-size, 22);
-              color: @gray-dark;
-              .rem(margin-bottom, 30);
+        button {
+          width: 100%;
+          .rem(height, 52);
+          .rem(line-height, 52);
+          .rem(font-size, 22);
+          color: @white;
+          background: @blue;
+          border: none;
+          .center;
+          @media all and (min-width: 1200px) {
+            width: 120px;
+            height: 120px;
+            .top;
+          }
+        }
 
-              .no1 {
-                .rem(margin-left, 30);
-              }
-              @media all and (min-width: 1200px) {
-                font-size: 22px;
-              }
+        ul {
+          list-style: none;
+          .rem(margin, 40 0);
+          padding: 0;
+        }
 
-              .star {
-                .pointer;
+        li {
+          width: 100%;
+          .rem(padding, 0 0 20);
+          .rem(margin, 0 0 20);
+          border-bottom: 1px solid @gray-lighter;
+          .left;
+          @media all and (min-width: 1200px) {
+            min-height: 90px;
+          }
+
+          div {
+            .rem(font-size, 22);
+            color: @gray-dark;
+            .rem(margin, 20 0 0);
+            @media all and (min-width:1200px) {
+              font-size: 18px;
+            }
+
+            p {
+              &.star-rate {
+                .inline-block;
+                .rem(margin, 0 0 0 10);
+
                 i {
-                  .bottom;
-                  .rem(font-size, 32);
-                  @media all and (min-width: 1200px) {
-                    font-size: 26px;
-                  }
+                  .rem(font-size, 28);
 
                   &.fa-star {
                     color: #ffcc00;
@@ -1923,128 +1989,48 @@ board
                 }
               }
             }
+          }
+        }
 
-            textarea {
-              width: 100%;
-              .rem(height, 140);
-              .rem(padding, 10);
-              .rem(font-size, 18);
-              line-height: 1.4;
-              resize: none;
-              border: none;
-              background: @gray-lighter;
-              color: @gray;
-              .placeholder(20, @gray);
-              @media all and (min-width: 1200px) {
-                font-size: 16px;
-                .placeholder(16px, @gray);
-                width: calc(~"100% - 120px");
-                height: 120px;
-              }
-            }
+        .replyText {
+          padding: 0;
+          .rem(margin, 10 0);
+          .rem(font-size, 16);
+          color: @gray-dark;
+          line-height: 1.4;
+          @media all and (min-width: 1200px) {
+            font-size: 16px;
+          }
+        }
 
-            button {
-              width: 100%;
-              .rem(height, 52);
-              .rem(line-height, 52);
-              .rem(font-size, 22);
-              color: @white;
-              background: @blue;
-              border: none;
-              .center;
-              @media all and (min-width: 1200px) {
-                width: 120px;
-                height: 120px;
-                .top;
-              }
-            }
-
-            ul {
-              list-style: none;
-              .rem(margin, 40 0);
-              padding: 0;
-            }
-
-            li {
-              width: 100%;
-              .rem(padding, 0 0 20);
-              .rem(margin, 0 0 20);
-              border-bottom: 1px solid @gray-lighter;
-              .left;
-              @media all and (min-width: 1200px) {
-                min-height: 90px;
-              }
-
-              div {
-                .rem(font-size, 22);
-                color: @gray-dark;
-                .rem(margin, 20 0 0);
-                @media all and (min-width:1200px) {
-                  font-size: 18px;
-                }
-
-                p {
-                  &.star-rate {
-                    .inline-block;
-                    .rem(margin, 0 0 0 10);
-
-                    i {
-                      .rem(font-size, 28);
-
-                      &.fa-star {
-                        color: #ffcc00;
-                      }
-
-                      &.fa-star-o {
-                        color: #d3d3d3;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-
-            .replyText {
-              padding: 0;
-              .rem(margin, 10 0);
-              .rem(font-size, 16);
-              color: @gray-dark;
-              line-height: 1.4;
-              @media all and (min-width: 1200px) {
-                font-size: 16px;
-              }
-            }
-
-            .aside {
-              .mapazero;
-              .rem(font-size, 16);
-              color: @gray-dark;
-              .right;
-              @media all and (min-width: 1200px) {
-                font-size: 14px;
-              }
-
-              span {
-                float: left;
-              }
-
-              a {
-                .inline-block;
-                .rem(width, 56);
-                .rem(height, 42);
-                .rem(line-height, 42);
-                .rem(font-size, 16);
-                color: @gray-dark;
-                border: 1px solid @gray-lighter;
-                .center;
-                @media all and (min-width: 1200px) {
-                  font-size: 16px;
-                }
-              }
-            }
+        .aside {
+          .mapazero;
+          .rem(font-size, 16);
+          color: @gray-dark;
+          .right;
+          @media all and (min-width: 1200px) {
+            font-size: 14px;
           }
 
+          span {
+            float: left;
+          }
 
+          a {
+            .inline-block;
+            .rem(width, 56);
+            .rem(height, 42);
+            .rem(line-height, 42);
+            .rem(font-size, 16);
+            color: @gray-dark;
+            border: 1px solid @gray-lighter;
+            .center;
+            @media all and (min-width: 1200px) {
+              font-size: 16px;
+            }
+          }
+        }
+      }
 
       .btn-area {
         .center;
@@ -2065,10 +2051,6 @@ board
       }
     }
   }
-
-
-
-
 
   .board-write {
     .center;
@@ -2828,7 +2810,7 @@ view page
           min-height: 300px;
         }
 
-        &>a {
+        & > a {
           .absolute;
           .rem(bottom, 10);
           .rem(right, 10);
@@ -3363,7 +3345,6 @@ plan
         .rem(font-size, 16);
         margin-left: -1px;
         border: 1px solid @gray-light;
-
         @media all and (min-width:1200px) {
           margin-left: 10px;
           width: 211px;
