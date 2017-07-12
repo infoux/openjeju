@@ -341,11 +341,11 @@
   background: rgba(255, 255, 255, 0.94);
   text-align: center;
   color: #0075bc;
-  font-size: 3.09090909rem;
+  font-size: 1.90909091rem;
   padding-top: 40vh;
 }
 .loading i {
-  font-size: 3.09090909rem;
+  font-size: 1.90909091rem;
 }
 .sr-only {
   position: absolute;
