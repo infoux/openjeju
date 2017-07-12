@@ -20,7 +20,7 @@
 @myfont: "NanumSquare";
 @font-size: 14px;
 @img-url: "../images"; //@img-url: "/openjeju/images";
-@header-height: 100px;
+@header-height: 120px;
 @logo: url("@{img-url}/logo.svg") no-repeat center / 100% 100%;
 /*
 @font-size-01: floor((@font-size * 1.143)); // 16px
@@ -465,11 +465,11 @@
     background: rgba(0, 0, 0, 0.7);
   }
 }
-
-
-        @keyframes blinker {
-          50% { opacity: 0.5; }
-        }
+@keyframes blinker {
+  50% {
+    opacity: 0.5;
+  }
+}
 /* header */
 * {
   .box-sizing;
@@ -477,16 +477,17 @@
 
 .loading {
   .fixed;
-  z-index:999;
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
-  background:rgba(255,255,255,0.94);
+  z-index: 999;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.94);
   .center;
-  color:@blue;
+  color: @blue;
   .rem(font-size, 68);
-  padding-top:40vh;
+  padding-top: 40vh;
+
   i {
     .rem(font-size, 68);
   }

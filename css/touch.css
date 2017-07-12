@@ -90,59 +90,6 @@
 .pointer {
   cursor: pointer;
 }
-#category {
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-}
-@media all and (min-width: 1200px) {
-  #category {
-    width: calc(100% - 200px);
-  }
-}
-#category ul {
-  border-top: none;
-  margin: 0;
-  padding: 0;
-  font-size: 0;
-  text-align: left;
-}
-#category ul li {
-  display: inline-block;
-  width: calc(100% / 3);
-  padding: 0 0.09090909rem;
-  margin: 0 0 0.13636364rem;
-}
-@media all and (min-width: 1200px) {
-  #category ul li {
-    width: auto;
-  }
-}
-#category ul li a {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  line-height: 2.36363636rem;
-  font-size: 0.81818182rem;
-  color: #222222;
-  padding: 0 0.45454545rem;
-  border: 1px solid #555555;
-  text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-@media all and (min-width: 1200px) {
-  #category ul li a {
-    font-size: 18px;
-    padding: 5px 20px;
-  }
-}
-#category ul li.active a {
-  border-color: transparent;
-  background: #0075bc;
-  color: #fff;
-}
 .ellipse {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -203,13 +150,12 @@ a {
 }
 /*font*/
 html {
-  width: 700px;
   font-size: 22px;
 }
 body {
   font-family: "NanumSquare", "Malgun Gothic", "apple sd gothic neo", sans-serif;
   color: #222222;
-  min-height: 100vh;
+  min-height: 1200px;
   font-size: 0;
 }
 ul {
@@ -221,6 +167,7 @@ header {
   display: inline-block;
   overflow: hidden;
   position: relative;
+  height: 774px;
   z-index: 100;
   width: 100%;
   background: url("../images/touch-bg.png") no-repeat center top / 100% 100%;
@@ -343,13 +290,15 @@ header.sub {
   overflow: hidden;
 }
 #mainVideo {
-  width: 700px;
-  height: auto;
+  display: flex-box;
+  width: 100%;
+  height: 19.81818182rem;
   position: absolute;
   margin: 0;
   padding: 0;
   bottom: 0;
   left: 0;
+  background: #000;
 }
 .sub-frame {
   display: inline-block;

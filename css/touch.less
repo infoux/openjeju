@@ -132,59 +132,6 @@
   cursor: pointer;
 }
 
-#category {
-  .top;
-  .inline-block;
-  width: 100%;
-  @media all and (min-width: 1200px) {
-    width: calc(~"100% - 200px");
-  }
-
-  ul {
-    border-top: none;
-    .mapazero;
-    .zero;
-    .left;
-
-    li {
-      .inline-block;
-      width: calc(~"100% / 3");
-      .rem(padding, 0 2);
-      .rem(margin, 0 0 3);
-      @media all and (min-width: 1200px) {
-        width: auto;
-      }
-
-      a {
-        .inline-block;
-        width: 100%;
-        height: 100%;
-        .rem(line-height, 52);
-        .rem(font-size, 18);
-        color: @gray-darker;
-        .rem(padding, 0 10);
-        border: 1px solid @gray;
-        .center;
-        .hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        @media all and (min-width: 1200px) {
-          font-size: 18px;
-          padding: 5px 20px;
-        }
-      }
-
-      &.active {
-        a {
-          border-color: transparent;
-          background: @blue;
-          color: @white;
-        }
-      }
-    }
-  }
-}
-
 .box-sizing (@type:border-box) {
   -webkit-box-sizing: @type;
   -moz-box-sizing: @type;
@@ -344,14 +291,13 @@ a {
 }
 /*font*/
 html {
-  width: 700px;
   font-size: 22px;
 }
 
 body {
   font-family: @myfont,"Malgun Gothic", "apple sd gothic neo", sans-serif;
   color: @gray-darker;
-  min-height: 100vh;
+  min-height: 1200px;
   .zero;
 }
 @import "fontello.css";
@@ -366,6 +312,7 @@ header {
   .inline-block;
   .hidden;
   .relative;
+  height: 774px;
   z-index: 100;
   width: 100%;
   background: url("../images/touch-bg.png") no-repeat center top / 100% 100%;
@@ -507,12 +454,14 @@ header {
 }
 
 #mainVideo {
-  width: 700px;
-  height: auto;
+  display: flex-box;
+  width: 100%;
+  .rem(height, 436);
   .absolute;
   .mapazero;
   bottom: 0;
   left: 0;
+  background: @black;
 }
 
 .sub-frame {

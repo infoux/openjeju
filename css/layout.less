@@ -1,5 +1,4 @@
 /* layout - default */
-
 body {
   .container {
     .container(100%);
@@ -17,59 +16,21 @@ body {
 
     .eventBanner {
       .inline-block;
+
       img {
         max-width: 100%;
       }
     }
 
-    .live {
-      .inline-block;
-      .top;
-      width:100%;
-      @media all and (min-width: 1200px) {
-        width:190px;
-          .inline-block;
-          height:60px;
-          margin:10px 0 0 10px;
-      }
-      .rem(font-size, 16);
-      a {
-        .block;
-        .rem(padding, 20);
-        color:@white;
-        height:100%;
-        background:rgba(0,0,0,0.4);
-          .rem(font-size, 22);
-          @media all and (min-width: 1200px) {
-            font-size: 18px;
-            line-height:1.4;
-            background:@dark-green;
-            padding:8px;
-            border-radius:12px;
-            .drop-shadow;
-          }
-        p {
-          .inline-block;
-          .mapazero;
-          color:@yellow;
-          @media all and (min-width: 1200px) {
-
-            .block;
-          }
-        }
-
-        animation: blinker 1s linear infinite;
-      }
-    }
     button {
       .absolute;
       right: 0;
-      top:0;
+      top: 0;
       .rem(width, 30);
       .rem(height, 30);
       padding: 0;
       color: @white;
-      background: @dark-blue;
+      background: @black;
       border: none;
       .pointer;
       .zero;
@@ -96,176 +57,187 @@ body {
     .rem(line-height, 66);
     background: @white;
     .center;
-
-    .menuToggle {
-      .headerBtn;
-      .absolute;
-      left: 0;
-      top: 0;
-      .zero;
-
-      .pointer .menuToggle {
-        .none;
-      }
-    }
     @media all and (min-width: 1200px) {
       height: @header-height;
+      .inline-block;
+      line-height: 1;
+      width: 100%;
+    }
+
+    & > .container {
+      .inline-block;
+      .relative;
 
       .menuToggle {
-        .none;
-      }
-    }
-
-    h1 {
-      .inline-block;
-      .zero;
-      .hidden;
-      .rem(width, 130);
-      .rem(height, 22);
-      .rem(margin, 20 0 0);
-      @media all and (min-width: 1200px) {
-        margin: 0;
-      }
-
-      a {
-        .block;
-        .full;
-        .full-background(@logo);
-      }
-      @media all and (min-width: 1200px) {
+        .headerBtn;
         .absolute;
         left: 0;
-        top: calc(~"50% - 14px");
-        width: 170px;
-        height: 28px;
-      }
-    }
+        top: 0;
+        .zero;
 
-    .util_menu {
-      .mapazero;
-      font-size: 0;
-      @media all and (max-width: 1199px) {
-        li {
-          height: 100%;
-
-          a {
-            .headerBtn;
-            .bold;
-            color: @gray;
-          }
-
-          &.login {
-            .absolute;
-            .rem(right, 40);
-            top: 0;
-            .zero;
-          }
-
-          &.rank {
-            .none;
-          }
-
-          &.plan {
-            .absolute;
-            right: 0;
-            top: 0;
-            .zero;
-          }
+        .pointer .menuToggle {
+          .none;
         }
       }
       @media all and (min-width: 1200px) {
-        .absolute;
-        right: 0;
-        top: 0;
+        height: 64px;
+        .zero;
 
-        li {
-          .relative;
-          .mapazero;
-          .top;
-          display: inline-block;
+        .menuToggle {
+          .none;
+        }
+      }
 
-          a {
-            .relative;
-            .block;
-            width: 116px;
-            height: 100px;
-            line-height: normal;
-            padding: 26px 14px;
-            background: @gray-lighter;
-            border-left: @border-normal;
-            font-size: 18px;
-            .center;
+      h1 {
+        .inline-block;
+        .zero;
+        .hidden;
+        .rem(width, 130);
+        .rem(height, 22);
+        .rem(margin, 20 0 0);
+        @media all and (min-width: 1200px) {
+          margin: 0;
+        }
 
-            strong {
-              display: block;
+        a {
+          .block;
+          .full;
+          .full-background(@logo);
+        }
+        @media all and (min-width: 1200px) {
+          .absolute;
+          left: 0;
+          top: 20px;
+          width: 170px;
+          height: 28px;
+        }
+      }
+
+      .util_menu {
+        .mapazero;
+        font-size: 0;
+        @media all and (max-width: 1199px) {
+          li {
+            height: 100%;
+
+            a {
+              .headerBtn;
+              .bold;
+              color: @gray;
             }
 
-            &.active {
-              border-color: transparent;
-              background: @blue;
-              color: @white;
+            &.login {
+              .absolute;
+              .rem(right, 40);
+              top: 0;
+              .zero;
+            }
+
+            &.rank {
+              .none;
             }
 
             &.plan {
-              .relative;
+              .absolute;
+              right: 0;
+              top: 0;
+              .zero;
             }
           }
+        }
+        @media all and (min-width: 1200px) {
+          .absolute;
+          right: 0;
+          top: 14px;
 
-          &.login {
-            .none
-          }
+          li {
+            .relative;
+            .mapazero;
+            .top;
+            display: inline-block;
 
-          i {
-            .none;
+            a {
+              .relative;
+              .block;
+              height: 38px;
+              line-height: 38px;
+              padding: 0 14px;
+              margin: 0 0 0 4px;
+              border: 1px solid @gray-light;
+              font-size: 18px;
+              border-radius: 6px;
+              .center;
+
+              strong {}
+
+              &.active {
+                border-color: transparent;
+                background: @blue;
+                color: @white;
+              }
+
+              &.plan {
+                .relative;
+              }
+            }
+
+            &.login {
+              .none
+            }
+
+            i {
+              .none;
+            }
           }
         }
       }
-    }
 
-    .gnb {
-      .none;
-      @media all and (min-width: 1200px) {
-        .absolute;
-        .inline-block;
-        top: 10px;
-        right: 250px;
-        height: 14px;
-        line-height: normal;
-
-        a {
-          .inline-block;
-          color: @gray-darker;
-          margin: 0 5px;
-
-          &.lang {
-            i {
-              vertical-align: -1px;
-              margin-left: 5px;
-            }
-          }
-        }
-
-        .lang-list {
-          .none;
+      .gnb {
+        .none;
+        @media all and (min-width: 1200px) {
           .absolute;
-          top: 67px;
-          right: 2px;
-          z-index: 100;
+          .inline-block;
+          top: 22px;
+          right: 270px;
+          height: 14px;
           line-height: normal;
-          background: @white;
-          border: 1px solid @gray-lighter;
 
           a {
-            .block;
-            color: @gray-light;
-            padding: 4px 6px;
+            .inline-block;
+            color: @gray-darker;
+            margin: 0 10px;
+            font-size: 16px;
+
+            &.lang {
+              i {
+                vertical-align: -1px;
+                margin-left: 5px;
+              }
+            }
+          }
+
+          .lang-list {
+            .none;
+            .absolute;
+            z-index: 100;
+            top: 30px;
+            right: 2px;
+            line-height: normal;
+            background: @white;
+            border: 1px solid @gray-lighter;
+
+            a {
+              .block;
+              color: @gray-light;
+              padding: 4px 6px;
+            }
           }
         }
       }
-    }
 
-    i {
-      .rem(font-size, 26);
+      i {
+        .rem(font-size, 26);
+      }
     }
 
     nav {
@@ -336,34 +308,49 @@ body {
         }
       }
       @media all and (min-width: 1200px) {
-        position: absolute;
-        top: 20px;
-        right: 254px;
+        .inline-block;
+        .absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
         font-size: 0;
-        height: 70px;
-        margin-top: 6px;
+        border-top: 1px solid @gray-lighter;
 
         ul {
           .mapazero;
           .inline-block;
+          width: 100%;
+          .zero;
 
           li {
             .inline-block;
+            width: calc(100% / 7);
+            .center;
 
-            a {
-              .block;
-              font-size: 20px;
-              .bold;
-              color: @gray-darker;
-              padding: 0 16px;
-              width: 100%;
-              height: 70px;
-              line-height: 60px;
-              border-bottom: 2px solid transparent;
+            h2 {
+              .mapazero;
 
-              &.active,
-              &:hover {
-                color: @blue;
+              a {
+                .block;
+                font-size: 20px;
+                .bold;
+                color: @gray-darker;
+                width: 100%;
+                height: 55px;
+                line-height: 56px;
+
+                &.active,
+                &:hover {
+                  color: @blue;
+                }
+              }
+            }
+
+            &.live {
+              .top;
+
+              a {
+                .zero;
               }
             }
           }
@@ -373,6 +360,57 @@ body {
           display: none;
         }
       }
+    }
+
+    div.live {
+      .inline-block;
+      .top;
+      width: 100%;
+      @media all and (min-width: 1200px) {
+        .right
+      }
+      .rem(font-size, 16);
+
+      a {
+        .block;
+        .rem(padding, 20);
+        color: @white;
+        height: 100%;
+        background: rgba(0,0,0,0.4);
+        .rem(font-size, 22);
+        @media all and (min-width: 1200px) {
+          .absolute;
+          right: 0;
+          top: 0;
+          padding: 6px 0 0;
+          height: 55px;
+          width: calc(100% / 7);
+          .center;
+          font-size: 16px;
+        }
+
+        strong {
+          @media all and (min-width: 1200px) {
+            font-size: 18px;
+          }
+        }
+
+        p {
+          .inline-block;
+          .mapazero;
+          color: @yellow;
+          @media all and (min-width: 1200px) {
+            .block;
+            padding-top: 6px;
+          }
+        }
+        animation: blinker 1s linear infinite;
+      }
+    }
+
+    &.active {
+      height: 300px;
+      .drop-shadow;
     }
   }
 
