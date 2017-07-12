@@ -1665,14 +1665,17 @@ body .main .main-trip ul {
 body .main .main-trip ul li {
   display: inline-block;
   position: relative;
+  vertical-align: top;
   width: 100%;
-  margin: 0 0 0.90909091rem;
+  height: 9.09090909rem;
+  margin: 0 0 4.54545455rem;
 }
 @media all and (min-width: 1200px) {
   body .main .main-trip ul li {
     width: 292.5px;
+    height: 190px;
     margin-right: 10px;
-    padding-bottom: 96px;
+    margin-bottom: 80px;
   }
   body .main .main-trip ul li:nth-child(4n) {
     margin-right: 0;
@@ -1681,6 +1684,7 @@ body .main .main-trip ul li {
 body .main .main-trip ul li img {
   width: 100%;
   height: auto;
+  display: none;
 }
 body .main .main-trip ul li a {
   display: inline-block;
@@ -1704,8 +1708,8 @@ body .main .main-trip ul li a {
 body .main .main-trip ul li a h5 {
   position: absolute;
   left: 0;
-  text-align: left;
-  bottom: 0.90909091rem;
+  width: 100%;
+  bottom: -2.90909091rem;
   margin: 0;
   padding: 0 0.90909091rem;
   font-size: 1rem;
@@ -1717,7 +1721,7 @@ body .main .main-trip ul li a h5 small {
 }
 @media all and (min-width: 1200px) {
   body .main .main-trip ul li a h5 {
-    bottom: 40px;
+    bottom: -56px;
     text-align: center;
     padding: 0;
     width: 100%;

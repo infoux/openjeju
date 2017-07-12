@@ -105,6 +105,11 @@ $(document).ready(function() {
       $(this).css("background", "url(" + $(this).find("img").attr("src") + ") no-repeat center / cover");
     });
 
+    $(".main-trip li").each(function() {
+      $(this).css("background", "url(" + $(this).find("img").attr("src") + ") no-repeat center / cover");
+    });
+
+
 
     var mag = ($(window).width() - $('.mobile .main-food li').width() - 20) / 2;
 
