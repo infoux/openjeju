@@ -157,6 +157,7 @@ body {
   color: #222222;
   min-height: 1200px;
   font-size: 0;
+  background: #000;
 }
 ul {
   list-style: none;
@@ -167,7 +168,7 @@ header {
   display: inline-block;
   overflow: hidden;
   position: relative;
-  height: 774px;
+  height: 808px;
   z-index: 100;
   width: 100%;
   background: url("../images/touch-bg.png") no-repeat center top / 100% 100%;
