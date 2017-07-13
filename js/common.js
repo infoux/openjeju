@@ -47,6 +47,9 @@ $(document).ready(function() {
 
   $(".board-gallery .image").each(function() {
 
+
+
+
     $(this).css("background", "url(" + $(this).find("img").attr("src") + ") no-repeat center / cover");
 
 
@@ -63,8 +66,10 @@ $(document).ready(function() {
       $("body").addClass("mobile");
 
 
-      $('body #main_menu .menu>li').has('ul').find("h2 a").removeAttr("href");
 
+      $('#main_menu .menu>li:has(ul>li)').each(function() {
+        $(this).find("h2 a").removeAttr("href");
+      });
 
       $('body #main_menu h2 a').on('click', function() {
         $("body #main_menu ul ul").removeAttr("style");
