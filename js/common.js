@@ -219,14 +219,13 @@ $(document).ready(function() {
   $('body.mobile .plan-pop .close').click(function() {
     $('body.mobile .plan-pop').hide();
   });
+
+  /* View 에서 처리할 예정
   $('body.mobile p.mobile-mapView a').click(function() {
     $('body.mobile .sub .plan-view .list').hide();
     $('body.mobile .sub .plan-view .mapView').show();
   });
-
-
-
-
+  */
 
 
   $('body.pc .sub .list-type01 .container ul li a.detail').click(function() {
