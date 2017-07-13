@@ -2670,6 +2670,7 @@ view page
             width: calc(~"100%" - 120px);
             font-size: 18px;
             margin: 0 0 10px;
+            min-height: 20px;
           }
         }
 
@@ -4929,6 +4930,126 @@ culture
 
         img {
           max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .bi {
+    .center;
+
+    .container {
+      .center;
+
+      .sts-form {
+        .left;
+        .rem(margin, 0 0 40);
+        border: 2px solid @gray-lighter;
+        background: @gray-white;
+        .rem(padding, 10);
+        @media all and (min-width: 1200px) {
+          padding: 20px;
+          margin: 0 0 30px;
+        }
+
+        dl {
+          .zero;
+
+          dt {
+            .inline-block;
+            .rem(font-size, 18);
+            .rem(width, 70);
+            .rem(padding, 10 0);
+            @media all and (min-width: 1200px) {
+              font-size: 18px;
+              width: 90px;
+              line-height: 42px;
+              .top;
+              padding: 10px 0;
+            }
+          }
+
+          dd {
+            .inline-block;
+            .rem(font-size, 18);
+            .rem(padding, 10 0);
+            margin: 0;
+            border-bottom: 1px solid @gray-lighter;
+            .remCalc(width, 70);
+            @media all and (min-width:1200px) {
+              font-size: 16px;
+              padding: 10px 0;
+              width: calc(~"50% - 90px");
+              border: none;
+            }
+
+            & > label {
+              .inline-block;
+              border: 1px solid @gray-light;
+              .rem(border-radius, 6);
+              .rem(height, 38);
+              .rem(line-height, 38);
+              background: @white;
+              .rem(padding, 0 8);
+              @media all and (min-width: 1200px) {
+                padding: 0 20px;
+                height: 42px;
+                line-height: 42px;
+              }
+            }
+
+            input[type="radio"] {
+              .none;
+            }
+
+            input[type="radio"]:checked + label {
+              background: @blue;
+              color: @white;
+              border-color: transparent;
+            }
+
+            input[type="month"] {
+              background: @white;
+              color: @gray-dark;
+              border: 1px solid @gray-light;
+              .rem(font-size, 18);
+              .rem(padding, 8 10);
+              .rem(border-radius, 6);
+              outline: none;
+              @media all and (min-width: 1200px) {
+                padding: 10px 20px;
+                font-size: 16px;
+              }
+            }
+
+            &:last-of-type {
+              border-bottom-width: 0;
+            }
+          }
+        }
+
+        .submit-data {
+          .center;
+          .rem(margin, 20 0 0);
+
+          button {
+            .inline-block;
+            .rem(height, 52);
+            .rem(line-height, 52);
+            .rem(margin, 0 2);
+            border: none;
+            width: 100%;
+            background: @blue;
+            color: @white;
+            .rem(font-size, 18);
+            @media all and (min-width: 1200px) {
+              height: 42px;
+              line-height: 42px;
+              font-size: 20px;
+              padding: 0 60px;
+              width: auto;
+            }
+          }
         }
       }
     }

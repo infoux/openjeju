@@ -544,6 +544,26 @@ html {
 body {
   font-family: @myfont,"Malgun Gothic", "apple sd gothic neo", sans-serif;
   color: @gray-darker;
+
+  &:lang(ko) {
+    @myfont,"Malgun Gothic", "apple sd gothic neo", sans-serif;
+  }
+
+  &:lang(zh) {
+    font-family: LiHei Pro Medium, sans-serif;
+  }
+
+  &:lang(ja) {
+    font-family: osaka, sans-serif;
+  }
+
+  &:lang(en) {
+    font-family: helvetica neue, sans-serif;
+  }
+
+  &:lang(ru) {
+    font-family: tahoma, Arial, helvetica, sans-serif;
+  }
 }
 @media (max-width:360px) {
   html {

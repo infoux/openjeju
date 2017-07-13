@@ -62,9 +62,14 @@ $(document).ready(function() {
       $("body").removeClass("pc");
       $("body").addClass("mobile");
 
+
+      $('body #main_menu .menu>li').has('ul').find("h2 a").removeAttr("href");
+
+
       $('body #main_menu h2 a').on('click', function() {
         $("body #main_menu ul ul").removeAttr("style");
         $(this).parent().parent().find("ul").css("height", "auto");
+
       });
 
 

@@ -400,6 +400,21 @@ body {
   font-family: "NanumSquare", "Malgun Gothic", "apple sd gothic neo", sans-serif;
   color: #222222;
 }
+body:lang(ko) {
+  @myfont ,"Malgun Gothic", "apple sd gothic neo", sans-serif;
+}
+body:lang(zh) {
+  font-family: LiHei Pro Medium, sans-serif;
+}
+body:lang(ja) {
+  font-family: osaka, sans-serif;
+}
+body:lang(en) {
+  font-family: helvetica neue, sans-serif;
+}
+body:lang(ru) {
+  font-family: tahoma, Arial, helvetica, sans-serif;
+}
 @media (max-width: 360px) {
   html {
     font-size: 18px;
@@ -704,6 +719,7 @@ body #header > .container i {
     color: #fff;
     background: #0075bc;
     border-bottom: 1px solid #0064ab;
+    cursor: pointer;
   }
   body #header nav .menu li h2 a.active,
   body #header nav .menu li h2 a:focus,
@@ -4540,6 +4556,7 @@ culture
     width: calc(100% - 120px);
     font-size: 18px;
     margin: 0 0 10px;
+    min-height: 20px;
   }
 }
 .sub .view-info .container .basic .hr {
@@ -6801,4 +6818,123 @@ culture
 }
 .sub .culture.write .uploaded img {
   max-width: 100%;
+}
+.sub .bi {
+  text-align: center;
+}
+.sub .bi .container {
+  text-align: center;
+}
+.sub .bi .container .sts-form {
+  text-align: left;
+  margin: 0 0 1.81818182rem;
+  border: 2px solid #eeeeee;
+  background: #f6f6f6;
+  padding: 0.45454545rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .bi .container .sts-form {
+    padding: 20px;
+    margin: 0 0 30px;
+  }
+}
+.sub .bi .container .sts-form dl {
+  font-size: 0;
+}
+.sub .bi .container .sts-form dl dt {
+  display: inline-block;
+  font-size: 0.81818182rem;
+  width: 3.18181818rem;
+  padding: 0.45454545rem 0;
+}
+@media all and (min-width: 1200px) {
+  .sub .bi .container .sts-form dl dt {
+    font-size: 18px;
+    width: 90px;
+    line-height: 42px;
+    vertical-align: top;
+    padding: 10px 0;
+  }
+}
+.sub .bi .container .sts-form dl dd {
+  display: inline-block;
+  font-size: 0.81818182rem;
+  padding: 0.45454545rem 0;
+  margin: 0;
+  border-bottom: 1px solid #eeeeee;
+  width: calc(100% -  3.18181818rem);
+}
+@media all and (min-width: 1200px) {
+  .sub .bi .container .sts-form dl dd {
+    font-size: 16px;
+    padding: 10px 0;
+    width: calc(50% - 90px);
+    border: none;
+  }
+}
+.sub .bi .container .sts-form dl dd > label {
+  display: inline-block;
+  border: 1px solid #777777;
+  border-radius: 0.27272727rem;
+  height: 1.72727273rem;
+  line-height: 1.72727273rem;
+  background: #fff;
+  padding: 0 0.36363636rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .bi .container .sts-form dl dd > label {
+    padding: 0 20px;
+    height: 42px;
+    line-height: 42px;
+  }
+}
+.sub .bi .container .sts-form dl dd input[type="radio"] {
+  display: none;
+}
+.sub .bi .container .sts-form dl dd input[type="radio"]:checked + label {
+  background: #0075bc;
+  color: #fff;
+  border-color: transparent;
+}
+.sub .bi .container .sts-form dl dd input[type="month"] {
+  background: #fff;
+  color: #333333;
+  border: 1px solid #777777;
+  font-size: 0.81818182rem;
+  padding: 0.36363636rem 0.45454545rem;
+  border-radius: 0.27272727rem;
+  outline: none;
+}
+@media all and (min-width: 1200px) {
+  .sub .bi .container .sts-form dl dd input[type="month"] {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+.sub .bi .container .sts-form dl dd:last-of-type {
+  border-bottom-width: 0;
+}
+.sub .bi .container .sts-form .submit-data {
+  text-align: center;
+  margin: 0.90909091rem 0 0;
+}
+.sub .bi .container .sts-form .submit-data button {
+  display: inline-block;
+  height: 2.36363636rem;
+  line-height: 2.36363636rem;
+  margin: 0 0.09090909rem;
+  border: none;
+  width: 100%;
+  background: #0075bc;
+  color: #fff;
+  font-size: 0.81818182rem;
+}
+@media all and (min-width: 1200px) {
+  .sub .bi .container .sts-form .submit-data button {
+    height: 42px;
+    line-height: 42px;
+    font-size: 20px;
+    padding: 0 60px;
+    width: auto;
+  }
 }

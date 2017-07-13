@@ -303,5 +303,5 @@ header.sub {
 }
 .sub-frame {
   display: inline-block;
-  width: 700px;
+  width: 100%;
 }
