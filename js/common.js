@@ -152,9 +152,10 @@ $(document).ready(function() {
     $("#header nav").removeClass("open");
   });
 
-  $(".indicator li a").click(function() {
-    $(".indicator li .sub-menu").css("display", "none");
-    $(this).parent().find(".sub-menu").toggle();
+  $(".indicator .sub>li a").click(function() {
+    $(".indicator .sub>li").removeClass("active");
+    $(this).parent().addClass("active");
+    $(".indicator .sub>li.active").find(".sub-menu").toggle();
   });
 
   $("body.mobile section.mat #category li.active").click(function() {
