@@ -241,10 +241,11 @@ header nav {
 header nav .icon-logo {
   display: inline-block;
   position: absolute;
-  left: 0.45454545rem;
+  left: 0.90909091rem;
   top: 1.72727273rem;
   width: 7.45454545rem;
   font-size: 1.09090909rem;
+  color: #fff;
 }
 header nav ul {
   display: inline-block;
@@ -254,6 +255,7 @@ header nav ul {
 }
 header nav ul li {
   display: inline-block;
+  vertical-align: top;
 }
 header nav ul li a {
   display: inline-block;

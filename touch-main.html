@@ -22,7 +22,7 @@
     <div id="clock">
 
     </div>
-    <h1><a href="">오픈제주<i class="icon-logo"></i></a></h1>
+    <h1><a href="touch-main.html">오픈제주<i class="icon-logo"></i></a></h1>
 
     <div class="weather">
       <ul>
@@ -45,13 +45,13 @@
       </ul>
     </div>
     <nav id="main_menu">
-      <i class="icon-logo"></i>
+      <a href="touch-main.html"><i class="icon-logo"></i></a>
       <ul>
-        <li><a href=""><i class="icon-ar" aria-hidden="true"></i>증강현실</a></li>
-        <li><a href=""><i class="icon-cycle" aria-hidden="true"></i>자전거코스</a></li>
-        <li><a href=""><i class="icon-walk" aria-hidden="true"></i>도보코스</a></li>
-        <li><a href=""><i class="icon-cafe" aria-hidden="true"></i>카페로드</a></li>
-        <li><a href=""><i class="icon-mount" aria-hidden="true"></i>제주문화/체험</a></li>
+        <li><a href="touch-sub.html"><i class="icon-ar" aria-hidden="true"></i>증강현실</a></li>
+        <li><a href="touch-sub.html"><i class="icon-cycle" aria-hidden="true"></i>자전거코스</a></li>
+        <li><a href="touch-sub.html"><i class="icon-walk" aria-hidden="true"></i>도보코스</a></li>
+        <li><a href="touch-sub.html"><i class="icon-magic" aria-hidden="true"></i>축제/행사</a></li>
+        <li><a href="touch-sub.html"><i class="icon-mount" aria-hidden="true"></i>제주문화/체험</a></li>
       </ul>
     </nav>
     <div class="charger">
@@ -73,7 +73,7 @@
       var clock = document.getElementById("clock"); // 출력할 장소 선택
       var currentDate = new Date(); // 현재시간
       var calendar = currentDate.getFullYear() + "-" + (currentDate.getMonth() + 1) + "-" + currentDate.getDate() // 현재 날짜
-      var amPm = 'AM'; // 초기값 AM
+      var amPm = 'AM'; // 초기값 AMjs
       var currentHours = addZeros(currentDate.getHours(), 2);
       var currentMinute = addZeros(currentDate.getMinutes(), 2);
 

@@ -722,9 +722,13 @@ body {
           border: 1px solid @gray-lighter;
           background: @white;
           @media all and (min-width: 1200px) {
-            width: calc(~"100% / 4 - 10px");
+            width: calc(~"(100% - 15px) / 4");
             padding: 30px 20px;
             margin-right: 5px;
+
+            &:last-child {
+              margin-right: 0;
+            }
           }
 
           h5 {

@@ -1045,6 +1045,14 @@ body #footer address p.attention {
   margin-top: 0.45454545rem;
   word-break: keep-all;
 }
+body #footer address .company {
+  display: block;
+  width: 15.45454545rem;
+  height: 2rem;
+  margin: 0.45454545rem auto;
+  background: url("../images/company.png") no-repeat center / 100%;
+  font-size: 0;
+}
 @media all and (min-width: 1200px) {
   body #footer address {
     font-size: 14px;
@@ -1053,6 +1061,13 @@ body #footer address p.attention {
   }
   body #footer address span {
     display: inline-block;
+  }
+  body #footer address .company {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 340px;
+    height: 44px;
   }
 }
 /* main - default */
@@ -1777,9 +1792,12 @@ body .main .rank .container .rank-pop {
 }
 @media all and (min-width: 1200px) {
   body .main .rank .container .rank-pop {
-    width: calc(100% / 4 - 10px);
+    width: calc((100% - 15px) / 4);
     padding: 30px 20px;
     margin-right: 5px;
+  }
+  body .main .rank .container .rank-pop:last-child {
+    margin-right: 0;
   }
 }
 body .main .rank .container .rank-pop h5 {
