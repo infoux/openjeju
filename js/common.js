@@ -147,9 +147,11 @@ $(document).ready(function() {
 
   $(".menuToggle").click(function() {
     $("#header nav").addClass("open");
+    $("body").addClass("menuOpen");
   });
   $("#header nav .close").click(function() {
     $("#header nav").removeClass("open");
+    $("body").removeClass("menuOpen");
   });
 
   $(".indicator .sub>li a").click(function() {

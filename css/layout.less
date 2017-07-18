@@ -1,5 +1,10 @@
 /* layout - default */
 body {
+  &.menuOpen {
+    height: 100vh;
+    overflow: hidden;
+  }
+
   .container {
     .container(100%);
     @media all and (min-width: 1200px) {
@@ -50,14 +55,14 @@ body {
   }
 
   #header {
-    .relative;
     border-bottom: @border-normal;
     z-index: 999;
     .rem(height, 66);
     .rem(line-height, 66);
-    background: @white;
+    background: @gray-10;
     .center;
     @media all and (min-width: 1200px) {
+      .relative;
       height: @header-height;
       .inline-block;
       line-height: 1;
@@ -164,11 +169,14 @@ body {
               padding: 0 14px;
               margin: 0 0 0 4px;
               border: 1px solid @gray-light;
+              background: @white;
               font-size: 18px;
               border-radius: 6px;
               .center;
 
-              strong {}
+              strong {
+                .normal
+              }
 
               &.active {
                 border-color: transparent;
@@ -243,110 +251,125 @@ body {
     nav {
       @media all and (max-width: 1199px) {
         .header-default;
-        .hidden;
+        .none;
         .absolute;
         left: 0;
-        .rem(top, 66);
+        top: 0;
         z-index: 999;
-        width: 100%;
-        height: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.6);
         .left;
 
         &.open {
-          height: auto;
+          .block;
         }
 
-        .menu {
-          width: 100%;
+        .container {
+          width: calc(~"100% - 80px");
+          background: @white;
           .drop-shadow;
-          .mapazero;
+          overflow-y: scroll;
+          .rem(padding-top, 30);
 
-          li {
-            .block;
-            width: 100%;
-            .rem(line-height, 32);
+          &::before {
+            content: "OPEN JEJU";
+            .rem(padding, 0 20);
+            .rem(font-size, 32);
+          }
 
-            h2 {
-              .mapazero;
+          .menu {
+            .mapazero;
 
-              a {
-                .block;
-                width: 100%;
-                height: 100%;
-                .rem(padding, 12);
-                .rem(font-size, 16);
-                color: @white;
-                background: @blue;
-                border-bottom: 1px solid @dark-blue;
-                .pointer;
+            li {
+              .block;
+              width: 100%;
+              .rem(line-height, 26);
 
-                &.active,
-                &:focus,
-                &:hover {
-                  background: @gray-dark;
-                  border-color: @black;
-                }
-              }
-            }
-
-            ul {
-              height: 0;
-              .hidden;
-              .mapazero;
-
-              li {
-                background: @dark-blue;
+              h2 {
+                .mapazero;
 
                 a {
                   .block;
                   width: 100%;
                   height: 100%;
-                  .rem(padding, 12);
-                  .rem(font-size, 14);
-                  color: @white;
-                  border-bottom: 1px solid @dark-blue;
+                  .rem(padding, 10 20);
+                  .rem(font-size, 16);
+                  color: @black;
+                  .normal;
+                  .pointer;
 
                   &.active,
                   &:focus,
                   &:hover {
+                    background: @gray-20;
                     border-color: @black;
-                    background: rgba(0,0,0,0.2);
-                  }
-
-                  i {
-                    .opacity(0.2);
-                    .rem(margin-right, 10);
                   }
                 }
               }
-            }
 
-            &.live {
-              background: @green;
-              .center;
-              color: @white;
+              ul {
+                height: 0;
+                .hidden;
+                .mapazero;
 
-              h2 {
-                a {
+                li {
                   background: @dark-blue;
-                  .left;
+
+                  a {
+                    .block;
+                    width: 100%;
+                    height: 100%;
+                    .rem(padding, 8 20);
+                    .rem(font-size, 14);
+                    color: @white;
+
+                    &.active,
+                    &:focus,
+                    &:hover {
+                      border-color: @black;
+                      background: rgba(0,0,0,0.2);
+                    }
+
+                    i {
+                      .opacity(0.2);
+                      .rem(margin-right, 10);
+                    }
+                  }
                 }
               }
 
-              & > a {
-                .none;
-              }
+              &.live {
+                background: @gray-10;
+                .center;
+                .rem(padding, 10);
 
-              span {
-                .inline-block;
-                .rem(padding, 10 0);
+                h2 {
+                  a {
+                    background: @dark-blue;
+                    color: @white;
+                    .rem(border-radius, 6);
+                    .center;
+                  }
+                }
+
+                & > a {
+                  .none;
+                }
+
+                span {
+                  .inline-block;
+                  .rem(padding, 10 0);
+                }
               }
             }
           }
         }
 
         .close {
-          .rem(margin-top, 10);
+          .absolute;
+          right: 0;
+          top: 0;
           .block;
           .zero;
           .center;
@@ -354,15 +377,11 @@ body {
           i {
             .rem(font-size, 18);
             .inline-block;
-            .rem(width, 42);
-            .rem(height, 42);
-            .rem(line-height, 40);
-            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
             color: @white;
-            .rem(border-width, 2);
-            border-style: solid;
-            border-color: @white;
-            background: @black;
+            background: @blue;
             .drop-shadow;
           }
         }
@@ -375,6 +394,7 @@ body {
         width: 100%;
         font-size: 0;
         border-top: 1px solid @gray-lighter;
+        background: @white;
 
         .container {
           .menu {

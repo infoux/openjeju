@@ -28,6 +28,13 @@
 @font-size-08: floor((@font-size * 3.143)); // 44px
 @font-size-09: floor((@font-size * 3.125)); // 50px
 */
+@gray- 30: ();
+@gray- 40: ();
+@gray- 50: ();
+@gray- 60: ();
+@gray- 70: ();
+@gray- 80: ();
+@gray- 90: ();
 /* mixin */
 .bold {
   font-weight: bold;
@@ -436,6 +443,10 @@ body:lang(ru) {
   }
 }
 /* layout - default */
+body.menuOpen {
+  height: 100vh;
+  overflow: hidden;
+}
 body .container {
   position: relative;
   display: inline-block;
@@ -491,16 +502,16 @@ body .top_banner button i {
   }
 }
 body #header {
-  position: relative;
   border-bottom: 1px solid #eee;
   z-index: 999;
   height: 3rem;
   line-height: 3rem;
-  background: #fff;
+  background: #fcfcfc;
   text-align: center;
 }
 @media all and (min-width: 1200px) {
   body #header {
+    position: relative;
     height: 120px;
     display: inline-block;
     line-height: 1;
@@ -615,9 +626,13 @@ body #header > .container .util_menu {
     padding: 0 14px;
     margin: 0 0 0 4px;
     border: 1px solid #777777;
+    background: #fff;
     font-size: 18px;
     border-radius: 6px;
     text-align: center;
+  }
+  body #header > .container .util_menu li a strong {
+    font-weight: normal;
   }
   body #header > .container .util_menu li a.active {
     border-color: transparent;
@@ -681,100 +696,113 @@ body #header > .container i {
     vertical-align: top;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    display: none;
     position: absolute;
     left: 0;
-    top: 3rem;
+    top: 0;
     z-index: 999;
-    width: 100%;
-    height: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
     text-align: left;
   }
   body #header nav.open {
-    height: auto;
+    display: block;
   }
-  body #header nav .menu {
-    width: 100%;
+  body #header nav .container {
+    width: calc(100% - 80px);
+    background: #fff;
     -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+    overflow-y: scroll;
+    padding-top: 1.36363636rem;
+  }
+  body #header nav .container::before {
+    content: "OPEN JEJU";
+    padding: 0 0.90909091rem;
+    font-size: 1.45454545rem;
+  }
+  body #header nav .container .menu {
     margin: 0;
     padding: 0;
   }
-  body #header nav .menu li {
+  body #header nav .container .menu li {
     display: block;
     width: 100%;
-    line-height: 1.45454545rem;
+    line-height: 1.18181818rem;
   }
-  body #header nav .menu li h2 {
+  body #header nav .container .menu li h2 {
     margin: 0;
     padding: 0;
   }
-  body #header nav .menu li h2 a {
+  body #header nav .container .menu li h2 a {
     display: block;
     width: 100%;
     height: 100%;
-    padding: 0.54545455rem;
+    padding: 0.45454545rem 0.90909091rem;
     font-size: 0.72727273rem;
-    color: #fff;
-    background: #0075bc;
-    border-bottom: 1px solid #0064ab;
+    color: #000;
+    font-weight: normal;
     cursor: pointer;
   }
-  body #header nav .menu li h2 a.active,
-  body #header nav .menu li h2 a:focus,
-  body #header nav .menu li h2 a:hover {
-    background: #333333;
+  body #header nav .container .menu li h2 a.active,
+  body #header nav .container .menu li h2 a:focus,
+  body #header nav .container .menu li h2 a:hover {
+    background: #eeeeee;
     border-color: #000;
   }
-  body #header nav .menu li ul {
+  body #header nav .container .menu li ul {
     height: 0;
     overflow: hidden;
     margin: 0;
     padding: 0;
   }
-  body #header nav .menu li ul li {
+  body #header nav .container .menu li ul li {
     background: #0064ab;
   }
-  body #header nav .menu li ul li a {
+  body #header nav .container .menu li ul li a {
     display: block;
     width: 100%;
     height: 100%;
-    padding: 0.54545455rem;
+    padding: 0.36363636rem 0.90909091rem;
     font-size: 0.63636364rem;
     color: #fff;
-    border-bottom: 1px solid #0064ab;
   }
-  body #header nav .menu li ul li a.active,
-  body #header nav .menu li ul li a:focus,
-  body #header nav .menu li ul li a:hover {
+  body #header nav .container .menu li ul li a.active,
+  body #header nav .container .menu li ul li a:focus,
+  body #header nav .container .menu li ul li a:hover {
     border-color: #000;
     background: rgba(0, 0, 0, 0.2);
   }
-  body #header nav .menu li ul li a i {
+  body #header nav .container .menu li ul li a i {
     -webkit-opacity: 0.2;
     -moz-opacity: 0.2;
     opacity: 0.2;
     margin-right: 0.45454545rem;
   }
-  body #header nav .menu li.live {
-    background: #199d54;
+  body #header nav .container .menu li.live {
+    background: #fcfcfc;
     text-align: center;
-    color: #fff;
+    padding: 0.45454545rem;
   }
-  body #header nav .menu li.live h2 a {
+  body #header nav .container .menu li.live h2 a {
     background: #0064ab;
-    text-align: left;
+    color: #fff;
+    border-radius: 0.27272727rem;
+    text-align: center;
   }
-  body #header nav .menu li.live > a {
+  body #header nav .container .menu li.live > a {
     display: none;
   }
-  body #header nav .menu li.live span {
+  body #header nav .container .menu li.live span {
     display: inline-block;
     padding: 0.45454545rem 0;
   }
   body #header nav .close {
-    margin-top: 0.45454545rem;
+    position: absolute;
+    right: 0;
+    top: 0;
     display: block;
     font-size: 0;
     text-align: center;
@@ -782,15 +810,11 @@ body #header > .container i {
   body #header nav .close i {
     font-size: 0.81818182rem;
     display: inline-block;
-    width: 1.90909091rem;
-    height: 1.90909091rem;
-    line-height: 1.81818182rem;
-    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
     color: #fff;
-    border-width: 0.09090909rem;
-    border-style: solid;
-    border-color: #fff;
-    background: #000;
+    background: #0075bc;
     -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
@@ -805,6 +829,7 @@ body #header > .container i {
     width: 100%;
     font-size: 0;
     border-top: 1px solid #eeeeee;
+    background: #fff;
   }
   body #header nav .container .menu {
     margin: 0;
@@ -1969,8 +1994,10 @@ culture
     z-index: 300;
     display: block;
     text-align: center;
-    border-bottom: 1px solid #eeeeee;
-    background: #f6f6f6;
+    border: 1px solid #eeeeee;
+    border-left: none;
+    border-right: none;
+    background: #fcfcfc;
   }
   .sub .indicator .container {
     padding: 0;
