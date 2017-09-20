@@ -1920,6 +1920,85 @@ body .main .rank .container .rank-pop ul li .count {
     font-size: 20px;
   }
 }
+body .main .rentcar {
+  background: #eeeeee;
+  text-align: center;
+  padding-bottom: 1.36363636rem;
+}
+body .main .rentcar .container h4 {
+  font-size: 1.18181818rem;
+  color: #0075bc;
+  margin: 2.72727273rem 0 1.36363636rem;
+}
+body .main .rentcar .container h4 small {
+  font-size: 1.18181818rem !important;
+  color: #0075bc !important;
+  padding: 0 0 0.18181818rem;
+}
+@media all and (min-width: 1200px) {
+  body .main .rentcar .container h4 {
+    text-align: left;
+    padding-left: calc(50% + 30px);
+    font-size: 36px;
+    margin: 70px 0 30px;
+  }
+  body .main .rentcar .container h4 small {
+    font-size: 36px !important;
+  }
+}
+body .main .rentcar .container h4::before {
+  content: "";
+  display: block;
+  width: 12.72727273rem;
+  height: 6.68181818rem;
+  background: url("../images/img-rentcar.png") no-repeat center / 100% 100%;
+  margin: 0 auto 0.90909091rem;
+}
+@media all and (min-width: 1200px) {
+  body .main .rentcar .container h4::before {
+    position: absolute;
+    left: 50%;
+    margin-left: -580px;
+    width: 540px;
+    height: 284px;
+  }
+}
+body .main .rentcar .container p {
+  font-size: 0.63636364rem;
+  display: inline-block;
+  width: 100%;
+  line-height: 1.4;
+}
+@media all and (min-width: 1200px) {
+  body .main .rentcar .container p {
+    text-align: left;
+    padding-left: calc(50% + 30px);
+    font-size: 18px;
+  }
+}
+body .main .rentcar .container p u {
+  text-decoration: none;
+  display: block;
+}
+body .main .rentcar .container a {
+  display: block;
+  text-align: center;
+  width: 9.09090909rem;
+  margin: 0.90909091rem auto 2.27272727rem;
+  padding: 0.63636364rem 0;
+  border: 2px solid #0075bc;
+  color: #0075bc;
+  background: #fff;
+  font-size: 0.81818182rem;
+}
+@media all and (min-width: 1200px) {
+  body .main .rentcar .container a {
+    margin-left: calc(50% + 30px);
+    width: 240px;
+    padding: 16px 0;
+    font-size: 18px;
+  }
+}
 /* sub */
 .sub {
   /*
